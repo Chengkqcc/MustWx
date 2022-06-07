@@ -54,7 +54,10 @@
         {
             "root": "pakB",
             "pages": [
-                "pages/home/home"
+                "pages/home/home",
+                "pages/mine/mine",
+                "pages/usersetting/usersetting",
+                "pages/yijianfankui/yijianfankui"
             ],
             "name": "bb",
             "independent": false
