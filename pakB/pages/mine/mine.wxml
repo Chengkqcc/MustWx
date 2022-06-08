@@ -21,25 +21,26 @@
       <view class="function common">
         <view class="title">常用功能</view>
         <van-grid column-num="4" border="{{false}}">
-          <van-grid-item icon="photo-o" text="{{item.text}}" wx:for="{{ function_data }}" link-type="navigateTo" url="{{item.page}}" />
+          <van-grid-item icon="photo-o" text="{{item.text}}" wx:for="{{ function_data }}" url="{{item.page}}" />
         </van-grid>
       </view>
       <!-- 管理 -->
       <view class="manage common">
         <view class="title">模板管理</view>
         <van-grid column-num="4" border="{{false}}">
-          <van-grid-item icon="photo-o" text="{{item.text}}" wx:for="{{ manage_data }}" link-type="navigateTo" url="{{item.page}}" /> 
+          <van-grid-item icon="photo-o" text="{{item.text}}" wx:for="{{ manage_data }}" url="{{item.page}}" /> 
         </van-grid>
       </view>
       <!-- 设置 -->
       <view class="user_set common">
         <view class="title">账户设置</view>
         <van-grid column-num="4" border="{{false}}">
-          <van-grid-item icon="photo-o" text="{{item.text}}" wx:for="{{ user_set_data }}" link-type="navigateTo" url="{{item.page}}" />
+          <van-grid-item icon="photo-o" text="{{item.text}}" wx:for="{{ user_set_data }}" url="{{item.page}}" />
         </van-grid>
       </view>
     </view>
 </view>
+<!-- 未登录 -->
 <view class="mine" wx:else>
     <view class="user" bindtap="loginfn">
       <!-- 头像 -->
@@ -60,24 +61,21 @@
       <view class="function common">
         <view class="title">常用功能</view>
         <van-grid column-num="4" border="{{false}}">
-          <van-grid-item icon="photo-o" text="{{item.text}}" wx:for="{{ function_data }}" link-type="navigateTo"   />
-          <!-- url="{{登录页面}}" -->
+          <van-grid-item icon="photo-o" text="{{item.text}}" wx:for="{{ function_data }}" url="{{'登录页面'}}"  />
         </van-grid>
       </view>
       <!-- 管理 -->
       <view class="manage common">
         <view class="title">模板管理</view>
         <van-grid column-num="4" border="{{false}}">
-          <van-grid-item icon="photo-o" text="{{item.text}}" wx:for="{{ manage_data }}" link-type="navigateTo"  /> 
-          <!-- url="{{登录页面}}" -->
+          <van-grid-item icon="photo-o" text="{{item.text}}" wx:for="{{ manage_data }}" url="{{'登录页面'}}"  />
         </van-grid>
       </view>
       <!-- 设置 -->
       <view class="user_set common">
         <view class="title">账户设置</view>
         <van-grid column-num="4" border="{{false}}">
-          <van-grid-item icon="photo-o" text="{{item.text}}" wx:for="{{ user_set_data }}" link-type="navigateTo"/>
-            <!-- url="{{index==1||index==2||index==3? 登录页面 :item.page}}" -->
+          <van-grid-item icon="photo-o" text="{{item.text}}" wx:for="{{ user_set_data }}" url="{{item.id==1||item.id==2||item.id==3? '登录页面' :item.page}}" />
         </van-grid>
       </view>
     </view>
