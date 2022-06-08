@@ -9,14 +9,13 @@
     "window": {
         "backgroundTextStyle": "light",
         "navigationBarBackgroundColor": "#fff",
-        "navigationBarTitleText": "Weixin",
+        "navigationBarTitleText": "一定签电子合同",
         "navigationBarTextStyle": "black"
     },
     "sitemapLocation": "sitemap.json",
     "tabBar": {
         "selectedColor": "#e53f3c",
-        "list": [
-            {
+        "list": [{
                 "text": "首页",
                 "pagePath": "pages/index/index",
                 "iconPath": "images/nav/home-off.png",
@@ -42,8 +41,7 @@
             }
         ]
     },
-    "subpackages": [
-        {
+    "subpackages": [{
             "root": "pakA",
             "pages": [
                 "pages/home/home"

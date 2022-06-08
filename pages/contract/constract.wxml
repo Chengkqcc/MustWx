@@ -1,2 +1,13 @@
 <!--pages/contract/constract.wxml-->
-<text>合同页面</text>
+<view class="contract">
+    <view class="search">
+        <view class="searchInput">
+            <van-icon name="search" />
+            <input placeholder="输入关键字进行搜索"/>
+        </view>
+        <van-icon name="bars" size="25px" color="#666"/>
+    </view>
+    <view class="nav">
+        
+    </view>
+</view>

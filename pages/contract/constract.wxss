@@ -1,1 +1,19 @@
-/* pages/contract/constract.wxss */
+.contract .search {
+  box-sizing: border-box;
+  padding: 0 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.contract .search .searchInput {
+  box-sizing: border-box;
+  width: 87%;
+  height: 40px;
+  background: #F1F1F1;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+}
+.contract .search .searchInput .van-icon-search {
+  margin: 0 5px 0 10px;
+}
