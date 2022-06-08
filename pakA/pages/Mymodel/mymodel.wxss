@@ -1,0 +1,85 @@
+
+
+/* 更改导航左箭头颜色 */
+.van-nav-bar .van-icon {
+  color: #000 !important;
+}
+
+.tabs {
+  margin-bottom: 20rpx;
+  background: #fff;
+}
+
+.tabs .tab {
+  white-space: nowrap;
+}
+
+.tabs .tab .title {
+  color: #000;
+  margin: 0 40rpx;
+  display: inline-block;
+}
+
+.tabs .tab .active {
+  font-weight: bold;
+  color: #E54D42;
+}
+
+.tabs .tab .active::after {
+  /*伪元素 */
+  content: "";
+  display: block;
+  margin: 0 auto;
+  padding-bottom: 20rpx;
+  width: 50rpx;
+  border-bottom: 6rpx solid #E54D42;
+}
+
+.model .content {
+  background: #F1F1F1;
+  height: 100%;
+}
+
+.model .model-btns {
+  position: fixed;
+  height: 150rpx;
+  line-height: 150rpx;
+  background: #fff;
+  bottom: 0;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+.tab-content {
+  /* height: 100vh; */
+  height: calc(100vh - 400rpx)
+}
+.model .model-btns .van-button {
+  width: 320rpx;
+}
+.content .no-have {
+  text-align: center;
+  color: #999999;
+  padding-bottom: 40rpx;
+}
+.content .model-content {
+  background: #fff;
+  color: #999999;
+}
+
+.model-content .model-title {
+  margin-bottom: 20rpx;
+  color: #000;
+}
+
+.con-container .btns {
+  height: 100%;
+}
+
+.con-container .van-button {
+  height: 100%;
+}
+
+.content-item {
+  margin: 40rpx 0;
+}

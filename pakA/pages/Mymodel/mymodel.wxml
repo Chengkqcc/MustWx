@@ -1,0 +1,101 @@
+<!-- 模板管理页 -->
+<view class="model">
+  <!-- 导航栏 -->
+  <van-nav-bar title="模板管理" left-arrow bind:click-left="onClickLeft" border="{{false}}" />
+
+  <!-- Tabs标签页 -->
+  <view class="tabs">
+    <scroll-view class="tab" scroll-x>
+      <block wx:for="{{tabs}}" wx:key="*this">
+        <view class="{{active==index?'title active':'title'}}" bindtap="changeTab" data-index="{{index}}">{{item.title}}</view>
+      </block>
+    </scroll-view>
+
+  </view>
+  <!-- 内容 -->
+  <view class="content">
+
+    <view class="con-container">
+      <van-notice-bar wx:if="{{!tab}}" left-icon="volume-o" scrollable="{{ false }}" text="在代码阅读过程中" />
+      <scroll-view class="tab-content" scroll-y>
+        <view class="content-item">
+          <van-swipe-cell right-width="{{ 120 }}" bind:open="onOpen">
+            <van-cell-group>
+              <van-cell is-link center>
+                <view class="model-content" slot="title">
+                  <view class="model-title">新建空白模板</view>
+                  <view class="model-num">模板编号：54941594598545</view>
+                  <view class="model-time">模板时间：2022-06-08 19:56</view>
+                  <view class="model-num">模板版本：v2</view>
+                </view>
+              </van-cell>
+            </van-cell-group>
+            <view slot="right" class="btns">
+              <van-button class="edit" square color="#ccc">编辑</van-button>
+              <van-button class="del" square color="#E54D42">删除</van-button>
+            </view>
+          </van-swipe-cell>
+        </view>
+        <view class="content-item">
+          <van-swipe-cell right-width="{{ 120 }}">
+            <van-cell-group>
+              <van-cell is-link center>
+                <view class="model-content" slot="title">
+                  <view class="model-title">新建空白模板</view>
+                  <view class="model-num">模板编号：54941594598545</view>
+                  <view class="model-time">模板时间：2022-06-08 19:56</view>
+                  <view class="model-num">模板版本：v2</view>
+                </view>
+              </van-cell>
+            </van-cell-group>
+            <view slot="right" class="btns">
+              <van-button class="edit" square color="#ccc">编辑</van-button>
+              <van-button class="del" square color="#E54D42">删除</van-button>
+            </view>
+          </van-swipe-cell>
+        </view>
+        <view class="content-item">
+          <van-swipe-cell right-width="{{ 120 }}">
+            <van-cell-group>
+              <van-cell is-link center>
+                <view class="model-content" slot="title">
+                  <view class="model-title">新建空白模板</view>
+                  <view class="model-num">模板编号：54941594598545</view>
+                  <view class="model-time">模板时间：2022-06-08 19:56</view>
+                  <view class="model-num">模板版本：v2</view>
+                </view>
+              </van-cell>
+            </van-cell-group>
+            <view slot="right" class="btns">
+              <van-button class="edit" square color="#ccc">编辑</van-button>
+              <van-button class="del" square color="#E54D42">删除</van-button>
+            </view>
+          </van-swipe-cell>
+        </view>
+        <view class="content-item">
+          <van-swipe-cell right-width="{{ 120 }}">
+            <van-cell-group>
+              <van-cell is-link center>
+                <view class="model-content" slot="title">
+                  <view class="model-title">新建空白模板</view>
+                  <view class="model-num">模板编号：54941594598545</view>
+                  <view class="model-time">模板时间：2022-06-08 19:56</view>
+                  <view class="model-num">模板版本：v2</view>
+                </view>
+              </van-cell>
+            </van-cell-group>
+            <view slot="right" class="btns">
+              <van-button class="edit" square color="#ccc">编辑</van-button>
+              <van-button class="del" square color="#E54D42">删除</van-button>
+            </view>
+          </van-swipe-cell>
+        </view>
+        <view class="no-have">~没有了</view>
+      </scroll-view>
+    </view>
+  </view>
+  <view class="model-btns" wx:if="{{active==0}}">
+    <van-button plain color="#E54D42">朴素按钮</van-button>
+    <van-button color="#E54D42">新建空白合同</van-button>
+  </view>
+</view>
