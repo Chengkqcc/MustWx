@@ -1,27 +1,25 @@
-// pakB/pages/usersetting/usersetting.js
+// pakB/pages/newsdetail/newsdetail.js
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-      login:false,//是否登录，true 登录 false 未登录
-      user_set_data:[
-        {id:0,title:'账户充值',page:''},
-        {id:1,title:'企业LOGO设置',page:''},
-        {id:2,title:'资料设置',page:''},
-        {id:3,title:'邮箱设置',page:''},
-        {id:4,title:'手机号设置',page:''},
-        {id:5,title:'意见反馈',page:'/pakB/pages/yijianfankui/yijianfankui'},
-        {id:6,title:'关于我们',page:'/pakB/pages/guanyuwomen/guanyuwomen'},
-      ]
+      news:null
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
-    onLoad: function (options) {
-
+    onLoad: function (options) {      
+      let eventChannel = this.getOpenerEventChannel()
+      eventChannel.on('new-detail',data=>{
+        console.log(data.data);
+        this.setData({news:data.data})
+        wx.setNavigationBarTitle({
+          title: data.data.text,
+        })
+      })
     },
 
     /**

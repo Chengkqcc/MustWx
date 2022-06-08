@@ -37,6 +37,20 @@
                     "name": "",
                     "pathName": "pakB/pages/yijianfankui/yijianfankui",
                     "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pakB/pages/guanyuwomen/guanyuwomen",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pakB/pages/xinwenzixun/xinwenzixun",
+                    "query": "",
                     "scene": null,
                     "launchMode": "default"
                 }
