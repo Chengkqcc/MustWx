@@ -1,11 +1,20 @@
-// pages/mine/mine.js
+// pakB/pages/usersetting/usersetting.js
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-      
+      login:false,//是否登录，true 登录 false 未登录
+      user_set_data:[
+        {title:'账户充值',page:''},
+        {title:'企业LOGO设置',page:''},
+        {title:'资料设置',page:''},
+        {title:'邮箱设置',page:''},
+        {title:'手机号设置',page:''},
+        {title:'意见反馈',page:'pages/yijianfankui/yijianfankui'},
+        {title:'关于我们',page:''},
+      ]
     },
 
     /**
