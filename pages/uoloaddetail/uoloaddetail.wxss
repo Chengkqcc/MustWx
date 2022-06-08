@@ -1,0 +1,16 @@
+page {
+  box-sizing: border-box;
+  padding-top: 80rpx;
+  background: #f1f1f1;
+}
+.cell_item {
+  background: #fff;
+  margin-bottom: 90rpx;
+}
+.cell_item .pailie {
+  display: flex;
+}
+.cell_item .box1 .van-cell {
+  background: #eee;
+  box-sizing: border-box;
+}

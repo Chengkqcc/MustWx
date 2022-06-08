@@ -27,15 +27,15 @@
         "uploadWithSourceMap": true,
         "compileHotReLoad": true,
         "lazyloadPlaceholderEnable": false,
-        "useMultiFrameRuntime": false,
-        "useApiHook": false,
-        "useApiHostProcess": false,
+        "useMultiFrameRuntime": true,
+        "useApiHook": true,
+        "useApiHostProcess": true,
         "babelSetting": {
             "ignore": [],
             "disablePlugins": [],
             "outputPath": ""
         },
-        "useIsolateContext": false,
+        "useIsolateContext": true,
         "userConfirmedBundleSwitch": false,
         "packNpmManually": true,
         "packNpmRelationList": [
@@ -54,7 +54,7 @@
     "compileType": "miniprogram",
     "libVersion": "2.19.4",
     "appid": "wxb477562d764bed06",
-    "projectname": "must",
+    "projectname": "wxmust",
     "debugOptions": {
         "hidedInDevtools": []
     },

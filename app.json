@@ -4,7 +4,8 @@
         "pages/logs/logs",
         "pages/contract/constract",
         "pages/mine/mine",
-        "pages/uploading/uploading"
+        "pages/uploading/uploading",
+        "pages/uoloaddetail/uoloaddetail"
     ],
     "window": {
         "backgroundTextStyle": "light",
@@ -13,6 +14,14 @@
         "navigationBarTextStyle": "black"
     },
     "sitemapLocation": "sitemap.json",
+    "usingComponents": {
+        "van-popup": "@vant/weapp/popup/index",
+        "van-cell": "@vant/weapp/cell/index",
+        "van-cell-group": "@vant/weapp/cell-group/index",
+        "van-field": "@vant/weapp/field/index",
+        "van-action-sheet": "@vant/weapp/action-sheet/index",
+        "van-icon": "@vant/weapp/icon/index"
+    },
     "tabBar": {
         "selectedColor": "#e53f3c",
         "list": [

@@ -1,4 +1,5 @@
 {
+    "setting": {},
     "condition": {
         "plugin": {
             "list": []
@@ -13,7 +14,7 @@
             "list": [
                 {
                     "name": "",
-                    "pathName": "pages/index/index",
+                    "pathName": "pages/uoloaddetail/uoloaddetail",
                     "query": "",
                     "scene": null,
                     "launchMode": "default"
