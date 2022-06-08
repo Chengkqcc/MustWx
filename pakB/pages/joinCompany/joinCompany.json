@@ -1,0 +1,6 @@
+{
+   "navigationBarTitleText": "申请加入企业",
+   "usingComponents": {
+     "companies":"/components/companies/companies"
+   }
+}

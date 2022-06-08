@@ -1,0 +1,33 @@
+.companies-container .title-wrap {
+  display: flex;
+  justify-content: space-between;
+  padding: 20rpx 30rpx;
+  font-size: 28rpx;
+  color: #aaa;
+}
+.companies-container .title-wrap .tip {
+  font-size: 36rpx;
+}
+.companies-container .search-content {
+  position: absolute;
+  width: 100vw;
+  height: 48vh;
+  top: 168rpx;
+  left: 0;
+  z-index: 99;
+}
+.companies-container .search-content van-cell-group {
+  height: 40vh;
+  width: 100vw;
+  overflow: scroll;
+  position: absolute;
+}
+.companies-container .search-content .closed {
+  width: 100vw;
+  position: absolute;
+  top: 40vh;
+  line-height: 8vh;
+  text-align: center;
+  background: #FAFAFA;
+  color: #D55849;
+}
