@@ -1,0 +1,21 @@
+.btm {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20rpx 30rpx;
+  padding-bottom: 28rpx;
+  display: flex;
+  background: #F7F7F7;
+  justify-content: space-between;
+}
+.btm .join {
+  width: 138px;
+  height: 40px;
+  margin-right: 40rpx;
+}
+.btm .add {
+  flex: 1;
+  height: 40px;
+  width: 187px;
+}
