@@ -4,16 +4,12 @@
       <van-icon name="warning-o" custom-class="tip" bindtap="tip" />
    </view>
    <van-field value="{{ company }}" label="企业名称" placeholder="请输入企业名称" input-align="right" placeholder-style="color:#808080;" bind:change="changeValue" />
-   <view class="search-content" wx:if="{{companies.length>0}}">
+   <view class="search-content {{closed?'search-closed':''}}" wx:if="{{companies.length>0}}">
       <van-cell-group custom-class="cell-group">
          <block wx:for="{{companies}}" wx:key="goods_id">
-            <van-cell title="{{item.goods_name}}" is-link custom-class="item" />
+            <van-cell title="{{item.goods_name}}" is-link custom-class="item" link-type="navigateTo" url="/pakB/pages/Auth/Auth" />
          </block>
       </van-cell-group>
       <view class="closed" bindtap="closed">关闭</view>
    </view>
-   <!-- <view class="btn">
-      <van-button color="#e54d42" custom-class="joinBtn" bindtap="joinBtn">申请加入</van-button>
-   </view>
-   <van-toast id="van-toast" /> -->
 </view>

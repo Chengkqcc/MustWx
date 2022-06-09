@@ -1,5 +1,4 @@
 import Toast from '../../../miniprogram_npm/@vant/weapp/toast/toast';
-import request from '../../../utils/myrequest'
 
 Page({
 
@@ -7,27 +6,7 @@ Page({
     * 页面的初始数据
     */
    data: {
-      company: '', // 输入的公司名
-      companies:null, // 联想的公司数据
-      closed:false, // 关闭联想
-   },
-   //   点击提示
-   tip() {
-      wx.showModal({
-         title: '提示',
-         content: '请填写您要加入的企业',
-         showCancel: false
-      })
-   },
-
-   // 输入内容时触发
-   async changeValue(event) {
-      let {data} = await request({url:'/goods/qsearch?query='+event.detail})
-      console.log(data)
-      this.setData({
-         company: event.detail,
-         companies: data.message
-      })
+      tip:'请填写您要加入的企业', // 提示信息
    },
 
    // 申请加入
@@ -37,13 +16,6 @@ Page({
          Toast('企业名称不正确');
          return
       }
-   },
-
-   // 关闭联想
-   closed(){
-      this.setData({
-         closed:true
-      })
    },
 
    /**

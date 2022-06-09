@@ -1,0 +1,5 @@
+<view class="auth">
+   <view class="notice">
+      <van-notice-bar mode="closeable" left-icon="volume-o" text="完成企业认证，即可免费试用8份电子合同" />
+   </view>
+</view>

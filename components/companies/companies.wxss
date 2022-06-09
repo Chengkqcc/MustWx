@@ -31,3 +31,6 @@
   background: #FAFAFA;
   color: #D55849;
 }
+.companies-container .search-closed {
+  display: none;
+}

@@ -1,0 +1,8 @@
+.auth {
+  background: #F1F1F1;
+  width: 100vw;
+  height: 100vh;
+}
+.auth .notice {
+  padding: 30rpx 0 20rpx;
+}

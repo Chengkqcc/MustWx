@@ -1,1 +1,15 @@
 /* pakB/pages/addCompany/addCompany.wxss */
+.addCompany {
+   background: #F1F1F1;
+   height: 100vh;
+   width: 100vw;
+   position: relative;
+ }
+ .addCompany .btn {
+   margin-top: 20rpx;
+   padding: 20rpx 30rpx;
+ }
+ .addCompany .btn .addBtn {
+   width: 100%;
+ }
+ 

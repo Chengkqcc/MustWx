@@ -22,6 +22,20 @@
           "query": "",
           "launchMode": "default",
           "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pakB/pages/addCompany/addCompany",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pakB/pages/Auth/Auth",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
         }
       ]
     }
