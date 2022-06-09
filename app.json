@@ -47,7 +47,9 @@
       "root": "pakA",
       "pages": [
         "pages/home/home",
-        "pages/Mymodel/mymodel"
+        "pages/Mymodel/mymodel",
+        "pages/systemModel/systemModel",
+        "pages/otherModel/otherModel"
       ],
       "name": "aa",
       "independent": false

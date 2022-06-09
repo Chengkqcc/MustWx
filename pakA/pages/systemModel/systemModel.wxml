@@ -1,0 +1,66 @@
+<!--pakA/pages/systemModel/systemModel.wxml-->
+<view class="system">
+  <!-- 导航栏 -->
+  <van-nav-bar title="系统模板" left-arrow bind:click-left="onClickLeft" border="{{false}}" />
+  <scroll-view class="content" scroll-y>
+    <van-search value="{{value}}" background="#e1e1e1" placeholder="输入关键词进行搜索" />
+    <view class="grid">
+      <view class="grid-item">
+        <view class="item-img">
+          <image src="https://img.yzcdn.cn/vant/apple-1.jpg"></image>
+        </view>
+        <view class="title">
+          商品合同1
+        </view>
+      </view>
+      <view class="grid-item">
+        <view class="item-img">
+          <image src="https://img.yzcdn.cn/vant/apple-1.jpg"></image>
+        </view>
+        <view class="title">
+          商品合同1
+        </view>
+      </view>
+      <view class="grid-item">
+        <view class="item-img">
+          <image src="https://img.yzcdn.cn/vant/apple-1.jpg"></image>
+        </view>
+        <view class="title">
+          商品合同1
+        </view>
+      </view>
+      <view class="grid-item">
+        <view class="item-img">
+          <image src="https://img.yzcdn.cn/vant/apple-1.jpg"></image>
+        </view>
+        <view class="title">
+          商品合同1
+        </view>
+      </view>
+      <view class="grid-item">
+        <view class="item-img">
+          <image src="https://img.yzcdn.cn/vant/apple-1.jpg"></image>
+        </view>
+        <view class="title">
+          商品合同1
+        </view>
+      </view>
+      <view class="grid-item">
+        <view class="item-img">
+          <image src="https://img.yzcdn.cn/vant/apple-1.jpg"></image>
+        </view>
+        <view class="title">
+          商品合同1
+        </view>
+      </view>
+      <view class="grid-item">
+        <view class="item-img">
+          <image src="https://img.yzcdn.cn/vant/apple-1.jpg"></image>
+        </view>
+        <view class="title">
+          商品合同1
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>

@@ -6,12 +6,12 @@ Page({
    */
   data: {
     active: 0,
+    show:false,
     tabs: [{
         title: "我的模板",
       },
       {
         title: "草稿箱",
-        
       },
       {
         title: "待审模板",
@@ -23,38 +23,53 @@ Page({
         title: "其他模板",
       }
     ],
-    tab:"我的模板"
+    tab: "我的模板"
   },
   onClickLeft() {
     wx.showToast({
       title: '返回主页',
       icon: 'none'
     });
+
   },
-  changeTab(e){
-    console.log(e.currentTarget.dataset.index)
-    let tabs= this.data.tabs
+  changeTab(e) {
+    let tabs = this.data.tabs
     let index = e.currentTarget.dataset.index;
     this.setData({
-      active:e.currentTarget.dataset.index,
-      tab:tabs[index].title
+      active: e.currentTarget.dataset.index,
+      tab: tabs[index].title
     })
-  },
-  onOpen(){
+    if (index == 3) {
+      wx.navigateTo({
+        url: '/pakA/pages/systemModel/systemModel'
+      })
+    }
+    if (index == 4) {
+      wx.navigateTo({
+        url: '/pakA/pages/otherModel/otherModel'
+      })
+    }
 
+  },
+  delfn() {
+    console.log("删除")
+    this.setData({ show: true });
+  },
+  onClose() {
+    this.setData({ show: false });
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    
+
   },
 
   /**
