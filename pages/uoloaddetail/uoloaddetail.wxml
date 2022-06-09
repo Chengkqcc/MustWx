@@ -1,0 +1,50 @@
+<!--pages/uoloaddetail/uoloaddetail.wxml-->
+<view class="cell_item">
+    <van-cell-group>
+        <van-cell 
+        title="基本信息"  
+        title-style="font-weight:bold" 
+        />
+        <van-field
+            value="{{ contractName }}"
+            label="合同名称"
+            placeholder="请输入合同名称"
+            input-align="right"
+        />
+    </van-cell-group>
+</view>
+
+<view class="cell_item">
+    <van-cell-group>
+        <van-cell 
+            title-style="font-weight:bold"
+         >
+            <view slot="title" class="pailie" >
+                <view class="van-cell-text" >{{choosetype}}</view>
+                <van-icon name="arrow-down" bindtap="chooseP" />
+            </view>
+             <van-icon slot="right-icon" name="info-o" class="custom-icon" bindtap="alertExplain"/>
+         </van-cell>
+        <view>
+            
+        </view>
+          
+        <van-cell
+            class="box1" 
+            title="程克强"  
+            title-style="font-weight:bold" 
+            label="19880893706"
+        >
+            <van-icon slot="right-icon" name="delete-o" class="custom-icon" bindtap=""/>
+        </van-cell>
+    </van-cell-group>
+</view>
+
+<van-action-sheet
+  show="{{ show }}"
+  actions="{{ actions }}"
+  bind:close="onClose"
+  bind:select="onSelect"
+  cancel-text="取消"
+/>
+  

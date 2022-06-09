@@ -1,0 +1,32 @@
+<!--pakB/pages/guanyuwomen/guanyuwomen.wxml-->
+<!-- 登录 -->
+<!-- {{login}} -->
+<view wx:if="login" class="guanyuwomen">
+  <block wx:for="{{guanyuwomen_data}}" wx:key="{{index}}">
+    <view class="cell" wx:if="{{item.id==6||item.id==7||item.id==5}}">
+      <van-cell title="{{item.title}}" is-link value="{{item.text}}" url="{{item.page}}" border="{{false}}"/>
+    </view>    
+    <view class="cell" wx:else>
+      <van-cell title="{{item.title}}" value="{{item.text}}" is-link url="{{item.page}}" border="{{false}}"/>
+    </view> 
+  </block>
+</view>
+<!-- 未登录 -->
+<view wx:else class="guanyuwomen">
+  <block wx:for="{{guanyuwomen_data}}" wx:key="{{index}}">
+    <view class="cell" wx:if="{{item.id==0}}" >
+      <van-cell title="{{item.title}}" value="{{item.text}}" is-link url="{{item.page}}" border="{{false}}"/>
+    </view>
+    <view class="cell" wx:elif="{{item.id==5}}" >
+    <!-- 没箭头 -->
+      <van-cell title="{{item.title}}" value="{{item.text}}" url="{{item.page}}" border="{{false}}"/>
+    </view>
+    <view class="cell" wx:elif="{{item.id==6||item.id==7}}" >
+    <!-- 没箭头 -->
+      <van-cell title="{{item.title}}" value="{{item.text}}" url="{{'登录页面'}}" border="{{false}}"/>
+    </view>
+    <view class="cell" wx:else>
+      <van-cell title="{{item.title}}" value="{{item.text}}" is-link url="{{'登录页面'}}" border="{{false}}"/>
+    </view>
+  </block>
+</view>
