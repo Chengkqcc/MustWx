@@ -1,2 +1,123 @@
 <!--pages/uploading/uploading.wxml-->
-<text>上传页面</text>
+<view class="content">
+
+<view class="banner"> 
+      <swiper 
+      circular 	
+      indicator-dots="true"
+      style="height:{{swiperHeight}}"
+      indicator-active-color="#fff"
+      >
+          <block wx:for="{{banners}}" wx:key="*this">
+             <swiper-item class=""  id="swiper-item" >
+                  <image  src="{{item}}" mode="widthFix" bindload = "handleSwiperImageLoaded" />
+             </swiper-item>
+          </block> 
+      </swiper>
+</view>
+<view class="main">
+    <view class="choose_item marginb" bindtap="chooseWxFile">
+        <view class="item_left">
+            <view class="item_l">
+                <image class="" src="https://h5.1dq.com/static/upload_ico/file.png" />
+            </view>
+            <view class="item_m">
+                <text class="tit">选择微信聊天文件</text>
+                <text class="tips">从微信聊天中选取文件上传合同</text>
+            </view>
+        </view>
+          
+        
+        <view class="item_r">
+            <text>＞</text>
+        </view>
+              
+          
+    </view>
+    <view class="choose_item marginb">
+        <view class="item_left">
+            <view class="item_l">
+                <image class="" src="https://h5.1dq.com/static/upload_ico/file.png" />
+            </view>
+            <view class="item_m">
+                <text class="tit">选择手机文件</text>
+                <text class="tips">使用手机文件签署</text>
+            </view>
+        </view>
+          
+        
+        <view class="item_r">
+            <text>＞</text>
+        </view>
+              
+          
+    </view>
+    <view class="choose_item">
+        <view class="item_left">
+            <view class="item_l yellow">
+                <image class="" src="https://h5.1dq.com/static/upload_ico/Word.png" />
+            </view>
+            <view class="item_m">
+                <text class="tit">选择手机文件</text>
+                <text class="tips">使用手机文件签署</text>
+            </view>
+        </view>
+          
+        
+        <view class="item_r">
+            <text>＞</text>
+        </view>
+              
+          
+    </view>
+    <view class="choose_item marginb">
+        <view class="item_left">
+            <view class="item_l green">
+                <image class="" src="https://h5.1dq.com/static/upload_ico/tpl.png" />
+            </view>
+            <view class="item_m">
+                <text class="tit">选择手机文件</text>
+                <text class="tips">使用手机文件签署</text>
+            </view>
+        </view>
+          
+        
+        <view class="item_r">
+            <text>＞</text>
+        </view>
+              
+          
+    </view>
+    <view class="choose_item">
+        <view class="item_left">
+            <view class="item_l red">
+                <image class="" src="https://h5.1dq.com/static/upload_ico/computer.png" />
+            </view>
+            <view class="item_m">
+                <text class="tit">选择手机文件</text>
+                <text class="tips">使用手机文件签署</text>
+            </view>
+        </view>
+          
+        
+        <view class="item_r">
+            <text>＞</text>
+        </view>
+              
+          
+    </view>
+</view>
+
+<van-popup
+  show="{{ show }}"
+  closeable
+  position="bottom"
+  custom-style="height: 20%"
+  bind:close="onClose"
+>
+    <view class="hid_top">
+        <text>选择合同发起方</text>
+    </view>
+    
+</van-popup>
+</view>
