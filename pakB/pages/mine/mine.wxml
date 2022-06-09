@@ -4,17 +4,20 @@
 <view class="mine" wx:if="{{login}}">
     <view class="user">
       <!-- 头像 -->
-      <view class="img">
-        <image class="" src="https://oss2.1dq.com/app/img/gr.png"></image>
+      <view class="yonghu">
+        <view class="img">
+          <image class="" src="https://oss2.1dq.com/app/img/gr.png"></image>
+        </view>
+        <view class="text">
+          <view class="h1">已登录</view>
+          <view class="p">****</view>
+        </view>
       </view>
-      <view class="text">
-        <view class="h1">已登录</view>
-        <view class="p">****</view>
-      </view>
+      <view class="qiehuan" bindtap="bottom_qiehuan">切换</view>
     </view>
     <view class="content" >
       <!-- 合同 -->
-      <view class="cont">
+      <view class="cont" bindtap="hetong_fn">
         <image class="" src="https://oss2.1dq.com/app/img/money.png"></image>
       </view>
       <!-- 功能 -->
@@ -38,45 +41,86 @@
           <van-grid-item icon="photo-o" text="{{item.text}}" wx:for="{{ user_set_data }}" url="{{item.page}}" />
         </van-grid>
       </view>
+      <!-- 蓝色浮窗 -->        
+      <view class="fixed" wx:if="{{rzshow}}">
+        <view class="title">
+          <view class="text">
+            为保障您签署合同的有效性，您需要完成个人实名认证才能签署合同，认证完成后免费赠送您3份电子合同，
+          </view>
+          <view class="renzheng" bindtap="renzheng_fn">
+            点击开始认证>>
+          </view>
+        </view>
+        <van-icon name="cross" bind:click="close_renzheng" />
+      </view>
+    </view>
+    <!-- 底部切换 -->
+    <view class="qiehuan">
+      <van-popup show="{{ show }}" bind:close="onClose" position="bottom" custom-style="height: 40%;">
+        <view class="title">
+          <view class="text">切换企业空间</view>
+          <van-icon name="cross" bind:click="close_qiehuan" />
+        </view>
+        <!-- 切换用户 -->
+        <view class="item_user" bindtap="qiehuan_fn">
+          <view class="user_item">
+            <view class="img">
+              <image class="" src="https://oss2.1dq.com/app/img/gr.png"></image>
+            </view>
+            <view class="yonghu">
+              <view class="name">
+                <view class="phone">156****3372</view>
+                <view class="state">当前</view>
+              </view>
+              <view class="rzstate">认证状态: 未认证</view>
+            </view>
+          </view>
+          <van-icon name="arrow" />
+        </view>
+      </van-popup>
     </view>
 </view>
+
+
 <!-- 未登录 -->
 <view class="mine" wx:else>
-    <view class="user" bindtap="loginfn">
-      <!-- 头像 -->
+  <view class="user" bindtap="loginfn">
+    <!-- 头像 -->
+    <view class="yonghu">
       <view class="img">
         <image class="" src="https://oss2.1dq.com/app/img/gr.png"></image>
       </view>
       <view class="text">
-        <view class="h1">请先登录或注册</view>
+        <view class="h1">请登录或注册</view>
         <view class="p">****</view>
       </view>
     </view>
-    <view class="content" >
-      <!-- 合同 -->
-      <view class="cont" bindtap="loginfn">
-        <image class="" src="https://oss2.1dq.com/app/img/money.png"></image>
-      </view>
-      <!-- 功能 -->
-      <view class="function common">
-        <view class="title">常用功能</view>
-        <van-grid column-num="4" border="{{false}}">
-          <van-grid-item icon="photo-o" text="{{item.text}}" wx:for="{{ function_data }}" url="{{'登录页面'}}"  />
-        </van-grid>
-      </view>
-      <!-- 管理 -->
-      <view class="manage common">
-        <view class="title">模板管理</view>
-        <van-grid column-num="4" border="{{false}}">
-          <van-grid-item icon="photo-o" text="{{item.text}}" wx:for="{{ manage_data }}" url="{{'登录页面'}}"  />
-        </van-grid>
-      </view>
-      <!-- 设置 -->
-      <view class="user_set common">
-        <view class="title">账户设置</view>
-        <van-grid column-num="4" border="{{false}}">
-          <van-grid-item icon="photo-o" text="{{item.text}}" wx:for="{{ user_set_data }}" url="{{item.id==1||item.id==2||item.id==3? '登录页面' :item.page}}" />
-        </van-grid>
-      </view>
+  </view>
+  <view class="content" >
+    <!-- 合同 -->
+    <view class="cont" bindtap="loginfn">
+      <image class="" src="https://oss2.1dq.com/app/img/money.png"></image>
     </view>
+    <!-- 功能 -->
+    <view class="function common">
+      <view class="title">常用功能</view>
+      <van-grid column-num="4" border="{{false}}">
+        <van-grid-item icon="photo-o" text="{{item.text}}" wx:for="{{ function_nologin_data }}" url="{{'登录页面'}}"  />
+      </van-grid>
+    </view>
+    <!-- 管理 -->
+    <view class="manage common">
+      <view class="title">模板管理</view>
+      <van-grid column-num="4" border="{{false}}">
+        <van-grid-item icon="photo-o" text="{{item.text}}" wx:for="{{ manage_data }}" url="{{'登录页面'}}"  />
+      </van-grid>
+    </view>
+    <!-- 设置 -->
+    <view class="user_set common">
+      <view class="title">账户设置</view>
+      <van-grid column-num="4" border="{{false}}">
+        <van-grid-item icon="photo-o" text="{{item.text}}" wx:for="{{ user_set_data }}" url="{{item.id==1||item.id==2||item.id==3? '登录页面' :item.page}}" />
+      </van-grid>
+    </view>
+  </view>
 </view>

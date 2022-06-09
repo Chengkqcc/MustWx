@@ -69,7 +69,9 @@
                 "pages/yijianfankui/yijianfankui",
                 "pages/guanyuwomen/guanyuwomen",
                 "pages/xinwenzixun/xinwenzixun",
-                "pages/newsdetail/newsdetail"
+                "pages/newsdetail/newsdetail",
+                "pages/dianzihetong/dianzihetong",
+                "pages/order/order"
             ],
             "name": "bb",
             "independent": false

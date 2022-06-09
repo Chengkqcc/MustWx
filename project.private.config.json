@@ -51,6 +51,20 @@
                     "name": "",
                     "pathName": "pakB/pages/xinwenzixun/xinwenzixun",
                     "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pakB/pages/dianzihetong/dianzihetong",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pakB/pages/order/order",
+                    "query": "%7B%22title%22%3A%22%E4%B8%AA%E4%BA%BA%E4%BD%93%E9%AA%8C%E5%A5%97%E9%A4%90%22%2C%22wj_num%22%3A%2210%22%2C%22time%22%3A%221%22%2C%22state%22%3A%22%22%2C%22price%22%3A%2248%22%7D=undefined",
                     "scene": null,
                     "launchMode": "default"
                 }
