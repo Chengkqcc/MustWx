@@ -1,0 +1,6 @@
+<view class = 'container'>
+  <header></header>>
+  <view class = 'hotProblem-con'>
+    <view>企业账户可以加盖企业公章，个人账户只能自己签字</view>
+  </view>
+</view>
