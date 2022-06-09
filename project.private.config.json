@@ -11,14 +11,22 @@
         },
         {
           "name": "",
+<<<<<<< HEAD
           "pathName": "pakB/pages/bm/bm",
+=======
+          "pathName": "pakA/pages/help/help",
+>>>>>>> yangpengyue
           "query": "",
           "launchMode": "default",
           "scene": null
         },
         {
           "name": "",
+<<<<<<< HEAD
           "pathName": "pakB/pages/joinCompany/joinCompany",
+=======
+          "pathName": "pakA/pages/offer/offer",
+>>>>>>> yangpengyue
           "query": "",
           "launchMode": "default",
           "scene": null
@@ -26,7 +34,11 @@
       ]
     }
   },
+<<<<<<< HEAD
   "projectname": "MustWx",
+=======
+  "projectname": "ypy1",
+>>>>>>> yangpengyue
   "setting": {
     "compileHotReLoad": true,
     "urlCheck": false

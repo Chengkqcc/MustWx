@@ -44,7 +44,10 @@
    "subpackages": [{
          "root": "pakA",
          "pages": [
-            "pages/home/home"
+          "pages/home/home",
+          "pages/help/help",
+          "pages/hotProblem/hotProblem",
+          "pages/offer/offer"
          ],
          "name": "aa",
          "independent": false
@@ -68,6 +71,13 @@
       "van-notice-bar": "@vant/weapp/notice-bar/index",
       "van-field": "@vant/weapp/field/index",
       "van-icon": "@vant/weapp/icon/index",
-      "van-toast": "@vant/weapp/toast/index"
+      "van-toast": "@vant/weapp/toast/index",
+    "van-cell-group": "@vant/weapp/cell-group/index",
+    "van-tabbar": "@vant/weapp/tabbar/index",
+    "van-tabbar-item": "@vant/weapp/tabbar-item/index",
+    "van-nav-bar": "@vant/weapp/nav-bar/index",
+    "van-dialog": "@vant/weapp/dialog/index",
+    "van-tab": "@vant/weapp/tab/index",
+    "van-tabs": "@vant/weapp/tabs/index"
    }
 }
