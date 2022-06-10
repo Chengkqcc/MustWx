@@ -2,7 +2,6 @@
 import myrequest from '../../../utils/myrequest.js'
 import Dialog from '../../../miniprogram_npm/@vant/weapp/dialog/dialog';
 Page({
-
   /**
    * 页面的初始数据
    */
@@ -20,6 +19,13 @@ Page({
 
 
   //footer事件
+  //跳转到问题反馈页面
+  toProblem(){
+    wx.navigateTo({
+      url: '/pakA/pages/problem/problem?title="问题反馈" ',
+    })
+  },
+
   //客服电话
   serverTel(){
     Dialog.alert({

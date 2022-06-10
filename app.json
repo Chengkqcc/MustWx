@@ -5,24 +5,9 @@
     "pages/contract/constract",
     "pages/mine/mine",
     "pages/uploading/uploading",
-    "pages/uoloaddetail/uoloaddetail"
+    "pages/uoloaddetail/uoloaddetail",
+    "pages/uploading/uploading"
   ],
-  "usingComponents": {
-    "van-button": "@vant/weapp/button/index",
-    "van-cell": "@vant/weapp/cell/index",
-    "van-empty": "@vant/weapp/empty/index",
-    "van-notice-bar": "@vant/weapp/notice-bar/index",
-    "van-field": "@vant/weapp/field/index",
-    "van-icon": "@vant/weapp/icon/index",
-    "van-toast": "@vant/weapp/toast/index",
-    "van-cell-group": "@vant/weapp/cell-group/index",
-    "van-tabbar": "@vant/weapp/tabbar/index",
-    "van-tabbar-item": "@vant/weapp/tabbar-item/index",
-    "van-nav-bar": "@vant/weapp/nav-bar/index",
-    "van-dialog": "@vant/weapp/dialog/index",
-    "van-tab": "@vant/weapp/tab/index",
-    "van-tabs": "@vant/weapp/tabs/index"
-  },
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
@@ -66,7 +51,8 @@
         "pages/home/home",
         "pages/help/help",
         "pages/hotProblem/hotProblem",
-        "pages/offer/offer"
+        "pages/offer/offer",
+        "pages/problem/problem"
       ],
       "name": "aa",
       "independent": false
@@ -90,5 +76,23 @@
       "name": "bb",
       "independent": false
     }
-  ]
+  ],
+  "usingComponents": {
+    "van-button": "@vant/weapp/button/index",
+    "van-cell": "@vant/weapp/cell/index",
+    "van-empty": "@vant/weapp/empty/index",
+    "van-notice-bar": "@vant/weapp/notice-bar/index",
+    "van-field": "@vant/weapp/field/index",
+    "van-icon": "@vant/weapp/icon/index",
+    "van-toast": "@vant/weapp/toast/index",
+    "van-cell-group": "@vant/weapp/cell-group/index",
+    "van-tabbar": "@vant/weapp/tabbar/index",
+    "van-tabbar-item": "@vant/weapp/tabbar-item/index",
+    "van-nav-bar": "@vant/weapp/nav-bar/index",
+    "van-dialog": "@vant/weapp/dialog/index",
+    "van-tab": "@vant/weapp/tab/index",
+    "van-tabs": "@vant/weapp/tabs/index",
+    "van-rate": "@vant/weapp/rate/index",
+    "van-uploader": "@vant/weapp/uploader/index"
+  }
 }

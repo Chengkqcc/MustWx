@@ -1,0 +1,47 @@
+.container {
+  width: 100vw;
+  height: 100%;
+  box-sizing: border-box;
+  background-color: #f1f1f1;
+}
+.container .problem-con {
+  margin-top: 120rpx;
+}
+.container .problem-con .van-cell {
+  background-color: #f1f1f1;
+  color: #8f8f94;
+  padding-left: 30rpx;
+}
+.container .problem-con .preview {
+  background-color: #fff;
+  padding: 20rpx 30rpx;
+}
+.container .problem-con .preview .van-cell {
+  padding-left: 0;
+  background-color: #fff;
+}
+.container .problem-con .email .van-cell {
+  background-color: #fff;
+}
+.container .problem-con .section {
+  width: 100%;
+  background-color: #fff;
+  height: 200rpx;
+  box-sizing: border-box;
+  padding: 20rpx 30rpx 0;
+}
+.container .problem-con .section textarea {
+  width: 100%;
+}
+.container .problem-con .feedback .feedback-title {
+  display: flex;
+}
+.container .problem-con .feedback .van-cell {
+  padding-left: 16rpx;
+}
+.container .problem-con .sure {
+  padding: 0 30rpx 130rpx;
+}
+.container .problem-con .sure .btn {
+  border-radius: 10rpx;
+}
