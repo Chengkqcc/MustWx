@@ -5,8 +5,7 @@
     "pages/contract/constract",
     "pages/mine/mine",
     "pages/uploading/uploading",
-    "pages/uoloaddetail/uoloaddetail",
-    "pages/uploading/uploading"
+    "pages/uoloaddetail/uoloaddetail"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -71,7 +70,9 @@
         "pages/order/order",
         "pages/bm/bm",
         "pages/addCompany/addCompany",
-        "pages/joinCompany/joinCompany"
+        "pages/joinCompany/joinCompany",
+        "pages/renzhengzhongxin/renzhengzhongxin",
+        "pages/shimingrenzheng/shimingrenzheng"
       ],
       "name": "bb",
       "independent": false

@@ -1,0 +1,54 @@
+page {
+  background-color: #f1f1f1;
+}
+.shimingrenzheng {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 50px;
+  box-sizing: border-box;
+}
+.shimingrenzheng .top {
+  width: 100%;
+}
+.shimingrenzheng .top .title {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  font-weight: 500;
+  font-size: 18px;
+}
+.shimingrenzheng .top .title .set_eid {
+  color: #aaa;
+}
+.shimingrenzheng .top .title .set_eid text {
+  color: #000;
+}
+.shimingrenzheng .top .van-cell {
+  padding: 15px 16px;
+  border-bottom: 1px solid #f1f1f1;
+}
+.shimingrenzheng .top .van-cell .van-field__label {
+  font-size: 16px;
+  font-weight: 100;
+  color: #000;
+}
+.shimingrenzheng .top .van-cell .van-field__control {
+  font-size: 16px;
+}
+.shimingrenzheng .top .van-checkbox {
+  padding: 15px;
+}
+.shimingrenzheng .top .van-checkbox .value text {
+  color: #258FFF;
+}
+.shimingrenzheng .bottom {
+  font-size: 14px;
+  font-weight: 200;
+}
+.shimingrenzheng .bottom text {
+  color: #0081FF;
+}

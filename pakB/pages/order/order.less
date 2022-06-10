@@ -84,6 +84,7 @@ page{
     position: fixed;
     background-color:#F7F7F7;
     bottom:0;
+    z-index: 90;
     .price{
       font-size:20px;
       font-weight:200;
@@ -95,6 +96,91 @@ page{
     button{
       font-size:20px;
       font-weight: 300;
+    }
+  }
+}
+.toB_dialog{
+  border-radius: 0;
+  background-color: #fff;
+  .van-dialog__header{
+    padding:0;
+    border-radius: 0;
+  }
+  .van-button--plain{
+    .van-button__text{
+      color:#000;
+    }
+  } 
+  .dialog-index--van-dialog__confirm{
+    .van-button__text{
+      padding:10px 20px;
+      background-color: #0081FF;
+      color:#fff;
+      border-radius: 5px;;
+    }
+  }
+  .title{
+    height:50px;
+    line-height:50px;
+    font-size:20px;
+    font-weight: 200;
+    position:relative;
+    .closebtn{
+      position:absolute;
+      right:10px;
+      top:15px;
+    }
+  }
+  .value{
+    background-color: #f1f1f1;
+    padding:20px;
+    .price_text{
+      font-size:18px;
+      font-weight: 200;
+      margin-bottom:20px;
+      text{
+        color:#E54D42;
+        font-weight: 400;
+      }
+    }
+    .kh{
+      font-size:14px;
+      font-weight: 200;
+      color:#000;
+      margin-bottom:10px;
+      text{
+        font-weight: 900;
+      }
+    }
+    .van-button{
+      border-radius: 5px;
+      color:#000;
+    }
+  }
+}
+.toB_popup{
+  background-color: #f1f1f1;
+  .title{
+    display:flex;
+    justify-content: space-between;
+    height:50px;
+    line-height: 50px;
+    border-bottom: #ccc 1px solid;
+    color:#aaa;
+    padding:0 5px 0 20px;
+    .confirm{
+      color:#0081FF;
+    }
+  }
+  .content{
+    padding:20px;
+    color:#aaa;
+    font-size:14px;
+    .text{
+      margin-bottom: 10px;
+      &:last-child{
+        margin-bottom:0;
+      }
     }
   }
 }

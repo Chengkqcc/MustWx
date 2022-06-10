@@ -9,7 +9,7 @@ Page({
         rzshow:true,//认证框是否显示
         show:false,//是否展示底部 切换框
         function_data:[
-          {id:0,text:'认证中心',page:'login',icon:''},
+          {id:0,text:'认证中心',page:'/pakB/pages/renzhengzhongxin/renzhengzhongxin',icon:''},
           {id:1,text:'产品购买',page:'login',icon:''},
           {id:2,text:'优惠券',page:'login',icon:''},
           {id:3,text:'费用中心',page:'login',icon:''},
