@@ -23,7 +23,7 @@
   </view>
   <view class = 'footer'>
     <view class="tab">
-        <view class = 'tab-item'>
+        <view class = 'tab-item'  bindtap="toProblem">
           <van-icon name="chat-o" />
           <text>问题反馈</text>
         </view>
