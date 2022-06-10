@@ -5,11 +5,3 @@
    width: 100vw;
    position: relative;
  }
- .addCompany .btn {
-   margin-top: 20rpx;
-   padding: 20rpx 30rpx;
- }
- .addCompany .btn .addBtn {
-   width: 100%;
- }
- 

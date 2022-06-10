@@ -1,33 +1,12 @@
-// pakB/pages/addCompany/addCompany.js
-import Toast from '../../../miniprogram_npm/@vant/weapp/toast/toast';
 Page({
 
    /**
     * 页面的初始数据
     */
    data: {
-      checked: true,
       tip: '完成企业认证后，系统自动赠送8份电子合同，您将自动成为该企业管理员并为您创建企业电子公章；', // 提示信息
-   },
-
-   onChange(event) {
-      // 需要手动对 checked 状态进行更新
-      this.setData({
-         checked: event.detail
-      });
-      if(!event.detail){
-         Toast('您关闭后，客服将不会主动联系您，第一次使用建议开启；');
-         return
-      }
-   },
-
-   // 下一步
-   addBtn() {
-      // console.log(this.data.companies.length)
-      if (!this.data.companies || this.data.companies.length <= 0) {
-         Toast('企业名称不正确');
-         return
-      }
+      hasSwitch:true,// 是否显示开关
+      btnText:'下一步',// 按钮文字
    },
 
 

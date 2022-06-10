@@ -1,10 +1,4 @@
 <view class="addCompany">
-   <companies tip="{{tip}}"></companies>
-   <van-cell title="是否允许客服联系我">
-      <van-switch checked="{{ checked }}" bind:change="onChange" active-color="#D45849"/>
-   </van-cell>
-   <view class="btn">
-      <van-button color="#D45849" custom-class="addBtn" bindtap="addBtn">下一步</van-button>
-   </view>
+   <companies tip="{{tip}}" hasSwitch="{{hasSwitch}}" btnText="{{btnText}}"></companies>
    <van-toast id="van-toast" />
 </view>

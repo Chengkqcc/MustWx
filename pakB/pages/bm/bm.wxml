@@ -1,6 +1,6 @@
 <view class="bm-container">
    <import src="/templates/bm_template/bm_template" />
-   <template wx:if="{{hasData}}" is="companies"></template>
+   <template wx:if="{{hasData}}" is="companies" data="{{ imageURL }}"></template>
    <template wx:else is="empty"></template>
    <view class="btm">
       <van-button color="#e54d42" plain custom-class="join" bindtap="joinBtn">申请加入企业</van-button>

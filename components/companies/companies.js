@@ -1,4 +1,5 @@
 import request from '../../utils/myrequest'
+import Toast from '../../miniprogram_npm/@vant/weapp/toast/toast';
 
 Component({
    /**
@@ -6,6 +7,8 @@ Component({
     */
    properties: {
       tip: String,
+      hasSwitch:Boolean,
+      btnText:String
    },
 
    /**
@@ -15,6 +18,7 @@ Component({
       company: '', // 输入的公司名
       companies: null, // 联想的公司数据
       closed: false, // 关闭联想
+      checked:true, // 开关开启
    },
 
    /**
@@ -32,9 +36,7 @@ Component({
 
       // 输入内容时触发
       async changeValue(event) {
-         let {
-            data
-         } = await request({
+         let { data } = await request({
             url: '/goods/qsearch?query=' + event.detail
          })
          console.log(data)
@@ -49,6 +51,33 @@ Component({
          this.setData({
             closed: true
          })
+      },
+
+      onChange(event) {
+         // 需要手动对 checked 状态进行更新
+         this.setData({
+            checked: event.detail
+         });
+         if (!event.detail) {
+            Toast('您关闭后，客服将不会主动联系您，第一次使用建议开启；');
+            return
+         }
+      },
+
+      // 点击当前项赋值给输入框
+      itemfn(event) {
+         console.log(event.target.dataset.company)
+         this.setData({
+            company: event.target.dataset.company
+         })
+      },
+      // 下一步
+      addBtn() {
+         // console.log(this.data.companies.length)
+         if (!this.data.company) {
+            Toast('企业名称不正确');
+            return
+         }
       },
    }
 })

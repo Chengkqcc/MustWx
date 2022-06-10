@@ -6,4 +6,18 @@
    </view>
 </template>
 <!-- 有数据 -->
-<template name="companies"></template>
+<template name="companies">
+   <view class="hasCompanies">
+      <van-cell-group>
+         <van-cell is-link>
+            <view class="left" slot="title">
+               <image class="image" src="/images/nav/my-off.png"></image>
+               <view class="title">
+                  <view class="text">886有限公司</view>
+                  <view class="desc">认证状态：未认证</view>
+               </view>
+            </view>
+         </van-cell>
+      </van-cell-group>
+   </view>
+</template>

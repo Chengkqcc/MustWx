@@ -7,9 +7,16 @@
    <view class="search-content {{closed?'search-closed':''}}" wx:if="{{companies.length>0}}">
       <van-cell-group custom-class="cell-group">
          <block wx:for="{{companies}}" wx:key="goods_id">
-            <van-cell title="{{item.goods_name}}" is-link custom-class="item" link-type="navigateTo" url="/pakB/pages/Auth/Auth" />
+            <van-cell title="{{item.goods_name}}" is-link custom-class="item" bindtap="itemfn" data-company="{{item.goods_name}}" />
          </block>
       </van-cell-group>
       <view class="closed" bindtap="closed">关闭</view>
    </view>
+   <van-cell title="是否允许客服联系我" wx:if="{{hasSwitch}}">
+      <van-switch checked="{{ checked }}" bind:change="onChange" active-color="#D45849" />
+   </van-cell>
+   <view class="btn">
+      <van-button color="#D45849" custom-class="addBtn" bindtap="addBtn">{{btnText}}</van-button>
+   </view>
+   <!-- <van-toast id="van-toast" /> -->
 </view>

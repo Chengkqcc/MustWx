@@ -1,7 +1,4 @@
 <view class="joinCompany">
-   <companies tip="{{tip}}"></companies>
-   <view class="btn">
-      <van-button color="#D45849" custom-class="joinBtn" bindtap="joinBtn">申请加入</van-button>
-   </view>
+   <companies tip="{{tip}}" hasSwitch="{{hasSwitch}}" btnText="{{btnText}}"></companies>
    <van-toast id="van-toast" />
 </view>

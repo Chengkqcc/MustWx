@@ -1,5 +1,3 @@
-import Toast from '../../../miniprogram_npm/@vant/weapp/toast/toast';
-
 Page({
 
    /**
@@ -7,15 +5,8 @@ Page({
     */
    data: {
       tip:'请填写您要加入的企业', // 提示信息
-   },
-
-   // 申请加入
-   joinBtn() {
-      // console.log(this.data.companies.length)
-      if (!this.data.companies || this.data.companies.length<=0 ) {
-         Toast('企业名称不正确');
-         return
-      }
+      hasSwitch:false,// 是否显示开关
+      btnText:'申请加入',// 按钮文字
    },
 
    /**

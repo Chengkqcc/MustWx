@@ -5,7 +5,8 @@ Page({
     * 页面的初始数据
     */
    data: {
-      hasData: false, // 是否有企业数据
+      hasData: true, // 是否有企业数据
+      imageURL:"/images/nav/my-off.png"
    },
 
    // 点击申请加入企业
