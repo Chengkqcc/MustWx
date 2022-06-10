@@ -26,7 +26,7 @@
   </view>
 </view>
 <!-- 底部切换 -->
-<view class="qiehuan">
+<view class="qiehuan" wx:if="{{!title == '个人套餐'}} ">
   <van-popup show="{{ show }}" bind:close="onClose" position="bottom" custom-style="height: 40%;">
     <view class="title">
       <view class="text">选择购买账户</view>

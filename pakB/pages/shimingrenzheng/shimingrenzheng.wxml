@@ -1,0 +1,34 @@
+<!--pakB/pages/shimingrenzheng/shimingrenzheng.wxml-->
+<view class="shimingrenzheng">
+  <view class="top">
+    <view class="title">
+      <view class="text">Eid身份认证</view>
+      <view class="set_eid" bindtap="set_eid_fn"><text>更改</text><van-icon name="arrow" /></view>
+    </view>
+    <view class="name" hover-class="none" hover-stop-propagation="false">
+       <van-field
+          model:value="{{ name }}"
+          label="真实姓名"
+          placeholder="请输入您的真实姓名"
+          border="{{ false }}"
+          bind:change="onnameChange"
+          input-align="right"
+        />
+    </view>
+    <view class="eid" hover-class="none" hover-stop-propagation="false">
+       <van-field
+          model:value="{{ eid }}"
+          label="身份证号"
+          placeholder="请输入您的身份证号"
+          border="{{ false }}"
+          bind:change="oneidChange"
+          input-align="right"
+        />
+    </view>
+    <van-checkbox value="{{ checked }}" shape="square" bind:change="onChange">
+      我已阅读并同意<text>《实名认证授权协议》<text>
+    </van-checkbox>
+    <van-button type="primary" block>块级元素</van-button>
+  </view>
+  <view class="bottom">实名认证遇到问题? 您可以进行<text bindtap="rgrz_fn">人工认证</text></view>
+</view>

@@ -23,6 +23,20 @@
                     "name": "",
                     "pathName": "pakB/pages/bm/bm",
                     "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pakB/pages/mine/mine",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pakB/pages/dianzihetong/dianzihetong",
+                    "query": "",
                     "scene": null,
                     "launchMode": "default"
                 }
