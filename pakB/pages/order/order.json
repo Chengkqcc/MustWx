@@ -1,9 +1,0 @@
-{
-  "navigationBarTitleText":"提交订单",
-  "usingComponents": {
-    "van-cell": "@vant/weapp/cell/index",
-    "van-button": "@vant/weapp/button/index",
-    "van-popup": "@vant/weapp/popup/index",
-    "van-dialog": "@vant/weapp/dialog/index"
-  }
-}

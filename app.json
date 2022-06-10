@@ -5,7 +5,7 @@
     "pages/contract/constract",
     "pages/mine/mine",
     "pages/uploading/uploading",
-    "pages/uoloaddetail/uoloaddetail",
+    "pages/uoloaddetail/uoloaddetail"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -60,14 +60,6 @@
       "root": "pakB",
       "pages": [
         "pages/home/home",
-        "pages/mine/mine",
-        "pages/usersetting/usersetting",
-        "pages/yijianfankui/yijianfankui",
-        "pages/guanyuwomen/guanyuwomen",
-        "pages/xinwenzixun/xinwenzixun",
-        "pages/newsdetail/newsdetail",
-        "pages/dianzihetong/dianzihetong",
-        "pages/order/order",
         "pages/bm/bm",
         "pages/addCompany/addCompany",
         "pages/joinCompany/joinCompany",
@@ -85,7 +77,7 @@
     "van-field": "@vant/weapp/field/index",
     "van-icon": "@vant/weapp/icon/index",
     "van-toast": "@vant/weapp/toast/index",
-    "van-switch": "@vant/weapp/switch/index"
+    "van-switch": "@vant/weapp/switch/index",
     "van-cell-group": "@vant/weapp/cell-group/index",
     "van-tabbar": "@vant/weapp/tabbar/index",
     "van-tabbar-item": "@vant/weapp/tabbar-item/index",
