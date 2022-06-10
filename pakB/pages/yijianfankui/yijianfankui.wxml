@@ -48,11 +48,11 @@
 </view>
 
 <van-action-sheet
+  class="action_sheet"
   show="{{ show }}"
   actions="{{ actions }}"
   bind:close="onClose"
   bind:select="onSelect"
   bind:cancel="onClose"
   cancel-text="取消"
-  round="{{false}}"
 />

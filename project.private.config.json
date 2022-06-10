@@ -1,24 +1,41 @@
 {
+    "setting": {},
   "condition": {
+    "plugin": {
+        "list": []
+    },
+    "game": {
+        "list": []
+    },
+    "gamePlugin": {
+        "list": []
+    },
     "miniprogram": {
       "list": [
         {
+            "name": "",
+            "pathName": "pakB/pages/order/order",
+            "query": "",
+            "launchMode": "default",
+            "scene": null
+        },
+        {
+            "name": "",
+            "pathName": "pakB/pages/bm/bm",
+            "query": "",
+            "scene": null,
+            "launchMode": "default"
+        },
+        {
           "name": "",
-          "pathName": "pages/index/index",
+          "pathName": "pakA/pages/help/help",
           "query": "",
           "launchMode": "default",
           "scene": null
         },
         {
           "name": "",
-          "pathName": "pakB/pages/bm/bm",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "",
-          "pathName": "pakB/pages/joinCompany/joinCompany",
+          "pathName": "pakA/pages/problem/problem",
           "query": "",
           "launchMode": "default",
           "scene": null
@@ -37,13 +54,10 @@
           "launchMode": "default",
           "scene": null
         }
-      ]
     }
   },
-  "projectname": "MustWx",
+  "description": "项目私有配置文件。此文件中的内容将覆盖 project.config.json 中的相同字段。项目的改动优先同步到此文件中。详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html",
   "setting": {
-    "compileHotReLoad": true,
     "urlCheck": false
-  },
-  "description": "项目私有配置文件。此文件中的内容将覆盖 project.config.json 中的相同字段。项目的改动优先同步到此文件中。详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html"
+  }
 }

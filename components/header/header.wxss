@@ -1,0 +1,17 @@
+.title {
+  width: 100vw;
+  height: 88rpx;
+  background-color: #fff;
+  position: fixed;
+  z-index: 9;
+  left: 0;
+  top: 0; 
+}
+.title .van-nav-bar__content .van-nav-bar__title {
+  font-weight: bolder;
+  max-width: 80%;
+  text-align: left;
+}
+.title .van-nav-bar__content .van-icon {
+  font-weight: bolder;
+}
