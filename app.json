@@ -49,7 +49,8 @@
         "pages/home/home",
         "pages/Mymodel/mymodel",
         "pages/systemModel/systemModel",
-        "pages/otherModel/otherModel"
+        "pages/otherModel/otherModel",
+        "pages/sendModel/sendModel"
       ],
       "name": "aa",
       "independent": false

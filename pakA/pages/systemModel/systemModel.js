@@ -5,18 +5,57 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    hdData: [{
+      title: "商品合同1",
+    }, {
+      title: "商品合同2",
+    }, {
+      title: "商品合同3",
+    }, {
+      title: "商品合同4",
+    }, {
+      title: "商品合同5",
+    }, {
+      title: "商品合同6",
+    }, {
+      title: "商品合同71",
+    }, {
+      title: "商品合同11",
+    }, {
+      title: "商品合同27",
+    }, {
+      title: "商品合同57",
+    }, {
+      title: "商品合同8",
+    }, {
+      title: "商品合同9",
+    }],
+    hdArr:[],
+    value: ""
   },
-  onClickLeft(){
+  onClickLeft() {
     wx.navigateBack({
       delta: 1,
+    })
+  },
+  filterHd(e) {
+    let value = e.detail
+    let arr = this.data.hdData
+    let newArr = arr.filter((item) => {
+      return item.title.indexOf(value) != -1
+    })
+    console.log(newArr)
+    this.setData({
+      hdArr: newArr
     })
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.setData({
+      hdArr:this.data.hdData
+    })
   },
 
   /**
