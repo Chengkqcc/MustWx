@@ -1,0 +1,66 @@
+<!--pakB/pages/dianziqianzhang/dianziqianzhang.wxml-->
+<view class="dianziqianzhang" hover-class="none" hover-stop-propagation="false">
+  <van-tabs bind:click="onClick">
+    <block wx:for="{{ht_data}}" wx:key="{{item.id}}">
+      <van-tab title="{{item.title}}">
+        <view class="write">
+          <view class="title">{{item.desc1}}</view>
+          <view class="text">{{item.desc2}}</view>
+        </view>
+        <block wx:for="{{item.type}}" wx:key="{{index}}">
+          <view class="item">
+            <view class="key">{{item[0]}}</view>
+            <view class="value">
+               <text class="">{{item[1]?item[1]:'-'}}</text>
+               <van-icon name="arrow-down"  wx:if="{{item[2]== 'icon2'}}"/>
+               <van-icon name="question-o" bindtap="popup_fn" wx:elif="{{item[2]=='icon1'}}"/>
+            </view>
+          </view>
+        </block>   
+        <!-- pay -->
+        <view class="pay_box">
+          <view class="price">
+            <text>{{item.price}}</text>元/年
+          </view>
+          <van-button type="danger" bindtap="pay_fn" data-item="{{item}}">立即开通</van-button>
+        </view>
+      </van-tab>
+    </block>
+  </van-tabs>
+</view>
+<!-- ? 弹窗 -->
+<van-popup show="{{ ts_show }}" bind:close="onClose" overlay-style="background-color:rgba(0,0,0,0)">
+  <view class="popup">
+    <view class="title">
+      <text class="text">提示</text>
+      <van-icon name="cross" bind:click="close_popup"/>
+    </view>
+    <view class="value">同一份合同只能自己签字或盖章，不能发送给别人签字或盖章，一般用于只需要单方面盖章的通知、公告等，如需多人签署(如甲方、乙方）请购买电子合同标准版。</view>
+    <van-button type="primary" size="normal" bindtap="close_popup">确定</van-button>
+  </view>
+</van-popup>
+<!-- 底部切换 -->
+<view class="qiehuan">
+  <van-popup show="{{ show }}" bind:close="close_qiehuan" position="bottom" custom-style="height: 40%;">
+    <view class="title">
+      <view class="text">选择购买账户</view>
+      <van-icon name="cross" bind:click="close_qiehuan" />
+    </view>
+    <!-- 切换用户 -->
+    <view class="item_user" bindtap="qiehuan_fn" wx:if="{{ title == '个人签章包年版'}}">
+      <view class="user_item">
+        <view class="img">
+          <image class="" src="https://oss2.1dq.com/app/img/gr.png"></image>
+        </view>
+        <view class="yonghu">
+          <view class="name">
+            <view class="phone">156****3372</view>
+            <view class="state">当前</view>
+          </view>
+          <view class="rzstate">认证状态: 未认证</view>
+        </view>
+      </view>
+      <van-icon name="arrow" />
+    </view>
+  </van-popup>
+</view>

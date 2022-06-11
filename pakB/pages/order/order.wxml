@@ -12,10 +12,10 @@
       <van-cell title="订单金额" value="{{obj.price}} 元" border="{{false}}" />
     </view>
     <view class="item">
-      <van-cell title="有效期" value="{{obj.time}} 年" border="{{false}}" />
+      <van-cell title="有效期"  wx:if="{{obj.time}}" value="{{obj.time}}" border="{{false}}" />
     </view>
     <view class="item">
-      <van-cell title="可签署次数" value="{{obj.wj_num}} 次" border="{{false}}" />
+      <van-cell title="可签署次数" wx:if="{{obj.wj_num}}" value="{{obj.wj_num}} 次" border="{{false}}" />
     </view>
   </view>
   <view class="pay_ways title">支付方式</view>

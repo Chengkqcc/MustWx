@@ -5,6 +5,6 @@
     "van-field": "@vant/weapp/field/index",
     "van-button": "@vant/weapp/button/index",
     "van-checkbox": "@vant/weapp/checkbox/index",
-    "van-checkbox-group": "@vant/weapp/checkbox-group/index"
+    "van-popup": "@vant/weapp/popup/index"
   }
 }

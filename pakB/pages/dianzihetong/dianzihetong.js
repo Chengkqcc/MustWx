@@ -12,20 +12,20 @@ Page({
           id:0,
           title:'个人套餐',
           children:[
-            {title:'个人体验套餐',wj_num:'10',time:'1',state:'',price:'48'},
-            {title:'个人A套餐',wj_num:'20',time:'1',state:'',price:'78'},
-            {title:'个人B套餐',wj_num:'50',time:'1',state:'热卖',price:'148'},
-            {title:'个人C套餐',wj_num:'100',time:'1',state:'',price:'198'},
-            {title:'个人D套餐',wj_num:'500',time:'2',state:'热卖',price:'898'},
-            {title:'个人E套餐',wj_num:'2000',time:'5',state:'',price:'2998'}
+            {title:'个人体验套餐',wj_num:'10',time:'1 年',state:'',price:'48'},
+            {title:'个人A套餐',wj_num:'20',time:'1 年',state:'',price:'78'},
+            {title:'个人B套餐',wj_num:'50',time:'1 年',state:'热卖',price:'148'},
+            {title:'个人C套餐',wj_num:'100',time:'1 年',state:'',price:'198'},
+            {title:'个人D套餐',wj_num:'500',time:'2 年',state:'热卖',price:'898'},
+            {title:'个人E套餐',wj_num:'2000',time:'5 年',state:'',price:'2998'}
           ]
         },
         {
           id:1,
           title:'企业套餐',
           children:[
-            {title:'个人体验套餐',wj_num:'10',time:'1',state:'',price:'48'},
-            {title:'个人A套餐',wj_num:'20',time:'1',state:'',price:'78'},
+            {title:'个人体验套餐',wj_num:'10',time:'1 年',state:'',price:'48'},
+            {title:'个人A套餐',wj_num:'20',time:'1 年',state:'',price:'78'},
           ]
         }
       ]

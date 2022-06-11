@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "电子签章包年版",
+  "usingComponents": {
+    "van-tab": "@vant/weapp/tab/index",
+    "van-tabs": "@vant/weapp/tabs/index",
+    "van-popup": "@vant/weapp/popup/index"
+  }
+}

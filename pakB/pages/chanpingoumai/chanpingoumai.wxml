@@ -1,0 +1,14 @@
+<!--pakB/pages/chanpingoumai/chanpingoumai.wxml-->
+<view class="chanpingoumai">
+  <block wx:for="{{buyType_data}}" wx:key="{{item.id}}">
+    <view class="item" bindtap="type_fn" data-item="{{item}}">
+      <view class="write">
+        <view class="title">{{item.title}}</view>
+        <view class="desc">{{item.desc}}</view>
+      </view>
+      <view class="img">
+        <image class="" src="{{item.img}}"></image>
+      </view>
+    </view>
+  </block>
+</view>
