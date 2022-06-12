@@ -54,11 +54,8 @@
     "compileType": "miniprogram",
     "libVersion": "2.19.4",
     "appid": "wxb477562d764bed06",
-<<<<<<< HEAD
     "projectname": "wxmust",
-=======
     "projectname": "wxproject",
->>>>>>> 117d221423413b7fc0d8dbea9d565dd92bc2cd9d
     "debugOptions": {
         "hidedInDevtools": []
     },

@@ -1,0 +1,34 @@
+<!--components/qiye/qiye.wxml-->
+<van-cell-group>
+    <view class="tips">
+        <van-cell title-style="color:#c6c6c6;"
+        custom-class="tit"
+         >
+            <view slot="title" class="pailie" >
+                <view class="van-cell-text" >{{titles}}方信息填写</view>
+                <!-- <van-icon name="arrow-down" bindtap="chooseP" data-index='0' /> -->
+            </view>
+             <van-icon slot="right-icon" name="info-o" class="custom-icon" bindtap="alertExplain" />
+        </van-cell>
+    </view>
+    <van-field
+            model:value="{{ handName }}"
+            label="企业名称"
+            placeholder="请输入企业名称"
+            input-align="right"
+    />
+    <van-field
+            model:value="{{ contractName }}"
+            label="经办人姓名"
+            placeholder="请输入姓名"
+            input-align="right"
+    />
+    <van-field
+            model:value="{{ contractNumber }}"
+            label="联系手机号"
+            placeholder="请输入手机号或邮箱"
+            input-align="right"
+    />
+</van-cell-group>
+<slot name="before2"></slot>
+<button class="bot_btn" bindtap="addQiye">确定</button>
