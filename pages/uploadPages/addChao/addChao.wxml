@@ -1,0 +1,4 @@
+<!--pages/uploadPages/addChao/addChao.wxml-->
+<import src="/templates/Chao/Chao"/>
+<template wx:if="{{_index==1}}" is="qian" data="{{persontype,titles,formData}}"></template>
+<template wx:elif="{{_index!=1}}" is="chao" data="{{persontype,titles,formData}}"></template>

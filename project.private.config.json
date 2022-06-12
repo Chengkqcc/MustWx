@@ -14,14 +14,14 @@
             "list": [
                 {
                     "name": "",
-                    "pathName": "pages/uoloaddetail/uoloaddetail",
+                    "pathName": "pages/uploading/uploading",
                     "query": "",
-                    "launchMode": "default",
-                    "scene": null
+                    "scene": null,
+                    "launchMode": "default"
                 },
                 {
                     "name": "",
-                    "pathName": "pakB/pages/mine/mine",
+                    "pathName": "pages/uoloaddetail/uoloaddetail",
                     "query": "",
                     "launchMode": "default",
                     "scene": null
@@ -37,8 +37,8 @@
                     "name": "",
                     "pathName": "pakB/pages/yijianfankui/yijianfankui",
                     "query": "",
-                    "scene": null,
-                    "launchMode": "default"
+                    "launchMode": "default",
+                    "scene": null
                 }
             ]
         }

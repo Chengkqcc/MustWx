@@ -5,7 +5,11 @@
         "pages/contract/constract",
         "pages/mine/mine",
         "pages/uploading/uploading",
-        "pages/uoloaddetail/uoloaddetail"
+        "pages/uoloaddetail/uoloaddetail",
+        "pages/uploadPages/addQian/addQian",
+        "templates/Qian/Qian",
+        "pages/uploadPages/addChao/addChao",
+        "templates/Chao/Chao"
     ],
     "window": {
         "backgroundTextStyle": "light",
@@ -16,11 +20,15 @@
     "sitemapLocation": "sitemap.json",
     "usingComponents": {
         "van-popup": "@vant/weapp/popup/index",
+        "van-button": "@vant/weapp/button/index",
         "van-cell": "@vant/weapp/cell/index",
         "van-cell-group": "@vant/weapp/cell-group/index",
         "van-field": "@vant/weapp/field/index",
         "van-action-sheet": "@vant/weapp/action-sheet/index",
-        "van-icon": "@vant/weapp/icon/index"
+        "van-icon": "@vant/weapp/icon/index",
+        "van-checkbox": "@vant/weapp/checkbox/index",
+        "van-checkbox-group": "@vant/weapp/checkbox-group/index",
+        "van-toast": "@vant/weapp/toast/index"
     },
     "tabBar": {
         "selectedColor": "#e53f3c",

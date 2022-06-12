@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "person":"../../../components/person/person",
+    "qiye":"/components/qiye/qiye"
+  },
+  "navigationBarTitleText":"添加签署人"
+}
