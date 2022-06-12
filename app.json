@@ -34,7 +34,9 @@
         "van-tab": "@vant/weapp/tab/index",
         "van-tabs": "@vant/weapp/tabs/index",
         "van-rate": "@vant/weapp/rate/index",
-        "van-uploader": "@vant/weapp/uploader/index"
+        "van-uploader": "@vant/weapp/uploader/index",
+        "van-action-sheet": "@vant/weapp/action-sheet/index",
+        "van-search": "@vant/weapp/search/index"
     },
     "tabBar": {
         "selectedColor": "#e53f3c",
@@ -69,11 +71,13 @@
         {
             "root": "pakA",
             "pages": [
-                "pages/home/home",
-                "pages/help/help",
-                "pages/hotProblem/hotProblem",
-                "pages/offer/offer",
-                "pages/problem/problem"
+              "pages/home/home",
+              "pages/help/help",
+              "pages/hotProblem/hotProblem",
+              "pages/offer/offer",
+              "pages/problem/problem",
+              "pages/serverLine/serverLine",
+              "pages/serverChat/serverChat"
             ],
             "name": "aa",
             "independent": false
@@ -99,7 +103,7 @@
                 "pages/dianziqianzhang/dianziqianzhang",
                 "pages/falvfuwu/falvfuwu",
                 "pages/youhuiquan/youhuiquan",
-                "pages/dingdanguanli/dingdanguanli"
+                "pages/dingdanguanli/dingdanguanli"        
             ],
             "name": "bb",
             "independent": false

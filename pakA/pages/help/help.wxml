@@ -1,33 +1,36 @@
 <view class = 'container'>
   <header></header>
-  <view class = 'advertisement'>
-    <image src='https://oss2.1dq.com/app/static/app-plus/images/qrcode-online.jpg' alt=""/>
-  </view>
-  <view class = 'help-list'>
-    <view class = 'help-item' wx:for="{{allData?helpList:m1.sliceData(helpList,5)}}" wx:key = "index">
-      <view class = 'help-item-title'>
-        <text>{{item.name}}</text>
-        <text class = 'text-more' wx:if = "{{item.data.length>5}}">更多></text>
-      </view>
-      <van-cell-group>
-        <van-cell 
-          title="{{item.name}}" 
-          wx:for="{{m1.sliceData(item.data,5)}}" 
-          wx:key="index" 
-          bindtap="toAnswer"
-          is-link
-          />
-      </van-cell-group>
+  <scroll-view class = 'help-con' scroll-y>
+    <view class = 'advertisement'>
+      <image src='https://oss2.1dq.com/app/static/app-plus/images/qrcode-online.jpg' alt=""/>
     </view>
-    <view class = 'lookMore' bindtap = 'lookMorefn' wx:if="{{!allData}}">查看更多</view>
-  </view>
+    <view class = 'help-list'>
+      <view class = 'help-item' wx:for="{{allData?helpList:m1.sliceData(helpList,5)}}" wx:key = "index">
+        <view class = 'help-item-title'>
+          <text>{{item.name}}</text>
+          <text class = 'text-more' wx:if = "{{item.data.length>5}}">更多></text>
+        </view>
+        <van-cell-group>
+            <van-cell 
+              wx:for="{{m1.sliceData(item.data,5)}}" 
+              wx:key="index" 
+              bindtap="toAnswer"
+              is-link
+            >
+              <navigator url="/pakA/pages/hotProblem/hotProblem?title={{item.name}}" slot = 'title'>{{item.name}}</navigator>
+            </van-cell>
+        </van-cell-group>
+      </view>
+      <view class = 'lookMore' bindtap = 'lookMorefn' wx:if="{{!allData}}">查看更多</view>
+    </view>
+  </scroll-view>
   <view class = 'footer'>
     <view class="tab">
         <view class = 'tab-item'  bindtap="toProblem">
           <van-icon name="chat-o" />
           <text>问题反馈</text>
         </view>
-        <view class = 'tab-item'>
+        <view class = 'tab-item'  bindtap="toServerChat">
           <van-icon name="friends-o" />
           <text>在线客服</text>
         </view>

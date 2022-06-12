@@ -10,9 +10,9 @@ Page({
     allData:false,//是否显示全部数据
   },
   //中间内容
-  toAnswer(){
+  toServerChat(){
     wx.navigateTo({
-      url: '/pakA/pages/hotProblem/hotProblem',
+      url: '/pakA/pages/serverChat/serverChat',
     })
   },
 
