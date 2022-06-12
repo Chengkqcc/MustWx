@@ -70,6 +70,9 @@
 <<<<<<< HEAD
                     "pathName": "pages/uploading/uploading",
 =======
+<<<<<<< HEAD
+                    "pathName": "pages/uploading/uploading",
+=======
                     "pathName": "pakB/pages/order/order",
                     "query": "",
                     "launchMode": "default",
@@ -86,13 +89,18 @@
                 {
                     "name": "",
                     "pathName": "pages/uoloaddetail/uoloaddetail",
+>>>>>>> 88164e9b15b1f82452e471948f913f16fef47a56
                     "query": "",
-                    "launchMode": "default",
-                    "scene": null
+                    "scene": null,
+                    "launchMode": "default"
                 },
                 {
                     "name": "",
+<<<<<<< HEAD
+                    "pathName": "pages/uoloaddetail/uoloaddetail",
+=======
                     "pathName": "pakB/pages/dianzihetong/dianzihetong",
+>>>>>>> 88164e9b15b1f82452e471948f913f16fef47a56
                     "query": "",
                     "launchMode": "default",
                     "scene": null
@@ -110,6 +118,8 @@
                     "query": "",
                     "launchMode": "default",
                     "scene": null
+<<<<<<< HEAD
+=======
                 },
                 {
                     "name": "",
@@ -124,6 +134,7 @@
                     "query": "",
                     "launchMode": "default",
                     "scene": null
+>>>>>>> 88164e9b15b1f82452e471948f913f16fef47a56
                 }
             ]
 >>>>>>> 88164e9b15b1f82452e471948f913f16fef47a56

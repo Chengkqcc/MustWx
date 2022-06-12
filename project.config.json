@@ -36,7 +36,6 @@
       "disablePlugins": [],
       "outputPath": ""
     },
-<<<<<<< HEAD
     "useIsolateContext": false,
     "userConfirmedBundleSwitch": false,
     "packNpmManually": true,
@@ -63,91 +62,4 @@
   "appid": "wxb477562d764bed06",
   "projectname": "wxmust",
   "condition": {}
-=======
-    "setting": {
-        "urlCheck": true,
-        "es6": true,
-        "enhance": true,
-        "postcss": true,
-        "preloadBackgroundData": false,
-        "minified": true,
-        "newFeature": false,
-        "coverView": true,
-        "nodeModules": false,
-        "autoAudits": false,
-        "showShadowRootInWxmlPanel": true,
-        "scopeDataCheck": false,
-        "uglifyFileName": false,
-        "checkInvalidKey": true,
-        "checkSiteMap": true,
-        "uploadWithSourceMap": true,
-        "compileHotReLoad": true,
-        "lazyloadPlaceholderEnable": false,
-        "useMultiFrameRuntime": false,
-        "useApiHook": false,
-        "useApiHostProcess": false,
-        "babelSetting": {
-            "ignore": [],
-            "disablePlugins": [],
-            "outputPath": ""
-        },
-        "useIsolateContext": false,
-        "userConfirmedBundleSwitch": false,
-        "packNpmManually": true,
-        "packNpmRelationList": [
-            {
-                "packageJsonPath": "./package.json",
-                "miniprogramNpmDistDir": "./"
-            }
-        ],
-        "minifyWXSS": true,
-        "disableUseStrict": false,
-        "minifyWXML": true,
-        "showES6CompileOption": false,
-        "useCompilerPlugins": false,
-        "ignoreUploadUnusedFiles": true
-    },
-    "editorSetting": {
-        "tabIndent": "insertSpaces",
-        "tabSize": 2
-    },
-    "compileType": "miniprogram",
-    "libVersion": "2.19.4",
-    "appid": "wxb477562d764bed06",
-    "projectname": "wxmust",
-<<<<<<< HEAD
-    "projectname": "wxproject",
-    "debugOptions": {
-        "hidedInDevtools": []
-    },
-    "scripts": {},
-    "staticServerOptions": {
-        "baseURL": "",
-        "servePath": ""
-    },
-    "isGameTourist": false,
-    "condition": {
-        "search": {
-            "list": []
-        },
-        "conversation": {
-            "list": []
-        },
-        "game": {
-            "list": []
-        },
-        "plugin": {
-            "list": []
-        },
-        "gamePlugin": {
-            "list": []
-        },
-        "miniprogram": {
-            "list": []
-        }
-    }
-=======
-    "condition": {}
->>>>>>> 2cccfb1b208f35038d989dedbf01d8458737920e
->>>>>>> 88164e9b15b1f82452e471948f913f16fef47a56
 }
