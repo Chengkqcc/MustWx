@@ -9,15 +9,17 @@
 <template name="companies">
    <view class="hasCompanies">
       <van-cell-group>
-         <van-cell is-link>
-            <view class="left" slot="title">
-               <image class="image" src="/images/nav/my-off.png"></image>
-               <view class="title">
-                  <view class="text">886有限公司</view>
-                  <view class="desc">认证状态：未认证</view>
+         <block wx:for="{{companiesList}}" wx:key="*this">
+            <van-cell is-link url="/pakB/pages/Auth/Auth?name={{item}}">
+               <view class="left" slot="title">
+                  <image class="image" src="/images/nav/my-off.png"></image>
+                  <view class="title">
+                     <view class="text">{{item}}</view>
+                     <view class="desc">认证状态：未认证</view>
+                  </view>
                </view>
-            </view>
-         </van-cell>
+            </van-cell>
+         </block>
       </van-cell-group>
    </view>
 </template>

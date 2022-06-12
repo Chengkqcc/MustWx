@@ -15,6 +15,34 @@
           "query": "",
           "launchMode": "default",
           "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pakB/pages/Auth/Auth",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pakB/pages/faren/faren",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pakB/pages/duigong/duigong",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pakB/pages/rengong/rengong",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
         }
       ]
     }

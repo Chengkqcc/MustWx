@@ -5,8 +5,9 @@ Page({
     */
    data: {
       tip: '完成企业认证后，系统自动赠送8份电子合同，您将自动成为该企业管理员并为您创建企业电子公章；', // 提示信息
-      hasSwitch:true,// 是否显示开关
-      btnText:'下一步',// 按钮文字
+      hasSwitch: true, // 是否显示开关
+      btnText: '下一步', // 按钮文字
+      renzheng:false,// 认证提示
    },
 
 
@@ -14,7 +15,13 @@ Page({
     * 生命周期函数--监听页面加载
     */
    onLoad(options) {
-
+      if (!this.data.renzheng) {
+         wx.showModal({
+            title: '认证提示',
+            content: '完成企业认证后，系统自动赠送您8份电子合同，您将成为该企业管理元并为您创建企业公章；',
+            showCancel: false,
+         })
+      }
    },
 
    /**

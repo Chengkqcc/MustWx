@@ -1,0 +1,21 @@
+<view class="faren">
+   <van-cell-group>
+      <view class="title">
+         <text class="req">*</text>
+         企业信息
+      </view>
+      <van-field value="{{ name }}" label="企业名称" placeholder="请输入企业名称" input-align="right" />
+      <van-field value="{{ code }}" label="信用代码" placeholder="请输入企业信用代码/注册号" input-align="right" />
+   </van-cell-group>
+   <van-cell-group>
+      <view class="title">
+         <text class="req">*</text>
+         法人信息
+      </view>
+      <van-field value="{{ username }}" label="法人名称" placeholder="请输入法人姓名" input-align="right" />
+      <van-field value="{{ userID }}" label="法人证件号" placeholder="请输入法人身份证号" input-align="right" />
+   </van-cell-group>
+   <view class="btn">
+      <van-button color="#D45849" custom-class="nextBtn" bindtap="nextBtn">下一步</van-button>
+   </view>
+</view>

@@ -1,0 +1,35 @@
+<view class="rengong">
+   <!-- 信息填隙 -->
+   <van-cell-group>
+      <view class="title">企业信息填写</view>
+      <van-field value="{{ name }}" label="企业名称" placeholder="请输入企业名称" input-align="right" />
+      <van-field value="{{ code }}" label="信用代码" placeholder="请输入企业信用代码/注册号" input-align="right" />
+      <van-field value="{{ username }}" label="法人名称" placeholder="请输入法人名称/注册号" input-align="right" />
+      <van-field value="{{ userID }}" label="法人证件号" placeholder="请输入法人身份证号" input-align="right" />
+   </van-cell-group>
+   <!-- 营业执照 -->
+   <view class="yyzz">
+      <view class="title">营业执照（副本）</view>
+      <van-uploader file-list="{{ fileList }}" deletable="{{ true }}" max-count="2" bind:after-read="afterRead" bind:delete="deleteClick" preview-size="320rpx"></van-uploader>
+   </view>
+   <!-- 身份证照片(正) -->
+   <view class="idcard-zh">
+      <view class="title">经办人身份证照片（正面）</view>
+      <view class="container">
+         <view class="left"></view>
+         <view class="right"></view>
+      </view>
+   </view>
+   <!-- 身份证照片(背) -->
+   <view class="idcard-bei">
+      <view class="title">经办人身份证照片（背面）</view>
+   </view>
+   <!-- 授权书 -->
+   <view class="sqs">
+      <view class="title">企业授权书（签字并盖章）</view>
+   </view>
+   <!-- 提交审核 -->
+   <view class="btn">
+      <van-button color="#D45849" custom-class="nextBtn" bindtap="submitBtn">提交审核</van-button>
+   </view>
+</view>

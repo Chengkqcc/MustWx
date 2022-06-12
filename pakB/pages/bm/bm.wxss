@@ -26,6 +26,7 @@
 }
 .hasCompanies {
   padding-top: 30rpx;
+  padding-bottom: 128rpx;
 }
 .hasCompanies .van-cell {
   display: flex;

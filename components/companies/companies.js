@@ -7,8 +7,8 @@ Component({
     */
    properties: {
       tip: String,
-      hasSwitch:Boolean,
-      btnText:String
+      hasSwitch: Boolean,
+      btnText: String,
    },
 
    /**
@@ -18,7 +18,7 @@ Component({
       company: '', // 输入的公司名
       companies: null, // 联想的公司数据
       closed: false, // 关闭联想
-      checked:true, // 开关开启
+      checked: true, // 开关开启
    },
 
    /**
@@ -36,7 +36,9 @@ Component({
 
       // 输入内容时触发
       async changeValue(event) {
-         let { data } = await request({
+         let {
+            data
+         } = await request({
             url: '/goods/qsearch?query=' + event.detail
          })
          console.log(data)
@@ -66,18 +68,37 @@ Component({
 
       // 点击当前项赋值给输入框
       itemfn(event) {
-         console.log(event.target.dataset.company)
          this.setData({
             company: event.target.dataset.company
          })
       },
-      // 下一步
+      // 下一步按钮
       addBtn() {
-         // console.log(this.data.companies.length)
          if (!this.data.company) {
             Toast('企业名称不正确');
             return
          }
+         let arr = wx.getStorageSync('companiesList') || [];
+         arr.push(this.data.company)
+         wx.setStorageSync('companiesList', arr)
+
+         wx.nextTick(() => {
+            wx.showLoading({
+               title: '加载中',
+            })
+            // wx.showToast({
+            //    title: '企业添加成功',
+            //    icon: 'success',
+            //    duration: 2000
+            // })
+         });
+
+         setTimeout(() => {
+            wx.hideLoading()
+            wx.navigateTo({
+               url: '/pakB/pages/Auth/Auth?name=' + this.data.company
+            });
+         }, 1500)
       },
    }
 })

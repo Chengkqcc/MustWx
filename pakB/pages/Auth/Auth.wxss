@@ -6,3 +6,39 @@
 .auth .notice {
   padding: 30rpx 0 20rpx;
 }
+.auth .verification-method .van-cell {
+  display: flex;
+  align-items: center;
+}
+.auth .verification-method .van-cell .left {
+  display: flex;
+  align-items: center;
+}
+.auth .verification-method .van-cell .left .image-wrap {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 10rpx;
+  margin-right: 20rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.auth .verification-method .van-cell .left .image-wrap .image {
+  width: 52rpx;
+  height: 52rpx;
+}
+.auth .verification-method .van-cell .left .title {
+  font-size: 34rpx;
+  font-weight: 400;
+}
+.auth .verification-method .van-cell .left .desc {
+  font-size: 30rpx;
+  font-weight: 300;
+}
+.auth .deleteText {
+  text-align: center;
+  margin-top: 30rpx;
+  text-decoration: underline;
+  color: gray;
+  font-size: 28rpx;
+}
