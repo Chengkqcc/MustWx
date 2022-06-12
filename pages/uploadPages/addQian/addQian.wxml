@@ -1,0 +1,4 @@
+<!--pages/uploadPages/addQian/addQian.wxml-->
+<import src="/templates/Qian/Qian"/>
+<template wx:if="{{_index==1}}" is="qian" data="{{_index,choosetype,alert,alert2,actions,formData,show,flag,persontype,titles}}"></template>
+<template wx:elif="{{_index!=1}}" is="chao" data="{{formData,persontype,titles}}"></template>

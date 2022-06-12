@@ -1,0 +1,7 @@
+<!--pakB/pages/yijianfankui/yijianfankui.wxml-->
+<view class="yijianfankui">
+  <van-cell title="问题和意见" is-link value="快速键入" arrow-direction="down" border="{{false}}" />
+  <van-cell title="图片(选填,提供问题截图,总大小10M以下)" border="{{false}}" />
+  <van-cell title="QQ/邮箱" border="{{false}}" />
+  <van-cell title="问题和意见"border="{{false}}" />
+</view>
