@@ -16,7 +16,10 @@
    <view class="idcard-zh">
       <view class="title">经办人身份证照片（正面）</view>
       <view class="container">
-         <view class="left"></view>
+         <view class="left">
+            <van-icon name="photograph" />
+            <view class="text">选择照片</view>
+         </view>
          <view class="right"></view>
       </view>
    </view>
