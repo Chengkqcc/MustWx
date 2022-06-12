@@ -54,6 +54,7 @@ Page({
             checked: true
         })
     },
+    // 不同意
     unconsent() {
         this.setData({
             show: false,

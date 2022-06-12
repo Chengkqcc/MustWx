@@ -6,7 +6,7 @@
     </view>
 
     <!-- 使用账户密码登录 -->
-    <view class="bottom">
+    <view class="bottom" bind:tap="useAccount">
         <text>使用账户密码登录</text>
         <view class="icon">
             <van-icon name="arrow" />
@@ -21,10 +21,10 @@
                 <view class="title">微信快速登录</view>
                 <text>为了保障合同的有效性需使用手机号登录</text>
             </view>
-            <van-button color="#E54D42"  block>微信一键登录</van-button>
+            <van-button color="#E54D42"  block bind:tap="wxLogin">微信一键登录</van-button>
             <view class="notice">
                 <van-checkbox value="{{ checked }}" bind:change="onChange"></van-checkbox>
-                <text>我已阅读并同意</text>
+                <text bind:tap="ready">我已阅读并同意</text>
                 <p>《注册与使用协议》</p>
                 <p>《隐私协议》</p>
                 <p>《数字证书申领协议》</p>
@@ -32,4 +32,18 @@
         </view>
     </van-popup>
 
+    <!-- 阅读协议 -->
+    <van-popup show="{{readyShow}}" bind:close="readyClose" custom-class="readyWrap" overlay="{{false}}" closeable>
+        <view class="readyNotice">
+            <p class="ready">阅读协议</p>
+            <view class="readyCenter">
+                <view>您是否已阅读并同意《注册与使用协议》</view>
+                <view>《隐私协议》《数字证书申领协议》</view>
+            </view>
+            <view class="buttonWrap">
+                <van-button color="#07C160" block bind:tap="consent">我同意</van-button>
+                <van-button plain type="primary" custom-class="btn" bind:tap="unconsent">不同意</van-button>
+            </view>
+        </view>
+    </van-popup>
 </view>

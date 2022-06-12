@@ -6,7 +6,7 @@
     </form>
     <view class="notice">
         <van-checkbox value="{{ checked }}" bind:change="onChange"></van-checkbox>
-        <text>我已阅读并同意</text>
+        <view>我已阅读并同意</view>
         <p>《注册与使用协议》</p>
         <p>《隐私协议》</p>
         <p>《数字证书申领协议》</p>

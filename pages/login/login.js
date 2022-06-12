@@ -6,7 +6,8 @@ Page({
      */
     data: {
         show: false,
-        checked: false
+        checked: false,
+        readyShow: false
     },
 
     showPopup() {
@@ -15,6 +16,9 @@ Page({
 
     onClose() {
         this.setData({ show: false });
+    },
+    readyClose() {
+        this.setData({ readyShow: false })
     },
     // 点击复选框
     onChange(event) {
@@ -35,6 +39,37 @@ Page({
             url: '../register/register',
         })
     },
+    // 微信一键登录
+    wxLogin() {
+        if (!this.data.checked) {
+            this.setData({
+                readyShow: true
+            })
+        }
+    },
+    // 点击同意
+    consent() {
+        this.setData({
+            readyShow: false,
+            checked: true
+        })
+    },
+    // 点击不同意
+    unconsent() {
+        this.setData({
+            readyShow: false
+        })
+    },
+    // 已阅读
+    ready() {
+        console.log(1)
+    },
+
+    // 使用账户密码登录
+    useAccount() {
+        console.log(1)
+    },
+
 
     /**
      * 生命周期函数--监听页面加载

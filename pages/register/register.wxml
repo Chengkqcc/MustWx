@@ -33,8 +33,8 @@
         </view>
     </van-popup>
 
-    <view>
-        <text wx:if="{{usanotice}}">请输入正确的的账号</text>
-        <text wx:if="{{pwdnotice}}">密码不能少于8位</text>
+    <view class="demo">
+        <view wx:if="{{usanotice}}">请输入正确的的账号</view>
+        <view wx:if="{{pwdnotice}}">密码不能少于8位</view>
     </view>
 </view>

@@ -54,3 +54,18 @@
   border: none;
   background: #f2f2f2;
 }
+.register .demo {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+.register .demo view {
+  width: 38%;
+  height: 30px;
+  background: #575757;
+  color: #fff;
+  font-size: 13px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
