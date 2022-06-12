@@ -1,4 +1,6 @@
 // pakA/pages/Mymodel/mymodel.js
+import getDate from "../../../utils/formatime"
+
 
 Page({
 
@@ -30,31 +32,11 @@ Page({
       modelnum: "6549495949549544",
       modeltime: "2022-06-08 19:56:20",
       modelv: "v2"
-    }],
+    }], //我的模板
+    waitArr: [], //待审模板
     isDel: false,
     arrIndex: 0,
   },
-  getDate(date) {
-    var seperator1 = "-";
-    var seperator2 = ":";
-    var month = date.getMonth() + 1;
-    var strDate = date.getDate();
-    if (month >= 1 && month <= 9) {
-      month = "0" + month;
-    }
-    if (strDate >= 0 && strDate <= 9) {
-      strDate = "0" + strDate;
-    }
-    var hours = date.getHours()
-    hours = hours > 10 ? hours : "0" + hours
-    var minutes = date.getMinutes()
-    minutes = minutes > 10 ? minutes : "0" + minutes
-    var seconds = date.getSeconds();
-    seconds = seconds > 10 ? seconds : "0" + seconds
-    var currentdate = date.getFullYear() + seperator1 + month + seperator1 + strDate + " " + hours + seperator2 + minutes + seperator2 + seconds;
-    return currentdate;
-  },
-
   onClickLeft() {
     wx.showToast({
       title: '返回主页',
@@ -82,7 +64,7 @@ Page({
 
   },
   addHd() {
-    let date = this.getDate(new Date())
+    let date = getDate(new Date())
     console.log(date)
     let arr = this.data.tabArr;
     let obj = {
@@ -98,35 +80,69 @@ Page({
   },
   delfn(e) {
     let index = e.currentTarget.dataset.index;
-
-
     this.setData({
       show: true,
       arrIndex: index
     });
   },
   onClose() {
-
     this.setData({
       show: false
     });
   },
   sureDel() {
-    let arr = this.data.tabArr;
+    let active = this.data.active;
     let index = this.data.arrIndex;
-
-    arr.splice(index, 1)
-
+    let tabarr=[];
+    let waitarr=[];
+    if (active == 0) {
+      tabarr = this.data.tabArr;
+      console.log(tabarr)
+      tabarr.splice(index,1)
+      this.setData({
+        tabArr: tabarr,
+      })
+    } else if (active == 2) {
+      waitarr = this.data.waitArr;
+      waitarr.splice(index, 1)
+      this.setData({
+        waitArr:waitarr,
+      })
+    }
     this.setData({
-      tabArr: arr,
       show: false
+    })
+  },
+  onloadmodel(){
+    wx.navigateTo({
+      url: '/pakA/pages/sendModel/sendModel',
     })
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    console.log(options)
+    let tabs = this.data.tabs
+    let index = this.options.activeIndex
+    let title = options.value;
+    let date = options.date;
+    let waitObj = {
+      title,
+      modelnum: "36456465466546",
+      date,
+      modelv: "v2"
+    }
+    let waitArr = this.data.waitArr
+    waitArr.unshift(waitObj)
+    if (options) {
+      this.setData({
+        arrIndex: index,
+        tab: tabs[index].title,
+        active: index,
+        waitArr
+      })
+    }
   },
 
   /**

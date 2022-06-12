@@ -3,6 +3,8 @@
     "van-dialog": "@vant/weapp/dialog/index",
     "van-cell-group": "@vant/weapp/cell-group/index",
     "van-field": "@vant/weapp/field/index",
-    "van-uploader": "@vant/weapp/uploader/index"
-  }
+    "van-uploader": "@vant/weapp/uploader/index",
+    "van-toast": "@vant/weapp/toast/index"
+  },
+  "navigationBarTitleText":"制作模板"
 }

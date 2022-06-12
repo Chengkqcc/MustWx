@@ -21,6 +21,7 @@ image {
   background: #fff;
   margin-top: 20rpx;
   padding: 20rpx;
+  padding-bottom: 0;
 }
 .uploadfile .title {
   margin-bottom: 50rpx;
@@ -36,10 +37,16 @@ image {
   margin: 50rpx;
 }
 .explain .explain-title {
-  font-size: 28rpx;
+  font-size: 30rpx;
   font-weight: bolder;
   color: #000;
 }
 .explain view {
   color: #666;
+  font-size: 26rpx;
+}
+.submit{
+  background: #E54D42;
+  color: #fff;
+  margin: 0 30rpx;
 }

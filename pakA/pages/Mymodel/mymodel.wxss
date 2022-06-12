@@ -110,15 +110,15 @@
 }
 .model-box .model-btns {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
-.model-box .model-btns button {
-  width: 200rpx;
+.model-box .model-btns .van-button {
+  width: 240rpx;
   height: 80rpx;
-  font-size: 30rpx;
+  margin: 0 20rpx;
 }
-.model-box .model-btns .btn{
-  background: #F2F2F2;
-  /* border: 0 transparent; */
-  color: green;
+
+.model-box .model-btns .btn {
+  border: 0;
+  background: #eee;
 }

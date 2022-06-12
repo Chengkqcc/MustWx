@@ -3,7 +3,7 @@
     <van-field value="{{ value }}" title-width="60" label="模板名称" input-align="right" placeholder="请输入模板名称" bind:change="onChange" />
   </van-cell-group>
   <van-cell-group>
-    <van-field value="{{bzValue}}" autosize="{{obj}}" type="textarea" title-width="60" label="备注" input-align="right" placeholder="请输入备注" bind:change="onChange" />
+    <van-field value="{{bzValue}}" autosize="{{obj}}" type="textarea" title-width="60" label="备注" input-align="right" placeholder="请输入备注"  />
   </van-cell-group>
   <view class="uploadfile">
     <view class="title">
@@ -15,13 +15,14 @@
   <view class="explain">
     <view class="explain-title">模板说明</view>
     <view>1、支持doc、docx、pdf文件;</view>
-    <view>2、支持doc、docx、pdf文件;</view>
-    <view>3、支持doc、docx、pdf文件;</view>
-    <view>4、支持doc、docx、pdf文件;</view>
-    <view>5、支持doc、docx、pdf文件;</view>
-    <view>6、支持doc、docx、pdf文件;</view>
+    <view>2、模板效果请参考系统模板;</view>
+    <view>3、模板制作好之后可以在我的模板中查看和使用;</view>
+    <view>4、制作模板时长约1~3个小时，如需加急需请联系客服;</view>
+    <view>5、您也可以使用电脑登录1dq.com 自助制作模板;</view>
   </view>
+  <button class="submit" bindtap="submitfn">确定提交</button>
 </view>
 <van-dialog use-slot title="请按照下方说明准备模板文件" confirmButtonText="我知道了" show="{{ false }}" bind:close="onClose">
   <image src="../../img/model.jpg" />
 </van-dialog>
+<van-toast id="van-toast" />

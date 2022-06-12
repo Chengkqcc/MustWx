@@ -1,13 +1,18 @@
 // pakA/pages/sendModel/sendModel.js
+import formatime from "../../../utils/formatime";
+import Toast from '../../../miniprogram_npm/@vant/weapp/toast/toast';
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    value: "",
     show: true,
+    bzValue:"",
     obj: {
-      minHeight: 80
+      minHeight: 50
     },
     fileList: []
   },
@@ -21,22 +26,43 @@ Page({
     } = this.data;
     console.log(fileList)
     fileList.push({
-      url:file.url,
+      url: file.url,
       deletable: true,
     });
     this.setData({
       fileList
     });
   },
-  delfile(e){
+  delfile(e) {
     let index = e.detail.index;
     const {
       fileList = []
     } = this.data;
-    fileList.splice(index,1);
+    fileList.splice(index, 1);
     this.setData({
       fileList
     });
+  },
+  onChange(e) {
+    this.setData({
+      value: e.detail
+    })
+  },
+  submitfn() {
+    let date = formatime(new Date())
+    let index = 2
+    let value = this.data.value;
+    if (value.length < 2) {
+      Toast("名称至少需要两个字符")
+      return
+    }
+    if(this.data.fileList.length==0){
+      Toast("请上传模板")
+      return
+    }
+    wx.navigateTo({
+      url: '/pakA/pages/Mymodel/mymodel?activeIndex=' + index + '&value=' + value + '&date=' + date
+    })
   },
   /**
    * 生命周期函数--监听页面加载
