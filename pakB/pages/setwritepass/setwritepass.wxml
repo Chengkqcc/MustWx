@@ -1,0 +1,19 @@
+<!--pakB/pages/setwritepass/setwritepass.wxml-->
+<view class="setwritepass">
+  <van-field
+    mode:value="{{ pass }}"
+    center
+    placeholder="请输入新密码"
+    border="{{ false }}"
+    use-button-slot
+    bind:input="pass_fn"
+  >
+    <view class="pass" slot="button" bindtap="eyes_fn">
+      <van-icon wx:if="{{eyes_flag}}" name="eye-o" />
+      <van-icon wx:else name="closed-eye" />
+    </view>
+  </van-field>
+  <view class="btn">
+    <van-button color="#E54D42" block bind:click="setPass_fn">确定设置</van-button>
+  </view>
+</view>

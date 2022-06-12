@@ -77,7 +77,14 @@
                 "pages/dianziqianzhang/dianziqianzhang",
                 "pages/falvfuwu/falvfuwu",
                 "pages/youhuiquan/youhuiquan",
-                "pages/dingdanguanli/dingdanguanli"
+                "pages/dingdanguanli/dingdanguanli",
+                "pages/qianmingguanli/qianmingguanli",
+                "pages/tongzhishezhi/tongzhishezhi",
+                "pages/xiaoxizhongxin/xiaoxizhongxin",
+                "pages/anquanshezhi/anquanshezhi",
+                "pages/setloginpass/setloginpass",
+                "pages/setwritepass/setwritepass",
+                "pages/setoldpass/setoldpass"
             ],
             "name": "bb",
             "independent": false
@@ -99,6 +106,8 @@
         "van-tab": "@vant/weapp/tab/index",
         "van-tabs": "@vant/weapp/tabs/index",
         "van-rate": "@vant/weapp/rate/index",
-        "van-uploader": "@vant/weapp/uploader/index"
+        "van-uploader": "@vant/weapp/uploader/index",
+        "van-popup": "@vant/weapp/popup/index",
+        "van-switch": "@vant/weapp/switch/index"
     }
 }

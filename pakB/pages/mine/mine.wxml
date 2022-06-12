@@ -45,10 +45,7 @@
       <view class="fixed" wx:if="{{rzshow}}">
         <view class="title">
           <view class="text">
-            为保障您签署合同的有效性，您需要完成个人实名认证才能签署合同，认证完成后免费赠送您3份电子合同，
-          </view>
-          <view class="renzheng" bindtap="renzheng_fn">
-            点击开始认证>>
+            为保障您签署合同的有效性，您需要完成个人实名认证才能签署合同，认证完成后免费赠送您3份电子合同， <text bindtap="renzheng_fn">点击开始认证>></text>
           </view>
         </view>
         <van-icon name="cross" bind:click="close_renzheng" />

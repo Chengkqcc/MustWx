@@ -1,0 +1,48 @@
+<!--pakB/pages/setoldpass/setoldpass.wxml-->
+<view class="setoldpass">
+  <van-field
+    mode:value="{{ oldpass }}"
+    center
+    placeholder="请输入新密码"
+    border="{{ false }}"
+    use-button-slot
+    bind:input="pass_fn"
+    mark:pass="oldpass"
+  >
+    <view class="pass" slot="button" bindtap="eyes_fn">
+      <van-icon wx:if="{{oldpass_eyes_flag}}" name="eye-o" />
+      <van-icon wx:else name="closed-eye" />
+    </view>
+  </van-field>
+  <van-field
+    mode:value="{{ newpass }}"
+    center
+    placeholder="请输入新密码"
+    border="{{ false }}"
+    use-button-slot
+    bind:input="pass_fn"
+    mark:pass="newpass"
+  >
+    <view class="pass" slot="button" bindtap="eyes_fn">
+      <van-icon wx:if="{{newpass_eyes_flag}}" name="eye-o" />
+      <van-icon wx:else name="closed-eye" />
+    </view>
+  </van-field>
+  <van-field
+    mode:value="{{ agin_newpass }}"
+    center
+    placeholder="请输入新密码"
+    border="{{ false }}"
+    use-button-slot
+    bind:input="pass_fn"
+    mark:pass="agin_newpass"
+  >
+    <view class="pass" slot="button" bindtap="eyes_fn">
+      <van-icon wx:if="{{agin_newpass_eyes_flag}}" name="eye-o" />
+      <van-icon wx:else name="closed-eye" />
+    </view>
+  </van-field>
+  <view class="btn">
+    <van-button color="#E54D42" block bind:click="setPass_fn">确定更改</van-button>
+  </view>
+</view>

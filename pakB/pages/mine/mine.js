@@ -13,7 +13,7 @@ Page({
           {id:1,text:'产品购买',page:'/pakB/pages/chanpingoumai/chanpingoumai',icon:''},
           {id:2,text:'优惠券',page:'/pakB/pages/youhuiquan/youhuiquan',icon:''},
           {id:3,text:'费用中心',page:'/pakB/pages/dingdanguanli/dingdanguanli',icon:''},
-          {id:4,text:'签名管理',page:'login',icon:''},
+          {id:4,text:'签名管理',page:'/pakB/pages/qianmingguanli/qianmingguanli',icon:''},
           {id:5,text:'企业管理',page:'login',icon:''},
         ],
         function_nologin_data:[
@@ -29,9 +29,9 @@ Page({
         ],
         user_set_data:[
           {id:0,text:'账户设置',page:'/pakB/pages/usersetting/usersetting',icon:''},
-          {id:1,text:'安全设置',page:'login',icon:''},
-          {id:2,text:'通知设置',page:'login',icon:''},
-          {id:3,text:'消息中心',page:'login',icon:''},
+          {id:1,text:'安全设置',page:'/pakB/pages/anquanshezhi/anquanshezhi',icon:''},
+          {id:2,text:'通知设置',page:'/pakB/pages/tongzhishezhi/tongzhishezhi',icon:''},
+          {id:3,text:'消息中心',page:'/pakB/pages/xiaoxizhongxin/xiaoxizhongxin',icon:''},
           {id:4,text:'帮助中心',page:'login',icon:''},
           {id:5,text:'意见反馈',page:'/pakB/pages/yijianfankui/yijianfankui',icon:''},
           {id:6,text:'关于我们',page:'/pakB/pages/guanyuwomen/guanyuwomen',icon:''},
@@ -68,6 +68,9 @@ Page({
     // 点击认证
     renzheng_fn(){
       console.log('认证');
+      wx.navigateTo({
+        url:'/pakB/pages/shimingrenzheng/shimingrenzheng'
+      })
     },
     /**
      * 生命周期函数--监听页面加载
