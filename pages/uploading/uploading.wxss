@@ -1,1 +1,65 @@
-/* pages/uploading/uploading.wxss */
+page {
+  background-color: #f1f1f1;
+}
+image {
+  width: 100%;
+  height: 100%;
+}
+.content {
+  padding: 30rpx;
+  box-sizing: border-box;
+}
+.banner {
+  margin-bottom: 30rpx;
+}
+.main .marginb {
+  margin-bottom: 28rpx;
+}
+.main .choose_item {
+  background: #fff;
+  height: 140rpx;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 32rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.main .choose_item .item_left {
+  display: flex;
+  align-items: center;
+}
+.main .choose_item .item_left .item_l {
+  height: 96rpx;
+  width: 96rpx;
+  border-radius: 10rpx;
+  overflow: hidden;
+  background: #0bb9f7;
+  box-sizing: border-box;
+  padding: 24rpx;
+  margin-right: 16rpx;
+}
+.main .choose_item .item_left .yellow {
+  background: #fa9e3b;
+}
+.main .choose_item .item_left .green {
+  background: #6bca2c;
+}
+.main .choose_item .item_left .red {
+  background: #f9755c;
+}
+.main .choose_item .item_left .item_m {
+  display: flex;
+  flex-direction: column;
+}
+.main .choose_item .item_left .item_m .tit {
+  color: #4d5255;
+  font-size: 26rpx;
+}
+.main .choose_item .item_left .item_m .tips {
+  color: #a9aba9;
+  font-size: 22rpx;
+}
+.main .choose_item .item_r text {
+  color: #bbbfca;
+}

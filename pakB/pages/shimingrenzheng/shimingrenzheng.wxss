@@ -1,0 +1,112 @@
+page {
+  background-color: #f1f1f1;
+}
+.shimingrenzheng {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 50px;
+  box-sizing: border-box;
+}
+.shimingrenzheng .top {
+  width: 100%;
+}
+.shimingrenzheng .top .title {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  font-weight: 500;
+  font-size: 18px;
+}
+.shimingrenzheng .top .title .set_eid {
+  color: #aaa;
+}
+.shimingrenzheng .top .title .set_eid text {
+  color: #000;
+}
+.shimingrenzheng .top .van-cell {
+  padding: 15px 16px;
+  border-bottom: 1px solid #f1f1f1;
+}
+.shimingrenzheng .top .van-cell .van-field__label {
+  font-size: 16px;
+  font-weight: 100;
+  color: #000;
+}
+.shimingrenzheng .top .van-cell .van-field__control {
+  font-size: 16px;
+}
+.shimingrenzheng .top .checked {
+  padding: 15px;
+  display: flex;
+  align-items: center;
+}
+.shimingrenzheng .top .checked .text {
+  color: #0081FF;
+}
+.shimingrenzheng .top .btn {
+  padding: 20px 15px 0;
+}
+.shimingrenzheng .top .van-button {
+  border-radius: 5px;
+}
+.shimingrenzheng .bottom {
+  font-size: 14px;
+  font-weight: 200;
+}
+.shimingrenzheng .bottom text {
+  color: #0081FF;
+}
+.items .title {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  background-color: #f1f1f1;
+}
+.items .title .text {
+  font-size: 16px;
+  font-weight: 700;
+}
+.items .item_user {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #F1F1F1;
+}
+.items .item_user:last-child {
+  border: 0;
+}
+.items .item_user .user_item {
+  display: flex;
+}
+.items .item_user .user_item .img {
+  width: 50px;
+  height: 50px;
+}
+.items .item_user .user_item .img image {
+  width: 100%;
+  height: 100%;
+}
+.items .item_user .user_item .yonghu {
+  margin-left: 10px;
+}
+.items .item_user .user_item .yonghu .name {
+  display: flex;
+  align-items: center;
+}
+.items .item_user .user_item .yonghu .name .state {
+  padding: 5px 10px;
+  background-color: #F37B1D;
+  color: #fff;
+  font-size: 14px;
+  margin-left: 10px;
+  border-radius: 3px;
+}
+.items .item_user .user_item .yonghu .rzstate {
+  font-size: 16px;
+  color: #bbb;
+}

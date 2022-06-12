@@ -1,0 +1,7 @@
+
+<template name="qian">
+    <person titles="{{titles}}"  persontype="{{persontype}}" formData="{{formData}}"></person>
+</template>
+<template name="chao">
+    <qiye titles="{{titles}}" persontype="{{persontype}}" formData="{{formData}}"></qiye>
+</template>

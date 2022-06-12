@@ -1,0 +1,17 @@
+<!--pakB/pages/falvfuwu/falvfuwu.wxml-->
+<view class="falvfuwu">
+  <block wx:for="{{fl_data}}" wx:key="{{item.id}}">
+    <view class="item">
+      <view class="left">
+        <view class="title">{{item.title}}</view>
+        <view class="price">
+          <text>￥ {{item.price}}</text> 元/次
+        </view>
+        <view class="desc">{{item.desc}}</view>
+      </view>
+      <view class="btn" bind:click="pay_fn" data-item="{{item}}">
+        <van-button plain type="danger" size="small">现在购买</van-button>
+      </view>
+    </view>
+  </block>
+</view>

@@ -1,0 +1,6 @@
+{
+   "navigationBarTitleText": "添加企业",
+   "usingComponents": {
+      "companies": "/components/companies/companies"
+   }
+}
