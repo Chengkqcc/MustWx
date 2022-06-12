@@ -1,6 +1,6 @@
 .title {
   width: 100vw;
-  height: 88rpx;
+  height: 10vh;
   background-color: #fff;
   position: fixed;
   z-index: 9;
