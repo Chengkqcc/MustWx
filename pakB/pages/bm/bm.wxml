@@ -1,0 +1,5 @@
+<view class="bm-container">
+   <import src="/templates/bm_template/bm_template"/>
+   <template wx:if="{{hasData}}" is="companies"></template>
+   <template wx:else is="empty"></template>
+</view>

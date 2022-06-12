@@ -1,0 +1,15 @@
+<!--pakB/pages/dingdanguanli/dingdanguanli.wxml-->
+<view class="dingdanguanli" hover-class="none" hover-stop-propagation="false">
+  <van-tabs bind:click="onClick">
+    <block wx:for="{{order_data}}" wx:key="{{item.id}}">
+      <van-tab title="{{item.title}}">
+        <view wx:if="{{item.children.length==0}}" class="empty">
+          <van-empty description="-暂时还没有内容-" />
+        </view>
+        <view class="item" wx:else>
+          data
+        </view>
+      </van-tab>
+    </block>
+  </van-tabs>
+</view>

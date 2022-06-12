@@ -18,6 +18,7 @@
         "navigationBarTextStyle": "black"
     },
     "sitemapLocation": "sitemap.json",
+<<<<<<< HEAD
     "usingComponents": {
         "van-popup": "@vant/weapp/popup/index",
         "van-button": "@vant/weapp/button/index",
@@ -30,6 +31,8 @@
         "van-checkbox-group": "@vant/weapp/checkbox-group/index",
         "van-toast": "@vant/weapp/toast/index"
     },
+=======
+>>>>>>> 2cccfb1b208f35038d989dedbf01d8458737920e
     "tabBar": {
         "selectedColor": "#e53f3c",
         "list": [
@@ -63,7 +66,11 @@
         {
             "root": "pakA",
             "pages": [
-                "pages/home/home"
+                "pages/home/home",
+                "pages/help/help",
+                "pages/hotProblem/hotProblem",
+                "pages/offer/offer",
+                "pages/problem/problem"
             ],
             "name": "aa",
             "independent": false
@@ -74,10 +81,43 @@
                 "pages/home/home",
                 "pages/mine/mine",
                 "pages/usersetting/usersetting",
-                "pages/yijianfankui/yijianfankui"
+                "pages/yijianfankui/yijianfankui",
+                "pages/guanyuwomen/guanyuwomen",
+                "pages/xinwenzixun/xinwenzixun",
+                "pages/newsdetail/newsdetail",
+                "pages/dianzihetong/dianzihetong",
+                "pages/order/order",
+                "pages/bm/bm",
+                "pages/addCompany/addCompany",
+                "pages/joinCompany/joinCompany",
+                "pages/renzhengzhongxin/renzhengzhongxin",
+                "pages/shimingrenzheng/shimingrenzheng",
+                "pages/chanpingoumai/chanpingoumai",
+                "pages/dianziqianzhang/dianziqianzhang",
+                "pages/falvfuwu/falvfuwu",
+                "pages/youhuiquan/youhuiquan",
+                "pages/dingdanguanli/dingdanguanli"
             ],
             "name": "bb",
             "independent": false
         }
-    ]
+    ],
+    "usingComponents": {
+        "van-button": "@vant/weapp/button/index",
+        "van-cell": "@vant/weapp/cell/index",
+        "van-empty": "@vant/weapp/empty/index",
+        "van-notice-bar": "@vant/weapp/notice-bar/index",
+        "van-field": "@vant/weapp/field/index",
+        "van-icon": "@vant/weapp/icon/index",
+        "van-toast": "@vant/weapp/toast/index",
+        "van-cell-group": "@vant/weapp/cell-group/index",
+        "van-tabbar": "@vant/weapp/tabbar/index",
+        "van-tabbar-item": "@vant/weapp/tabbar-item/index",
+        "van-nav-bar": "@vant/weapp/nav-bar/index",
+        "van-dialog": "@vant/weapp/dialog/index",
+        "van-tab": "@vant/weapp/tab/index",
+        "van-tabs": "@vant/weapp/tabs/index",
+        "van-rate": "@vant/weapp/rate/index",
+        "van-uploader": "@vant/weapp/uploader/index"
+    }
 }

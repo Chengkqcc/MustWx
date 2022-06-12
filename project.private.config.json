@@ -1,5 +1,8 @@
 {
-    "setting": {},
+    "description": "项目私有配置文件。此文件中的内容将覆盖 project.config.json 中的相同字段。项目的改动优先同步到此文件中。详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html",
+    "setting": {
+        "urlCheck": false
+    },
     "condition": {
         "plugin": {
             "list": []
@@ -14,7 +17,21 @@
             "list": [
                 {
                     "name": "",
+<<<<<<< HEAD
                     "pathName": "pages/uploading/uploading",
+=======
+<<<<<<< HEAD
+                    "pathName": "pages/uploading/uploading",
+=======
+                    "pathName": "pakB/pages/order/order",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pakB/pages/bm/bm",
+>>>>>>> 2cccfb1b208f35038d989dedbf01d8458737920e
                     "query": "",
                     "scene": null,
                     "launchMode": "default"
@@ -22,23 +39,52 @@
                 {
                     "name": "",
                     "pathName": "pages/uoloaddetail/uoloaddetail",
+>>>>>>> 88164e9b15b1f82452e471948f913f16fef47a56
+                    "query": "",
+                    "scene": null,
+                    "launchMode": "default"
+                },
+                {
+                    "name": "",
+<<<<<<< HEAD
+                    "pathName": "pages/uoloaddetail/uoloaddetail",
+=======
+                    "pathName": "pakB/pages/dianzihetong/dianzihetong",
+>>>>>>> 88164e9b15b1f82452e471948f913f16fef47a56
                     "query": "",
                     "launchMode": "default",
                     "scene": null
                 },
                 {
                     "name": "",
-                    "pathName": "pakB/pages/usersetting/usersetting",
+                    "pathName": "pakB/pages/dianziqianzhang/dianziqianzhang",
                     "query": "",
                     "launchMode": "default",
                     "scene": null
                 },
                 {
                     "name": "",
-                    "pathName": "pakB/pages/yijianfankui/yijianfankui",
+                    "pathName": "pakB/pages/falvfuwu/falvfuwu",
                     "query": "",
                     "launchMode": "default",
                     "scene": null
+<<<<<<< HEAD
+=======
+                },
+                {
+                    "name": "",
+                    "pathName": "pakB/pages/youhuiquan/youhuiquan",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pakB/pages/dingdanguanli/dingdanguanli",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+>>>>>>> 88164e9b15b1f82452e471948f913f16fef47a56
                 }
             ]
         }
