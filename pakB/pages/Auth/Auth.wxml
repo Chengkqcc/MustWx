@@ -1,0 +1,43 @@
+<view class="auth">
+   <view class="notice">
+      <van-notice-bar mode="closeable" left-icon="volume-o" text="完成企业认证，即可免费试用8份电子合同" />
+   </view>
+   <view class="verification-method">
+      <van-cell-group>
+         <van-cell is-link url="/pakB/pages/faren/faren">
+            <view class="left" slot="title">
+               <view class="image-wrap" style="background: rgb(250, 158, 59);">
+                  <image class="image" src="https://oss2.1dq.com/app/static/app-plus/images/companyLegalAuth.png"></image>
+               </view>
+               <view class="title">
+                  <view class="text">法人授权认证</view>
+                  <view class="desc">通过企业法人授权，可快速完成认证</view>
+               </view>
+            </view>
+         </van-cell>
+         <van-cell is-link url="/pakB/pages/duigong/duigong">
+            <view class="left" slot="title">
+               <view class="image-wrap" style="background: rgb(93, 191, 254);">
+                  <image class="image" src="https://oss2.1dq.com/app/static/app-plus/images/duigongzhuanzhang.png"></image>
+               </view>
+               <view class="title">
+                  <view class="text">对公打款认证</view>
+                  <view class="desc">推荐有企业对公账户的用户使用</view>
+               </view>
+            </view>
+         </van-cell>
+         <van-cell is-link url="/pakB/pages/rengong/rengong">
+            <view class="left" slot="title">
+               <view class="image-wrap" style="background: rgb(255, 88, 88);">
+                  <image class="image" src="https://oss2.1dq.com/app/static/app-plus/images/rengong.png"></image>
+               </view>
+               <view class="title">
+                  <view class="text">人工审核认证</view>
+                  <view class="desc">需要营业执照、经办人身份证、授权书</view>
+               </view>
+            </view>
+         </van-cell>
+      </van-cell-group>
+   </view>
+   <view class="deleteText" bindtap="deletefn">删除该企业？</view>
+</view>

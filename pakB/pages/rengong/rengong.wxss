@@ -1,0 +1,21 @@
+.rengong {
+   background: #f1f1f1;
+   width: 100vw;
+   height: 100vh;
+}
+.title {
+   line-height: 80rpx;
+   font-size: 28rpx;
+   color: #B9BABA;
+   padding-left: 34rpx;
+}
+.title .req {
+   color: #D45849;
+}
+.btn {
+   margin-top: 20rpx;
+   padding: 20rpx 30rpx;
+ }
+.btn .nextBtn {
+   width: 100%;
+ }

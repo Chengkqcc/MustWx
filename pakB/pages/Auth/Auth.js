@@ -1,27 +1,42 @@
+// pakB/pages/Auth/Auth.js
 Page({
 
    /**
     * 页面的初始数据
     */
    data: {
-      tip: '完成企业认证后，系统自动赠送8份电子合同，您将自动成为该企业管理员并为您创建企业电子公章；', // 提示信息
-      hasSwitch: true, // 是否显示开关
-      btnText: '下一步', // 按钮文字
-      renzheng:false,// 认证提示
+      company:''
    },
-
+   //   删除该企业
+   deletefn() {
+      let companiesList = wx.getStorageSync('companiesList');
+      // console.log(companiesList)
+      let arr = companiesList.filter((item)=>{
+         if(item !== this.data.company) return item
+      })
+      console.log(arr)
+      wx.setStorageSync('companiesList',arr)
+      wx.showModal({
+         content: '企业删除成功',
+         showCancel: false,
+         success (res) {
+            if (res.confirm) {
+              console.log('用户点击确定')
+              wx.navigateTo({
+                 url: '/pakB/pages/bm/bm'
+              });
+            }
+          }
+      })
+   },
 
    /**
     * 生命周期函数--监听页面加载
     */
    onLoad(options) {
-      if (!this.data.renzheng) {
-         wx.showModal({
-            title: '认证提示',
-            content: '完成企业认证后，系统自动赠送您8份电子合同，您将成为该企业管理元并为您创建企业公章；',
-            showCancel: false,
-         })
-      }
+      this.setData({
+         company:options.name
+      })
    },
 
    /**
