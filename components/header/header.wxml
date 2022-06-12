@@ -1,6 +1,6 @@
 <view class = "title">
     <van-nav-bar
-      title="帮助中心"
+      title="{{title?title:'帮助中心'}}"
       bind:click-left="backfn"
     >
       <view slot="left">

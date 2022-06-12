@@ -1,39 +1,18 @@
-// pakA/pages/hotProblem/hotProblem.js
-import myrequest from '../../../utils/myrequest'
+// pakA/pages/serverLine/serverLine.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    title:"",
-    detailList:""
-  },
-  //title传值
-  sendTitle(title){
-    this.setData({
-      title
-    })
-  },
-  //获取详情数据
-  async getDetailData(){
-    const {data} = await myrequest({
-      url:"/detail"
-    })
-    this.setData({
-      detailList:data.data
-    })
-    console.log(data.data)
-  },
 
+  },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
 
-    this.sendTitle(options.title)
-    this.getDetailData()
   },
 
   /**

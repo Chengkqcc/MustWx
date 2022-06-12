@@ -1,0 +1,110 @@
+.container {
+  width: 100%;
+  height: 100vh;
+  background-color: #fafafa;
+}
+.container .chat-con {
+  width: 100%;
+  position: fixed;
+  top: 10vh;
+  box-sizing: border-box;
+  height: 90vh;
+}
+.container .chat-con .chat-info {
+  margin: 0 30rpx;
+}
+.container .chat-con .chat-info .chat-left {
+  display: flex;
+  padding: 10rpx;
+}
+.container .chat-con .chat-info .chat-left .headImg {
+  width: 80rpx;
+  height: 80rpx;
+}
+.container .chat-con .chat-info .chat-left .chat-text {
+  font-size: 35rpx;
+  color: #333;
+  line-height: 7vw;
+  padding: 2vw 2.5vw;
+  background-color: #fff;
+  margin-left: 15rpx;
+  border-radius: 10rpx;
+  z-index: 10;
+  position: relative;
+}
+.container .chat-con .chat-info .chat-left .chat-text::after {
+  display: block;
+  content: "";
+  width: 0;
+  height: 0;
+  border: 10rpx solid transparent;
+  border-right-color: #fff;
+  position: absolute;
+  left: -20rpx;
+  top: 30rpx;
+}
+.container .chat-con .chat-info .chat-right {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10rpx;
+}
+.container .chat-con .chat-info .chat-right .headImg {
+  width: 80rpx;
+  height: 80rpx;
+}
+.container .chat-con .chat-info .chat-right .chat-text {
+  font-size: 35rpx;
+  color: #333;
+  line-height: 7vw;
+  padding: 2vw 2.5vw;
+  background-color: #96EB6A;
+  margin-right: 15rpx;
+  border-radius: 10rpx;
+  z-index: 10;
+  position: relative;
+  max-width: 100vw;
+}
+.container .chat-con .chat-info .chat-right .chat-text::before {
+  display: block;
+  content: "";
+  width: 0;
+  height: 0;
+  border: 10rpx solid transparent;
+  border-left-color: #96EB6A;
+  position: absolute;
+  right: -20rpx;
+  top: 30rpx;
+}
+.container .inputRoom {
+  width: 100vw;
+  height: 16vw;
+  border-top: 1px solid #cdcdcd;
+  background-color: #f1f1f1;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  z-index: 20;
+  box-sizing: border-box;
+  padding: 0 20rpx;
+}
+.container .inputRoom input {
+  flex: 1;
+  height: 9.33vw;
+  background-color: #fff;
+  margin-left: 2vw;
+  padding: 0 3vw;
+  font-size: 28rpx;
+  color: #444;
+}
+.container .inputRoom .smile {
+  margin: 0 10rpx;
+}
+.container .inputRoom .sendBtn {
+  white-space: nowrap;
+}
+.container .inputRoom .sendBtn .van-button--normal {
+  padding: 0 30rpx;
+  font-size: 28rpx !important;
+  line-height: 28rpx !important;
+}
