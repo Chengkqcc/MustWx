@@ -27,6 +27,7 @@
           "launchMode": "default",
           "scene": null
         },
+<<<<<<< HEAD
         {
           "name": "",
           "pathName": "pakB/pages/dianzihetong/dianzihetong",
@@ -61,6 +62,71 @@
           "query": "",
           "launchMode": "default",
           "scene": null
+=======
+        "miniprogram": {
+            "list": [
+                {
+                    "name": "",
+<<<<<<< HEAD
+                    "pathName": "pages/uploading/uploading",
+=======
+                    "pathName": "pakB/pages/order/order",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pakB/pages/bm/bm",
+>>>>>>> 2cccfb1b208f35038d989dedbf01d8458737920e
+                    "query": "",
+                    "scene": null,
+                    "launchMode": "default"
+                },
+                {
+                    "name": "",
+                    "pathName": "pages/uoloaddetail/uoloaddetail",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pakB/pages/dianzihetong/dianzihetong",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pakB/pages/dianziqianzhang/dianziqianzhang",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pakB/pages/falvfuwu/falvfuwu",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pakB/pages/youhuiquan/youhuiquan",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pakB/pages/dingdanguanli/dingdanguanli",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                }
+            ]
+>>>>>>> 88164e9b15b1f82452e471948f913f16fef47a56
         }
       ]
     }

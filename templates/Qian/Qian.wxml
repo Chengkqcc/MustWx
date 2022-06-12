@@ -1,0 +1,61 @@
+<!--templates/Qian/Qian.wxml-->
+<template name="qian">
+    <person formData="{{formData}}" persontype="{{persontype}}" titles="{{titles}}">
+        <view slot="before">
+            <van-cell title="实名认证方式" is-link value="{{choosetype}}" bindtap="chooseF" />
+            <van-cell title-style="color:#c6c6c6;" custom-class="tit">
+                <view slot="title" custom-class="tit">
+                    <view class="van-cell-text">印章要求</view>
+                    <!-- <van-icon name="arrow-down" bindtap="chooseP" data-index='0' /> -->
+                </view>
+                <van-icon slot="right-icon" name="info-o" class="custom-icon" bindtap="alertExplain" />
+            </van-cell>
+            <view class="yaoqiu">
+                <view>
+                    <van-checkbox value="{{ formData.shouxie }}" shape="square" bind:change="onChange">
+                        手写签名
+                    </van-checkbox>
+                </view>
+                <view wx:if="{{flag}}">
+                    <van-checkbox value="{{ formData.muban }}" shape="square" bind:change="onChange2">
+                        模板章
+                    </van-checkbox>
+                </view>
+            </view>
+        </view>
+       
+    </person>
+    <van-action-sheet show="{{ show }}" actions="{{ actions }}" bind:close="onClose" bind:select="onSelect" cancel-text="取消" />
+
+    
+</template>
+<template name="chao">
+    <qiye formData = "{{formData}}" persontype="{{persontype}}" titles="{{titles}}" >
+        <view slot="before2">
+            <van-cell title-style="color:#c6c6c6;" custom-class="tit">
+                <view slot="title" custom-class="tit">
+                    <view class="van-cell-text">印章要求</view>
+                    <!-- <van-icon name="arrow-down" bindtap="chooseP" data-index='0' /> -->
+                </view>
+                <van-icon slot="right-icon" name="info-o" class="custom-icon" bindtap="alertExplain" />
+            </van-cell>
+            <view class="yaoqiu">
+                <view>
+                    <van-checkbox value="{{ formData.gong }}" shape="square" bind:change="onChange3">
+                        企业公章
+                    </van-checkbox>
+                </view>
+                <view>
+                    <van-checkbox value="{{ formData.shouxie }}" shape="square" bind:change="onChange">
+                        经办人手写签名
+                    </van-checkbox>
+                </view>
+                <view>
+                    <van-checkbox value="{{ formData.muban }}" shape="square" bind:change="onChange2">
+                        经办人模板章
+                    </van-checkbox>
+                </view>
+            </view>
+        </view>
+    </qiye>
+</template>
