@@ -1,17 +1,4 @@
 {
-<<<<<<< HEAD
-   "pages": [
-      "pages/index/index",
-      "pages/logs/logs",
-      "pages/contract/constract",
-      "pages/mine/mine",
-      "pages/uploading/uploading",
-      "pages/uoloaddetail/uoloaddetail",
-      "pages/uploadPages/addQian/addQian",
-      "templates/Qian/Qian",
-      "pages/uploadPages/addChao/addChao",
-      "templates/Chao/Chao"
-   ],
    "window": {
       "backgroundTextStyle": "light",
       "navigationBarBackgroundColor": "#fff",
@@ -19,24 +6,6 @@
       "navigationBarTextStyle": "black"
    },
    "sitemapLocation": "sitemap.json",
-   "usingComponents": {
-      "van-button": "@vant/weapp/button/index",
-      "van-cell": "@vant/weapp/cell/index",
-      "van-empty": "@vant/weapp/empty/index",
-      "van-notice-bar": "@vant/weapp/notice-bar/index",
-      "van-field": "@vant/weapp/field/index",
-      "van-icon": "@vant/weapp/icon/index",
-      "van-toast": "@vant/weapp/toast/index",
-      "van-cell-group": "@vant/weapp/cell-group/index",
-      "van-tabbar": "@vant/weapp/tabbar/index",
-      "van-tabbar-item": "@vant/weapp/tabbar-item/index",
-      "van-nav-bar": "@vant/weapp/nav-bar/index",
-      "van-dialog": "@vant/weapp/dialog/index",
-      "van-tab": "@vant/weapp/tab/index",
-      "van-tabs": "@vant/weapp/tabs/index",
-      "van-rate": "@vant/weapp/rate/index",
-      "van-uploader": "@vant/weapp/uploader/index"
-   },
    "tabBar": {
       "selectedColor": "#e53f3c",
       "list": [{
@@ -65,7 +34,8 @@
          }
       ]
    },
-   "subpackages": [{
+   "subpackages": [
+      {
          "root": "pakA",
          "pages": [
             "pages/home/home",
@@ -145,7 +115,8 @@
          }
       ]
    },
-   "subpackages": [{
+   "subpackages": [
+      {
          "root": "pakA",
          "pages": [
             "pages/home/home",
@@ -172,9 +143,7 @@
          "name": "bb",
          "independent": false
       }
-   ]
-}
-=======
+   ],
   "pages": [
     "pages/index/index",
     "pages/logs/logs",
@@ -213,77 +182,5 @@
     "van-uploader": "@vant/weapp/uploader/index",
     "van-action-sheet": "@vant/weapp/action-sheet/index",
     "van-search": "@vant/weapp/search/index"
-  },
-  "tabBar": {
-    "selectedColor": "#e53f3c",
-    "list": [
-      {
-        "text": "首页",
-        "pagePath": "pages/index/index",
-        "iconPath": "images/nav/home-off.png",
-        "selectedIconPath": "images/nav/home-on.png"
-      },
-      {
-        "text": "上传",
-        "pagePath": "pages/uploading/uploading",
-        "iconPath": "images/nav/fl-off.png",
-        "selectedIconPath": "images/nav/fl-on.png"
-      },
-      {
-        "text": "合同",
-        "pagePath": "pages/contract/constract",
-        "iconPath": "images/nav/cart-off.png",
-        "selectedIconPath": "images/nav/cart-on.png"
-      },
-      {
-        "text": "我的",
-        "pagePath": "pages/mine/mine",
-        "iconPath": "images/nav/my-off.png",
-        "selectedIconPath": "images/nav/my-on.png"
-      }
-    ]
-  },
-  "subpackages": [
-    {
-      "root": "pakA",
-      "pages": [
-        "pages/home/home",
-        "pages/help/help",
-        "pages/hotProblem/hotProblem",
-        "pages/offer/offer",
-        "pages/problem/problem",
-        "pages/serverLine/serverLine",
-        "pages/serverChat/serverChat"
-      ],
-      "name": "aa",
-      "independent": false
-    },
-    {
-      "root": "pakB",
-      "pages": [
-        "pages/home/home",
-        "pages/mine/mine",
-        "pages/usersetting/usersetting",
-        "pages/yijianfankui/yijianfankui",
-        "pages/guanyuwomen/guanyuwomen",
-        "pages/xinwenzixun/xinwenzixun",
-        "pages/newsdetail/newsdetail",
-        "pages/dianzihetong/dianzihetong",
-        "pages/order/order",
-        "pages/bm/bm",
-        "pages/addCompany/addCompany",
-        "pages/joinCompany/joinCompany",
-        "pages/renzhengzhongxin/renzhengzhongxin",
-        "pages/shimingrenzheng/shimingrenzheng",
-        "pages/chanpingoumai/chanpingoumai",
-        "pages/dianziqianzhang/dianziqianzhang",
-        "pages/falvfuwu/falvfuwu",
-        "pages/youhuiquan/youhuiquan",
-        "pages/dingdanguanli/dingdanguanli"
-      ],
-      "name": "bb",
-      "independent": false
-    }
-  ]
+  }
 }
->>>>>>> 1f90595fa5af8b304bfa0d47e68468c2cbbeeca5
