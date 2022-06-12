@@ -5,9 +5,99 @@
             <van-icon name="search" />
             <input placeholder="输入关键字进行搜索"/>
         </view>
-        <van-icon name="bars" size="25px" color="#666"/>
+        <van-icon name="bars" size="25px" color="#666" is-link bind:click="showPopup"/>
+        <van-popup show="{{ show }}" bind:close="onClose" position="right" overlay-style="opacity:0.5">
+            <view class="popup">
+                <view class="popupTop">
+                    <image src="https://oss2.1dq.com/app/img/gr.png"/>
+                    <view class="info">
+                        <van-icon name="records" />
+                        <view class="number">剩余0份</view>
+                    </view>
+
+                </view>
+                <view class="popupCenter">
+                    <view class="changeBox"  bind:tap="changeSpace">
+                        <view>请先登录或注册</view>
+                        <van-icon name="arrow-down" />
+                    </view>
+                    <view class="gatherInfo">
+                        <form>
+                            <div>
+                                <label>发起人</label>
+                                <input type="text" placeholder="请输入发起人"/>
+                            </div>
+                            <div>
+                                <label>签署人</label>
+                                <input type="text" placeholder="请输入签署人"/>
+                            </div>
+                            <div>
+                                <label>发起时间</label>
+                                <input type="text" placeholder="请选择发起时间" bind:tap="changeTime" value="{{beginTime}}"/>
+                            </div>
+                            <div>
+                                <label>截止时间</label>
+                                <input type="text" placeholder="请选择截止时间" bind:tap="changeFinishTime" value="{{finishTime}}"/>
+                            </div>
+                        </form>
+                        <view class="buttonWrapper">
+                            <van-button class="searchButton" color="#E54D42" size="large" block bind:tap="onClose">搜索</van-button>
+                            <van-button class="cloaseButton" color="#F0F0F0" size="large" block bind:tap="onClose">关闭</van-button>
+                        </view>
+                    </view>
+                </view>
+                <view class="popupBottom"></view>
+            </view>
+        </van-popup>
+        <!-- 切换企业空间 -->
+        <van-popup show="{{spaceShow}}" bind:close="closeSpace" position="bottom"  custom-style="height: 50%;" overlay-style="opacity:0.5" closeable>
+            <view class="space">
+                <p >切换企业空间</p>
+            </view>
+        </van-popup>
+
+        <!-- 选择发起时间 -->
+        <van-popup show="{{timeShow}}" position="bottom" overlay="{{false}}" custom-style="height: 50%;">
+              <van-datetime-picker
+                type="date"
+                value="{{ currentDate }}"
+                bind:input="onInput"
+                min-date="{{ minDate }}"
+                formatter="{{ formatter }}"
+                bind:confirm="confirm"
+                bind:cancel="closeTime"
+              />
+        </van-popup>
+        <!-- 选择截止时间 -->
+        <van-popup show="{{FinishTimeShow}}" position="bottom" overlay="{{false}}" custom-style="height: 50%;">
+              <van-datetime-picker
+                type="date"
+                value="{{ currentDate }}"
+                bind:input="onInput"
+                min-date="{{ minDate }}"
+                formatter="{{ formatter }}"
+                bind:confirm="finish"
+                bind:cancel="closeFinish"
+              />
+        </van-popup>
+      
+
     </view>
     <view class="nav">
-        
+        <van-tabs active="{{ active }}" color="#e54d42" class="van-tans" title-inactive-color="#666" title-active-color="#e54d42">
+            <block wx:for="{{nav}}">
+                <van-tab title="{{item.text}}"></van-tab>
+            </block>
+        </van-tabs>
+    </view>
+    <view class="content">
+         <view class="emptyConstract">
+            <image src="https://h5.1dq.com/static/app/images/nodata.png"/>
+            <view class="text">- 暂时还没有内容 -</view>
+            <view class="login">
+                <view class="icon">＋</view>
+                <view class="logintext" bind:tap="login">登录用户</view>
+            </view>
+         </view>
     </view>
 </view>

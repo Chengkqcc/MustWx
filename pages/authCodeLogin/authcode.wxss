@@ -1,0 +1,77 @@
+.authcode {
+  box-sizing: border-box;
+  padding: 30px 15px 0 15px;
+}
+.authcode form label {
+  display: block;
+  height: 25px;
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 5px;
+}
+.authcode form input {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #cecece;
+}
+.authcode .notice {
+  box-sizing: border-box;
+  height: 60px;
+  font-size: 14px;
+  padding-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+}
+.authcode .notice p {
+  color: #47A4FF;
+}
+.authcode .next button {
+  border-radius: 5px;
+  margin-top: 25px;
+}
+.authcode .promptInfo {
+  padding-top: 40px;
+}
+.authcode .promptInfo text {
+  box-sizing: border-box;
+  display: block;
+  width: 55%;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 10px;
+  color: #fff;
+  font-size: 12px;
+  background: #575757;
+  margin: 0 auto;
+}
+.authcode .readyWrap {
+  box-sizing: border-box;
+  width: 85%;
+  height: 42%;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 4rpx 4rpx 8rpx 4rpx rgba(0, 0, 0, 0.5);
+}
+.authcode .readyWrap .readyCenter {
+  font-size: 14px;
+  padding: 45px 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.authcode .readyWrap .buttonWrap {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 15px;
+  display: flex;
+  justify-content: space-between;
+}
+.authcode .readyWrap .buttonWrap button {
+  width: 120px;
+  height: 30px;
+  border-radius: 4px;
+}
+.authcode .readyWrap .buttonWrap .btn {
+  border: none;
+  background: #f2f2f2;
+}

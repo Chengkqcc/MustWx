@@ -1,0 +1,25 @@
+.register {
+  box-sizing: border-box;
+  padding: 15px;
+}
+.register form view {
+  margin-top: 25px;
+}
+.register form view label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+.register form view input {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #cecece;
+}
+.register .notice {
+  padding: 25px 0;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 14px;
+}
+.register .notice p {
+  color: #47A4FF;
+}

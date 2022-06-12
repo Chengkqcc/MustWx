@@ -1,0 +1,66 @@
+.login {
+  height: 100vh;
+  box-sizing: border-box;
+  padding: 25px 30px 0px;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+.login .buttonWrap {
+  width: 100%;
+}
+.login .buttonWrap button {
+  margin-bottom: 25px;
+  border-radius: 5px;
+}
+.login .bottom {
+  width: 100%;
+  padding-bottom: 35px;
+  font-size: 14px;
+  color: #aaa;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.login .wxLogin {
+  box-sizing: border-box;
+  width: 100%;
+  height: 300px;
+  background: #fff;
+  padding: 15px;
+}
+.login .wxLogin button {
+  border-radius: 5px;
+}
+.login .wxLogin .phone {
+  color: #585858;
+  font-size: 14px;
+  font-weight: 300;
+}
+.login .wxLogin .quickLogin {
+  padding: 35px 0 30px 0;
+  text-align: center;
+}
+.login .wxLogin .quickLogin .title {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+.login .wxLogin .quickLogin text {
+  font-size: 14px;
+  color: #aaa;
+}
+.login .wxLogin .notice {
+  box-sizing: border-box;
+  height: 60px;
+  font-size: 14px;
+  padding-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+}
+.login .wxLogin .notice text {
+  color: #aaa;
+}
+.login .wxLogin .notice p {
+  color: #47A4FF;
+}

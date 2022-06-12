@@ -1,6 +1,11 @@
 {
   "navigationBarTitleText": "合同管理",
   "usingComponents": {
-    "van-icon": "@vant/weapp/icon/index"
+    "van-icon": "@vant/weapp/icon/index",
+    "van-tab": "@vant/weapp/tab/index",
+    "van-tabs": "@vant/weapp/tabs/index",
+    "van-popup": "@vant/weapp/popup/index",
+    "van-button": "@vant/weapp/button/index",
+    "van-datetime-picker": "@vant/weapp/datetime-picker/index"
   }
 }

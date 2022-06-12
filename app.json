@@ -4,7 +4,10 @@
         "pages/logs/logs",
         "pages/contract/constract",
         "pages/mine/mine",
-        "pages/uploading/uploading"
+        "pages/uploading/uploading",
+        "pages/login/login",
+        "pages/authCodeLogin/authcode",
+        "pages/register/register"
     ],
     "window": {
         "backgroundTextStyle": "light",
@@ -15,7 +18,8 @@
     "sitemapLocation": "sitemap.json",
     "tabBar": {
         "selectedColor": "#e53f3c",
-        "list": [{
+        "list": [
+            {
                 "text": "首页",
                 "pagePath": "pages/index/index",
                 "iconPath": "images/nav/home-off.png",
@@ -41,7 +45,8 @@
             }
         ]
     },
-    "subpackages": [{
+    "subpackages": [
+        {
             "root": "pakA",
             "pages": [
                 "pages/home/home"

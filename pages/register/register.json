@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "新用户注册",
+  "usingComponents": {
+    "van-button": "@vant/weapp/button/index",
+    "van-checkbox": "@vant/weapp/checkbox/index"
+  }
+}
