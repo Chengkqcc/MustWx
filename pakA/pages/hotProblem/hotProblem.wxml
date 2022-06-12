@@ -1,6 +1,9 @@
 <view class = 'container'>
-  <header></header>>
-  <view class = 'hotProblem-con'>
-    <view>企业账户可以加盖企业公章，个人账户只能自己签字</view>
+  <header title = "{{title}}"></header>
+  <view class = 'hotProblem-con' scroll-y>
+    <view wx:for="{{detailList}}" wx:key="index"  class = 'hotProblem-item'>-
+      <view class = 'text'>({{index+1}}){{item.tips.content}}</view>
+      <image src = "{{item.img}}" class = 'img' wx:if="{{item.img}}"></image>
+    </view>
   </view>
 </view>
