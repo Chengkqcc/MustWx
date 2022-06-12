@@ -1,0 +1,13 @@
+.tit {
+  background-color: #eee;
+}
+.x_imt .van-cell {
+  background-color: #000 !important;
+}
+.bot_btn {
+  background-color: #d35849;
+  color: #fff;
+  margin-top: 60rpx;
+  box-sizing: border-box;
+  padding: 0 30rpx;
+}

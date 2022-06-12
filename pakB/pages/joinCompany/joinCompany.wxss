@@ -1,0 +1,6 @@
+.joinCompany {
+  background: #F1F1F1;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}

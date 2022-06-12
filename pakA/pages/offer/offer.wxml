@@ -1,0 +1,24 @@
+<view class = 'container'>
+  <header></header>
+  <image src="	https://oss2.1dq.com/app/static/images/money.jpg" class = 'img'></image>
+  <view>
+    <van-tabs bind:click="onClick" active = "{{active}}">
+      <van-tab title="个人套餐">
+        <van-cell center title="{{item.name}}" value="￥{{item.money}}元" use-label-slot wx:for="{{personalProductList}}" wx:key="index">
+          <view slot = 'label'>
+            <view>可签署文件{{item.number}}份</view>
+            <view>有效期{{item.period_validity}}年</view>
+          </view>
+        </van-cell>
+      </van-tab>
+      <van-tab title="企业套餐">
+        <van-cell center title="{{item.name}}" value="￥{{item.money}}元" use-label-slot wx:for="{{enterpriseProductList}}" wx:key="index">
+          <view slot = 'label'>
+            <view>可签署文件{{item.number}}份</view>
+            <view>有效期{{item.period_validity}}年</view>
+          </view>
+        </van-cell>
+      </van-tab>
+    </van-tabs>
+  </view>
+</view>

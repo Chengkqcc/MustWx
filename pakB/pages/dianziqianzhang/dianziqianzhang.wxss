@@ -1,0 +1,143 @@
+page {
+  background-color: #EE0A24;
+}
+.dianziqianzhang .van-tabs__wrap {
+  padding: 30px 0;
+  background-color: #EE0A24;
+}
+.dianziqianzhang .van-tabs__wrap .van-tabs__scroll {
+  background-color: #EE0A24;
+}
+.dianziqianzhang .van-tabs__wrap .van-tabs__scroll .van-tabs__nav .van-tab--active {
+  font-weight: 700;
+}
+.dianziqianzhang .van-tabs__wrap .van-tabs__scroll .van-tabs__nav .van-ellipsis {
+  color: #E5D4D3;
+  font-size: 18px;
+}
+.dianziqianzhang .van-tabs__wrap .van-tabs__scroll .van-tabs__nav .van-tab {
+  text-align: right;
+  padding: 0 10px;
+}
+.dianziqianzhang .van-tabs__wrap .van-tabs__scroll .van-tabs__nav .van-tab:last-child {
+  text-align: left;
+}
+.dianziqianzhang .van-tabs__content {
+  height: 100%;
+  background-color: #F8F8F8;
+  border-radius: 20px 20px 0 0 ;
+  padding-bottom: 80px;
+}
+.dianziqianzhang .write {
+  background-color: #fff;
+  padding: 30px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.dianziqianzhang .write .title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #EE0A24;
+}
+.dianziqianzhang .write .text {
+  font-size: 14px;
+  font-weight: 300;
+  margin-top: 15px;
+}
+.dianziqianzhang .item {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.dianziqianzhang .item:nth-child(2n+1) {
+  background-color: #fff;
+}
+.dianziqianzhang .pay_box {
+  position: fixed;
+  bottom: 0;
+  background-color: #F7F7F7;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0 0 15px;
+  width: 100vw;
+  box-sizing: border-box;
+}
+.dianziqianzhang .pay_box .price {
+  font-size: 20px;
+  font-weight: 200;
+}
+.dianziqianzhang .pay_box .price text {
+  color: #EE0A24;
+  font-weight: 400;
+}
+.popup {
+  width: 80vw;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #aaa;
+  padding: 15px;
+  padding-bottom: 50px;
+  box-sizing: border-box;
+}
+.popup .title {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.popup .value {
+  font-size: 14px;
+}
+.qiehuan .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: #F1F1F1;
+}
+.qiehuan .title .text {
+  font-weight: bolder;
+}
+.qiehuan .item_user {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #F1F1F1;
+}
+.qiehuan .item_user .user_item {
+  display: flex;
+}
+.qiehuan .item_user .user_item .img {
+  width: 50px;
+  height: 50px;
+}
+.qiehuan .item_user .user_item .img image {
+  width: 100%;
+  height: 100%;
+}
+.qiehuan .item_user .user_item .yonghu {
+  margin-left: 10px;
+}
+.qiehuan .item_user .user_item .yonghu .name {
+  display: flex;
+  align-items: center;
+}
+.qiehuan .item_user .user_item .yonghu .name .state {
+  padding: 5px 10px;
+  background-color: #F37B1D;
+  color: #fff;
+  font-size: 14px;
+  margin-left: 10px;
+  border-radius: 3px;
+}
+.qiehuan .item_user .user_item .yonghu .rzstate {
+  font-size: 16px;
+  color: #bbb;
+}

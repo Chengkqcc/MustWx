@@ -1,0 +1,71 @@
+<!--pakB/pages/shimingrenzheng/shimingrenzheng.wxml-->
+<view class="shimingrenzheng">
+  <view class="top">
+    <view class="title" bindtap="set_eid_fn">
+      <view class="text">{{rz_way}}</view>
+      <view class="set_eid"><text>更改</text><van-icon name="arrow" /></view>
+    </view>
+    <view class="name">
+       <van-field
+          model:value="{{ name }}"
+          label="真实姓名"
+          placeholder="请输入您的真实姓名"
+          border="{{ false }}"
+          bind:change="onnameChange"
+          input-align="right"
+        />
+    </view>
+    <view class="eid">
+       <van-field
+          model:value="{{ eid }}"
+          label="身份证号"
+          placeholder="请输入您的身份证号"
+          border="{{ false }}"
+          bind:change="oneidChange"
+          input-align="right"
+        />
+    </view>
+    <view class="checked">
+      <van-checkbox value="{{ checked }}" shape="square" bind:change="onChange">我已阅读并同意</van-checkbox>
+      <navigator class="text" target="" url="/" open-type="navigate">
+        《实名认证授权协议》
+      </navigator>
+    </view>
+    <view class="btn">
+      <van-button color="#E54D42" block bind:click="next_fn">下一步</van-button>
+    </view>
+  </view>
+  <view class="bottom">实名认证遇到问题? 您可以进行<text bindtap="rgrz_fn">人工认证</text></view>
+</view>
+<!-- 更换  -->
+<van-popup
+  show="{{ show }}"
+  position="bottom"
+  custom-style="height: 62%;"
+  bind:close="close_popup"
+>
+<view class="items">
+  <view class="title">
+    <view class="text">更换其他认证方式</view>
+    <van-icon name="cross" bind:click="close_popup"/>
+  </view>
+  <block wx:for="{{ways}}" wx:key="{{item.id}}">
+    <!-- 认证方式 -->
+    <view class="item_user" bindtap="qiehuan_fn" data-item="{{item}}">
+      <view class="user_item">
+        <view class="img">
+          <image class="" src="https://oss2.1dq.com/app/img/gr.png"></image>
+        </view>
+        <view class="yonghu">
+          <view class="name">
+            <view class="phone">{{item.title}}</view>
+            <!-- <view class="state">当前</view> -->
+          </view>
+          <view class="rzstate">{{item.desc}}</view>
+        </view>
+      </view>
+      <van-icon name="arrow" />
+    </view>
+  </block>
+</view>
+</van-popup>

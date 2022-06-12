@@ -1,0 +1,4 @@
+<view class="joinCompany">
+   <companies tip="{{tip}}" hasSwitch="{{hasSwitch}}" btnText="{{btnText}}"></companies>
+   <van-toast id="van-toast" />
+</view>

@@ -1,0 +1,46 @@
+.companies-container{
+   .title-wrap {
+      display: flex;
+      justify-content: space-between;
+      padding: 20rpx 30rpx;
+      font-size: 28rpx;
+      color: #aaa;
+      .tip {
+         font-size: 36rpx;
+      }
+   }
+   .search-content {
+      position: absolute;
+      width: 100vw;
+      height: 48vh;
+      top: 168rpx;
+      left: 0;
+      z-index: 99;
+      van-cell-group {
+         height: 40vh;
+         width: 100vw;
+         overflow: scroll;
+         position: absolute;
+      }
+      .closed {
+         width: 100vw;
+         position: absolute;
+         top: 40vh;
+         line-height: 8vh;
+         text-align: center;
+         background: #FAFAFA;
+         color: #D55849;
+      }
+   }
+   .search-closed {
+      display: none;
+   }
+
+   .btn {
+      margin-top: 20rpx;
+      padding: 20rpx 30rpx;
+      .addBtn {
+         width: 100%;
+      }   
+   }
+}

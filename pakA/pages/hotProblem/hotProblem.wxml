@@ -1,0 +1,9 @@
+<view class = 'container'>
+  <header title = "{{title}}"></header>
+  <view class = 'hotProblem-con' scroll-y>
+    <view wx:for="{{detailList}}" wx:key="index"  class = 'hotProblem-item'>-
+      <view class = 'text'>({{index+1}}){{item.tips.content}}</view>
+      <image src = "{{item.img}}" class = 'img' wx:if="{{item.img}}"></image>
+    </view>
+  </view>
+</view>

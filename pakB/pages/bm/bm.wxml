@@ -1,0 +1,11 @@
+<view class="bm-container">
+   <import src="/templates/bm_template/bm_template" />
+   <template wx:if="{{hasData}}" is="companies" data="{{ imageURL,companiesList }}"></template>
+   <template wx:else is="empty"></template>
+   <view class="btm">
+      <van-button color="#e54d42" plain custom-class="join" bindtap="joinBtn">申请加入企业</van-button>
+      <navigator url="/pakB/pages/addCompany/addCompany" open-type="navigate">
+         <van-button color="#e54d42" custom-class="add">添加新企业</van-button>
+      </navigator>
+   </view>
+</view>

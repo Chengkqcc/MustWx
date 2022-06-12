@@ -1,0 +1,22 @@
+.container {
+  width: 100%;
+  background-color: #f1f1f1;
+}
+.container .hotProblem-con {
+  position: fixed;
+  height: 100%;
+  left: 0;
+  top: 10vh;
+  bottom: 10vh;
+  width: 100%;
+  padding: 30rpx;
+  background-color: #fff;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+.container .hotProblem-con .hotProblem-item .text {
+  font-size: 30rpx;
+  margin: 5px 0;
+  line-height: 56rpx;
+  color: #6a6a6a;
+}

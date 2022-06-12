@@ -1,0 +1,84 @@
+.container{
+  width:100vw;
+  height:100%;
+  background-color:#f1f1f1;
+  box-sizing: border-box;
+  .help-con{
+    position:fixed;
+    left:0;
+    top:10vh;
+    width:100%;
+    height:90vh;
+    box-sizing: border-box;
+    padding-bottom:174rpx;
+    background-color:#f1f1f1;
+    .advertisement{
+      margin:32rpx 32rpx 0rpx;
+      box-sizing: border-box;
+      image{
+        width:100%;
+        height:220rpx;
+        border-radius: 6rpx;
+      }
+    }
+    .help-list{
+      margin:0 32rpx 6rpx;
+      .help-item{
+        .help-item-title{
+          height:90rpx;
+          box-sizing: border-box;
+          padding-top:38rpx;
+          font-size:24rpx;
+          font-weight: bold;
+          display: flex;
+          justify-content: space-between;
+          .text-more{
+            font-size:28rpx;
+            font-weight: 100;
+          }
+        }
+        .van-cell-group{
+          border-radius: 10rpx;
+          overflow: hidden;
+        }
+      }
+      .lookMore{
+        height:128rpx;
+        line-height: 128rpx;
+        text-align: center;
+        font-size: 24rpx;
+        margin-top:24rpx;
+      }
+    }
+  }
+ 
+
+  .footer{
+    position: fixed;
+    bottom:0px;
+    left:0;
+    width:100%;
+    height:174rpx;
+    background-color: #f1f1f1;
+    z-index:9;
+    box-sizing: border-box;
+    padding:10rpx 32rpx 20rpx;
+    .tab{
+      width:100%;
+      height:140rpx;
+      background-color: #fff;
+      border-radius: 10rpx;
+      display: flex;
+      .tab-item{
+        display: flex;
+        flex-direction: column;
+        flex:1;
+        text-align: center;
+        justify-content: center;
+        text{
+          margin-top:10rpx;
+        }
+      }
+    }
+  }
+}
