@@ -37,14 +37,13 @@ Page({
                     notice: false
                 })
             }, 2800)
-        } else if (this.data.value.length < 11) {
+        }
+        else if (this.data.value.length < 11) {
             this.setData({
                 notice: true
             })
         } else {
-            this.setData({
-                notice: false
-            })
+            console.log(1)
         }
     },
 
@@ -53,6 +52,12 @@ Page({
         this.setData({
             show: false,
             checked: true
+        })
+    },
+    unconsent() {
+        this.setData({
+            show: false,
+            checked: false
         })
     },
 

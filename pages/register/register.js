@@ -5,13 +5,70 @@ Page({
      * 页面的初始数据
      */
     data: {
-        checked: false
+        show: false,
+        checked: false,
+        phone: "",
+        psd: "",
+        usanotice: false,
+        pwdnotice: false,
+    },
+    onClose() {
+        this.setData({ show: false });
     },
     // 点击复选框
     onChange(event) {
         this.setData({
             checked: event.detail,
         });
+    },
+    // 点击注册
+    register() {
+        if (!this.data.checked) {
+            this.setData({
+                show: true
+            })
+        } else if (this.data.phone.length < 11) {
+            let that = this;
+            this.setData({
+                usanotice: true,
+                pwdnotice: false
+            })
+
+            setTimeout(function () {
+                that.setData({
+                    usanotice: false,
+                    pwdnotice: false
+                })
+            }, 1200)
+        } else if (this.data.psd.length < 8) {
+            let that = this;
+
+            this.setData({
+                usanotice: false,
+                pwdnotice: true
+            })
+            setTimeout(function () {
+                that.setData({
+                    usanotice: false,
+                    pwdnotice: false
+                })
+            }, 1200)
+        } else {
+            console.log("验证码")
+        }
+    },
+
+    // 同意
+    consent() {
+        this.setData({
+            show: false,
+            checked: true
+        })
+    },
+    unconsent() {
+        this.setData({
+            show: false,
+        })
     },
 
     /**
