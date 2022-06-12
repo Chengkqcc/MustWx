@@ -1,0 +1,47 @@
+<!--pakB/pages/renzhengzhongxin/renzhengzhongxin.wxml-->
+<view class="renzhengzhongxin">
+  <view class="top">
+    <view class="title">认证中心</view>
+    <view class="text">为保障您签署合同的有效性，您必须完成认证后才可以签署合同。</view>
+  </view>
+  <view class="personal">
+    <view class="title">
+      <view class="line"></view>
+      <view class="text">个人认证</view>
+    </view>
+    <!-- 用户 -->
+    <view class="item_user" bindtap="personal_fn">
+      <view class="user_item">
+        <view class="img">
+          <image class="" src="https://oss2.1dq.com/app/img/gr.png"></image>
+        </view>
+        <view class="yonghu">
+          <view class="name">
+            <view class="phone">156****3372</view>
+            <!-- <view class="state">当前</view> -->
+          </view>
+          <view class="rzstate">认证状态: 未认证</view>
+        </view>
+      </view>
+      <van-icon name="arrow" />
+    </view>
+  </view>
+  <view class="bottom">
+    <view class="kefu" bindtap="to_kefu_fn">
+      <van-icon name="audio" />
+      <text>客服</text>
+    </view>
+    <view class="add_b_authen" bindtap="add_b_authen_fn">添加企业认证</view>
+  </view>
+</view>
+<!-- 添加企业认证 判断 个人认证 -->
+<van-popup show="{{ show }}" bind:close="onClose" overlay-style="background-color:rgba(0,0,0,0)">
+  <view class="popup">
+    <view class="title">
+      <text class="text">提示</text>
+      <van-icon name="cross" bind:click="close_popup"/>
+    </view>
+    <view class="value">您完成了个人认证后，才能提交企业认证</view>
+    <van-button type="primary" size="normal" bindtap="close_popup">确定</van-button>
+  </view>
+</van-popup>

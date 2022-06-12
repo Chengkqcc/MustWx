@@ -1,0 +1,124 @@
+page {
+  background-color: #f1f1f1;
+}
+.renzhengzhongxin .top {
+  height: 150px;
+  background-color: #258FFF;
+  padding: 30px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+}
+.renzhengzhongxin .top .title {
+  font-size: 28px;
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+.renzhengzhongxin .top .text {
+  font-size: 16px;
+  font-weight: 300;
+}
+.renzhengzhongxin .personal {
+  background-color: #fff;
+}
+.renzhengzhongxin .personal .title {
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  height: 50px;
+  border-bottom: #f1f1f1 1px solid;
+}
+.renzhengzhongxin .personal .title .line {
+  width: 4px;
+  height: 20px;
+  background-color: #AAAAAA;
+  border-radius: 2px;
+  margin-right: 10px;
+}
+.renzhengzhongxin .personal .title .text {
+  font-weight: 900;
+  font-size: 18px;
+}
+.renzhengzhongxin .personal .item_user {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #F1F1F1;
+}
+.renzhengzhongxin .personal .item_user .user_item {
+  display: flex;
+}
+.renzhengzhongxin .personal .item_user .user_item .img {
+  width: 50px;
+  height: 50px;
+}
+.renzhengzhongxin .personal .item_user .user_item .img image {
+  width: 100%;
+  height: 100%;
+}
+.renzhengzhongxin .personal .item_user .user_item .yonghu {
+  margin-left: 10px;
+}
+.renzhengzhongxin .personal .item_user .user_item .yonghu .name {
+  display: flex;
+  align-items: center;
+}
+.renzhengzhongxin .personal .item_user .user_item .yonghu .name .state {
+  padding: 5px 10px;
+  background-color: #F37B1D;
+  color: #fff;
+  font-size: 14px;
+  margin-left: 10px;
+  border-radius: 3px;
+}
+.renzhengzhongxin .personal .item_user .user_item .yonghu .rzstate {
+  font-size: 16px;
+  color: #bbb;
+}
+.renzhengzhongxin .bottom {
+  position: absolute;
+  bottom: 0;
+  height: 50px;
+  background-color: #F7F7F7;
+  border-top: #bbb;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 15px;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+.renzhengzhongxin .bottom .kefu {
+  display: flex;
+  flex-direction: column;
+  padding: 0 15px;
+  border-right: #ddd 1px solid;
+}
+.renzhengzhongxin .bottom .add_b_authen {
+  padding: 10px 15px;
+  background-color: #258FFF;
+  color: #fff;
+}
+.popup {
+  width: 80vw;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #aaa;
+  padding: 15px;
+  padding-bottom: 50px;
+  box-sizing: border-box;
+}
+.popup .title {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.popup .value {
+  font-size: 14px;
+}

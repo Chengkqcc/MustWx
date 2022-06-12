@@ -1,0 +1,59 @@
+<view class = 'container'>
+  <header></header>
+  <view class = 'problem-con'>
+    <van-cell title="问题和意见" value = "快速键入"  border="{{ false }}">
+      <van-icon slot="right-icon" name="arrow-down" class="custom-icon" />
+    </van-cell>
+    <scroll-view class="section" scroll-y>
+      <textarea 
+      bindblur="bindTextAreaBlur"
+       maxlength = "{{-1}}"  
+       placeholder = '请详细描述你的问题和意见'
+       value = "{{feedbackValue}}"
+       bindinput = "feedbackfn"
+       />
+    </scroll-view>
+    <van-cell title="图片（选填，提供问题截图，总大小10M以下）" />
+    <view class = 'preview'>
+      <van-cell title="点击预览图片" value= "{{fileList.length}}/8" class = 'preview-titlt'  border="{{ false }}" />
+      <van-uploader 
+      preview-image 
+      file-list="{{ fileList }}"
+      bind:after-read = "addImg" 
+      max-count="9"
+      bind:delete = "deleteImg"
+      />
+    </view>
+
+    <van-cell title="QQ/邮箱"  border="{{ false }}"/>
+    <van-field
+      value="{{ value }}"
+      placeholder="(选填，方便我们联系你)"
+      border="{{ false }}"
+      bind:change="onChange"
+      class = 'email'
+    />
+    <van-cell class = 'feedback' border="{{false}}">
+      <van-cell class = 'feedback'>
+      <view slot="title" class = 'feedback-title'>
+        <view class="">应用评分</view>
+        <van-rate
+          slot="title"
+          value="{{ 3 }}"
+          size="{{ 20 }}"
+          color="#ffd21e"
+          void-color="#666"
+          bind:change="onChange"
+        />
+      </view>
+    </van-cell>
+      
+    </van-cell>
+    <view class = 'sure'>
+      <van-button type="danger" block class = 'btn' >确定</van-button>
+    </view>
+    
+  </view>
+  
+ 
+</view>

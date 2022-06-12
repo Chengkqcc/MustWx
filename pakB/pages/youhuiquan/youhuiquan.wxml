@@ -1,0 +1,12 @@
+<!--pakB/pages/youhuiquan/youhuiquan.wxml-->
+<view class="youhuiquan">
+  <van-tabs bind:click="onClick">
+    <block wx:for="{{yh_data}}" wx:key="{{item.id}}">
+      <van-tab title="{{item.title}}">
+        <view wx:if="{{item.children.length==0}}" class="empty">
+          <van-empty description="-暂时还没有内容-" />
+        </view>
+      </van-tab>
+    </block>
+  </van-tabs>
+</view>

@@ -1,12 +1,13 @@
 {
-    "description": "项目配置文件",
+    "description": "项目配置文件，详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html",
     "packOptions": {
         "ignore": [
             {
-                "type": "file",
-                "value": ".eslintrc.js"
+                "value": ".eslintrc.js",
+                "type": "file"
             }
-        ]
+        ],
+        "include": []
     },
     "setting": {
         "urlCheck": true,
@@ -27,15 +28,15 @@
         "uploadWithSourceMap": true,
         "compileHotReLoad": true,
         "lazyloadPlaceholderEnable": false,
-        "useMultiFrameRuntime": true,
-        "useApiHook": true,
-        "useApiHostProcess": true,
+        "useMultiFrameRuntime": false,
+        "useApiHook": false,
+        "useApiHostProcess": false,
         "babelSetting": {
             "ignore": [],
             "disablePlugins": [],
             "outputPath": ""
         },
-        "useIsolateContext": true,
+        "useIsolateContext": false,
         "userConfirmedBundleSwitch": false,
         "packNpmManually": true,
         "packNpmRelationList": [
@@ -51,10 +52,15 @@
         "useCompilerPlugins": false,
         "ignoreUploadUnusedFiles": true
     },
+    "editorSetting": {
+        "tabIndent": "insertSpaces",
+        "tabSize": 2
+    },
     "compileType": "miniprogram",
     "libVersion": "2.19.4",
     "appid": "wxb477562d764bed06",
     "projectname": "wxmust",
+<<<<<<< HEAD
     "projectname": "wxproject",
     "debugOptions": {
         "hidedInDevtools": []
@@ -85,4 +91,7 @@
             "list": []
         }
     }
+=======
+    "condition": {}
+>>>>>>> 2cccfb1b208f35038d989dedbf01d8458737920e
 }

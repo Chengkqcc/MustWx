@@ -1,0 +1,13 @@
+<!-- 没有数据 -->
+<template name="empty">
+   <view class="no-content">
+      <van-notice-bar left-icon="volume-o" text="视频教程 如何完成企业认证？" />
+      <van-empty class="custom-image" image="https://oss2.1dq.com/app/static/app-plus/images/empty.png" description="暂时还没有数据" />
+   </view>
+   <view class="btm">
+      <van-button color="#e54d42" plain custom-class="join" bindtap="joinBtn">申请加入企业</van-button>
+      <van-button color="#e54d42" custom-class="add">添加新企业</van-button>
+   </view>
+</template>
+<!-- 有数据 -->
+<template name="companies"></template>

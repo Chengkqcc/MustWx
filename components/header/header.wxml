@@ -1,0 +1,12 @@
+<view class = "title">
+    <van-nav-bar
+      title="帮助中心"
+      bind:click-left="backfn"
+    >
+      <view slot="left">
+        <van-icon name="arrow-left" />
+      </view>
+    </van-nav-bar>
+</view>
+
+
