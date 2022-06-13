@@ -1,7 +1,6 @@
 .rengong {
    background: #f1f1f1;
    width: 100vw;
-   height: 100vh;
 }
 .title {
    line-height: 80rpx;
@@ -18,4 +17,11 @@
  }
 .btn .nextBtn {
    width: 100%;
+}
+.van-uploader__wrapper {
+   padding: 0 30rpx;
+   display: flex;
+   justify-content: space-around;
+   width: 100vw;
+   box-sizing: border-box;
  }

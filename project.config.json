@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
     "description": "项目配置文件，详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html",
     "packOptions": {
         "ignore": [
@@ -75,48 +76,117 @@
     "ignoreUploadUnusedFiles": true,
     "useStaticServer": true,
     "coverView": true,
+=======
+  "description": "项目配置文件，详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html",
+  "packOptions": {
+    "ignore": [
+      {
+        "value": ".eslintrc.js",
+        "type": "file"
+      }
+    ],
+    "include": []
+  },
+  "setting": {
+    "urlCheck": true,
+>>>>>>> 9b3dc87c8eb519a50b07022e25c2752a3c7e4f53
     "es6": true,
+    "enhance": true,
     "postcss": true,
-    "lazyloadPlaceholderEnable": false,
     "preloadBackgroundData": false,
     "minified": true,
+    "newFeature": false,
+    "coverView": true,
+    "nodeModules": false,
     "autoAudits": false,
-    "uglifyFileName": false,
-    "uploadWithSourceMap": true,
-    "enhance": true,
-    "useMultiFrameRuntime": true,
     "showShadowRootInWxmlPanel": true,
-    "packNpmManually": false,
-    "packNpmRelationList": [],
-    "minifyWXSS": true,
-    "showES6CompileOption": false,
+    "scopeDataCheck": false,
+    "uglifyFileName": false,
     "checkInvalidKey": true,
+    "checkSiteMap": true,
+    "uploadWithSourceMap": true,
     "compileHotReLoad": true,
+    "lazyloadPlaceholderEnable": false,
+    "useMultiFrameRuntime": true,
+    "useApiHook": true,
+    "useApiHostProcess": true,
     "babelSetting": {
-        "ignore": [],
-        "disablePlugins": [],
-        "outputPath": ""
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
     },
+    "useIsolateContext": true,
+    "userConfirmedBundleSwitch": false,
+    "packNpmManually": true,
+    "packNpmRelationList": [
+      {
+        "packageJsonPath": "./package.json",
+        "miniprogramNpmDistDir": "./"
+      }
+    ],
+    "minifyWXSS": true,
     "disableUseStrict": false,
+    "minifyWXML": true,
+    "showES6CompileOption": false,
     "useCompilerPlugins": false,
-    "condition": {
-        "search": {
-            "list": []
-        },
-        "conversation": {
-            "list": []
-        },
-        "game": {
-            "list": []
-        },
-        "plugin": {
-            "list": []
-        },
-        "gamePlugin": {
-            "list": []
-        },
-        "miniprogram": {
-            "list": []
-        }
+    "ignoreUploadUnusedFiles": true,
+    "useStaticServer": true
+  },
+  "editorSetting": {
+    "tabIndent": "insertSpaces",
+    "tabSize": 2
+  },
+  "compileType": "miniprogram",
+  "libVersion": "2.19.4",
+  "appid": "wxb477562d764bed06",
+  "projectname": "wxmust",
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "ignoreUploadUnusedFiles": true,
+  "useStaticServer": true,
+  "coverView": true,
+  "es6": true,
+  "postcss": true,
+  "lazyloadPlaceholderEnable": false,
+  "preloadBackgroundData": false,
+  "minified": true,
+  "autoAudits": false,
+  "uglifyFileName": false,
+  "uploadWithSourceMap": true,
+  "enhance": true,
+  "useMultiFrameRuntime": true,
+  "showShadowRootInWxmlPanel": true,
+  "packNpmManually": false,
+  "packNpmRelationList": [],
+  "minifyWXSS": true,
+  "showES6CompileOption": false,
+  "checkInvalidKey": true,
+  "compileHotReLoad": true,
+  "babelSetting": {
+    "ignore": [],
+    "disablePlugins": [],
+    "outputPath": ""
+  },
+  "disableUseStrict": false,
+  "useCompilerPlugins": false,
+  "condition": {
+    "search": {
+      "list": []
+    },
+    "conversation": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "plugin": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": []
     }
+  }
 }
