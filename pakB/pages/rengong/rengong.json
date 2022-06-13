@@ -1,3 +1,6 @@
 {
-  "navigationBarTitleText": "企业认证"
+  "navigationBarTitleText": "企业认证",
+  "usingComponents":{
+     "uploader":"/components/uploader/uploader"
+  }
 }
