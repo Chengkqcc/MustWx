@@ -58,21 +58,10 @@
         "pagePath": "pages/mine/mine",
         "iconPath": "images/nav/my-off.png",
         "selectedIconPath": "images/nav/my-on.png"
-      },
-      "usingComponents": {
-        "van-popup": "@vant/weapp/popup/index",
-        "van-button": "@vant/weapp/button/index",
-        "van-cell": "@vant/weapp/cell/index",
-        "van-cell-group": "@vant/weapp/cell-group/index",
-        "van-field": "@vant/weapp/field/index",
-        "van-action-sheet": "@vant/weapp/action-sheet/index",
-        "van-icon": "@vant/weapp/icon/index",
-        "van-checkbox": "@vant/weapp/checkbox/index",
-        "van-checkbox-group": "@vant/weapp/checkbox-group/index",
-        "van-toast": "@vant/weapp/toast/index",
-        "van-tag": "@vant/weapp/tag/index"
-      },
-    "subpackages": [{
+      }]
+    },
+    "subpackages": [
+      {
         "root": "pakA",
         "pages": [
           "pages/home/home",
@@ -138,6 +127,18 @@
       "van-action-sheet": "@vant/weapp/action-sheet/index",
       "van-search": "@vant/weapp/search/index",
       "van-popup": "@vant/weapp/popup/index",
-      "van-switch": "@vant/weapp/switch/index"
+      "van-switch": "@vant/weapp/switch/index",
+      "van-popup": "@vant/weapp/popup/index",
+      "van-button": "@vant/weapp/button/index",
+      "van-cell": "@vant/weapp/cell/index",
+      "van-cell-group": "@vant/weapp/cell-group/index",
+      "van-field": "@vant/weapp/field/index",
+      "van-action-sheet": "@vant/weapp/action-sheet/index",
+      "van-icon": "@vant/weapp/icon/index",
+      "van-checkbox": "@vant/weapp/checkbox/index",
+      "van-checkbox-group": "@vant/weapp/checkbox-group/index",
+      "van-toast": "@vant/weapp/toast/index",
+      "van-tag": "@vant/weapp/tag/index"
     }
   }
+
