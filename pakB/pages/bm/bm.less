@@ -1,3 +1,9 @@
+.bm-container {
+   background: #F1F1F1;
+   width: 100vw;
+   height: 100vh;
+}
+
 // 没有数据
 .btm {
    position: fixed;
@@ -23,3 +29,30 @@
 
 
 // 有数据
+.hasCompanies {
+   padding-top: 30rpx;
+   padding-bottom: 128rpx;
+   .van-cell {
+      display: flex;
+      align-items: center;
+      .left {
+         display: flex;
+         align-items: center;
+         .image {
+            width: 80rpx;
+            height: 80rpx;
+            background: #ccc;
+            border-radius: 10rpx;
+            margin-right: 20rpx;
+         }
+         .title {
+            font-size: 34rpx;
+            font-weight: 400;
+         }
+         .desc {
+            font-size: 30rpx;
+            font-weight: 300;
+         }
+      }
+   }
+}

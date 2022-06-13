@@ -1,19 +1,113 @@
-/**index.wxss**/
-.userinfo {
+.commonServer {
+  box-sizing: border-box;
+  width: 100vw;
+  padding: 25px 15px;
+  background: #F1F1F1;
+}
+.commonServer .serverList {
+  height: 205px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: #aaa;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
 }
-
-.userinfo-avatar {
-  overflow: hidden;
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+.commonServer .serverList .serverItem {
+  width: 31%;
+  padding: 20px 0;
+  border-radius: 8px;
+  background: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
-
-.usermotto {
-  margin-top: 200px;
+.commonServer .serverList .serverItem image {
+  width: 30px;
+  height: 30px;
+}
+.commonServer .serverList .serverItem p {
+  width: 100%;
+  color: #333;
+  font-weight: 300;
+  margin-top: 6px;
+  text-align: center;
+}
+.banner {
+  box-sizing: border-box;
+  width: 100vw;
+  padding: 15px;
+}
+.banner .title {
+  font-size: 20px;
+  color: #333;
+}
+.banner .swiper {
+  height: 200px;
+  padding-top: 25px;
+}
+.banner .swiper image {
+  width: 100%;
+  height: 170px;
+  border-radius: 8px;
+}
+.banner .van-notice-bar {
+  margin-top: 10px;
+  border-radius: 5px;
+  border: 1px solid #f1f1f1;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+.banner .van-notice-bar .van-icon {
+  color: #E54D42;
+}
+.model {
+  box-sizing: border-box;
+  width: 100vw;
+  padding: 0 15px;
+}
+.model .title {
+  margin-top: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+.model .title p {
+  font-size: 20px;
+  color: #333;
+}
+.model .title image {
+  width: 15px;
+  height: 15px;
+}
+.model .modelList {
+  width: 100%;
+  margin-top: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.model .modelList .modelItem {
+  width: 31%;
+  height: 180px;
+  text-align: center;
+  margin-top: 16px;
+}
+.model .modelList .modelItem .imgWrapper {
+  height: 80%;
+  border-radius: 2px;
+  background: #fff;
+  border: 1px solid #f1f1f1;
+}
+.model .modelList .modelItem .imgWrapper image {
+  width: 100%;
+  height: 100%;
+}
+.model .modelList .modelItem .text {
+  font-size: 14px;
+  color: #333;
+  margin-top: 10px;
+}
+.model .moreModle {
+  padding: 22px 0;
+  color: #a5a5a5;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
 }

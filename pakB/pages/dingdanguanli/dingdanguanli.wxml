@@ -1,13 +1,24 @@
 <!--pakB/pages/dingdanguanli/dingdanguanli.wxml-->
-<view class="dingdanguanli" hover-class="none" hover-stop-propagation="false">
+<view class="dingdanguanli">
   <van-tabs bind:click="onClick">
     <block wx:for="{{order_data}}" wx:key="{{item.id}}">
       <van-tab title="{{item.title}}">
         <view wx:if="{{item.children.length==0}}" class="empty">
           <van-empty description="-暂时还没有内容-" />
         </view>
-        <view class="item" wx:else>
-          data
+        <view class="list" wx:else>
+          <block wx:for="{{item.children}}" wx:key="{{item.id}}">
+            <view class="item">
+              <view class="left">
+                <view class="title">个人体验套餐</view>                
+                <view class="id">订单编号:<text>3758406276503347201622</text></view>                
+                <view class="time">创建时间:<text>2022-06-10 11:04:36</text></view>                
+                <view class="way">支付方式:<text>微信</text></view>                
+                <view class="state">订单状态:<text>未付款</text></view>                
+              </view>
+              <view class="right">￥48.00</view>
+            </view>
+          </block>
         </view>
       </van-tab>
     </block>

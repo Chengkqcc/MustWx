@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "使用验证码登录",
+  "usingComponents": {
+    "van-button": "@vant/weapp/button/index",
+    "van-checkbox": "@vant/weapp/checkbox/index",
+    "van-popup": "@vant/weapp/popup/index"
+  }
+}

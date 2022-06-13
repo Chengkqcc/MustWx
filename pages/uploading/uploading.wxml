@@ -1,6 +1,5 @@
 <!--pages/uploading/uploading.wxml-->
 <view class="content">
-
 <view class="banner"> 
       <swiper 
       circular 	
@@ -108,16 +107,13 @@
     </view>
 </view>
 
-<van-popup
+<!-- <van-popup
   show="{{ show }}"
   closeable
   position="bottom"
   custom-style="height: 20%"
   bind:close="onClose"
 >
-    <view class="hid_top">
-        <text>选择合同发起方</text>
-    </view>
     
-</van-popup>
+</van-popup> -->
 </view>

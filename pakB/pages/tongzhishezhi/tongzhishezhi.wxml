@@ -1,0 +1,15 @@
+<!--pakB/pages/tongzhishezhi/tongzhishezhi.wxml-->
+<view class="tongzhishezhi">
+  <block wx:for="{{tz_data}}" wx:ksy="{{item.id}}">
+    <view class="item">
+      <text>{{item.title}}</text><!-- #ee0a24 -->
+      <van-switch
+        checked="{{ item.flag }}"
+        active-color="#E85E55"
+        inactive-color="#fff"
+        bind:change="onORoff_fn"
+        data-item="{{item}}"
+      />
+    </view>
+  </block>
+</view>

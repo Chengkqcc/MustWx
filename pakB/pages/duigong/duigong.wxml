@@ -1,0 +1,30 @@
+<view class="duigong">
+   <van-cell-group>
+      <view class="title">
+         <text class="req">*</text>
+         企业信息填写
+      </view>
+      <van-field value="{{ qiyeName }}" label="企业名称" placeholder="请输入企业名称" input-align="right" bind:change="onQiyeName"/>
+      <van-field value="{{ xinyongCode }}" label="信用代码" placeholder="请输入企业信用代码/注册号" input-align="right" bind:change="onCode"/>
+      <van-field value="{{ farenName }}" label="法人名称" placeholder="请输入法人名称" input-align="right" bind:change="onFarenName"/>
+      <van-field value="{{ farenCode }}" label="法人证件号" placeholder="请输入法人身份证号" input-align="right" bind:change="onFarenCode"/>
+   </van-cell-group>
+   <van-cell-group>
+      <view class="title">
+         <text class="req">*</text>
+         对公银行账户信息
+      </view>
+      <van-field value="{{ kaihuName }}" label="开户名称" placeholder="为空默认为企业名称" input-align="right" bind:change="onKaihu"/>
+      <van-field value="{{ yinhangName }}" label="银行名称" placeholder="请输入关键词搜索" input-align="right" bind:change="onYinhang"/>
+      <van-field value="{{ duigongNum }}" label="对公帐号" placeholder="请输入完整的对公帐号" input-align="right" bind:change="onDuigong"/>
+   </van-cell-group>
+   <view class="desc">
+      <view class="descTitle">转账说明</view>
+      <view class="text">
+         系统将向您填写的对公账户随机支付一笔1元以下金额，当您收到转账时，填入对应的金额，则实名验证成功。
+      </view>
+   </view>
+   <view class="btn">
+      <van-button color="#D45849" custom-class="nextBtn" bindtap="submitBtn">确认提交</van-button>
+   </view>
+</view>

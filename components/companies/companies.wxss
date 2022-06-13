@@ -31,3 +31,13 @@
   background: #FAFAFA;
   color: #D55849;
 }
+.companies-container .search-closed {
+  display: none;
+}
+.companies-container .btn {
+  margin-top: 20rpx;
+  padding: 20rpx 30rpx;
+}
+.companies-container .btn .addBtn {
+  width: 100%;
+}

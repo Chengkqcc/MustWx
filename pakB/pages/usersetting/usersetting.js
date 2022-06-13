@@ -14,6 +14,13 @@ Page({
         {id:4,title:'手机号设置',page:''},
         {id:5,title:'意见反馈',page:'/pakB/pages/yijianfankui/yijianfankui'},
         {id:6,title:'关于我们',page:'/pakB/pages/guanyuwomen/guanyuwomen'},
+        {title:'账户充值',page:''},
+        {title:'企业LOGO设置',page:''},
+        {title:'资料设置',page:''},
+        {title:'邮箱设置',page:''},
+        {title:'手机号设置',page:''},
+        {title:'意见反馈',page:'pages/yijianfankui/yijianfankui'},
+        {title:'关于我们',page:''},
       ]
     },
 
