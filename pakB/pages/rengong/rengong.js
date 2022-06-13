@@ -1,48 +1,55 @@
-// pakB/pages/rengong/rengong.js
+import idcardReg from "../../../utils/idcardReg"
+import Toast from '../../../miniprogram_npm/@vant/weapp/toast/toast';
 Page({
 
    /**
     * 页面的初始数据
     */
    data: {
+      name: "", //企业名称
+      code: "", //信用代码
+      username: "", //法人名称
+      userID: "", //法人证件号
       fileList1: [{ //图片存放的数组
-         url: "/images/auth/yingyezhizhao.png",
+         url: "https://oss2.1dq.com/static/h5/rz/yyzz.jpg",
          name: '营业执照',
          deletable: false,
       }],
-      morenImg1: "/images/auth/yingyezhizhao.png",
+      morenImg1: "https://oss2.1dq.com/static/h5/rz/yyzz.jpg",
       name1:"营业执照",
 
       fileList2: [{ //图片存放的数组
-         url: "/images/auth/idcard-zheng.png",
-         name: '营业执照',
+         url: "https://oss2.1dq.com/static/h5/rz/idcard1_1.png",
+         name: '经办人身份证照片（正面）',
          deletable: false,
       }],
-      morenImg2: "/images/auth/idcard-zheng.png",
-      name2:"营业执照",
+      morenImg2: "https://oss2.1dq.com/static/h5/rz/idcard1_1.png",
+      name2:"经办人身份证照片（正面）",
 
       fileList3: [{ //图片存放的数组
-         url: "/images/auth/idcard-bei.png",
-         name: '营业执照',
+         url: "https://oss2.1dq.com/static/h5/rz/idcard2_1.png",
+         name: '经办人身份证照片（背面）',
          deletable: false,
       }],
-      morenImg3: "/images/auth/idcard-bei.png",
-      name3:"营业执照",
+      morenImg3: "https://oss2.1dq.com/static/h5/rz/idcard2_1.png",
+      name3:"经办人身份证照片（背面）",
 
       fileList4: [{ //图片存放的数组
-         url: "/images/auth/shouquanshu.png",
-         name: '营业执照',
+         url: "https://oss2.1dq.com/static/h5/rz/rzsqs.jpg",
+         name: '企业授权书',
          deletable: false,
       }],
-      morenImg4: "/images/auth/shouquanshu.png",
-      name4:"营业执照",
+      morenImg4: "https://oss2.1dq.com/static/h5/rz/rzsqs.jpg",
+      name4:"企业授权书",
    },
 
    /**
     * 生命周期函数--监听页面加载
     */
    onLoad(options) {
-
+      this.setData({
+        name:options.name
+      })
    },
 
    /**

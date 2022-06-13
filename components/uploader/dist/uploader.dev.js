@@ -21,12 +21,7 @@ Component({
   /**
    * 组件的初始数据
    */
-  data: {// fileList: [{ //图片存放的数组
-    //    url: "/images/auth/yingyezhizhao.png",
-    //    name: '营业执照',
-    //    deletable: false,
-    // }],
-  },
+  data: {},
 
   /**
    * 组件的方法列表

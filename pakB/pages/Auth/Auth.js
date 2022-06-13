@@ -10,7 +10,6 @@ Page({
    //   删除该企业
    deletefn() {
       let companiesList = wx.getStorageSync('companiesList');
-      // console.log(companiesList)
       let arr = companiesList.filter((item)=>{
          if(item !== this.data.company) return item
       })

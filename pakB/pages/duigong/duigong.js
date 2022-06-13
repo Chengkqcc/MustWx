@@ -1,18 +1,27 @@
-// pakB/pages/duigong/duigong.js
+import idcardReg from "../../../utils/idcardReg"
+import Toast from '../../../miniprogram_npm/@vant/weapp/toast/toast';
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    qiyeName: "", //企业名称
+    xinyongCode: "", //信用代码
+    farenName: "", //法人名称
+    farenCode: "", //法人证件号
+    kaihuName: "", //开户名称
+    yinhangName: "", //银行名称
+    duigongNum: "", //对公帐号
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-
+    this.setData({
+      qiyeName:options.name
+    })
   },
 
   /**

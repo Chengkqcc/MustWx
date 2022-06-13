@@ -11,46 +11,20 @@ Page({
    * 页面的初始数据
    */
   data: {
-    name: "",
+    qiyeName: "",
     //企业名称
-    code: "",
+    xinyongCode: "",
     //信用代码
-    username: "",
+    farenName: "",
     //法人名称
-    userID: "",
+    farenCode: "",
     //法人证件号
-    fileList1: [{
-      //图片存放的数组
-      url: "https://oss2.1dq.com/static/h5/rz/yyzz.jpg",
-      name: '营业执照',
-      deletable: false
-    }],
-    morenImg1: "https://oss2.1dq.com/static/h5/rz/yyzz.jpg",
-    name1: "营业执照",
-    fileList2: [{
-      //图片存放的数组
-      url: "https://oss2.1dq.com/static/h5/rz/idcard1_1.png",
-      name: '经办人身份证照片（正面）',
-      deletable: false
-    }],
-    morenImg2: "https://oss2.1dq.com/static/h5/rz/idcard1_1.png",
-    name2: "经办人身份证照片（正面）",
-    fileList3: [{
-      //图片存放的数组
-      url: "https://oss2.1dq.com/static/h5/rz/idcard2_1.png",
-      name: '经办人身份证照片（背面）',
-      deletable: false
-    }],
-    morenImg3: "https://oss2.1dq.com/static/h5/rz/idcard2_1.png",
-    name3: "经办人身份证照片（背面）",
-    fileList4: [{
-      //图片存放的数组
-      url: "https://oss2.1dq.com/static/h5/rz/rzsqs.jpg",
-      name: '企业授权书',
-      deletable: false
-    }],
-    morenImg4: "https://oss2.1dq.com/static/h5/rz/rzsqs.jpg",
-    name4: "企业授权书"
+    kaihuName: "",
+    //开户名称
+    yinhangName: "",
+    //银行名称
+    duigongNum: "" //对公帐号
+
   },
 
   /**
@@ -58,7 +32,7 @@ Page({
    */
   onLoad: function onLoad(options) {
     this.setData({
-      name: options.name
+      qiyeName: options.name
     });
   },
 

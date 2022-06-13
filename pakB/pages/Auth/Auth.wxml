@@ -4,7 +4,7 @@
    </view>
    <view class="verification-method">
       <van-cell-group>
-         <van-cell is-link url="/pakB/pages/faren/faren">
+         <van-cell is-link url="/pakB/pages/faren/faren?name={{company}}">
             <view class="left" slot="title">
                <view class="image-wrap" style="background: rgb(250, 158, 59);">
                   <image class="image" src="https://oss2.1dq.com/app/static/app-plus/images/companyLegalAuth.png"></image>
@@ -15,7 +15,7 @@
                </view>
             </view>
          </van-cell>
-         <van-cell is-link url="/pakB/pages/duigong/duigong">
+         <van-cell is-link url="/pakB/pages/duigong/duigong?name={{company}}">
             <view class="left" slot="title">
                <view class="image-wrap" style="background: rgb(93, 191, 254);">
                   <image class="image" src="https://oss2.1dq.com/app/static/app-plus/images/duigongzhuanzhang.png"></image>
@@ -26,7 +26,7 @@
                </view>
             </view>
          </van-cell>
-         <van-cell is-link url="/pakB/pages/rengong/rengong">
+         <van-cell is-link url="/pakB/pages/rengong/rengong?name={{company}}">
             <view class="left" slot="title">
                <view class="image-wrap" style="background: rgb(255, 88, 88);">
                   <image class="image" src="https://oss2.1dq.com/app/static/app-plus/images/rengong.png"></image>
