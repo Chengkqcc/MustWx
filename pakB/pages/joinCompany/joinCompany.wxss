@@ -4,10 +4,3 @@
   width: 100vw;
   position: relative;
 }
-.joinCompany .btn {
-  margin-top: 20rpx;
-  padding: 20rpx 30rpx;
-}
-.joinCompany .btn .joinBtn {
-  width: 100%;
-}

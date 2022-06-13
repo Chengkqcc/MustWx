@@ -1,7 +1,7 @@
 {
   "name": "must",
   "version": "1.0.0",
-  "description": "",
+  "description": "小程序练习",
   "main": ".eslintrc.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,5 +11,14 @@
   "license": "ISC",
   "dependencies": {
     "@vant/weapp": "^1.10.3"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chengkqcc/MustWx.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Chengkqcc/MustWx/issues"
+  },
+  "homepage": "https://github.com/Chengkqcc/MustWx#readme"
 }

@@ -1,0 +1,32 @@
+<!--pakB/pages/anquanshezhi/anquanshezhi.wxml-->
+<view class="anquanshezhi" hover-class="none" hover-stop-propagation="false">
+  <view class="pass" hover-class="none" hover-stop-propagation="false">
+    <van-cell  is-link  title="登录密码设置"  link-type="navigateTo"  url="/pakB/pages/setloginpass/setloginpass" border="{{false}}"/>
+    <van-cell  is-link  title="签署密码设置"  link-type="navigateTo"  url="/pakB/pages/setwritepass/setwritepass" border="{{false}}"/>
+  </view>
+  <view class="jiesuo" hover-class="none" hover-stop-propagation="false">
+    <view class="zw">
+      <text>指纹解锁</text>
+      <van-switch  bind:change="zw_fn"  checked="{{ zw_checked }}" active-color="#ee0a24" inactive-color="#fff"/>
+    </view>
+    <view class="face">
+      <text>面容解锁</text>
+      <van-switch bind:change="face_fn"  checked="{{ face_checked }}"  active-color="#ee0a24" inactive-color="#fff"/>
+    </view>
+  </view>
+  <van-cell class="zhuxiao"  is-link  title="注销账号" bind:click="zx_fn"/>
+</view>
+<!-- 注销弹窗 -->
+<van-popup show="{{ tip_show }}" overlay-style="background:rgba(0,0,0,0)" custom-class="tip" bind:close="onClose">
+  <view class="title">
+    <text>注销账号</text>
+    <van-icon name="cross" bind:click="close_tip" />
+  </view>
+  <view class="content">当您点击确定注销后，系统将自动注销您的账号;如您账户未申请过数字证书，将立即注销;如您账号申请过数字证书，将在3个工作日内自动注销，这期间，任何人不能登录您的账号，如您账户已经签署过合同，合同文件将在3个工作日内自动删除。</view>
+  <view class="btn">
+    <view bindtap="delete_fn">确定注销</view>
+    <view bindtap="close_tip">取消</view>
+  </view>
+</van-popup>
+
+  

@@ -1,1 +1,4 @@
-<companies companies="{{companies}}"></companies>
+<view class="addCompany">
+   <companies tip="{{tip}}" hasSwitch="{{hasSwitch}}" btnText="{{btnText}}"></companies>
+   <van-toast id="van-toast" />
+</view>

@@ -5,7 +5,9 @@ Page({
     * 页面的初始数据
     */
    data: {
-      hasData: false, // 是否有企业数据
+      hasData: false, // 是否有企业数据 
+      imageURL:"/images/nav/my-off.png",
+      companiesList:[],// 公司列表
    },
 
    // 点击申请加入企业
@@ -37,7 +39,18 @@ Page({
     * 生命周期函数--监听页面加载
     */
    onLoad(options) {
-
+      // 页面初始化
+      let companiesList = wx.getStorageSync('companiesList');
+      if(companiesList.length>0){
+         wx.setStorageSync('hasData',true);
+      }else{
+         wx.setStorageSync('hasData',false);
+      }
+      let hasData = wx.getStorageSync('hasData');
+      this.setData({
+         hasData,
+         companiesList
+      })
    },
 
    /**

@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "condition": {
     "miniprogram": {
       "list": [
@@ -16,4 +17,77 @@
   "setting": {
     "urlCheck": false
   }
+=======
+    "setting": {},
+    "condition": {
+        "miniprogram": {
+            "list": [{
+                    "name": "",
+                    "pathName": "pages/index/index",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pages/contract/constract",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pages/login/login",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pages/uploading/uploading",
+                    "query": "",
+                    "scene": null,
+                    "launchMode": "default"
+                },
+                {
+                    "name": "",
+                    "pathName": "pakB/pages/mine/mine",
+                    "query": "",
+                    "scene": null,
+                    "launchMode": "default"
+                },
+                {
+                    "name": "",
+                    "pathName": "pages/uoloaddetail/uoloaddetail",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pakB/pages/usersetting/usersetting",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pakB/pages/yijianfankui/yijianfankui",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+
+                {
+                    "name": "",
+                    "pathName": "pakB/pages/mine/mine",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                }
+            ]
+        }
+    },
+    "description": "项目私有配置文件。此文件中的内容将覆盖 project.config.json 中的相同字段。项目的改动优先同步到此文件中。详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html"
+>>>>>>> 5797cb7b3a24cb69cec28a64cecae5b226ccdb80
 }

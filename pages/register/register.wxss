@@ -1,0 +1,71 @@
+.register {
+  box-sizing: border-box;
+  padding: 15px;
+}
+.register form view {
+  margin-top: 25px;
+}
+.register form view label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+.register form view input {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #cecece;
+}
+.register .notice {
+  padding: 25px 0;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 14px;
+}
+.register .notice p {
+  color: #47A4FF;
+}
+.register .readyWrap {
+  box-sizing: border-box;
+  width: 85%;
+  height: 42%;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 4rpx 4rpx 8rpx 4rpx rgba(0, 0, 0, 0.5);
+}
+.register .readyWrap .readyCenter {
+  font-size: 14px;
+  padding: 45px 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.register .readyWrap .buttonWrap {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 15px;
+  display: flex;
+  justify-content: space-between;
+}
+.register .readyWrap .buttonWrap button {
+  width: 120px;
+  height: 30px;
+  border-radius: 4px;
+}
+.register .readyWrap .buttonWrap .btn {
+  border: none;
+  background: #f2f2f2;
+}
+.register .demo {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+.register .demo view {
+  width: 38%;
+  height: 30px;
+  background: #575757;
+  color: #fff;
+  font-size: 13px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

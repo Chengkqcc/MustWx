@@ -1,0 +1,70 @@
+<!--pakB/pages/qianmingguanli/qianmingguanli.wxml-->
+<view class="qianmingguanli">
+  <view class="title">
+    <text>个人印章</text> 
+    <van-icon name="info-o" bind:click="open_tip"/>
+  </view>
+  <view class="add_box" bindtap="add_qm">
+    <view class="add">
+      <view class="add_yz">
+        <van-icon name="plus" />
+        <text>添加印章</text>
+      </view>
+      <view class="add_qm">添加签名</view>
+    </view>
+  </view>
+  <view class="btn">
+    <van-button color="#E54D42" block bind:click="add_qyyz">添加企业印章</van-button>
+  </view>
+</view>
+<!-- ! 弹窗 -->
+<van-popup show="{{ tip_show }}" overlay-style="background:rgba(0,0,0,0)" custom-class="tip" bind:close="onClose">
+  <view class="title">
+    <text>提示</text>
+    <van-icon name="cross" bind:click="close_tip" />
+  </view>
+  <view class="content">个人模板印章和签名具备同样的法律效力</view>
+  <view class="btn">
+    <view bindtap="close_tip">确定</view>
+  </view>
+</van-popup>
+<!-- 签名 弹窗 -->
+<van-popup show="{{ qm_show }}" overlay-style="background:rgba(0,0,0,0)" custom-class="tip qm" bind:close="onClose">
+  <view class="title">
+    <text></text>
+    <van-icon name="cross" bind:click="close_qm" />
+  </view>
+  <view class="content">
+    <block wx:for="{{qm_data}}" wx:key="{{item.id}}">
+      <view class="item" bindtap="getQM_fn" data-item="{{item}}">{{item.title}}</view>
+    </block>
+  </view>
+  <view class="btn">
+    <view bindtap="close_qm">取消</view>
+  </view>
+</van-popup>
+<!-- 底部切换 -->
+<view class="qiehuan">
+  <van-popup show="{{ show }}" bind:close="close_qiehuan" position="bottom" custom-style="height: 40%;">
+    <view class="title">
+      <view class="text">切换企业空间</view>
+      <van-icon name="cross" bind:click="close_qiehuan" />
+    </view>
+    <!-- 切换用户 -->
+    <view class="item_user" bindtap="qiehuan_fn">
+      <view class="user_item">
+        <view class="img">
+          <image class="" src="https://oss2.1dq.com/app/img/gr.png"></image>
+        </view>
+        <view class="yonghu">
+          <view class="name">
+            <view class="phone">156****3372</view>
+            <view class="state">当前</view>
+          </view>
+          <view class="rzstate">认证状态: 未认证</view>
+        </view>
+      </view>
+      <van-icon name="arrow" />
+    </view>
+  </van-popup>
+</view>

@@ -1,0 +1,20 @@
+<!--pakA/pages/systemModel/systemModel.wxml-->
+<view class="system">
+  <!-- 导航栏 -->
+  <van-nav-bar title="系统模板" left-arrow bind:click-left="onClickLeft" border="{{false}}" />
+  <scroll-view class="content" scroll-y>
+    <van-search value="{{value}}" bind:change="filterHd" background="#e1e1e1" placeholder="输入关键词进行搜索" />
+    <view class="grid">
+      <block wx:for="{{hdArr}}" wx:key="*this">
+        <view class="grid-item">
+          <view class="item-img">
+            <image src="../../img/model.jpg"></image>
+          </view>
+          <view class="title">
+            {{item.title}}
+          </view>
+        </view>
+      </block>
+    </view>
+  </scroll-view>
+</view>

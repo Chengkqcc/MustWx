@@ -1,0 +1,146 @@
+page {
+  background-color: #F1F1F1;
+}
+.qianmingguanli .title {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  color: #BDBDBD;
+  font-size: 16px;
+}
+.qianmingguanli .add_box {
+  background-color: #fff;
+  padding: 10px 30px;
+  display: flex;
+}
+.qianmingguanli .add_box .add {
+  margin-bottom: 40px;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.qianmingguanli .add_box .add .add_yz {
+  width: 120px;
+  height: 120px;
+  background-color: #F1F1F1;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  color: #BFBFBF;
+}
+.qianmingguanli .add_box .add .add_yz .van-icon {
+  font-size: 40px;
+}
+.qianmingguanli .add_box .add .add_yz text {
+  font-size: 14px;
+  font-weight: 200;
+  margin-top: 3px;
+}
+.qianmingguanli .add_box .add .add_qm {
+  font-size: 16px;
+  color: #333;
+  margin-top: 3px;
+}
+.qianmingguanli .btn {
+  padding: 20px 15px;
+}
+.qianmingguanli .btn .van-button {
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 16px;
+}
+.tip {
+  padding: 15px 15px 50px;
+  border: 1px solid #BDBDBD;
+  box-shadow: 0 0 10px #BDBDBD;
+  width: 80vw;
+}
+.tip .title {
+  display: flex;
+  justify-content: space-between;
+}
+.tip .content {
+  padding: 0 20px;
+  font-size: 14px;
+  height: 120px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.tip .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tip .btn view {
+  padding: 5px 20px;
+  background-color: #07C160;
+  color: #fff;
+}
+.qm .content {
+  height: auto;
+  padding: 15px;
+  flex-direction: column;
+}
+.qm .content .item {
+  width: 100%;
+  border-bottom: 1px solid #F1F1F1;
+  padding: 10px 0;
+  color: #07C160;
+  font-size: 16px;
+}
+.qm .btn view {
+  background-color: #F2F2F2;
+  color: #07C160;
+}
+.qiehuan .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: #F1F1F1;
+}
+.qiehuan .title .text {
+  font-weight: bolder;
+}
+.qiehuan .item_user {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #F1F1F1;
+}
+.qiehuan .item_user .user_item {
+  display: flex;
+}
+.qiehuan .item_user .user_item .img {
+  width: 50px;
+  height: 50px;
+}
+.qiehuan .item_user .user_item .img image {
+  width: 100%;
+  height: 100%;
+}
+.qiehuan .item_user .user_item .yonghu {
+  margin-left: 10px;
+}
+.qiehuan .item_user .user_item .yonghu .name {
+  display: flex;
+  align-items: center;
+}
+.qiehuan .item_user .user_item .yonghu .name .state {
+  padding: 5px 10px;
+  background-color: #F37B1D;
+  color: #fff;
+  font-size: 14px;
+  margin-left: 10px;
+  border-radius: 3px;
+}
+.qiehuan .item_user .user_item .yonghu .rzstate {
+  font-size: 16px;
+  color: #bbb;
+}

@@ -1,0 +1,36 @@
+<!--pages/authCodeLogin/authcode.wxml-->
+<view class="authcode">
+    <form>
+        <label>手机号码或邮箱</label>
+        <input type="text" placeholder="请输入您的手机号或邮箱" model:value="{{value}}"></input>
+    </form>
+    <view class="notice">
+        <van-checkbox value="{{ checked }}" bind:change="onChange"></van-checkbox>
+        <view>我已阅读并同意</view>
+        <p>《注册与使用协议》</p>
+        <p>《隐私协议》</p>
+        <p>《数字证书申领协议》</p>
+    </view>
+    <view class="next">
+        <van-button color="#E54D42"  block bind:tap="next">下一步</van-button>
+    </view>
+
+    <view class="promptInfo" wx:if="{{notice}}">
+        <text>请输入正确的手机号码或邮箱号</text>
+    </view>
+
+    <!-- 阅读协议 -->
+    <van-popup show="{{show}}" bind:close="onClose" custom-class="readyWrap" overlay="{{false}}" closeable>
+        <view class="readyNotice">
+            <p class="ready">阅读协议</p>
+            <view class="readyCenter">
+                <view>您是否已阅读并同意《注册与使用协议》</view>
+                <view>《隐私协议》《数字证书申领协议》</view>
+            </view>
+            <view class="buttonWrap">
+                <van-button color="#07C160" block bind:tap="consent">我同意</van-button>
+                <van-button plain type="primary" custom-class="btn" bind:tap="unconsent">不同意</van-button>
+            </view>
+        </view>
+    </van-popup>
+</view>

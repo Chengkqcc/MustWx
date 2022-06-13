@@ -1,0 +1,52 @@
+image {
+  width: 90%;
+  margin: 0 auto;
+}
+.van-dialog__button .van-button {
+  width: 300rpx;
+  background: #0081FF;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20rpx;
+}
+.van-button__text {
+  color: #fff;
+}
+.sendmodel {
+  background: #F1F1F1;
+  height: 100vh;
+}
+.uploadfile {
+  background: #fff;
+  margin-top: 20rpx;
+  padding: 20rpx;
+  padding-bottom: 0;
+}
+.uploadfile .title {
+  margin-bottom: 50rpx;
+  color: #666;
+  display: flex;
+  font-size: 28rpx;
+  justify-content: space-between;
+}
+.filenum {
+  font-size: 30rpx;
+}
+.explain {
+  margin: 50rpx;
+}
+.explain .explain-title {
+  font-size: 30rpx;
+  font-weight: bolder;
+  color: #000;
+}
+.explain view {
+  color: #666;
+  font-size: 26rpx;
+}
+.submit{
+  background: #E54D42;
+  color: #fff;
+  margin: 0 30rpx;
+}

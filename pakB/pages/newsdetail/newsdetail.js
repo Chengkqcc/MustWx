@@ -5,21 +5,14 @@ Page({
      * 页面的初始数据
      */
     data: {
-      news:null
+
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
-    onLoad: function (options) {      
-      let eventChannel = this.getOpenerEventChannel()
-      eventChannel.on('new-detail',data=>{
-        console.log(data.data);
-        this.setData({news:data.data})
-        wx.setNavigationBarTitle({
-          title: data.data.text,
-        })
-      })
+    onLoad: function (options) {
+
     },
 
     /**
