@@ -2,34 +2,30 @@
    <!-- 信息填隙 -->
    <van-cell-group>
       <view class="title">企业信息填写</view>
-      <van-field value="{{ name }}" label="企业名称" placeholder="请输入企业名称" input-align="right" />
-      <van-field value="{{ code }}" label="信用代码" placeholder="请输入企业信用代码/注册号" input-align="right" />
-      <van-field value="{{ username }}" label="法人名称" placeholder="请输入法人名称/注册号" input-align="right" />
-      <van-field value="{{ userID }}" label="法人证件号" placeholder="请输入法人身份证号" input-align="right" />
+      <van-field value="{{ name }}" label="企业名称" placeholder="请输入企业名称" input-align="right" bind:change="onName"/>
+      <van-field value="{{ code }}" label="信用代码" placeholder="请输入企业信用代码/注册号" input-align="right" bind:change="onCode"/>
+      <van-field value="{{ username }}" label="法人名称" placeholder="请输入法人名称/注册号" input-align="right" bind:change="onUser"/>
+      <van-field value="{{ userID }}" label="法人证件号" placeholder="请输入法人身份证号" input-align="right" bind:change="onUserID"/>
    </van-cell-group>
    <!-- 营业执照 -->
    <view class="yyzz">
       <view class="title">营业执照（副本）</view>
-      <van-uploader file-list="{{ fileList }}" deletable="{{ true }}" max-count="2" bind:after-read="afterRead" bind:delete="deleteClick" preview-size="320rpx"></van-uploader>
+      <uploader fileList="{{fileList1}}" morenImg="{{morenImg1}}" name="{{name1}}"></uploader>
    </view>
    <!-- 身份证照片(正) -->
    <view class="idcard-zh">
       <view class="title">经办人身份证照片（正面）</view>
-      <view class="container">
-         <view class="left">
-            <van-icon name="photograph" />
-            <view class="text">选择照片</view>
-         </view>
-         <view class="right"></view>
-      </view>
+      <uploader fileList="{{fileList2}}" morenImg="{{morenImg2}}" name="{{name2}}"></uploader>
    </view>
    <!-- 身份证照片(背) -->
    <view class="idcard-bei">
       <view class="title">经办人身份证照片（背面）</view>
+      <uploader fileList="{{fileList3}}" morenImg="{{morenImg3}}" name="{{name3}}"></uploader>
    </view>
    <!-- 授权书 -->
    <view class="sqs">
       <view class="title">企业授权书（签字并盖章）</view>
+      <uploader fileList="{{fileList4}}" morenImg="{{morenImg4}}" name="{{name4}}"></uploader>
    </view>
    <!-- 提交审核 -->
    <view class="btn">

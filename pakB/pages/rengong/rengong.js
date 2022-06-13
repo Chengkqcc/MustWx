@@ -1,82 +1,55 @@
-// pakB/pages/rengong/rengong.js
+import idcardReg from "../../../utils/idcardReg"
+import Toast from '../../../miniprogram_npm/@vant/weapp/toast/toast';
 Page({
 
    /**
     * 页面的初始数据
     */
    data: {
-      fileList: [{ //图片存放的数组
-         url: '/images/auth/yingyezhizhao.png',
+      name: "", //企业名称
+      code: "", //信用代码
+      username: "", //法人名称
+      userID: "", //法人证件号
+      fileList1: [{ //图片存放的数组
+         url: "https://oss2.1dq.com/static/h5/rz/yyzz.jpg",
          name: '营业执照',
          deletable: false,
       }],
-   },
-   // 删除照片
-   deleteClick(event) {
-      var imgData = this.data.fileList;
-      // 通过splice方法删除图片
-      imgData.splice(event.detail.index, 1);
-      // 更新图片数组
-      this.setData({
-         fileList: imgData
-      })
-   },
-   // 上传图片
-   afterRead(event) {
-      // loading加载
-      wx.showLoading({
-         title: '上传中...'
-      });
-      const file = event.detail.file;//获取图片详细信息
-      console.log(file)
-      
-      let that = this;//防止this指向问题
-        // 设置请求头，根据项目需求变换
-        let Authorization = wx.getStorageSync('key')
-        let headers = {
-            'content-type': '',
-            'client_id': 'webApp',
-            'client_secret': '123456',
-        }
-        if (Authorization) {
-            headers.Authorization = 'Bearer ' + Authorization
-        }
-        // 调用wx.uploadFile上传图片方法
-        wx.uploadFile({
-            url: "https://mock.presstime.cn/mock/6231d826560ad300225857e7/example/uploader",// 模拟上传图片接口
-            method: 'POST',
-            header: headers,
-            filePath: file.url,
-            name: 'file',
-            // formData: {
-            //     user: 'test'
-            // },
-            // 成功回调
-            success(res) {
-              console.log(res)
-              // JSON.parse()方法是将JSON格式字符串转换为js对象
-               var result = JSON.parse(res.data);
-               // 上传完成需要更新 fileList
-               const {fileList = []} = that.data;
-               // 将图片信息添加到fileList数字中
-               fileList.push({
-                   ...file,
-                   url: result.data
-               });
-               // 更新存放图片的数组
-               that.setData({
-                   fileList
-               });
-               wx.hideLoading();//停止loading
-           },
-       });
+      morenImg1: "https://oss2.1dq.com/static/h5/rz/yyzz.jpg",
+      name1:"营业执照",
+
+      fileList2: [{ //图片存放的数组
+         url: "https://oss2.1dq.com/static/h5/rz/idcard1_1.png",
+         name: '经办人身份证照片（正面）',
+         deletable: false,
+      }],
+      morenImg2: "https://oss2.1dq.com/static/h5/rz/idcard1_1.png",
+      name2:"经办人身份证照片（正面）",
+
+      fileList3: [{ //图片存放的数组
+         url: "https://oss2.1dq.com/static/h5/rz/idcard2_1.png",
+         name: '经办人身份证照片（背面）',
+         deletable: false,
+      }],
+      morenImg3: "https://oss2.1dq.com/static/h5/rz/idcard2_1.png",
+      name3:"经办人身份证照片（背面）",
+
+      fileList4: [{ //图片存放的数组
+         url: "https://oss2.1dq.com/static/h5/rz/rzsqs.jpg",
+         name: '企业授权书',
+         deletable: false,
+      }],
+      morenImg4: "https://oss2.1dq.com/static/h5/rz/rzsqs.jpg",
+      name4:"企业授权书",
    },
 
    /**
     * 生命周期函数--监听页面加载
     */
    onLoad(options) {
-
+      this.setData({
+        name:options.name
+      })
    },
 
    /**
