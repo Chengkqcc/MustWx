@@ -1,7 +1,5 @@
 <!--pakB/pages/mine/mine.wxml-->
-<<<<<<< HEAD
-<text>pakB/pages/mine/mine.wxml</text>
-=======
+
 <!-- <text>pakB/pages/mine/mine.wxml</text> -->
 <!-- 登录 -->
 <view class="mine" wx:if="{{login}}">
@@ -124,4 +122,3 @@
     </view>
   </view>
 </view>
->>>>>>> hanyongsheng

@@ -1,2 +1,19 @@
 <!--pakB/pages/usersetting/usersetting.wxml-->
-<text>pakB/pages/usersetting/usersetting.wxml</text>
+<!-- 登录 -->
+<view wx:if="{{login}}" class="usersetting">
+  <block wx:for="{{user_set_data}}">
+    <view class="cell">
+      <van-cell title="{{item.title}}" is-link link-type="navigateTo"
+    url="{{item.page}}" border="{{false}}"/>
+    </view>    
+  </block>
+</view>
+<!-- 未登录 -->
+<view wx:else class="usersetting">
+  <block wx:for="{{user_set_data}}">
+    <view class="cell">
+      <van-cell title="{{item.title}}" is-link link-type="navigateTo"
+    url="{{index<=4?'登录页面':item.page}}" border="{{false}}"/>
+    </view>    
+  </block>
+</view>
