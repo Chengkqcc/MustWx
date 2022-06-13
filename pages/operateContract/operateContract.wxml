@@ -1,2 +1,30 @@
 <!--pages/operateContract/operateContract.wxml-->
-<text>pages/operateContract/operateContract.wxml</text>
+<view class="operateContract">
+    <!-- 合同详情 -->
+    <view class="detailContract" wx:if="{{detailContract}}">
+        <view class="nav">
+            <van-icon name="arrow-left" color="#aaa" size="20px" bindtap="back"/>
+            <text>合同详情</text>
+        </view>
+        <view class="info">
+            <!-- 合同信息 -->
+            <!-- 参与人 -->
+            <!-- 文件信息 -->
+            <!-- 合同备注 -->
+            <!-- 流程信息 -->
+        </view>
+    </view>
+    <!-- 二维码 -->
+    <view class="qrCode" wx:if="{{qrCode}}">
+        <view class="nav">
+            <van-icon name="arrow-left" color="#aaa" size="20px" bindtap="back"/>
+        </view>
+        <view class="qrCodeCenter">
+            <view class="title">邀请对方扫描二维码完成签署</view>
+            <view class="text">支持微信、QQ等</view>
+            <view class="img">
+                <image src="https://api-cdn-al.1dq.com/v2/QrCode?url=http://1dq.co/u/fnfDuP?source=qrcode"></image>
+            </view>
+        </view>
+    </view>
+</view>

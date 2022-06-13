@@ -1,1 +1,51 @@
-/* pages/operateContract/operateContract.wxss */
+.detailContract {
+  padding-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.detailContract .nav {
+  box-sizing: border-box;
+  width: 60%;
+  height: 50px;
+  padding: 10px 15px;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.detailContract .info {
+  width: 100%;
+  height: calc(100vh - 60px);
+  background: #f1f1f1;
+}
+.qrCode {
+  box-sizing: border-box;
+  padding: 0 20px;
+  padding-top: 20px;
+}
+.qrCode .nav {
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+.qrCode .qrCodeCenter .title {
+  font-size: 24px;
+  color: #333;
+  padding-top: 50px;
+  text-align: center;
+}
+.qrCode .qrCodeCenter .text {
+  font-size: 17px;
+  color: #aaa;
+  margin-top: 16px;
+  text-align: center;
+}
+.qrCode .qrCodeCenter .img {
+  padding-top: 80px;
+  display: flex;
+  justify-content: center;
+}
+.qrCode .qrCodeCenter .img image {
+  width: 220px;
+  height: 220px;
+}
