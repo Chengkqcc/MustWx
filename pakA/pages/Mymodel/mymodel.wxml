@@ -5,9 +5,9 @@
 
   <!-- Tabs标签页 -->
   <view class="tabs">
-    <scroll-view class="tab" scroll-x scroll-into-view="{{ detail }}" scroll-with-animation="{{true}}">
+    <scroll-view class="tab" scroll-x scroll-into-view="{{ detail }}" scroll-with-animation>
       <block wx:for="{{tabs}}" wx:key="*this">
-        <view class="{{active==index?'title active':'title'}}" bindtap="changeTab" data-index="{{index}}">{{item.title}}</view>
+        <view id="{{'d'+index}}" class="{{active==index?'title active':'title'}}" bindtap="changeTab" data-index="{{index}}">{{item.title}}</view>
       </block>
     </scroll-view>
 

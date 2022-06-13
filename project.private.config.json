@@ -37,6 +37,20 @@
           "name": "",
           "pathName": "pakA/pages/sendModel/sendModel",
           "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pakA/pages/systemModel/systemModel",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pakA/pages/otherModel/otherModel",
+          "query": "",
           "scene": null,
           "launchMode": "default"
         }

@@ -5,9 +5,17 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    active: 0,
+    tabs: ["所有", "经营", "买卖", "租赁", "承揽", "担保", "技术", "借款", "劳动", "运输", "保险", "证券", "房产", "建筑", "工程", "招标", "租赁", "产权", "其它", "综合"],
+    detail: "d0"
   },
-
+  changeTab(e) {
+    let index = e.currentTarget.dataset.index;
+    this.setData({
+      active: index,
+      detail: "d" + (index - 1)
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
