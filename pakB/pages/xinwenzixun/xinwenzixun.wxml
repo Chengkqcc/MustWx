@@ -1,2 +1,28 @@
 <!--pakB/pages/xinwenzixun/xinwenzixun.wxml-->
-<text>pakB/pages/xinwenzixun/xinwenzixun.wxml</text>
+<view class="xinwenzixun">
+  <view class="img">
+    <image class="" src="https://oss2.1dq.com/app/static/images/news.jpg"></image>
+  </view>
+  <view class="tabs">
+    <van-tabs sticky title-active-color="#f00" >
+      <block wx:for="{{news}}" wx:key="{{index}}">
+        <van-tab title="{{item.title}}">
+          <view class="" wx:if="{{item.children.length}}">
+            <block wx:for="{{item.children}}" wx:key="{{index}}">
+              <view class="item" bindtap="click_fn" data-item="{{item}}">
+                <view class="title">
+                  <view class="text">{{item.text}}</view>
+                  <view class="label">发布于：{{item.time}}/{{item.num}}次阅读</view>
+                </view>
+                <van-icon name="arrow" />
+              </view>
+            </block>
+          </view>
+          <view class="empty" wx:else>
+            <van-empty description="暂时还没有数据"></van-empty>
+          </view>
+        </van-tab>
+      </block>
+    </van-tabs>
+  </view>
+</view>

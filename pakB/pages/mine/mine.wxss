@@ -1,0 +1,128 @@
+page {
+  background-color: #F1F1F1;
+}
+.mine .user {
+  background-color: #fff;
+  height: 88px;
+  padding: 0 15px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.mine .user .yonghu {
+  display: flex;
+  align-items: center;
+}
+.mine .user .yonghu .img {
+  width: 58px;
+  height: 58px;
+  margin-right: 15px;
+  border-radius: 5px;
+}
+.mine .user .yonghu .img image {
+  width: 100%;
+  height: 100%;
+}
+.mine .user .yonghu .text {
+  height: 50px;
+}
+.mine .user .yonghu .text .h1 {
+  font-size: 16px;
+  color: #000;
+  white-space: 4px;
+  margin-bottom: 6px;
+}
+.mine .user .yonghu .text .p {
+  font-size: 12px;
+  color: #ccc;
+}
+.mine .user .qiehuan {
+  padding: 10px 15px;
+  font-size: 14px;
+  border: 1px solid #000;
+  border-radius: 3px;
+}
+.mine .content {
+  padding: 15px 15px 0;
+}
+.mine .content .cont {
+  width: 100%;
+  height: 52px;
+}
+.mine .content .cont image {
+  width: 100%;
+  height: 100%;
+}
+.mine .content .common {
+  background-color: #fff;
+  margin-top: 15px;
+  border-radius: 10px;
+  overflow: hidden;
+  padding-top: 15px;
+}
+.mine .content .common .title {
+  padding-left: 15px;
+  font-size: 14px;
+  color: #000;
+}
+.mine .content .fixed {
+  width: calc(100vw - 30px);
+  position: fixed;
+  bottom: 60px;
+  background-color: rgba(4, 140, 213, 0.8);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 15px;
+  color: #fff;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.mine .qiehuan .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: #F1F1F1;
+}
+.mine .qiehuan .title .text {
+  font-weight: bolder;
+}
+.mine .qiehuan .item_user {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #F1F1F1;
+}
+.mine .qiehuan .item_user .user_item {
+  display: flex;
+}
+.mine .qiehuan .item_user .user_item .img {
+  width: 50px;
+  height: 50px;
+}
+.mine .qiehuan .item_user .user_item .img image {
+  width: 100%;
+  height: 100%;
+}
+.mine .qiehuan .item_user .user_item .yonghu {
+  margin-left: 10px;
+}
+.mine .qiehuan .item_user .user_item .yonghu .name {
+  display: flex;
+  align-items: center;
+}
+.mine .qiehuan .item_user .user_item .yonghu .name .state {
+  padding: 5px 10px;
+  background-color: #F37B1D;
+  color: #fff;
+  font-size: 14px;
+  margin-left: 10px;
+  border-radius: 3px;
+}
+.mine .qiehuan .item_user .user_item .yonghu .rzstate {
+  font-size: 16px;
+  color: #bbb;
+}

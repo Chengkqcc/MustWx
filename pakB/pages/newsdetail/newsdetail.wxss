@@ -1,0 +1,13 @@
+page {
+  background-color: #F1F1F1;
+}
+.newsdetail {
+  padding: 15px;
+}
+.newsdetail .title {
+  display: flex;
+  justify-content: space-between;
+  color: #999999;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
