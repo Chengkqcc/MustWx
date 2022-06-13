@@ -1,0 +1,10 @@
+<!--pages/uploadPages/uploadfiles/uploadfiles.wxml-->
+<text class="tit">
+    文件上传
+</text>
+<text class="tips" >
+    支持PDF、DOCX、DOC、XLSX、XLS、PNG、JPG、JEPG、等常见办公格式，单文件最大为20MB
+</text>
+<button class="btn">选择文件</button>
+  
+  

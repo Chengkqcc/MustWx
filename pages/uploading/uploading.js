@@ -13,9 +13,9 @@ Page({
         show:false
     },
     //弹窗选择合同发起方
-    showPopup() {
-        this.setData({ show: true });
-      },
+    // showPopup() {
+    //     this.setData({ show: true });
+    //   },
     
     onClose() {
         this.setData({ show: false });
@@ -23,9 +23,9 @@ Page({
     //从微信聊天选择文件 
     chooseWxFile(){
         //判断是否有合同发起方
-        let key = wx.getStorageSync("token")
-        console.log(key)
-        if(key){
+        // let key = wx.getStorageSync("token")
+        // console.log(key)
+        // if(key){
             wx.chooseMessageFile({
                 count: 1,
                 success(res){
@@ -50,9 +50,9 @@ Page({
                     })
                 }
             })
-        }else{
-            this.showPopup()
-        }
+        // }else{
+        //     this.showPopup()
+        // }
         
     },
 

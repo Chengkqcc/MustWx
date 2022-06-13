@@ -60,6 +60,7 @@
     "libVersion": "2.19.4",
     "appid": "wxb477562d764bed06",
     "projectname": "wxmust",
+    "projectname": "wxproject",
     "debugOptions": {
         "hidedInDevtools": []
     },

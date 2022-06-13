@@ -2,8 +2,12 @@
   "navigationBarTitleText": "",
   "usingComponents": {
     "van-grid": "@vant/weapp/grid/index",
+<<<<<<< HEAD
     "van-grid-item": "@vant/weapp/grid-item/index",
     "van-icon": "@vant/weapp/icon/index",
     "van-popup": "@vant/weapp/popup/index"
+=======
+    "van-grid-item": "@vant/weapp/grid-item/index"
+>>>>>>> Chengkeqiang
   }
 }

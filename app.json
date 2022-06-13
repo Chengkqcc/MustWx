@@ -12,7 +12,19 @@
     "pages/uploadPages/addQian/addQian",
     "templates/Qian/Qian",
     "pages/uploadPages/addChao/addChao",
-    "templates/Chao/Chao"
+    "templates/Chao/Chao",
+    "pages/uploading/uploading",
+    "pages/login/login",
+    "pages/authCodeLogin/authcode",
+    "pages/register/register",
+    "pages/agreement/agreement",
+    "pages/operateContract/operateContract",
+    "pages/uoloaddetail/uoloaddetail",
+    "pages/uploadPages/addQian/addQian",
+    "templates/Qian/Qian",
+    "pages/uploadPages/addChao/addChao",
+    "templates/Chao/Chao",
+    "pages/uploadPages/uploadfiles/uploadfiles"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -46,72 +58,20 @@
         "pagePath": "pages/mine/mine",
         "iconPath": "images/nav/my-off.png",
         "selectedIconPath": "images/nav/my-on.png"
-      }
-      "pages": [
-        "pages/index/index",
-        "pages/logs/logs",
-        "pages/contract/constract",
-        "pages/mine/mine",
-        "pages/uploading/uploading",
-        "pages/login/login",
-        "pages/authCodeLogin/authcode",
-        "pages/register/register",
-        "pages/agreement/agreement",
-        "pages/operateContract/operateContract"
-      ],
-      "window": {
-        "backgroundTextStyle": "light",
-        "navigationBarBackgroundColor": "#fff",
-        "navigationBarTitleText": "一定签电子合同",
-        "navigationBarTextStyle": "black"
       },
-      "sitemapLocation": "sitemap.json",
-      "tabBar": {
-        "selectedColor": "#e53f3c",
-        "list": [{
-            "text": "首页",
-            "pagePath": "pages/index/index",
-            "iconPath": "images/nav/home-off.png",
-            "selectedIconPath": "images/nav/home-on.png"
-          },
-          {
-            "text": "上传",
-            "pagePath": "pages/uploading/uploading",
-            "iconPath": "images/nav/fl-off.png",
-            "selectedIconPath": "images/nav/fl-on.png"
-          },
-          {
-            "text": "合同",
-            "pagePath": "pages/contract/constract",
-            "iconPath": "images/nav/cart-off.png",
-            "selectedIconPath": "images/nav/cart-on.png"
-          },
-          {
-            "text": "我的",
-            "pagePath": "pages/mine/mine",
-            "iconPath": "images/nav/my-off.png",
-            "selectedIconPath": "images/nav/my-on.png"
-          }
-        ]
+      "usingComponents": {
+        "van-popup": "@vant/weapp/popup/index",
+        "van-button": "@vant/weapp/button/index",
+        "van-cell": "@vant/weapp/cell/index",
+        "van-cell-group": "@vant/weapp/cell-group/index",
+        "van-field": "@vant/weapp/field/index",
+        "van-action-sheet": "@vant/weapp/action-sheet/index",
+        "van-icon": "@vant/weapp/icon/index",
+        "van-checkbox": "@vant/weapp/checkbox/index",
+        "van-checkbox-group": "@vant/weapp/checkbox-group/index",
+        "van-toast": "@vant/weapp/toast/index",
+        "van-tag": "@vant/weapp/tag/index"
       },
-      "subpackages": [{
-          "root": "pakA",
-          "pages": [
-            "pages/home/home"
-          ],
-          "name": "aa",
-          "independent": false
-        },
-        {
-          "root": "pakB",
-          "pages": [
-            "pages/home/home"
-          ],
-          "name": "bb",
-          "independent": false
-        }
-      ]
-    },
     "subpackages": [{
         "root": "pakA",
         "pages": [

@@ -4,6 +4,7 @@ Page({
     /**
      * 页面的初始数据
      */
+<<<<<<< HEAD
     data: {        
         login:false,//是否登录，true登录，false 为登录
         function_data:[
@@ -32,6 +33,10 @@ Page({
       wx.navigateTo({
         url: '登录页面',
       })
+=======
+    data: {
+      
+>>>>>>> Chengkeqiang
     },
     /**
      * 生命周期函数--监听页面加载

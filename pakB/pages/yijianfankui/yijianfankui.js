@@ -5,6 +5,7 @@ Page({
      * 页面的初始数据
      */
     data: {
+<<<<<<< HEAD
       message:'',//问题和意见
       fileList: [],//上传的文件
       email:'',//邮箱 选填
@@ -72,6 +73,11 @@ Page({
       console.log(event.detail);
       this.setData({star:event.detail})
     },
+=======
+
+    },
+
+>>>>>>> Chengkeqiang
     /**
      * 生命周期函数--监听页面加载
      */

@@ -1,6 +1,7 @@
 page {
   background-color: #EFEFF4;
 }
+<<<<<<< HEAD
 .yijianfankui {
   height: 100vh;
 }
@@ -44,3 +45,5 @@ page {
 .action_sheet view button {
   border-bottom: 1px solid #F1F1F1;
 }
+=======
+>>>>>>> Chengkeqiang

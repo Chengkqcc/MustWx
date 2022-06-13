@@ -108,7 +108,7 @@
     </view>
 </view>
 
-<van-popup
+<!-- <van-popup
   show="{{ show }}"
   closeable
   position="bottom"
@@ -116,5 +116,5 @@
   bind:close="onClose"
 >
     
-</van-popup>
+</van-popup> -->
 </view>

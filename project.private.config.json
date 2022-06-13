@@ -35,10 +35,38 @@
                 },
                 {
                     "name": "",
+                    "pathName": "pages/uploading/uploading",
+                    "query": "",
+                    "scene": null,
+                    "launchMode": "default"
+                },
+                {
+                    "name": "",
                     "pathName": "pakB/pages/mine/mine",
                     "query": "",
                     "scene": null,
                     "launchMode": "default"
+                },
+                {
+                    "name": "",
+                    "pathName": "pages/uoloaddetail/uoloaddetail",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pakB/pages/usersetting/usersetting",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pakB/pages/yijianfankui/yijianfankui",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
                 }
             ]
         }
