@@ -105,6 +105,7 @@
   width: 165%;
   box-sizing: border-box;
   padding: 0 12px;
+  border-bottom: 1px solid #EEEEEE;
 }
 .contract .van-ellipsis {
   font-size: 16px;
@@ -153,4 +154,82 @@
 }
 .contract .content .emptyConstract .login .icon {
   margin-right: 5px;
+}
+.contract .content .contractList .contractItem {
+  box-sizing: border-box;
+  padding: 10px 15px;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+.contract .content .contractList .contractItem .contractLeft {
+  display: flex;
+}
+.contract .content .contractList .contractItem .contractLeft .img {
+  margin-right: 5px;
+  border: 1px solid #eee;
+}
+.contract .content .contractList .contractItem .contractLeft .img image {
+  width: 35px;
+  height: 40px;
+}
+.contract .content .contractList .contractItem .contractLeft .info {
+  display: flex;
+  flex-wrap: wrap;
+}
+.contract .content .contractList .contractItem .contractLeft .info .title {
+  color: rgba(59, 65, 68, 0.91);
+}
+.contract .content .contractList .contractItem .contractLeft .info .text {
+  font-size: 13px;
+  color: #999;
+}
+.contract .content .contractList .contractItem .contractRight {
+  display: flex;
+}
+.contract .operateWrap {
+  box-sizing: border-box;
+  padding: 0 30px;
+  text-align: center;
+}
+.contract .operateWrap .title {
+  padding: 25px 0;
+  font-size: 15px;
+  color: #737373;
+}
+.contract .operateWrap .operate {
+  padding-bottom: 25px;
+  border-bottom: 1px solid #F5F5F5;
+  display: flex;
+  justify-content: space-between;
+}
+.contract .operateWrap .operate .operateItem view {
+  width: 61px;
+  height: 61px;
+  border-radius: 5px;
+  background: #FF8867;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contract .operateWrap .operate .operateItem text {
+  display: block;
+  color: #333;
+  font-size: 15px;
+  margin-top: 5px;
+  cursor: pointer;
+}
+.contract .operateWrap .operate .operateItem:nth-child(2) view {
+  background: #66B1FF;
+}
+.contract .operateWrap .operate .operateItem:nth-child(3) view {
+  background: #6BCA2C;
+}
+.contract .operateWrap .operate .operateItem:last-child view {
+  background: #FFC658;
+}
+.contract .operateWrap .cancel {
+  font-size: 14px;
+  color: #666;
+  padding: 15px 0 10px 0;
 }

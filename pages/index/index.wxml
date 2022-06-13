@@ -3,7 +3,7 @@
     <view class="commonServer">
         <view class="serverList">
           <block wx:for="{{server}}" wx:key="id">
-            <div class="serverItem">
+            <div class="serverItem" bind:tap="redirect" data-url="{{item.text}}">
               <image src="{{item.imgsrc}}"></image>
               <p>{{item.text}}</p>
             </div>
@@ -14,26 +14,28 @@
         <p class="title">{{banner.title}}</p>
         <view class="swiper">
           <swiper style="height:100%" circular="true" indicator-dots="true" indicator-color="#CACBCD" indicator-active-color="red" autoplay="true" interval="5000">
-            <swiper-item class="bannerItem" wx:for="{{banner.bannerList}}" wx:key="id">
+            <swiper-item class="bannerItem" wx:for="{{banner.bannerList}}" wx:key="id" bind:tap="jumpSwiper" data-index="{{item.id}}">
               <image src="{{item.imgsrc}}" />
             </swiper-item>
           </swiper>
         </view>
-        <van-notice-bar
-          color="#333"
-          background="#fff"
-          left-icon="volume"
-          text="选择一份文件体验快速签约"
-        />
+        <view bind:tap="selectWenjian">
+            <van-notice-bar
+              color="#333"
+              background="#fff"
+              left-icon="volume"
+              text="选择一份文件体验快速签约"
+            />
+        </view>
     </view>
     <view class="model">
       <view class="title">
         <p>{{model.title}}</p>
-        <image src="../../images/nav/fl-off.png"/>
+        <image src="../../images/nav/fl-off.png" bind:tap="showModel"/>
       </view>
       <view class="modelList">
           <block wx:for="{{model.modelList}}" wx:key="id">
-              <view class="modelItem">
+              <view class="modelItem" bind:tap="detailContract">
                 <view class="imgWrapper">
                   <image src="{{item.imgsrc}}"/>
                 </view>
@@ -41,7 +43,7 @@
               </view>
           </block>
       </view>
-      <view class="moreModle">
+      <view class="moreModle" bind:tap="showModel">
         <view class="text">更多模板</view>
         <view class="icon">＞</view>
       </view>
