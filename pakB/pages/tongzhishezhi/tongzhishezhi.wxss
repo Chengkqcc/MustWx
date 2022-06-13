@@ -1,0 +1,19 @@
+page {
+  background-color: #f1f1f1;
+}
+.tongzhishezhi {
+  padding-top: 15px;
+}
+.tongzhishezhi .item {
+  padding: 15px;
+  background-color: #fff;
+  border-bottom: 1px solid #f1f1f1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.tongzhishezhi .item text {
+  font-size: 16px;
+  font-weight: 300;
+  color: #000;
+}

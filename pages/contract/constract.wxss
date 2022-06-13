@@ -1,1 +1,156 @@
-/* pages/contract/constract.wxss */
+.contract {
+  height: 100vh;
+}
+.contract .search {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 16px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.contract .search .searchInput {
+  box-sizing: border-box;
+  width: 87%;
+  height: 40px;
+  background: #F1F1F1;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+}
+.contract .search .searchInput .van-icon-search {
+  margin: 0 5px 0 10px;
+}
+.contract .popup {
+  width: 195px;
+  height: 100vh;
+  overflow: scroll;
+  background: #fff;
+}
+.contract .popup .popupTop {
+  padding: 25px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.contract .popup .popupTop image {
+  width: 64px;
+  height: 64px;
+}
+.contract .popup .popupTop .info {
+  width: 100%;
+  margin-top: 15px;
+  color: #aaa;
+  display: flex;
+  justify-content: center;
+}
+.contract .popup .popupTop .info .number {
+  margin-left: 5px;
+}
+.contract .popup .popupCenter .changeBox {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 14px;
+  color: #aaa;
+  display: flex;
+  justify-content: space-between;
+  background: #F1F1F1;
+}
+.contract .popup .popupCenter .gatherInfo {
+  padding: 15px 15px 10px 15px;
+}
+.contract .popup .popupCenter .gatherInfo label {
+  font-size: 16px;
+  color: #666;
+}
+.contract .popup .popupCenter .gatherInfo input {
+  box-sizing: border-box;
+  width: 100%;
+  height: 40px;
+  margin: 10px 0;
+  padding: 0 15px;
+  color: #585858;
+  font-weight: 300;
+  background: #F1F1F1;
+}
+.contract .popup .popupCenter .gatherInfo .buttonWrapper {
+  margin-top: 20px;
+}
+.contract .popup .popupCenter .gatherInfo button {
+  height: 38px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+.contract .popup .popupBottom {
+  width: 100%;
+  height: 25px;
+  background: #F1F1F1;
+}
+.contract .space {
+  box-sizing: border-box;
+  width: 100vw;
+  height: 50px;
+  font-size: 14px;
+  color: #333;
+  font-weight: 700;
+  padding: 0 15px;
+  background: #f1f1f1;
+  display: flex;
+  align-items: center;
+}
+.contract .nav {
+  width: 165%;
+  box-sizing: border-box;
+  padding: 0 12px;
+}
+.contract .van-ellipsis {
+  font-size: 16px;
+  overflow: initial !important;
+}
+.contract .van-tab--active {
+  font-weight: bold;
+}
+.contract .van-tabs__line {
+  width: 20px !important;
+  height: 2.8px !important;
+  border-radius: 10px !important;
+}
+.contract .content {
+  height: calc(100vh - 40px - 44px);
+  background: #F1F1F1;
+}
+.contract .content .emptyConstract {
+  padding-top: 70px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.contract .content .emptyConstract image {
+  width: 70px;
+  height: 70px;
+}
+.contract .content .emptyConstract .text {
+  width: 100%;
+  text-align: center;
+  color: #969799;
+  font-size: 14px;
+  margin-top: 16px;
+}
+.contract .content .emptyConstract .login {
+  width: 80px;
+  height: 35px;
+  border-radius: 8px;
+  padding: 0 16px;
+  background: #e54d42;
+  color: #fff;
+  font-size: 15px;
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+}
+.contract .content .emptyConstract .login .icon {
+  margin-right: 5px;
+}

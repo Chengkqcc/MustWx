@@ -1,0 +1,16 @@
+page {
+  background-color: #f1f1f1;
+}
+.setloginpass {
+  padding-top: 15px;
+}
+.setloginpass .btn {
+  padding: 15px;
+}
+.setloginpass .navigator {
+  font-size: #aaa;
+  font-weight: 200;
+  font-size: 16px;
+  text-decoration: underline;
+  text-align: center;
+}
