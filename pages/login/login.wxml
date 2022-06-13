@@ -25,9 +25,9 @@
             <view class="notice">
                 <van-checkbox value="{{ checked }}" bind:change="onChange"></van-checkbox>
                 <text bind:tap="ready">我已阅读并同意</text>
-                <p>《注册与使用协议》</p>
-                <p>《隐私协议》</p>
-                <p>《数字证书申领协议》</p>
+                <p bind:tap="agreement" data-index="0">《注册与使用协议》</p>
+                <p bind:tap="agreement" data-index="1">《隐私协议》</p>
+                <p bind:tap="agreement" data-index="2">《数字证书申领协议》</p>
             </view>
         </view>
     </van-popup>

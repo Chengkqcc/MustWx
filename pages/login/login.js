@@ -62,12 +62,20 @@ Page({
     },
     // 已阅读
     ready() {
-        console.log(1)
+        this.setData({
+            checked: !this.data.checked
+        })
+    },
+    // 协议
+    agreement(e) {
+        let index = e.currentTarget.dataset.index
+        wx.navigateTo({
+            url: '../agreement/agreement?index=' + index,
+        })
     },
 
     // 使用账户密码登录
     useAccount() {
-        console.log(1)
     },
 
 
