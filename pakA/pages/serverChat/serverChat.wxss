@@ -75,6 +75,9 @@
   right: -20rpx;
   top: 30rpx;
 }
+.container .chat-con .chat-info .chat-right .chat-img {
+  width: 50%;
+}
 .container .inputRoom {
   width: 100vw;
   height: 16vw;

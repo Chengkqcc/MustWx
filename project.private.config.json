@@ -1,87 +1,11 @@
 {
-<<<<<<< HEAD
-  "description": "项目私有配置文件。此文件中的内容将覆盖 project.config.json 中的相同字段。项目的改动优先同步到此文件中。详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html",
-  "setting": {
-    "urlCheck": false
-  },
-=======
->>>>>>> yangpengyue
   "condition": {
     "miniprogram": {
       "list": [
         {
           "name": "",
-          "pathName": "pakB/pages/order/order",
+          "pathName": "pakA/pages/help/help",
           "query": "",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "",
-          "pathName": "pakB/pages/bm/bm",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "",
-          "pathName": "pakB/pages/mine/mine",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "",
-<<<<<<< HEAD
-          "pathName": "pakB/pages/dianzihetong/dianzihetong",
-=======
-          "pathName": "pakA/pages/serverChat/serverChat",
->>>>>>> yangpengyue
-          "query": "",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "",
-<<<<<<< HEAD
-          "pathName": "pakB/pages/dianziqianzhang/dianziqianzhang",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "",
-          "pathName": "pakB/pages/falvfuwu/falvfuwu",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "",
-          "pathName": "pakB/pages/youhuiquan/youhuiquan",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "",
-          "pathName": "pakB/pages/dingdanguanli/dingdanguanli",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
-        }
-      ]
-    }
-=======
-          "pathName": "pakA/pages/offer/offer",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "",
-          "pathName": "pakA/pages/hotProblem/hotProblem",
-          "query": "title=%E4%B8%AA%E4%BA%BA%E7%94%A8%E6%88%B7%E5%92%8C%E4%BC%81%E4%B8%9A%E7%94%A8%E6%88%B7%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9F",
           "launchMode": "default",
           "scene": null
         }
@@ -91,6 +15,5 @@
   "description": "项目私有配置文件。此文件中的内容将覆盖 project.config.json 中的相同字段。项目的改动优先同步到此文件中。详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html",
   "setting": {
     "urlCheck": false
->>>>>>> yangpengyue
   }
 }

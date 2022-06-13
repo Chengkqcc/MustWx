@@ -8,7 +8,7 @@
       </view>
       <view class = 'chat-right' wx:else>
         <view class = 'chat-text' wx:if = "{{item.text}}">{{item.text}}</view>
-        <image class = 'chat-text' wx:if = "{{item.fileType == 'image'}}" src = '{{item.tempFilePath}}'></image>
+        <image class = 'chat-img' wx:if = "{{item.fileType == 'image'}}" src = '{{item.tempFilePath}}'></image>
         <image src = '/images/nav/cart-on.png' class = 'headImg'></image>
       </view>
     </view>
