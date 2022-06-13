@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
     "description": "项目配置文件，详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html",
     "packOptions": {
         "ignore": [
@@ -76,7 +75,6 @@
     "ignoreUploadUnusedFiles": true,
     "useStaticServer": true,
     "coverView": true,
-=======
   "description": "项目配置文件，详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html",
   "packOptions": {
     "ignore": [
@@ -89,7 +87,6 @@
   },
   "setting": {
     "urlCheck": true,
->>>>>>> 9b3dc87c8eb519a50b07022e25c2752a3c7e4f53
     "es6": true,
     "enhance": true,
     "postcss": true,

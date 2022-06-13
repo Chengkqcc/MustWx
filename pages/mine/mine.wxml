@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<!--pakB/pages/mine/mine.wxml-->
-<!-- <text>pakB/pages/mine/mine.wxml</text> -->
 <!-- 登录 -->
 <view class="mine" wx:if="{{login}}">
     <view class="user">
@@ -81,7 +78,3 @@
       </view>
     </view>
 </view>
-=======
-<!--pages/mine/mine.wxml-->
-<text>我的页面</text>
->>>>>>> Chengkeqiang

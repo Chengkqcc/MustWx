@@ -1,7 +1,6 @@
 {
   "navigationBarTitleText": "意见反馈",
   "usingComponents": {
-<<<<<<< HEAD
     "van-cell": "@vant/weapp/cell/index",
     "van-icon": "@vant/weapp/icon/index",
     "van-action-sheet": "@vant/weapp/action-sheet/index",
@@ -9,8 +8,5 @@
     "van-uploader": "@vant/weapp/uploader/index",
     "van-rate": "@vant/weapp/rate/index",
     "van-button": "@vant/weapp/button/index"
-=======
-    "van-cell": "@vant/weapp/cell/index"
->>>>>>> Chengkeqiang
   }
 }

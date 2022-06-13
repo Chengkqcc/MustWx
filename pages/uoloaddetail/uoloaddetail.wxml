@@ -25,43 +25,11 @@
             <view slot="title" style="display: flex;">
                 <van-icon name="add" />
                 <view class="van-cell-text" style="margin-left: 10rpx;" bindtap="addFu">添加附件</view>
-    </van-cell-group>
-</view>
-<view class="cell_item">
-    <van-cell-group>
-        <van-cell title-style="font-weight:bold">
-            <view slot="title" class="pailie">
-                <view class="van-cell-text">文件</view>
-            </view>
-            <van-icon slot="right-icon" name="info-o" class="custom-icon" bindtap="alertFiles" />
-        </van-cell>
-        <van-cell>
-            <view slot="title" style="display: flex;">
-                <van-icon name="send-gift-o" />
-                <view class="van-cell-text" style="margin-left: 10rpx;"> {{choose_files.name}}</view>
-            </view>
-            <van-checkbox wx:if="{{choose_files.type == 'file'}}" slot="right-icon" value="{{checked}}" checked-color="#929292" shape="square" bind:change="onChange">
-            </van-checkbox>
-        </van-cell>
-        <block wx:for="{{FuFilesArr}}" key="item.path">
-            <van-cell>
-                <view slot="title" style="display: flex;width: 100%;">
-                    <van-icon name="orders-o" />
-                    <view class="van-cell-text" style="margin-left: 10rpx;overflow: hidden;font-size: 28rpx;white-space: nowrap;text-overflow: ellipsis;"> {{item.name?item.name:"照片"}}</view>
-                    <!-- <view class="futips">附件</view> -->
-                    <van-tag type="danger" color="#eaeaea" text-color="#8e959b">附件</van-tag>
-                </view>
-                <van-icon name="cross" class="slot-right" bindtap="delFu" data-pth="item.path" />
-            </van-cell>
-        </block>
-        <van-cell>
-            <view slot="title" style="display: flex;">
-                <van-icon name="add" />
-                <view class="van-cell-text" style="margin-left: 10rpx;" bindtap="addFu">添加附件</view>
             </view>
         </van-cell>
     </van-cell-group>
 </view>
+
 
 <view class="cell_item cell_list">
     <van-cell-group>
@@ -104,30 +72,6 @@
     </van-cell-group>
 </view>
 <van-action-sheet show="{{ show }}" actions="{{ actions[_index] }}" bind:close="onClose" bind:select="onSelect" cancel-text="取消" />
-
-<view class="cell_item cell_list">
-    <van-cell-group>
-        <van-cell title-style="font-weight:bold">
-            <view slot="title" class="pailie">
-                <view class="van-cell-text">{{choosetype}}</view>
-                <van-icon name="arrow-down" bindtap="chooseP" data-index='0' />
-            </view>
-            <van-icon slot="right-icon" name="info-o" class="custom-icon" bindtap="alertExplain" />
-        </van-cell>
-        <block wx:for="{{signlist}}" wx:key="*this">
-            <van-cell wx:if="{{item.handName}}" class="box1" title="{{item.handName}}" title-style="font-weight:bold" label="经办人:{{item.contractName}}（{{item.contractNumber}}）">
-                <van-icon slot="right-icon" name="delete-o" class="custom-icon" bindtap="delItem" data-name="{{item.persontype}}" data-idx="{{item.ids}}" />
-            </van-cell>
-            <van-cell wx:else class="box1" title="{{item.contractName}}" title-style="font-weight:bold" label="{{item.contractNumber}}">
-                <van-icon slot="right-icon" name="delete-o" class="custom-icon" bindtap="delItem" data-name="{{item.persontype}}" data-idx="{{item.ids}}" />
-            </van-cell>
-        </block>
-        <van-button icon="plus" block="true" custom-style="border:none;color:#518dd9;font-size:11px;" bindtap="chooseP" data-index='1'>添加{{choosetype}}</van-button>
-    </van-cell-group>
-</view>
-
-<van-action-sheet show="{{ show }}" actions="{{ actions[_index] }}" bind:close="onClose" bind:select="onSelect" cancel-text="取消" />
-
 <!-- <view class='camera' wx:if="{{isAuth}}">
   <camera wx:if="{{isAuth}}" device-position="back" flash="off" binderror="error"></camera>
   <button class="takePhoto" type="primary" bindtap="takePhoto">拍照</button>

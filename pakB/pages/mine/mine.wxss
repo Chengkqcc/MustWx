@@ -8,7 +8,6 @@ page {
   box-sizing: border-box;
   display: flex;
   align-items: center;
-<<<<<<< HEAD
   justify-content: space-between;
 }
 .mine .user .yonghu {
@@ -16,16 +15,11 @@ page {
   align-items: center;
 }
 .mine .user .yonghu .img {
-=======
-}
-.mine .user .img {
->>>>>>> Chengkeqiang
   width: 58px;
   height: 58px;
   margin-right: 15px;
   border-radius: 5px;
 }
-<<<<<<< HEAD
 .mine .user .yonghu .img image {
   width: 100%;
   height: 100%;
@@ -34,22 +28,11 @@ page {
   height: 50px;
 }
 .mine .user .yonghu .text .h1 {
-=======
-.mine .user .img image {
-  width: 100%;
-  height: 100%;
-}
-.mine .user .text {
-  height: 50px;
-}
-.mine .user .text .h1 {
->>>>>>> Chengkeqiang
   font-size: 16px;
   color: #000;
   white-space: 4px;
   margin-bottom: 6px;
 }
-<<<<<<< HEAD
 .mine .user .yonghu .text .p {
   font-size: 12px;
   color: #ccc;
@@ -60,37 +43,53 @@ page {
   border: 1px solid #000;
   border-radius: 3px;
 }
-=======
-.mine .user .text .p {
-  font-size: 12px;
-  color: #ccc;
+.mine .user .qiehuan .img {
+  width: 58px;
+  height: 58px;
+  margin-right: 15px;
+  border-radius: 5px;
 }
->>>>>>> Chengkeqiang
-.mine .content {
-  padding: 15px 15px 0;
-}
-.mine .content .cont {
-  width: 100%;
-  height: 52px;
-}
-.mine .content .cont image {
+.mine .user .qiehuan .img image {
   width: 100%;
   height: 100%;
 }
-.mine .content .common {
+.mine .user .qiehuan .text {
+  height: 50px;
+}
+.mine .user .qiehuan .text .h1 {
+  font-size: 16px;
+  color: #000;
+  white-space: 4px;
+  margin-bottom: 6px;
+}
+.mine .user .qiehuan .text .p {
+  font-size: 12px;
+  color: #ccc;
+}
+.mine .user .content {
+  padding: 15px 15px 0;
+}
+.mine .user .content .cont {
+  width: 100%;
+  height: 52px;
+}
+.mine .user .content .cont image {
+  width: 100%;
+  height: 100%;
+}
+.mine .user .content .common {
   background-color: #fff;
   margin-top: 15px;
   border-radius: 10px;
   overflow: hidden;
   padding-top: 15px;
 }
-.mine .content .common .title {
+.mine .user .content .common .title {
   padding-left: 15px;
   font-size: 14px;
   color: #000;
 }
-<<<<<<< HEAD
-.mine .content .fixed {
+.mine .user .content .fixed {
   width: calc(100vw - 30px);
   position: fixed;
   bottom: 60px;
@@ -103,42 +102,42 @@ page {
   box-sizing: border-box;
   font-size: 14px;
 }
-.mine .qiehuan .title {
+.mine .user .qiehuan .title {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px;
   background-color: #F1F1F1;
 }
-.mine .qiehuan .title .text {
+.mine .user .qiehuan .title .text {
   font-weight: bolder;
 }
-.mine .qiehuan .item_user {
+.mine .user .qiehuan .item_user {
   padding: 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #F1F1F1;
 }
-.mine .qiehuan .item_user .user_item {
+.mine .user .qiehuan .item_user .user_item {
   display: flex;
 }
-.mine .qiehuan .item_user .user_item .img {
+.mine .user .qiehuan .item_user .user_item .img {
   width: 50px;
   height: 50px;
 }
-.mine .qiehuan .item_user .user_item .img image {
+.mine .user .qiehuan .item_user .user_item .img image {
   width: 100%;
   height: 100%;
 }
-.mine .qiehuan .item_user .user_item .yonghu {
+.mine .user .qiehuan .item_user .user_item .yonghu {
   margin-left: 10px;
 }
-.mine .qiehuan .item_user .user_item .yonghu .name {
+.mine .user .qiehuan .item_user .user_item .yonghu .name {
   display: flex;
   align-items: center;
 }
-.mine .qiehuan .item_user .user_item .yonghu .name .state {
+.mine .user .qiehuan .item_user .user_item .yonghu .name .state {
   padding: 5px 10px;
   background-color: #F37B1D;
   color: #fff;
@@ -146,9 +145,7 @@ page {
   margin-left: 10px;
   border-radius: 3px;
 }
-.mine .qiehuan .item_user .user_item .yonghu .rzstate {
+.mine .user .qiehuan .item_user .user_item .yonghu .rzstate {
   font-size: 16px;
   color: #bbb;
 }
-=======
->>>>>>> Chengkeqiang
