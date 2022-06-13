@@ -10,9 +10,8 @@
         "include": []
     },
     "setting": {
-<<<<<<< HEAD
+
         "urlCheck": false,
-=======
         "urlCheck": true,
         "description": "项目配置文件，详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html",
         "packOptions": {
@@ -71,7 +70,6 @@
         "libVersion": "2.19.4",
         "appid": "wxb477562d764bed06",
         "projectname": "wx",
->>>>>>> fea760a4f1752a577cfd7e31eb9db55739307b0e
         "es6": true,
         "enhance": true,
         "postcss": true,
@@ -90,24 +88,19 @@
         "compileHotReLoad": true,
         "lazyloadPlaceholderEnable": false,
         "useMultiFrameRuntime": true,
-<<<<<<< HEAD
         "useApiHook": true,
         "useApiHostProcess": true,
-=======
         "useApiHook": false,
         "useApiHostProcess": false,
->>>>>>> fea760a4f1752a577cfd7e31eb9db55739307b0e
         "babelSetting": {
             "ignore": [],
             "disablePlugins": [],
             "outputPath": ""
         },
-<<<<<<< HEAD
         "useIsolateContext": true,
         "userConfirmedBundleSwitch": false,
         "packNpmManually": false,
         "packNpmRelationList": [],
-=======
         "useIsolateContext": false,
         "userConfirmedBundleSwitch": false,
         "packNpmManually": true,
@@ -117,29 +110,21 @@
                 "miniprogramNpmDistDir": "./"
             }
         ],
->>>>>>> fea760a4f1752a577cfd7e31eb9db55739307b0e
         "minifyWXSS": true,
         "disableUseStrict": false,
         "minifyWXML": true,
         "showES6CompileOption": false,
         "useCompilerPlugins": false,
         "ignoreUploadUnusedFiles": true
-<<<<<<< HEAD
     },
     "editorSetting": {
         "tabIndent": "insertSpaces",
         "tabSize": 2
-=======
->>>>>>> fea760a4f1752a577cfd7e31eb9db55739307b0e
     },
     "compileType": "miniprogram",
     "libVersion": "2.19.4",
     "appid": "wxb477562d764bed06",
-<<<<<<< HEAD
     "projectname": "wxmust",
-    "condition": {}
-=======
-    "projectname": "must",
     "debugOptions": {
         "hidedInDevtools": []
     },
@@ -198,5 +183,4 @@
             "list": []
         }
     }
->>>>>>> fea760a4f1752a577cfd7e31eb9db55739307b0e
 }
