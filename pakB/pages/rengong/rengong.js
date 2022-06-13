@@ -16,6 +16,12 @@ Page({
       var imgData = this.data.fileList;
       // 通过splice方法删除图片
       imgData.splice(event.detail.index, 1);
+      // 删除后放置默认图片
+      imgData.push({
+        url: '/images/auth/yingyezhizhao.png',
+        name: '营业执照',
+        deletable: false,
+     })
       // 更新图片数组
       this.setData({
          fileList: imgData
@@ -53,7 +59,6 @@ Page({
             // },
             // 成功回调
             success(res) {
-              console.log(res)
               // JSON.parse()方法是将JSON格式字符串转换为js对象
                var result = JSON.parse(res.data);
                // 上传完成需要更新 fileList
@@ -63,6 +68,7 @@ Page({
                    ...file,
                    url: result.data
                });
+               fileList.splice(0,1); // 删除默认图片
                // 更新存放图片的数组
                that.setData({
                    fileList
