@@ -27,9 +27,9 @@
                     <van-icon name="orders-o" />
                     <view class="van-cell-text" style="margin-left: 10rpx;overflow: hidden;font-size: 28rpx;white-space: nowrap;text-overflow: ellipsis;"> {{item.name?item.name:"照片"}}</view>
                     <!-- <view class="futips">附件</view> -->
-                    <van-tag type="danger"  color="#eaeaea" text-color="#8e959b">附件</van-tag>
+                    <van-tag type="danger" color="#eaeaea" text-color="#8e959b">附件</van-tag>
                 </view>
-                <van-icon name="cross"  class="slot-right" bindtap="delFu"  data-pth="item.path" />
+                <van-icon name="cross" class="slot-right" bindtap="delFu" data-pth="item.path" />
             </van-cell>
         </block>
         <van-cell>
@@ -61,7 +61,26 @@
         <van-button icon="plus" block="true" custom-style="border:none;color:#518dd9;font-size:11px;" bindtap="chooseP" data-index='1'>添加{{choosetype}}</van-button>
     </van-cell-group>
 </view>
-
+<view class="cell_item">
+    <van-cell-group>
+        <van-cell title="其他设置" title-style="font-weight:bold">
+            <van-icon slot="right-icon" name="plus" class="custom-icon" bindtap="" />
+        </van-cell>
+        <van-cell>
+            <view slot="title">
+                <view class="van-cell-text">签署证书</view>
+            </view>
+            <view slot="right-icon">
+                <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+                    <view class="picker">
+                        {{array[index]}}
+                    </view>
+                </picker>
+                <van-icon name="arrow" />
+            </view>
+        </van-cell>
+    </van-cell-group>
+</view>
 <van-action-sheet show="{{ show }}" actions="{{ actions[_index] }}" bind:close="onClose" bind:select="onSelect" cancel-text="取消" />
 
 <!-- <view class='camera' wx:if="{{isAuth}}">

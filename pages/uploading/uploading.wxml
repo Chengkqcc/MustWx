@@ -108,7 +108,7 @@
     </view>
 </view>
 
-<van-popup
+<!-- <van-popup
   show="{{ show }}"
   closeable
   position="bottom"
@@ -119,5 +119,5 @@
         <text>选择合同发起方</text>
     </view>
     
-</van-popup>
+</van-popup> -->
 </view>

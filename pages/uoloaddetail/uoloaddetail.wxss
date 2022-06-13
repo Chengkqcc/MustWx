@@ -5,7 +5,7 @@ page {
 }
 .cell_item {
   background: #fff;
-  margin-bottom: 90rpx;
+  margin-bottom: 28rpx;
   box-sizing: border-box;
   padding: 0 40rpx;
 }

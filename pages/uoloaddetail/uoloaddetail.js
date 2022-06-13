@@ -6,6 +6,8 @@ Page({
      * 页面的初始数据
      */
     data: {
+        value:0,
+        array: ['美国', '中国', '巴西', '日本'],
         isAuth:false,   //摄像头权限
         FuFilesArr:[],
         choose_files: null,
@@ -35,6 +37,12 @@ Page({
             '需要签署的文件，您可以添加多个附件，附件信息将合并到PDF文件中(附件无需盖章),附件和主合同具备同等的法律效力'
         ]
     },
+    bindPickerChange: function(e) {
+        console.log('picker发送选择改变，携带值为', e.detail.value)
+        this.setData({
+          index: e.detail.value
+        })
+      },
     //删除附件的业务
     delFu(options){
         console.log(options)
@@ -81,7 +89,7 @@ Page({
                         wx.showToast({
                             title: '处理中...',
                             icon: 'loading',
-                            duration: 1000,
+                            duration: 500,
                             success:()=>{
                                 let files = res.tempFiles[0]
                                 console.log(res)
@@ -121,7 +129,7 @@ Page({
                         wx.showToast({
                           title: '选择文件失败,请重试',
                           icon:'none',
-                          duration:1000
+                          duration:500
                         })
                     }
                   })
@@ -138,7 +146,7 @@ Page({
                         wx.showToast({
                             title: '处理中...',
                             icon: 'loading',
-                            duration: 1500,
+                            duration: 500,
                             success:()=>{
                                 this.setData({
                                     FuFilesArr
@@ -169,7 +177,7 @@ Page({
                           wx.showToast({
                             title: '处理中...',
                             icon: 'loading',
-                            duration: 1000,
+                            duration: 500,
                             success:()=>{
                                 let files = res.tempFiles[0]
                                 console.log(res)
