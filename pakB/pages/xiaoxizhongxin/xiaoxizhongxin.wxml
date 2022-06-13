@@ -1,0 +1,11 @@
+<!--pakB/pages/xiaoxizhongxin/xiaoxizhongxin.wxml-->
+<view class="xiaoxizhongxin">
+  <view wx:if="{{xx_data.length==0}}" class="empty">
+    <van-empty description="-暂无消息-" />
+  </view>
+  <view wx:else class="message">
+    <block wx:for="{{xx_data}}" wx:key="{{index}}">
+    
+    </block>
+  </view>
+</view>
