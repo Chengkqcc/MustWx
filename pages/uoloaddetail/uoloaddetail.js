@@ -31,8 +31,26 @@ Page({
         ],
         messArr:[
             '假设本合同需要您和张三签字，需要在签署人中填写张三的手机号和姓名，在发起合同之后，张三可以收到短信，张三点击短信即可对合同签字。',
-            '抄送方为选填项，即本合同哪些人可以查看，抄送方只有查看的权限，无签署的权限'
+            '抄送方为选填项，即本合同哪些人可以查看，抄送方只有查看的权限，无签署的权限',
+            '需要签署的文件，您可以添加多个附件，附件信息将合并到PDF文件中(附件无需盖章),附件和主合同具备同等的法律效力'
         ]
+    },
+    //删除附件的业务
+    delFu(options){
+        console.log(options)
+    },
+    alertFiles(){
+        wx.showModal({
+            content: this.data.messArr[2],
+            showCancel:false,
+            success (res) {
+              if (res.confirm) {
+                console.log('用户点击确定')
+              } else if (res.cancel) {
+                console.log('用户点击取消')
+              }
+            }
+          })
     },
     takePhoto() {
         const ctx = wx.createCameraContext()
@@ -60,41 +78,44 @@ Page({
                   wx.chooseMessageFile({
                     count: 1,
                     success:(res)=>{
-                        let files = res.tempFiles[0]
-                        let FuFilesArr = this.data.FuFilesArr
-                        FuFilesArr.push(files)
                         wx.showToast({
                             title: '处理中...',
                             icon: 'loading',
-                            duration: 1500,
-                            complete:()=>{
+                            duration: 1000,
+                            success:()=>{
+                                let files = res.tempFiles[0]
+                                console.log(res)
+                                let FuFilesArr = this.data.FuFilesArr
+                                FuFilesArr.push(files)
+                                console.log(FuFilesArr)
                                 this.setData({
                                     FuFilesArr
                                 })
                             }
                         })
-                        const tempFilePaths = res.tempFilePaths
-                         wx.uploadFile({
-                            url: 'https://example.weixin.qq.com/upload', //仅为示例，非真实的接口地址
-                            filePath: tempFilePaths[0],
-                            name: 'file',
-                            formData: {
-                            'user': 'test'
-                            },
-                            success (res){
-                                const data = res.data
-                            },
-                            fail(){
-                                wx.showModal({
-                                    content: '上传文件失败，请稍后再试', //提示的内容
-                                    success: function(res) {
-                                      if(res.confirm) {
-                                        console.log('用户点击了确定')
-                                      }
-                                    }
-                                  })
-                            }
-                        })
+                        //选择的文件上传到服务器
+                        // const tempFilePaths = res.tempFilePaths
+                        //  wx.uploadFile({
+                        //     url: 'https://example.weixin.qq.com/upload', //仅为示例，非真实的接口地址
+                        //     filePath: tempFilePaths[0],
+                        //     name: 'file',
+                        //     formData: {
+                        //     'user': 'test'
+                        //     },
+                        //     success (res){
+                        //         const data = res.data
+                        //     },
+                        //     fail(){
+                        //         wx.showModal({
+                        //             content: '上传文件失败，请稍后再试', //提示的内容
+                        //             success: function(res) {
+                        //               if(res.confirm) {
+                        //                 console.log('用户点击了确定')
+                        //               }
+                        //             }
+                        //           })
+                        //     }
+                        // })
                     },
                     fail(res){
                         wx.showToast({
@@ -110,8 +131,7 @@ Page({
                     count: 1,
                     sizeType:'original',
                     sourceType:'album',
-                    success(res){
-                        console.log(res)
+                    success:(res)=>{
                         let files = res.tempFiles[0]
                         let FuFilesArr = this.data.FuFilesArr
                         FuFilesArr.push(files)
@@ -119,7 +139,7 @@ Page({
                             title: '处理中...',
                             icon: 'loading',
                             duration: 1500,
-                            complete(){
+                            success:()=>{
                                 this.setData({
                                     FuFilesArr
                                 })
@@ -143,9 +163,24 @@ Page({
                         count: 1,
                         sizeType: 'compressed',
                         sourceType:  'camera',
-                        success (res) {
+                        success:(res)=>{
                           // tempFilePath可以作为 img 标签的 src 属性显示图片
                           console.log(res)
+                          wx.showToast({
+                            title: '处理中...',
+                            icon: 'loading',
+                            duration: 1000,
+                            success:()=>{
+                                let files = res.tempFiles[0]
+                                console.log(res)
+                                let FuFilesArr = this.data.FuFilesArr
+                                FuFilesArr.push(files)
+                                console.log(FuFilesArr)
+                                this.setData({
+                                    FuFilesArr
+                                })
+                            }
+                        })
                         },
                         fail(){
                             wx.showToast({
@@ -158,6 +193,9 @@ Page({
                     break;
                 case 3:
                     console.log('用户点击了文件选择')
+                    wx.navigateTo({
+                      url: '/pages/uploadPages/uploadfiles/uploadfiles',
+                    })
                     break;
               }
             }

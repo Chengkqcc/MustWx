@@ -16,6 +16,17 @@ page {
   background: #eee;
   box-sizing: border-box;
 }
+.cell_item .van-checkbox__label {
+  padding: none !important;
+  display: none;
+}
+.cell_item .van-checkbox__label--right {
+  padding: none !important;
+  display: none;
+}
+.cell_item .van-cell__value {
+  display: none;
+}
 .cell_list {
   padding-bottom: 40rpx;
 }
