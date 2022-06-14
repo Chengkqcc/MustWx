@@ -32,7 +32,7 @@ Page({
           {id:1,text:'安全设置',page:'/pakB/pages/anquanshezhi/anquanshezhi',icon:''},
           {id:2,text:'通知设置',page:'/pakB/pages/tongzhishezhi/tongzhishezhi',icon:''},
           {id:3,text:'消息中心',page:'/pakB/pages/xiaoxizhongxin/xiaoxizhongxin',icon:''},
-          {id:4,text:'帮助中心',page:'login',icon:''},
+          {id:4,text:'帮助中心',page:'/pakA/pages/help/help',icon:''},
           {id:5,text:'意见反馈',page:'/pakB/pages/yijianfankui/yijianfankui',icon:''},
           {id:6,text:'关于我们',page:'/pakB/pages/guanyuwomen/guanyuwomen',icon:''},
         ]

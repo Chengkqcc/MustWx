@@ -14,3 +14,46 @@ page{
     text-align: center;
   }
 }
+.tip{
+  padding:15px 15px 50px;
+  border:1px solid #BDBDBD;
+  box-shadow:0 0 10px #BDBDBD;
+  width:80vw;
+  .title{
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+  }
+  .content{
+    padding: 20px;
+    font-size:14px;
+    height:auto;
+    text-align:center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    .text{}
+    .cell{
+      background-color: #07C160;
+      .codetext{
+        width:20px;
+        height:2px;
+      }
+    }
+  }
+  .btn{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    view{
+      padding:5px 20px;
+      background-color: #07C160;
+      color:#fff;
+      &:last-child{
+        background-color: #f1f1f1;
+        color:#07C160;
+      }
+    }
+  }
+}

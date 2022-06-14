@@ -1,19 +1,33 @@
 <!--pakB/pages/usersetting/usersetting.wxml-->
 <!-- 登录 -->
 <view wx:if="{{login}}" class="usersetting">
-  <block wx:for="{{user_set_data}}">
+  <block wx:for="{{user_set_data}}" wx:key="{{item.id}}">
     <view class="cell">
       <van-cell title="{{item.title}}" is-link link-type="navigateTo"
     url="{{item.page}}" border="{{false}}"/>
     </view>    
   </block>
+  <view class="btn" bind:tap="logout_fn">退出登录</view>
 </view>
 <!-- 未登录 -->
 <view wx:else class="usersetting">
-  <block wx:for="{{user_set_data}}">
+  <block wx:for="{{user_set_data}}" wx:key="{{item.id}}">
     <view class="cell">
       <van-cell title="{{item.title}}" is-link link-type="navigateTo"
     url="{{index<=4?'登录页面':item.page}}" border="{{false}}"/>
     </view>    
   </block>
 </view>
+
+<!-- ! 弹窗 -->
+<van-popup show="{{ tip_show }}" overlay-style="background:rgba(0,0,0,0)" custom-class="tip" bind:close="onClose">
+  <view class="title">
+    <text>提示</text>
+    <van-icon name="cross" bind:click="close_tip" />
+  </view>
+  <view class="content">您真的要退出系统吗?</view>
+  <view class="btn">
+    <view class="logout" bindtap="logout_close_tip">确定</view>
+    <view bindtap="close_tip">取消</view>
+  </view>
+</van-popup>

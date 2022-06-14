@@ -37,6 +37,20 @@
                     "name": "",
                     "pathName": "pakB/pages/mine/mine",
                     "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pakA/pages/help/help",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pakB/pages/usersetting/usersetting",
+                    "query": "",
                     "scene": null,
                     "launchMode": "default"
                 }

@@ -1,0 +1,6 @@
+<!--pakB/pages/xieyi/xieyi.wxml-->
+<import src="../../../templates/xieyi/smrzsqxy/smrzsqxy"/>
+<import src="../../../templates/xieyi/szzsslxy/szzsslxy"/>
+<import src="../../../templates/xieyi/yhysxy/yhysxy"/>
+<import src="../../../templates/xieyi/yhzcxy/yhzcxy"/>
+<template is="{{name}}"></template>
