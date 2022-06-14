@@ -15,7 +15,12 @@
     "templates/Qian/Qian",
     "pages/uploadPages/addChao/addChao",
     "templates/Chao/Chao",
-    "pages/uploadPages/uploadfiles/uploadfiles"
+    "pages/uploadPages/uploadfiles/uploadfiles",
+    "pages/index/index",
+    "templates/xieyi/smrzsqxy/smrzsqxy",
+    "templates/xieyi/szzsslxy/szzsslxy",
+    "templates/xieyi/yhysxy/yhysxy",
+    "templates/xieyi/yhzcxy/yhzcxy"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -26,7 +31,8 @@
   "sitemapLocation": "sitemap.json",
   "tabBar": {
     "selectedColor": "#e53f3c",
-    "list": [{
+    "list": [
+      {
         "text": "首页",
         "pagePath": "pages/index/index",
         "iconPath": "images/nav/home-off.png",
@@ -49,79 +55,83 @@
         "pagePath": "pages/mine/mine",
         "iconPath": "images/nav/my-off.png",
         "selectedIconPath": "images/nav/my-on.png"
-      }]
-    },
-    "subpackages": [
-      {
-        "root": "pakA",
-        "pages": [
-          "pages/home/home",
-          "pages/help/help",
-          "pages/hotProblem/hotProblem",
-          "pages/offer/offer",
-          "pages/problem/problem"
-        ],
-        "name": "aa",
-        "independent": false
-      },
-      {
-        "root": "pakB",
-        "pages": [
-          "pages/home/home",
-          "pages/mine/mine",
-          "pages/usersetting/usersetting",
-          "pages/yijianfankui/yijianfankui",
-          "pages/guanyuwomen/guanyuwomen",
-          "pages/xinwenzixun/xinwenzixun",
-          "pages/newsdetail/newsdetail",
-          "pages/dianzihetong/dianzihetong",
-          "pages/order/order",
-          "pages/bm/bm",
-          "pages/addCompany/addCompany",
-          "pages/joinCompany/joinCompany",
-          "pages/renzhengzhongxin/renzhengzhongxin",
-          "pages/shimingrenzheng/shimingrenzheng",
-          "pages/chanpingoumai/chanpingoumai",
-          "pages/dianziqianzhang/dianziqianzhang",
-          "pages/falvfuwu/falvfuwu",
-          "pages/youhuiquan/youhuiquan",
-          "pages/dingdanguanli/dingdanguanli",
-          "pages/qianmingguanli/qianmingguanli",
-          "pages/tongzhishezhi/tongzhishezhi",
-          "pages/xiaoxizhongxin/xiaoxizhongxin",
-          "pages/anquanshezhi/anquanshezhi",
-          "pages/setloginpass/setloginpass",
-          "pages/setwritepass/setwritepass",
-          "pages/setoldpass/setoldpass"
-        ],
-        "name": "bb",
-        "independent": false
       }
-    ],
-    "usingComponents": {
-      "van-empty": "@vant/weapp/empty/index",
-      "van-notice-bar": "@vant/weapp/notice-bar/index",
-      "van-tabbar": "@vant/weapp/tabbar/index",
-      "van-tabbar-item": "@vant/weapp/tabbar-item/index",
-      "van-nav-bar": "@vant/weapp/nav-bar/index",
-      "van-dialog": "@vant/weapp/dialog/index",
-      "van-tab": "@vant/weapp/tab/index",
-      "van-tabs": "@vant/weapp/tabs/index",
-      "van-rate": "@vant/weapp/rate/index",
-      "van-uploader": "@vant/weapp/uploader/index",
-      "van-search": "@vant/weapp/search/index",
-      "van-switch": "@vant/weapp/switch/index",
-      "van-popup": "@vant/weapp/popup/index",
-      "van-button": "@vant/weapp/button/index",
-      "van-cell": "@vant/weapp/cell/index",
-      "van-cell-group": "@vant/weapp/cell-group/index",
-      "van-field": "@vant/weapp/field/index",
-      "van-action-sheet": "@vant/weapp/action-sheet/index",
-      "van-icon": "@vant/weapp/icon/index",
-      "van-checkbox": "@vant/weapp/checkbox/index",
-      "van-checkbox-group": "@vant/weapp/checkbox-group/index",
-      "van-toast": "@vant/weapp/toast/index",
-      "van-tag": "@vant/weapp/tag/index"
+    ]
+  },
+  "subpackages": [
+    {
+      "root": "pakA",
+      "pages": [
+        "pages/home/home",
+        "pages/help/help",
+        "pages/hotProblem/hotProblem",
+        "pages/offer/offer",
+        "pages/problem/problem"
+      ],
+      "name": "aa",
+      "independent": false
+    },
+    {
+      "root": "pakB",
+      "pages": [
+        "pages/home/home",
+        "pages/mine/mine",
+        "pages/usersetting/usersetting",
+        "pages/yijianfankui/yijianfankui",
+        "pages/guanyuwomen/guanyuwomen",
+        "pages/xinwenzixun/xinwenzixun",
+        "pages/newsdetail/newsdetail",
+        "pages/dianzihetong/dianzihetong",
+        "pages/order/order",
+        "pages/bm/bm",
+        "pages/addCompany/addCompany",
+        "pages/joinCompany/joinCompany",
+        "pages/renzhengzhongxin/renzhengzhongxin",
+        "pages/shimingrenzheng/shimingrenzheng",
+        "pages/chanpingoumai/chanpingoumai",
+        "pages/dianziqianzhang/dianziqianzhang",
+        "pages/falvfuwu/falvfuwu",
+        "pages/youhuiquan/youhuiquan",
+        "pages/dingdanguanli/dingdanguanli",
+        "pages/qianmingguanli/qianmingguanli",
+        "pages/tongzhishezhi/tongzhishezhi",
+        "pages/xiaoxizhongxin/xiaoxizhongxin",
+        "pages/anquanshezhi/anquanshezhi",
+        "pages/setloginpass/setloginpass",
+        "pages/setwritepass/setwritepass",
+        "pages/setoldpass/setoldpass",
+        "pages/xieyi/xieyi",
+        "pages/setheaderimg/setheaderimg",
+        "pages/setmaterial/setmaterial",
+        "pages/setemail/setemail"
+      ],
+      "name": "bb",
+      "independent": false
     }
+  ],
+  "usingComponents": {
+    "van-empty": "@vant/weapp/empty/index",
+    "van-notice-bar": "@vant/weapp/notice-bar/index",
+    "van-tabbar": "@vant/weapp/tabbar/index",
+    "van-tabbar-item": "@vant/weapp/tabbar-item/index",
+    "van-nav-bar": "@vant/weapp/nav-bar/index",
+    "van-dialog": "@vant/weapp/dialog/index",
+    "van-tab": "@vant/weapp/tab/index",
+    "van-tabs": "@vant/weapp/tabs/index",
+    "van-rate": "@vant/weapp/rate/index",
+    "van-uploader": "@vant/weapp/uploader/index",
+    "van-search": "@vant/weapp/search/index",
+    "van-switch": "@vant/weapp/switch/index",
+    "van-popup": "@vant/weapp/popup/index",
+    "van-button": "@vant/weapp/button/index",
+    "van-cell": "@vant/weapp/cell/index",
+    "van-cell-group": "@vant/weapp/cell-group/index",
+    "van-field": "@vant/weapp/field/index",
+    "van-action-sheet": "@vant/weapp/action-sheet/index",
+    "van-icon": "@vant/weapp/icon/index",
+    "van-checkbox": "@vant/weapp/checkbox/index",
+    "van-checkbox-group": "@vant/weapp/checkbox-group/index",
+    "van-tag": "@vant/weapp/tag/index",
+    "van-toast": "@vant/weapp/toast/index"
   }
-
+}

@@ -1,0 +1,19 @@
+page {
+  background-color: #f1f1f1;
+}
+.setemail {
+  padding-top: 15px;
+}
+.setemail .text {
+  text-align: center;
+  font-size: 14px;
+  color: #aaa;
+  font-weight: 200;
+  padding: 15px 0;
+}
+.setemail .phone {
+  text-align: center;
+}
+.setemail .btn {
+  padding: 30px 15px;
+}

@@ -6,7 +6,6 @@
         {
           "name": "",
           "pathName": "pages/index/index",
-          "pathName": "pakB/pages/order/order",
           "query": "",
           "launchMode": "default",
           "scene": null
@@ -14,7 +13,6 @@
         {
           "name": "",
           "pathName": "pakA/pages/Mymodel/mymodel",
-          "pathName": "pakB/pages/bm/bm",
           "query": "",
           "launchMode": "default",
           "scene": null
@@ -22,7 +20,6 @@
         {
           "name": "",
           "pathName": "pakA/pages/systemModel/systemModel",
-          "pathName": "pakB/pages/mine/mine",
           "query": "",
           "launchMode": "default",
           "scene": null
@@ -32,11 +29,7 @@
           "pathName": "pakA/pages/sendModel/sendModel",
           "query": "",
           "scene": null,
-          "launchMode": "default",
-          "pathName": "pakB/pages/dianzihetong/dianzihetong",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
+          "launchMode": "default"
         },
         {
           "name": "",

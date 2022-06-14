@@ -14,3 +14,45 @@ page {
   text-decoration: underline;
   text-align: center;
 }
+.tip {
+  padding: 15px 15px 50px;
+  border: 1px solid #BDBDBD;
+  box-shadow: 0 0 10px #BDBDBD;
+  width: 80vw;
+}
+.tip .title {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+}
+.tip .content {
+  padding: 20px;
+  font-size: 14px;
+  height: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.tip .content .cell {
+  background-color: #07C160;
+}
+.tip .content .cell .codetext {
+  width: 20px;
+  height: 2px;
+}
+.tip .btn {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.tip .btn view {
+  padding: 5px 20px;
+  background-color: #07C160;
+  color: #fff;
+}
+.tip .btn view:last-child {
+  background-color: #f1f1f1;
+  color: #07C160;
+}
