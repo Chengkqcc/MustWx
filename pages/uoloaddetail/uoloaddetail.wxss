@@ -1,6 +1,6 @@
 page {
   box-sizing: border-box;
-  padding-top: 40rpx;
+  padding: 40rpx 0;
   background: #f1f1f1;
 }
 .cell_item {
@@ -30,24 +30,31 @@ page {
 .cell_list {
   padding-bottom: 40rpx;
 }
-.camera {
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  left: 0;
-  top: 0;
-  z-index: 100;
-  background-color: #000;
+.bot_btns {
+  display: flex;
+  box-sizing: border-box;
+  padding: 0 28rpx;
+  width: 100%;
 }
-.camera camera {
-  width: 100vw;
-  height: 70vh;
+.bot_btns button {
+  height: 78rpx;
+  color: #fff;
+  font-size: 30rpx;
 }
-button.takePhoto:not([size='mini']) {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100vw;
-  height: 90rpx;
-  border-radius: 0;
+.bot_btns .edit {
+  width: 244rpx;
+  border-radius: 10rpx;
+  background-color: #8a98a1;
+  margin-right: 20rpx;
+}
+.bot_btns .submit {
+  flex: 1;
+  background-color: #d35849;
+  color: #fff;
+}
+.quick {
+  text-align: center;
+  font-size: 24rpx;
+  width: 100%;
+  margin-top: 80rpx;
 }
