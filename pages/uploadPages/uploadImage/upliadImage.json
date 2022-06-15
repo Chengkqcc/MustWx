@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "img-drag": "/components/imgListdrag/imgListdrag"
+  },
+  "navigationBarTitleText":"上传图片签署"
+}
