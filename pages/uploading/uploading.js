@@ -16,9 +16,96 @@ Page({
     // showPopup() {
     //     this.setData({ show: true });
     //   },
-    
+    jumpcontract(){
+      wx.navigateTo({
+        url: '/pakA/pages/Mymodel/mymodel',
+      })
+    },
+    jumpedit(){
+      wx.navigateTo({
+        url: '/pakA/pages/editTxt/editTxt',
+      })
+    },
     onClose() {
         this.setData({ show: false });
+    },
+    choosePhonefile(){
+        wx.showActionSheet({
+            itemList: [ '相册照片', '拍摄照片', '文件选择器'], //文字数组
+            itemColor: '#000000', //文字颜色
+            success: (res) => {
+              switch (res.tapIndex) {
+                case 0:
+                  wx.chooseImage({
+                    count: 1,
+                    sizeType: ['compressed'],
+                    sourceType: ['album'],
+                    success: (res) => {
+                      let imgSrc = encodeURIComponent(JSON.stringify(res.tempFilePaths[0]))
+                      wx.navigateTo({
+                        url: '/pages/uploadPages/uploadImage/upliadImage?imgSrc='+imgSrc,
+                      })
+                    },
+                    fail:()=>{
+                      wx.showToast({
+                        title: '未选择文件',
+                        icon: 'none',
+                        duration: 1000
+                      })
+                    }
+                  })
+                  break;
+                case 1:
+                  // wx.chooseMedia({
+                  //     count:1,
+                  //     mediaType:"image",
+                  //     sourceType:'camera',
+                  //     camera:'back',
+                  //     success(res){
+                  //         console.log(res)
+                  //     }
+                  // })
+                  wx.chooseImage({
+                    count: 1,
+                    sizeType: ['compressed'],
+                    sourceType: ['camera'],
+                    success: (res) => {
+                      // tempFilePath可以作为 img 标签的 src 属性显示图片
+                      console.log(res)
+                      wx.showToast({
+                        title: '处理中...',
+                        icon: 'loading',
+                        duration: 500,
+                        success: () => {
+                          let files = res.tempFiles[0]
+                          console.log(res)
+                          let FuFilesArr = this.data.FuFilesArr
+                          FuFilesArr.push(files)
+                          console.log(FuFilesArr)
+                          this.setData({
+                            FuFilesArr
+                          })
+                        }
+                      })
+                    },
+                    fail() {
+                      wx.showToast({
+                        title: '您取消了拍照',
+                        icon: 'none',
+                        duration: 1000
+                      })
+                    }
+                  })
+                  break;
+                case 2:
+                  console.log('用户点击了文件选择')
+                  wx.navigateTo({
+                    url: '/pages/uploadPages/uploadfiles/uploadfiles',
+                  })
+                  break;
+              }
+            }
+          })
     },
     //从微信聊天选择文件 
     chooseWxFile(){

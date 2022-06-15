@@ -1,0 +1,29 @@
+<img-drag imgList="{{imgList}}" obj="{{obj}}" bind:updateImage="updateImage"></img-drag>
+
+<!-- <button class="btnx">下一步</button>
+<view class="tips">
+    <van-icon name="info-o" />
+    可同时上传多张图片，按住图片拖动可排序
+</view> -->
+ <!-- <view class="drag-container">
+  <view
+    wx:for="{{dragImgList}}" 
+    wx:key="index"
+    style="transform: translate({{index === currentIndex ? tranX : item.tranX}}px, {{index === currentIndex ? tranY : item.tranY}}px); z-index: {{index === currentIndex ? 10 : 1}};"
+    class="darg-item item-transition"
+    mark:index="{{index}}"
+    mark:key="{{item.key}}"
+    catch:longpress="longPress"
+    catch:touchmove="touchMove"
+    catch:touchend="touchEnd"
+  >
+    <image class="darg-item-img" src="{{item.src}}"/>
+    <text catch:tap="deleteImg" mark:key="{{item.key}}" class="drag-item-delete">×</text>
+  </view>
+  <view
+    bindtap="uploadImage"
+    class="darg-item drag-item-upload"
+    hidden="{{dragImgList.length >= 9}}"
+    style="transform: translate({{uploadPosition.tranX}}px, {{uploadPosition.tranY}}px);"
+  >+</view>
+</view> -->

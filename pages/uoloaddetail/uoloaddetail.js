@@ -120,6 +120,16 @@ Page({
   //删除附件的业务
   delFu(options) {
     console.log(options)
+    let FuFilesArr = this.data.FuFilesArr
+    let pth = options.target.dataset.pth
+    FuFilesArr.forEach((item,index)=>{
+      if(item.path == pth){
+        FuFilesArr.splice(index,1)  
+      }
+    })
+    this.setData({
+      FuFilesArr
+    })
   },
   alertFiles() {
     wx.showModal({
@@ -211,8 +221,8 @@ Page({
           case 1:
             wx.chooseImage({
               count: 1,
-              sizeType: 'original',
-              sourceType: 'album',
+              sizeType: ['compressed'],
+              sourceType: ['album'],
               success: (res) => {
                 let files = res.tempFiles[0]
                 let FuFilesArr = this.data.FuFilesArr
@@ -243,8 +253,8 @@ Page({
             // })
             wx.chooseImage({
               count: 1,
-              sizeType: 'compressed',
-              sourceType: 'camera',
+              sizeType: ['compressed'],
+              sourceType: ['camera'],
               success: (res) => {
                 // tempFilePath可以作为 img 标签的 src 属性显示图片
                 console.log(res)

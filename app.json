@@ -10,7 +10,8 @@
         "templates/Qian/Qian",
         "pages/uploadPages/addChao/addChao",
         "templates/Chao/Chao",
-        "pages/uploadPages/uploadfiles/uploadfiles"
+        "pages/uploadPages/uploadfiles/uploadfiles",
+        "pages/uploadPages/uploadImage/upliadImage"
     ],
     "window": {
         "backgroundTextStyle": "light",
@@ -31,7 +32,8 @@
         "van-checkbox-group": "@vant/weapp/checkbox-group/index",
         "van-toast": "@vant/weapp/toast/index",
         "van-tag": "@vant/weapp/tag/index",
-        "van-picker": "@vant/weapp/picker/index"
+        "van-picker": "@vant/weapp/picker/index",
+        "van-uploader": "@vant/weapp/uploader/index"
     },
     "tabBar": {
         "selectedColor": "#e53f3c",

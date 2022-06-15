@@ -16,20 +16,20 @@
         <van-cell>
             <view slot="title" style="display: flex;">
                 <van-icon name="send-gift-o" />
-                <view class="van-cell-text" style="margin-left: 10rpx;"> {{choose_files.name}}</view>
+                <view class="van-cell-text" style="margin-left: 10rpx;"> {{choose_files.name?choose_files.name : "照片"}}</view>
             </view>
             <van-checkbox wx:if="{{choose_files.type == 'file'}}" slot="right-icon" value="{{checked}}" checked-color="#929292" shape="square" bind:change="onChange">
             </van-checkbox>
         </van-cell>
         <block wx:for="{{FuFilesArr}}" key="item.path">
             <van-cell>
-                <view slot="title" style="display: flex;width: 100%;">
+                <view slot="title" style="display: flex;overflow: hidden;">
                     <van-icon name="orders-o" />
-                    <view class="van-cell-text" style="margin-left: 10rpx;overflow: hidden;font-size: 28rpx;white-space: nowrap;text-overflow: ellipsis;"> {{item.name?item.name:"照片"}}</view>
+                    <view class="van-cell-text" style="margin-left: 10rpx;overflow: hidden;font-size: 28rpx;white-space: nowrap;text-overflow: ellipsis;width: 400rpx;"> {{item.name?item.name:"照片"}}</view>
                     <!-- <view class="futips">附件</view> -->
                     <van-tag type="danger" color="#eaeaea" text-color="#8e959b">附件</van-tag>
                 </view>
-                <van-icon name="cross" class="slot-right" bindtap="delFu" data-pth="item.path" />
+                <van-icon name="cross" slot="right-icon" class="slot-right" bindtap="delFu" data-pth="{{item.path}}" />
             </van-cell>
         </block>
         <van-cell>
