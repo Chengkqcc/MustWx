@@ -18,5 +18,4 @@
    <view class="btn">
       <van-button color="#D45849" custom-class="addBtn" bindtap="addBtn">{{btnText}}</van-button>
    </view>
-   <!-- <van-toast id="van-toast" /> -->
 </view>

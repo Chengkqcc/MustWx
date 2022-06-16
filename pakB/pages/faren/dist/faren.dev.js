@@ -17,53 +17,86 @@ Page({
     //信用代码
     username: "",
     //法人名称
-    userID: "" //法人证件号
+    userID: "",
+    //法人证件号
+    allInfoState: false // 全部信息状态
 
   },
   onName: function onName(event) {
     if (!event.detail.value) {
       (0, _toast["default"])('企业名称输入不合法或为空');
+      this.setData({
+        allInfoState: false
+      });
       return;
     }
 
     this.setData({
-      name: event.detail.value.trim()
+      name: event.detail.value.trim(),
+      allInfoState: true
     });
   },
   onCode: function onCode(event) {
     if (!event.detail.value) {
       (0, _toast["default"])('信用代码输入不合法或为空');
+      this.setData({
+        allInfoState: false
+      });
       return;
     }
 
     this.setData({
-      code: event.detail.value.trim()
+      code: event.detail.value.trim(),
+      allInfoState: true
     });
   },
   onUsername: function onUsername(event) {
     if (!event.detail.value) {
       (0, _toast["default"])('法人名称输入不合法或为空');
+      this.setData({
+        allInfoState: false
+      });
       return;
     }
 
     this.setData({
-      username: event.detail.value.trim()
+      username: event.detail.value.trim(),
+      allInfoState: true
     });
   },
   onUserID: function onUserID(event) {
     // 身份证正则验证
     var res = (0, _idcardReg["default"])(event.detail.value);
-    if (res) this.setData({
-      userID: event.detail.value
-    });else {
+
+    if (!res) {
       (0, _toast["default"])('身份证输入不合法或为空');
+      this.setData({
+        userID: null,
+        allInfoState: false
+      });
       return;
+    } else {
+      this.setData({
+        userID: event.detail.value,
+        allInfoState: true
+      });
     }
   },
+  // 下一步
   nextBtn: function nextBtn() {
     var _this = this;
 
-    // loading加载
+    // console.log(this.data)
+    if (!this.data.name || !this.data.code || !this.data.username || !this.data.userID) {
+      (0, _toast["default"])('信息填写有误');
+      this.setData({
+        userID: null
+      });
+      return;
+    }
+
+    ; // loading加载
+
     wx.showLoading({
       title: '加载中...'
     });

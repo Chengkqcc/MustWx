@@ -12,7 +12,7 @@
          <text class="req">*</text>
          法人信息
       </view>
-      <van-field value="{{ username }}" label="法人名称" placeholder="请输入法人姓名" input-align="right" bind:blur="onUser"/>
+      <van-field value="{{ username }}" label="法人名称" placeholder="请输入法人姓名" input-align="right" bind:blur="onUsername"/>
       <van-field value="{{ userID }}" label="法人证件号" placeholder="请输入法人身份证号" input-align="right" bind:blur="onUserID"/>
    </van-cell-group>
    <view class="btn">
