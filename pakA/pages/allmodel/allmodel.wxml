@@ -1,0 +1,19 @@
+<!--pakA/pages/allmodel/allmodel.wxml-->
+<view class="allmodel">
+  {{title}}
+</view>
+<view class="tabbar-btns">
+  <view class="addEdit">
+    <view class="add">
+      <van-icon name="star-o" size="36px" />
+      <view>添加</view>
+    </view>
+    <view class="edit">
+      <van-icon name="edit" size="36px" />
+      <view>编辑</view>
+    </view>
+  </view>
+  <view class="usemodel">
+    <button>使用模板签署</button>
+  </view>
+</view>

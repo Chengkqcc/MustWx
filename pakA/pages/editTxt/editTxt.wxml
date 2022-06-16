@@ -1,0 +1,19 @@
+<!--pakA/pages/editTxt/editTxt.wxml-->
+<view class="toolbar" catchtouchend="format">
+  <i class="iconfont icon-zitiyanse {{formats.background === 1 ? 'ql-active' : ''}}" data-name="background" data-value="{{1}}"></i>
+  <i class="iconfont icon-zitixieti {{formats.ical === 2 ? 'ql-active' : ''}}" data-name="ical" data-value="{{2}}"></i>
+  <i class="iconfont icon-24gl-fontSizeDecrease"></i>
+  <i class="iconfont icon-sey-A-add-a"></i>
+  <i class="iconfont icon-fuwenbenbianjiqi_jiacu"></i>
+  <i class="iconfont icon-zitiyanse"></i>
+  <i class="iconfont icon-zuoduiqi"></i>
+  <i class="iconfont icon-juzhongduiqi"></i>
+  <i class="iconfont icon-youduiqi"></i>
+</view>
+<editor style="height:auto; min-height:240rpx;" 
+        id="editor" class="ql-container" bindinput="getEditorContent" bindready="onEditorReady" bindstatuschange="onStatusChange" placeholder="文档编辑">
+</editor>
+<view class="editmodel-btns">
+  <button class="txt">签署文档</button>
+  <button class="save">仅保存模板</button>
+</view>

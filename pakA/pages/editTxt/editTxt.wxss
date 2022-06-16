@@ -1,0 +1,93 @@
+@font-face {
+  font-family: "iconfont";
+  /* Project id 3468051 */
+  src: url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAATwAAsAAAAACqQAAASjAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHFQGYACEGAqGTIUrATYCJAMoCxYABCAFhGcHgSwbKwnInpo8SZsltkltqypgASxwMx488HXa+5jp5KcCjksr6dJp1136tL4COAL+32nLTcZYAbnmUCPX/vRyr006UtZWaCyah3BIHMIshxtLg+Id4uD2AsE8EI6tmlb/+0PlbM7FYuvZxxDEcK9B0YQK2AtQx1q2xXv1ckW1CuW5lK+TC816CQIwFOvmrT88uYiShxPJUT4/fFFAKhXDmUZQbK1Hz5AFjspe90SNWIEFcqG8DCx33y9eU5pYkFgKfpnWO6Siu2cNf+Ypz38P1GPMAgLsLAELUED+mRnFxnm7DxXi+XyYsb+nGQoRKpUP+azhW4e3Q89XvNY/njflb+b9/08fO7cXXyYIFf/mIRQuBBIHjYWNHwgbyP1zwnSZ694KFIKCZx34Y4pDQBDwfAWChNcawYE3HgQNb8q1WFDMhRYbinmoww8AY04Ih4iHeAMiCa5s7uRKYLRNoJPVUf45x6g0ZPF4SLhKjAhM7WSGJQyJ75jYbTWpn8eNG4MRYvteKYv3e/eZwEV7PHunQO7uTbZPlxrWPaFTQoeEnotL8Z1RiuiVhlJL0SaIQNmzrZ+WuJnd3T3eyQN2bjO9EiBaj9CPG3Hhi+zo3/5yx/qoYRUVi9dGDFlbOTCgq5G4yOet2Cyy1rOmn2VZLuTsveO5nb3zonvOm1DS4lNR+497j+X6Thp/4a6I2h3XfLzw1vRl+iLNUUa/s62J3la39UPJOt/8XgGxX6vyqqoKq8xlthdy3vFb4FDRYOC3lMGioeLZ4y5aPBj0LRnzAb8aG/L07U7JwLzTh0XlA/1x+VstP7Y+iBvT2ULr37shjEc96OiSotvXdnlyUllsWdLG67muEDSpa2/nOnWsr+otKi5z7euMHh/HyC+qdva5aW40e1fArsycaNuxJ7mtdx9uX4TiToWeduE6HXoK6XpTPfZqyJX4Fu2LJg68W/AmpUXH1SGPK9/GpY+kJ/VH++db5801k9Ibfzmy1vmQ0VDYsfo+Zu2RLxwd3K/uyltH2SKrKPnyj61Kse7/qlRVtJ3U05wzQ/7+OH+HXa91Zq+g6l+dBA3A02veg7n/P422TzhIWJv/U1R0X3OmJgEwemw4JfzpK8oaemS5xgC/Pneol30rw9aOgsDJBRVI/IgDhUMqRhNywcJNKdg41ABDniGpO9/d5ENoF5DpDCAIdgOSQE6AItg9RhOewSLSO9gE+wdDxwRI3LhAlAEbiAQVh6Zg1k9wKlXSrToPmqsTeyiyDLbDEMJ11bXd1AhwsHdxiDNRq5fjKaZjhYGHy9uBrgtsjhURUGR1eLw022tq6NirVCujDDTABggJqLCQHRijEDhqZsv2z5sHNC4dYa+JWY7bHAyrY3Wq1a6BGZHztXqeyeaOTZp6kkTz3SibYMCGiRXoIi5g5vh2EUAhVQtvETW1q8lm0XXl1cdXGi+16J/dh1/FCCmU0MIStvATjnAJ8w+uHAc7VX0FpL+qXsHuR5hKeNxUJtkO4Q4kDnV3w4JrqsssFjtFuJ4/V7/NQLLYqa7o5mTVN2rDqx5I9gLbhUFQ3ohqB7LphC3gIellhEeWSNZ1jCguQg==') format('woff2'),
+    url('iconfont.woff?t=1655296301446') format('woff'),
+    url('iconfont.ttf?t=1655296301446') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-sey-A-add-a:before {
+  content: "\e6ae";
+}
+
+.icon-caidan:before {
+  content: "\e790";
+}
+
+.icon-zitiyanse:before {
+  content: "\e646";
+}
+
+.icon-juzhongduiqi:before {
+  content: "\ec80";
+}
+
+.icon-youduiqi:before {
+  content: "\ec82";
+}
+
+.icon-zitixieti:before {
+  content: "\ec85";
+}
+
+.icon-zuoduiqi:before {
+  content: "\ec86";
+}
+
+.icon-24gl-fontSizeDecrease:before {
+  content: "\eb04";
+}
+
+.icon-fuwenbenbianjiqi_jiacu:before {
+  content: "\e655";
+}
+
+.toolbar {
+  z-index: 999;
+  box-sizing: border-box;
+  padding: 0 20rpx;
+  height: 100rpx;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 2rpx solid #ECECEC;
+  border-left: none;
+  border-right: none;
+  background-color: #FFFFFF;
+}
+
+.ql-active {
+  color: #22C704;
+}
+.editmodel-btns {
+  display: flex;
+  position: fixed;
+  height: 120rpx;
+  /* background: red; */
+  justify-content: space-around;
+  width: 100%;
+  bottom: 0;
+  padding: 20rpx 0;
+  background: #eee;
+  /* box-sizing: border-box; */
+}
+.editmodel-btns button {
+  width: 45%;
+}
+.txt {
+  background: #E54D42;
+  color: #fff;
+}
+.save {
+  background: #828282;
+  color: #fff;
+}
