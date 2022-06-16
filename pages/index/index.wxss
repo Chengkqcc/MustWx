@@ -111,3 +111,111 @@
   display: flex;
   justify-content: center;
 }
+.flow {
+  width: 95%;
+  border-radius: 8px;
+  background-color: unset;
+}
+.flow .nav {
+  box-sizing: border-box;
+  padding: 15px;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+.flow .nav .title {
+  color: #333;
+  font-size: 17px;
+}
+.flow .nav .right {
+  color: #aaa;
+  padding-top: 3px;
+}
+.flow .nav .right text {
+  font-size: 15px;
+}
+.flow .list {
+  background: #fff;
+}
+.flow .list .item {
+  box-sizing: border-box;
+  padding: 10px 15px;
+  border-top: 1px solid #EFEFEF;
+  display: flex;
+  justify-content: space-between;
+}
+.flow .list .item .left {
+  width: 60%;
+  display: flex;
+}
+.flow .list .item .left .img {
+  box-sizing: border-box;
+  padding: 12px;
+  height: 53px;
+  background: #FFC658;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flow .list .item .left .img image {
+  width: 29px;
+  height: 29px;
+}
+.flow .list .item .left .detailWrap {
+  padding-left: 10px;
+  display: flex;
+  align-items: center;
+}
+.flow .list .item .left .detailWrap .detail .title {
+  color: rgba(59, 65, 68, 0.91);
+  font-size: 14px;
+}
+.flow .list .item .left .detailWrap .detail .text {
+  margin-top: 3px;
+  color: #999;
+  font-size: 12px;
+}
+.flow .list .item .right {
+  display: flex;
+  align-items: center;
+}
+.flow .list .item .right view {
+  height: 26px;
+  line-height: 26px;
+  font-size: 13px;
+  padding: 0 8px;
+  border-radius: 4px;
+  margin-left: 5px;
+}
+.flow .list .item .right .finish {
+  background: #f37b1d;
+  color: #fff;
+}
+.flow .list .item .right .video {
+  background: #F1F1F1;
+  color: #333;
+}
+.flow .list .item:nth-child(2) .img {
+  background: #4988FD;
+}
+.flow .list .item:nth-child(3) .img {
+  background: #50BC93;
+}
+.flow .list .item:last-child .img {
+  background: #FF5858;
+}
+.flow .list .people .item:nth-child(3) .img {
+  background: #07C160;
+}
+.flow .list .people .item:nth-child(4) .img {
+  background: #2781D7;
+}
+.flow .list .people .item:nth-child(5) .img {
+  background: #50BC93;
+}
+.flow .close {
+  padding: 15px 0;
+  display: flex;
+  justify-content: center;
+}

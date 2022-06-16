@@ -170,6 +170,7 @@ Page({
         this.setData({
             constractShow: false
         })
+
     },
 
     // 登录用户
@@ -188,7 +189,17 @@ Page({
             url: '../operateContract/operateContract?index=' + index,
         })
     },
+    // 点击签署
+    jumpContracePage(e) {
+        this.setData({
+            constractShow: false
+        })
+        let index = e.currentTarget.dataset.index;
+        wx.navigateTo({
+            url: '../contractPage/contractPage?index=' + index,
+        })
 
+    },
     // 点击复制链接
     cloneIink() {
         let that = this;
@@ -202,6 +213,8 @@ Page({
             })
         }, 1200)
     },
+
+
 
 
 
