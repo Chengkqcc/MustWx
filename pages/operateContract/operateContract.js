@@ -5,14 +5,30 @@ Page({
      * 页面的初始数据
      */
     data: {
-
+        detailContract: false,
+        qrCode: false
     },
-
+    back() {
+        wx.navigateBack({
+            delta: 2
+        })
+    },
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-
+        let index = options.index;
+        if (index == "0") {
+            this.setData({
+                detailContract: true,
+                qrCode: false
+            })
+        } else if (index == "1") {
+            this.setData({
+                detailContract: false,
+                qrCode: true
+            })
+        }
     },
 
     /**

@@ -112,8 +112,11 @@ Page({
         url: '../../pakA/pages/help/help',
       })
     } else if (url == "企业管理") {
+      // wx.navigateTo({
+      //   url: '../login/login',
+      // })
       wx.navigateTo({
-        url: '../login/login',
+        url: '../../pakB/pages/bm/bm',
       })
     } else {
       wx.navigateTo({

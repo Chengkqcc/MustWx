@@ -48,6 +48,9 @@ image {
 .main .choose_item .item_left .red {
   background: #f9755c;
 }
+.main .choose_item .item_left .weixin {
+  background-color: #fff;
+}
 .main .choose_item .item_left .item_m {
   display: flex;
   flex-direction: column;

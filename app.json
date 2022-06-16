@@ -1,22 +1,4 @@
 {
-  "pages": [
-    "pages/index/index",
-    "pages/logs/logs",
-    "pages/contract/constract",
-    "pages/mine/mine",
-    "pages/uploading/uploading",
-    "pages/login/login",
-    "pages/authCodeLogin/authcode",
-    "pages/register/register",
-    "pages/agreement/agreement",
-    "pages/operateContract/operateContract",
-    "pages/uoloaddetail/uoloaddetail",
-    "pages/uploadPages/addQian/addQian",
-    "templates/Qian/Qian",
-    "pages/uploadPages/addChao/addChao",
-    "templates/Chao/Chao",
-    "pages/uploadPages/uploadfiles/uploadfiles"
-  ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
@@ -53,6 +35,28 @@
       }
     ]
   },
+  "pages": [
+    "pages/uploadPages/uploadfiles/uploadfiles",
+    "pages/uploadPages/uploadImage/upliadImage",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/contract/constract",
+    "pages/mine/mine",
+    "pages/uploading/uploading",
+    "pages/login/login",
+    "pages/authCodeLogin/authcode",
+    "pages/register/register",
+    "pages/agreement/agreement",
+    "pages/operateContract/operateContract",
+    "pages/uoloaddetail/uoloaddetail",
+    "pages/uploadPages/addQian/addQian",
+    "templates/Qian/Qian",
+    "pages/uploadPages/addChao/addChao",
+    "templates/Chao/Chao",
+    "templates/xieyi/smrzsqxy/smrzsqxy",
+    "templates/xieyi/szzsslxy/szzsslxy",
+    "templates/xieyi/yhysxy/yhysxy"
+  ],
   "subpackages": [
     {
       "root": "pakA",
@@ -100,7 +104,11 @@
         "pages/anquanshezhi/anquanshezhi",
         "pages/setloginpass/setloginpass",
         "pages/setwritepass/setwritepass",
-        "pages/setoldpass/setoldpass"
+        "pages/setoldpass/setoldpass",
+        "pages/xieyi/xieyi",
+        "pages/setheaderimg/setheaderimg",
+        "pages/setmaterial/setmaterial",
+        "pages/setemail/setemail"
       ],
       "name": "bb",
       "independent": false
@@ -129,6 +137,7 @@
     "van-checkbox": "@vant/weapp/checkbox/index",
     "van-checkbox-group": "@vant/weapp/checkbox-group/index",
     "van-toast": "@vant/weapp/toast/index",
-    "van-tag": "@vant/weapp/tag/index"
+    "van-tag": "@vant/weapp/tag/index",
+    "van-picker": "@vant/weapp/picker/index"
   }
 }

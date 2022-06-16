@@ -1,0 +1,14 @@
+page {
+  background-color: #F1F1F1;
+  padding: 15px;
+  box-sizing: border-box;
+}
+view {
+  line-height: 24px;
+}
+view.title {
+  font-weight: 600;
+}
+view.text {
+  font-weight: 200;
+}

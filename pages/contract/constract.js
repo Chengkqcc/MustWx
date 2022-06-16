@@ -60,6 +60,7 @@ Page({
         timeShow: false,
         FinishTimeShow: false,
         constractShow: false,
+        linkShow: false,
         currentDate: new Date().getTime(),
         minDate: new Date().getTime(),
         beginTime: null,
@@ -177,6 +178,31 @@ Page({
             url: "../login/login",
         })
     },
+    // 点击详情和二维码
+    operate(e) {
+        this.setData({
+            constractShow: false
+        })
+        let index = e.currentTarget.dataset.index;
+        wx.navigateTo({
+            url: '../operateContract/operateContract?index=' + index,
+        })
+    },
+
+    // 点击复制链接
+    cloneIink() {
+        let that = this;
+        this.setData({
+            constractShow: false,
+            linkShow: true
+        })
+        setTimeout(function () {
+            that.setData({
+                linkShow: false
+            })
+        }, 1200)
+    },
+
 
 
 

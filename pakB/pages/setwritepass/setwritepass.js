@@ -7,6 +7,7 @@ Page({
     data: {
       pass:'',
       eyes_flag:false,
+      yzm_show:false, // 验证码弹窗
     },
     // methods
     pass_fn(event){
@@ -19,8 +20,18 @@ Page({
       let eyes_flag = this.data.eyes_flag
       this.setData({eyes_flag:!eyes_flag})
     },
-    setPass_fn(){
-      console.log('签署密码设置，。。。');
+    // 验证码弹窗
+    setpass_fn(){
+      console.log('要验证新密码');
+      console.log('向手机***发送验证码');
+      this.setData({yzm_show:true})
+    },
+    close_tip(){
+      this.setData({yzm_show:false})
+    },
+    // 重新发送验证码
+    send_yzm_fn(){
+      console.log('重新发送验证码');
     },
     /**
      * 生命周期函数--监听页面加载
