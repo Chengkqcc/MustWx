@@ -314,10 +314,9 @@ Page({
         url: '../login/login',
       })
     } else if (title == "实名认证" || title == "经办人实名认证") {
-      // wx.navigateTo({
-      //   url: 'url',
-      // })
-      console.log("去实名认证页面")
+      wx.navigateTo({
+        url: '../../pakB/pages / shimingrenzheng / shimingrenzheng',
+      })
     } else if (title == "发起电子合同" || title == "企业名义发起合同") {
       wx.switchTab({
         url: '../uploading/uploading',
