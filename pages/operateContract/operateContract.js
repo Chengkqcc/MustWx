@@ -6,11 +6,36 @@ Page({
      */
     data: {
         detailContract: false,
-        qrCode: false
+        qrCode: false,
+        show: false,
+    },
+    showPopup() {
+        this.setData({ show: true });
+    },
+
+    onClose() {
+        this.setData({ show: false });
     },
     back() {
         wx.navigateBack({
             delta: 2
+        })
+    },
+    // 点击拒签的确定
+    confirm() {
+        console.log("确定")
+    },
+    // 点击拒签的取消
+    cancel() {
+        this.setData({
+            show: false
+        })
+    },
+    // 点修改备注
+    jumpContracePage(e) {
+        let index = e.currentTarget.dataset.index;
+        wx.navigateTo({
+            url: '../contractPage/contractPage?index=' + index,
         })
     },
     /**

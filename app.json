@@ -9,7 +9,10 @@
         "pages/authCodeLogin/authcode",
         "pages/register/register",
         "pages/agreement/agreement",
-        "pages/operateContract/operateContract"
+        "pages/operateContract/operateContract",
+        "pages/contractPage/contractPage",
+        "pages/eContract/eContract",
+        "pages/videoPage/videoPage"
     ],
     "window": {
         "backgroundTextStyle": "light",
@@ -20,7 +23,8 @@
     "sitemapLocation": "sitemap.json",
     "tabBar": {
         "selectedColor": "#e53f3c",
-        "list": [{
+        "list": [
+            {
                 "text": "首页",
                 "pagePath": "pages/index/index",
                 "iconPath": "images/nav/home-off.png",
@@ -46,7 +50,8 @@
             }
         ]
     },
-    "subpackages": [{
+    "subpackages": [
+        {
             "root": "pakA",
             "pages": [
                 "pages/home/home"

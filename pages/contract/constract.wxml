@@ -105,9 +105,10 @@
                 <view class="contractItem">
                     <view class="contractLeft">
                          <view class="img">
-                            <image src="{{item.imgsrc}}" />
+                            <!-- <image src="{{item.imgsrc}}" /> -->
+                            <image src="../../images/contract/contract.jpg"/>
                          </view>
-                         <view class="info">
+                         <view class="info" bindtap="operate" data-index="0">
                             <view class="title">{{item.title}}</view>
                             <view class="text">{{item.text}}</view>
                          </view>
@@ -129,7 +130,7 @@
                     <view class="icon"><van-icon name="info-o" size="35px" color="#fff"/></view>
                     <text>详情</text>
                 </view>
-                <view class="operateItem">
+                <view class="operateItem" bindtap="jumpContracePage" data-index="3">
                     <view class="icon2"><van-icon name="records" size="35px" color="#fff"/></view>
                     <text>签署</text>
                 </view>

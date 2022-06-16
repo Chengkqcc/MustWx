@@ -1,0 +1,123 @@
+.contractPageWrap .contractPage {
+  padding-top: 15px;
+}
+.contractPageWrap .contractPage .nav {
+  box-sizing: border-box;
+  width: 65%;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.contractPageWrap .contractPage .amend {
+  height: 100vh;
+  background: #f1f1f1;
+}
+.contractPageWrap .contractPage .amend .title {
+  background: #F1F1F1;
+  font-size: 14px;
+  color: #aaa;
+  padding: 10px 15px;
+}
+.contractPageWrap .contractPage .amend .content {
+  box-sizing: border-box;
+  height: 130px;
+  padding: 15px;
+  background: #fff;
+  font-size: 14px;
+  color: #666;
+}
+.contractPageWrap .contractPage .amend .btn {
+  padding: 25px 15px;
+}
+.contractPageWrap .contractPage .amend .btn button {
+  border-radius: 5px;
+}
+.contractPageWrap .contractPage .amend .keep {
+  width: 25%;
+  padding: 5px;
+  background: #525252;
+  font-size: 14px;
+  color: #fff;
+  text-align: center;
+  margin: 0 auto;
+}
+.contractPageWrap .contractPage .sign {
+  width: 100vw;
+  height: calc(100vh - 50px - 15px);
+}
+.contractPageWrap .contractPage .sign .content {
+  height: 100%;
+  background: #f1f1f1;
+}
+.contractPageWrap .contractPage .sign .content .img {
+  height: 72%;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.contractPageWrap .contractPage .sign .content .img image {
+  height: 100%;
+}
+.contractPageWrap .contractPage .sign .content .img .number {
+  background: #4D4D4D;
+  color: #fff;
+  font-size: 12px;
+  border-radius: 7px;
+  padding: 5px 8px;
+  position: absolute;
+  right: 15px;
+}
+.contractPageWrap .contractPage .sign .content .img .icon {
+  padding: 10px;
+  background: #F1F1F1;
+  position: absolute;
+  right: 0;
+  bottom: -65px;
+}
+.contractPageWrap .contractPage .sign .content .img .icon view:first-child {
+  margin-bottom: 10px;
+}
+.contractPageWrap .contractPage .sign .content .seal {
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+.contractPageWrap .contractPage .sign .content .seal .sealContent {
+  box-sizing: border-box;
+  width: 75%;
+  height: 35px;
+  padding: 2px 5px 0 15px;
+  color: #fff;
+  font-size: 12px;
+  background: #3C95F3;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.contractPageWrap .contractPage .sign .content .seal .sealContent text {
+  white-space: nowrap;
+}
+.contractPageWrap .contractPage .sign .content .seal .sealContent .icon {
+  align-self: flex-start;
+}
+.contractPageWrap .contractPage .sign .content .bottom {
+  padding: 5px 0;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #E6E6E6;
+}
+.contractPageWrap .contractPage .sign .content .bottom view {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.contractPageWrap .contractPage .sign .content .bottom view text {
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  color: #333;
+}

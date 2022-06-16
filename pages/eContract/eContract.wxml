@@ -1,0 +1,122 @@
+<!--pages/eContract/eContract.wxml-->
+<!-- 电子合同 -->
+<view class="eContract">
+    <view class="nav">
+        <van-icon name="arrow-left" color="#aaa" size="20px" bindtap="back"/>
+        <view class="text">电子签章_电子签约_电子合同管理|一定签</view>
+    </view>
+
+    <view class="contractTop">
+        <view class="title">电子合同签署</view>
+        <view class="text">一定签提供一套完整的电子合同、电子签章服务，为企业解决纸质合同签署难题，降低企业成本，提高办公效率。</view>
+        <view class="btn">
+            <van-button color="#E61717">现在注册</van-button>
+        </view>
+    </view>
+    <view class="content">
+        <view class="contentTop">
+            <view class="item active">产品介绍</view>
+            <view class="item">产品服务</view>
+            <view class="item">应用场景</view>
+            <view class="item">客户案例</view>
+            <view class="item">常见问题</view>
+        </view>
+
+        <view class="contentMain">
+            <!-- 产品介绍 -->
+            <view class="introduce">
+                <view class="top">
+                    <view class="title">产品介绍</view>
+                    <view class="text">
+                        根据《电子签名法》第十四条规定，可靠的电子签名与手写签名或者盖章具有同等的法律效力。一定签电子签章合同平台严格按照《中华人民共和国电子签名法》相关规定研发。一定签电子签章平台完美适应各种终端。可方便的在PC端、手机端、或是内部系统中使用。
+                    </view>
+                </view>
+                <view class="content">
+                    <block wx:for="{{introduce}}" wx:key="item.id">
+                        <view class="item">
+                            <image src="{{item.imgsrc}}"></image>
+                            <view class="right">
+                                <view class="title">{{item.title}}</view>
+                                <view class="text">{{item.text}}</view>
+                            </view>
+                        </view>
+                    </block>
+                </view>
+            </view>
+            <!-- 产品服务 -->
+            <view class="serve">
+                <view class="top">
+                    <view class="title">产品服务</view>
+                    <view class="text">一定签拥有多年行业经验，产品成熟稳定，具备高安全、高并发、高可用等特性</view>
+                </view>
+                <view class="content">
+                    <block wx:for="{{serve}}">
+                        <view class="item">
+                            <image src="{{item.imgsrc}}"/>
+                            <view class="title">{{item.title}}</view>
+                            <view class="text">{{item.text}}</view>
+                        </view>
+                    </block>
+                    
+                </view>
+                <view class="btn">
+                    <view>
+                        <van-button color="#E61717" block>联系我们</van-button>
+                    </view>
+                    
+                </view>
+            </view>
+            <!-- 应用场景 -->
+            <view class="scene">
+                <view class="top">
+                    <view class="title">应用场景</view>
+                    <view class="text">为企业提供一站式电子合同解决方案，为企业的不同业务场景、不同发展阶段客户提供安全稳定的服务。</view>
+                </view>
+                <view class="content">
+                    <block wx:for="{{scene}}">
+                        <view class="item">
+                            <image src="{{item.imgsrc}}"/>
+                            <view class="shade">
+                                <view class="title">{{item.title}}</view>
+                            </view>
+                        </view>
+                    </block>
+                </view>
+            </view>
+            <!-- 客户案例 -->
+            <view class="case">
+                <view class="top">
+                    <view class="title">客户案例</view>
+                    <view class="text">为生态合作伙伴计划提供全方位的合作与支持，提供业务发展新动力。</view>
+                </view>
+                <view class="content">
+                    <block wx:for="{{case}}">
+                        <view class="item">
+                            <image src="{{item.imgsrc}}"></image>
+                        </view>
+                    </block>
+                </view>
+            </view>
+            <!-- 常见问题 -->
+            <view class="question">
+                <view class="top">
+                    <view class="title">常见问题</view>
+                    <view class="text">
+                        如您对我们的产品有任何疑问，欢迎随时通过客服热线 021-6198 4561 和我们联系。
+                    </view>
+                </view>
+
+                <van-collapse value="{{ activeNames }}"  accordion  bind:change="onChange">
+
+                    <!-- <van-icon name="plus" /> -->
+                    
+                    <van-collapse-item wx:for="{{question}}" title="{{item.title}}" name="{{item.name}}" class="item">
+                        <view class="textWrap">
+                            <view wx:for="{{item.text}}">{{item}}</view>
+                        </view>
+                    </van-collapse-item>
+                </van-collapse>
+            </view>
+        </view>
+    </view>
+</view>

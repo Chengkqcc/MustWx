@@ -46,6 +46,13 @@ Page({
                 readyShow: true
             })
         }
+        wx.setStorageSync('token', "20010108")
+        let token = wx.getStorageSync('token')
+        setTimeout(function () {
+            wx.reLaunch({
+                url: '../index/index?token=' + token,
+            })
+        }, 1400)
     },
     // 点击同意
     consent() {
