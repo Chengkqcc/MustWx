@@ -5,6 +5,7 @@
 <text class="tips" >
     支持PDF、DOCX、DOC、XLSX、XLS、PNG、JPG、JEPG、等常见办公格式，单文件最大为20MB
 </text>
-<button class="btn">选择文件</button>
-  
+
+    <button class="btn" bindtap="chooseFiles">选择文件</button>
+
   

@@ -85,7 +85,7 @@ Component({
       // 对比当前移动的key和停放位置的key，如果不一样就修改位置
       const currentKey = e.mark.key
       const moveKey = this.getMoveKey(tranX, tranY)
-      console.log(currentKey, moveKey);
+      // console.log(currentKey, moveKey);
       if (currentKey === moveKey || this.data.currentKey === currentKey) return
       this.data.currentKey = currentKey
       this.insert(currentKey, moveKey)

@@ -8,6 +8,10 @@ Page({
 
     },
 
+    chooseFiles(){
+        let a = wx.getFileSystemManager()
+        console.log(a)
+    },
     /**
      * 生命周期函数--监听页面加载
      */

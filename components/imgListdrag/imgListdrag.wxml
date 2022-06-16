@@ -11,7 +11,7 @@
     catch:touchmove="touchMove"
     catch:touchend="touchEnd"
   >
-    <image class="darg-item-img" src="{{item.src}}"/>
+    <image class="darg-item-img" src="{{item.src}}" mode="aspecFill"/>
     <text catch:tap="deleteImg" mark:key="{{item.key}}" class="drag-item-delete">×</text>
   </view>
   <view
