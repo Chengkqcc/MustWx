@@ -85,12 +85,14 @@ Component({
          wx.nextTick(() => {
             wx.showLoading({
                title: '加载中',
+               success: () => {
+                  wx.showToast({
+                     title: '企业添加成功',
+                     icon: 'success',
+                     duration: 2000
+                  })
+               }
             })
-            // wx.showToast({
-            //    title: '企业添加成功',
-            //    icon: 'success',
-            //    duration: 2000
-            // })
          });
 
          setTimeout(() => {
