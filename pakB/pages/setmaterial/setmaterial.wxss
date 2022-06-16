@@ -1,0 +1,18 @@
+page {
+  background-color: #f1f1f1;
+}
+.setmaterial {
+  padding-top: 15px;
+}
+.setmaterial .lists .van-cell {
+  border-bottom: 1px solid #f1f1f1;
+}
+.setmaterial .lists .list:nth-child(4) {
+  margin-top: 15px;
+}
+.setmaterial .lists .list:nth-child(6) {
+  margin-top: 15px;
+}
+.setmaterial .btn {
+  padding: 15px;
+}

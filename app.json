@@ -8,7 +8,8 @@
   "sitemapLocation": "sitemap.json",
   "tabBar": {
     "selectedColor": "#e53f3c",
-    "list": [{
+    "list": [
+      {
         "text": "首页",
         "pagePath": "pages/index/index",
         "iconPath": "images/nav/home-off.png",
@@ -51,7 +52,11 @@
     "pages/uploadPages/addQian/addQian",
     "templates/Qian/Qian",
     "pages/uploadPages/addChao/addChao",
-    "templates/Chao/Chao"
+    "templates/Chao/Chao",
+    "pages/uploadPages/uploadfiles/uploadfiles",
+    "templates/xieyi/smrzsqxy/smrzsqxy",
+    "templates/xieyi/szzsslxy/szzsslxy",
+    "templates/xieyi/yhysxy/yhysxy"
   ],
   "subpackages": [
     {
@@ -94,7 +99,11 @@
         "pages/anquanshezhi/anquanshezhi",
         "pages/setloginpass/setloginpass",
         "pages/setwritepass/setwritepass",
-        "pages/setoldpass/setoldpass"
+        "pages/setoldpass/setoldpass",
+        "pages/xieyi/xieyi",
+        "pages/setheaderimg/setheaderimg",
+        "pages/setmaterial/setmaterial",
+        "pages/setemail/setemail"
       ],
       "name": "bb",
       "independent": false
@@ -110,6 +119,7 @@
     "van-tab": "@vant/weapp/tab/index",
     "van-tabs": "@vant/weapp/tabs/index",
     "van-rate": "@vant/weapp/rate/index",
+    "van-uploader": "@vant/weapp/uploader/index",
     "van-search": "@vant/weapp/search/index",
     "van-switch": "@vant/weapp/switch/index",
     "van-popup": "@vant/weapp/popup/index",
@@ -123,7 +133,6 @@
     "van-checkbox-group": "@vant/weapp/checkbox-group/index",
     "van-toast": "@vant/weapp/toast/index",
     "van-tag": "@vant/weapp/tag/index",
-    "van-picker": "@vant/weapp/picker/index",
-    "van-uploader": "@vant/weapp/uploader/index"
+    "van-picker": "@vant/weapp/picker/index"
   }
 }

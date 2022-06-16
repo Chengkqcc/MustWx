@@ -1,2 +1,45 @@
-<!--pakA/pages/otherModel/otherModel.wxml-->
-<text>其他模板</text>
+<view class="othermodel">
+  <view class="img">
+    <image src="https://oss2.1dq.com/app/static/images/appHT.jpg"></image>
+  </view>
+  <van-sticky>
+    <view class="tabs">
+      <scroll-view class="tab" scroll-anchoring scroll-x scroll-into-view="{{ detail }}" scroll-with-animation="{{true}}">
+        <block wx:for="{{tabs}}" wx:key="*this">
+          <view id="{{'d'+index}}" class="{{active==index?'title active':'title'}}" bindtap="changeTab" data-index="{{index}}">{{item}}</view>
+        </block>
+      </scroll-view>
+    </view>
+  </van-sticky>
+
+</view>
+<scroll-view scroll-top="{{0}}">
+  <view wx:if="{{active==0}}">
+    <van-cell title="顾问聘请协议" is-link />
+    <van-cell title="项目顾问咨询合同" is-link />
+    <van-cell title="财税顾问合同" is-link />
+    <van-cell title="财税顾问协议" is-link />
+    <van-cell title="财税顾问合作协议" is-link />
+    <van-cell title="财税咨询代理协议" is-link />
+    <van-cell title="聘请顾问协议书" is-link />
+    <van-cell title="税务代理合同书" is-link />
+    <van-cell title="房地产项目全程顾问咨询服务合同" is-link />
+    <van-cell title="媒体顾问协议" is-link />
+    <van-cell title="公司管理顾问聘用合同" is-link />
+    <van-cell title="会计公司服务协议书" is-link />
+    <van-cell title="顾问聘请协议" is-link />
+    <van-cell title="项目顾问咨询合同" is-link />
+    <van-cell title="财税顾问合同" is-link />
+    <van-cell title="财税顾问协议" is-link />
+    <van-cell title="财税顾问合作协议" is-link />
+    <van-cell title="财税咨询代理协议" is-link />
+    <van-cell title="聘请顾问协议书" is-link />
+    <van-cell title="税务代理合同书" is-link />
+    <van-cell title="房地产项目全程顾问咨询服务合同" is-link />
+    <van-cell title="媒体顾问协议" is-link />
+    <van-cell title="公司管理顾问聘用合同" is-link />
+    <van-cell title="会计公司服务协议书" is-link />
+  </view>
+</scroll-view>
+
+<view wx:if="{{active==1}}"></view>

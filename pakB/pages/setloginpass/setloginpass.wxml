@@ -14,9 +14,23 @@
     </view>
   </van-field>
   <view class="btn">
-    <van-button color="#E54D42" block>下一步</van-button>
+    <van-button color="#E54D42" block bind:click="setpass_fn">下一步</van-button>
   </view>
   <navigator class="navigator" url="/pakB/pages/setoldpass/setoldpass" open-type="navigate">
     使用旧密码变更 ?
   </navigator>
 </view>
+<!-- 验证码弹窗 -->
+<van-popup show="{{ yzm_show }}" overlay-style="background:rgba(0,0,0,0)" custom-class="tip" bind:close="onClose">
+  <view class="title">
+    <text>输入验证码</text>
+    <van-icon name="cross" bind:click="close_tip" />
+  </view>
+  <view class="content">
+    <view class="text">验证码已发送至{{'156****3372'}}</view>
+  </view>
+  <view class="btn">
+    <view wx:if="{{false}}" bindtap="send_yzm_fn">重新发送</view>
+    <view bindtap="">确定</view>
+  </view>
+</van-popup>

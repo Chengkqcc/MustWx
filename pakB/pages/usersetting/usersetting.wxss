@@ -5,7 +5,7 @@ page {
   padding-top: 15px;
 }
 .usersetting .cell {
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #f1f1f1;
 }
 .usersetting .cell:nth-child(1) {
   margin-bottom: 15px;
@@ -17,4 +17,44 @@ page {
 }
 .usersetting .cell:last-child {
   border: 0;
+}
+.usersetting .btn {
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 15px;
+  background-color: #F8F8F8;
+  border: 1px solid #ccc;
+}
+.tip {
+  padding: 15px 15px 50px;
+  border: 1px solid #BDBDBD;
+  box-shadow: 0 0 10px #BDBDBD;
+  width: 80vw;
+}
+.tip .title {
+  display: flex;
+  justify-content: space-between;
+}
+.tip .content {
+  padding: 0 20px;
+  font-size: 14px;
+  height: 120px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tip .btn {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.tip .btn view {
+  padding: 5px 30px;
+  background-color: #F2F2F2;
+  color: #07C160;
+}
+.tip .btn view.logout {
+  background-color: #07C160;
+  color: #fff;
 }

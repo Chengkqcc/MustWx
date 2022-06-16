@@ -1,0 +1,21 @@
+<!--pakB/pages/setmaterial/setmaterial.wxml-->
+<view class="setmaterial">
+  <view class="lists">
+    <block wx:for="{{material}}">
+      <view class="list" hover-class="none" hover-stop-propagation="false">
+        <van-field
+          label="{{item.title}}"
+          model:value="{{ item.value }}"
+          placeholder="{{ item.desc }}"
+          border="{{ false }}"
+          bind:change="onChange"
+          data-item="{{item.id}}"
+          input-align="right"
+        />
+      </view>
+    </block>
+  </view>
+  <view class="btn">
+    <van-button color="#E54D42" block bind:click="set_fn">确定更改</van-button>
+  </view>
+</view>

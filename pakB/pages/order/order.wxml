@@ -1,26 +1,40 @@
 <!--pakB/pages/order/order.wxml-->
 <view class="order">
-  <view class="order_detail title">订单详情</view>
-  <view class="order_detail_items">
-    <view class="item">
-      <van-cell title="产品名称" value="{{obj.title}}" border="{{false}}" />
+  <block wx:if="{{!chongzhi}}">
+    <view class="order_detail title">订单详情</view>
+    <view class="order_detail_items">
+      <view class="item">
+        <van-cell title="产品名称" value="{{obj.title}}" border="{{false}}" />
+      </view>
+      <view class="item">
+        <van-cell title="购买账户" value="{{'156****3372'}}" border="{{false}}" />
+      </view>
+      <view class="item">
+        <van-cell title="订单金额" value="{{obj.price}} 元" border="{{false}}" />
+      </view>
+      <view class="item">
+        <van-cell title="有效期"  wx:if="{{obj.time}}" value="{{obj.time}}" border="{{false}}" />
+      </view>
+      <view class="item">
+        <van-cell title="可签署次数" wx:if="{{obj.wj_num}}" value="{{obj.wj_num}} 次" border="{{false}}" />
+      </view>
     </view>
-    <view class="item">
-      <van-cell title="购买账户" value="{{'156****3372'}}" border="{{false}}" />
-    </view>
-    <view class="item">
-      <van-cell title="订单金额" value="{{obj.price}} 元" border="{{false}}" />
-    </view>
-    <view class="item">
-      <van-cell title="有效期"  wx:if="{{obj.time}}" value="{{obj.time}}" border="{{false}}" />
-    </view>
-    <view class="item">
-      <van-cell title="可签署次数" wx:if="{{obj.wj_num}}" value="{{obj.wj_num}} 次" border="{{false}}" />
-    </view>
-  </view>
+  </block>
+  <!-- 充值  start-->
+  <block wx:else>
+    <view class="order_detail title">充值金额</view>
+    <van-field
+      model:value="{{ rmb_value }}"
+      label="￥"
+      placeholder="请输入充值金额"
+      border="{{ false }}"
+      type="number"
+    />
+  </block>
+  <!-- 充值 end -->
   <view class="pay_ways title">支付方式</view>
   <radio-group class="pay_way" bindchange="onChange">
-    <view class="pay_way_item">
+    <view class="pay_way_item" wx:if="{{!chongzhi}}">
       <view class="pay_way_it">
         <view class="img">
           <image class="" src=""></image>
@@ -58,7 +72,7 @@
     </view>
   </radio-group>
   <view class="pay">
-    <view class="price">合计：<text>{{obj.price}}</text>元</view>
+    <view class="price">合计：<text>{{!chongzhi?obj.price:rmb_value?rmb_value:''}}</text>元</view>
     <van-button color="#E54D42" bind:click="pay_fn">确定支付</van-button>
   </view>
 </view>
@@ -75,10 +89,10 @@
 >
   <view class="title" slot="title">对公转账<van-icon class="closebtn" bind:click="close_toB_dialog" name="cross" /></view>
   <view class="value">
-    <view class="price_text">您的订单已经成功提交，请使用公司账户转账到下面账户，转账金额为<text>{{obj.price}}</text>元。</view>
-    <view class="khzh kh"><text>开户账号:</text>442961820466</view>
-    <view class="khmc kh"><text>开户名称:</text>上海寻程网络科技有限公司</view>
-    <view class="khdz kh"><text>开户地址:</text>中国银行股份有限公司上海市杨行支行</view>
+    <view class="price_text">您的订单已经成功提交，请使用公司账户转账到下面账户，转账金额为<text>{{chongzhi?rmb_value:obj.price}}</text>元。</view>
+    <view class="khzh kh"><text>开户账号:</text>{{bank.account}}</view>
+    <view class="khmc kh"><text>开户名称:</text>{{bank.name}}</view>
+    <view class="khdz kh"><text>开户地址:</text>{{bank.address}}</view>
     <van-button color="#ccc" plain block bind:click="popup_show">线下汇款处理说明</van-button>
   </view>
 </van-dialog>

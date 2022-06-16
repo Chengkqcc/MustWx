@@ -118,13 +118,14 @@
                 </view>
             </block>
          </view>
+         <view class="link" wx:if="{{linkShow}}">签署链接复制成功，将链接发送给对方即可签署</view>
     </view>
 
     <van-popup show="{{constractShow}}" bind:close="constractClose" position="bottom" overlay-style="opacity:0.7" custom-style="height: 42%;">
         <view class="operateWrap">
             <view class="title" bindtap="constractClose">选择要进行的操作</view>
             <view class="operate">
-                <view class="operateItem">
+                <view class="operateItem" bindtap="operate" data-index="0">
                     <view class="icon"><van-icon name="info-o" size="35px" color="#fff"/></view>
                     <text>详情</text>
                 </view>
@@ -132,11 +133,11 @@
                     <view class="icon2"><van-icon name="records" size="35px" color="#fff"/></view>
                     <text>签署</text>
                 </view>
-                <view class="operateItem">
+                <view class="operateItem" bindtap="operate" data-index="1">
                     <view class="icon3"><van-icon name="qr" size="35px" color="#fff"/></view>
                     <text>二维码</text>
                 </view>
-                <view class="operateItem">
+                <view class="operateItem" bindtap="cloneIink">
                     <view class="icon4"><van-icon name="description" size="35px" color="#fff"/></view>
                     <text>复制链接</text>
                 </view>
@@ -144,4 +145,6 @@
             <view class="cancel" bindtap="constractClose">取消</view>
         </view>
     </van-popup>
+
+    
 </view>
