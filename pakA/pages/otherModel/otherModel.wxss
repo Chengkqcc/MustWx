@@ -17,7 +17,7 @@
 
 .tabs .tab .title {
   color: #000;
-  margin: 0 40rpx;
+  padding: 0 40rpx;
   display: inline-block;
 }
 

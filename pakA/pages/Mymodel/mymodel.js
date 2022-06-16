@@ -48,21 +48,24 @@ Page({
   changeTab(e) {
     let tabs = this.data.tabs
     let index = e.currentTarget.dataset.index;
-    this.setData({
-      active: e.currentTarget.dataset.index,
-      tab: tabs[index].title,
-      detail: 'd' + (index - 1)
-    })
     if (index == 3) {
       wx.navigateTo({
         url: '/pakA/pages/systemModel/systemModel'
       })
+      return
     }
     if (index == 4) {
       wx.navigateTo({
         url: '/pakA/pages/otherModel/otherModel'
       })
+      return
     }
+    this.setData({
+      active: e.currentTarget.dataset.index,
+      tab: tabs[index].title,
+      detail: 'd' + (index - 1)
+    })
+
 
   },
   addHd() {

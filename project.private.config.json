@@ -51,6 +51,20 @@
           "name": "",
           "pathName": "pakA/pages/otherModel/otherModel",
           "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pakA/pages/allmodel/allmodel",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pakA/pages/editTxt/editTxt",
+          "query": "",
           "scene": null,
           "launchMode": "default"
         }

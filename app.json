@@ -50,7 +50,9 @@
         "pages/Mymodel/mymodel",
         "pages/systemModel/systemModel",
         "pages/otherModel/otherModel",
-        "pages/sendModel/sendModel"
+        "pages/sendModel/sendModel",
+        "pages/allmodel/allmodel",
+        "pages/editTxt/editTxt"
       ],
       "name": "aa",
       "independent": false
