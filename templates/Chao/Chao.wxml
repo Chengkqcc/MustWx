@@ -1,4 +1,4 @@
-
+<van-toast id="van-toast" />
 <template name="qian">
     <person titles="{{titles}}"  persontype="{{persontype}}" formData="{{formData}}"></person>
 </template>

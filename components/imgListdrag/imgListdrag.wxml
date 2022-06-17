@@ -11,8 +11,12 @@
     catch:touchmove="touchMove"
     catch:touchend="touchEnd"
   >
-    <image class="darg-item-img" src="{{item.src}}" mode="aspecFill"/>
+    <image class="darg-item-img" src="{{item.src}}" mode="aspectFill"/>
     <text catch:tap="deleteImg" mark:key="{{item.key}}" class="drag-item-delete">×</text>
+    <!-- <text catch:tap="deleteImg" mark:key="{{item.key}}" class="drag-item-delete2">></text> -->
+    <view mark:key="{{item.key}}" class="drag-item-delete2" catchtap="caiImg">
+      <van-icon name="arrow" />
+    </view>
   </view>
   <view
     bindtap="uploadImage"

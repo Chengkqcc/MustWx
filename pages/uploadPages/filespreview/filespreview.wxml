@@ -1,0 +1,8 @@
+<!--pages/uploadPages/filespreview/filespreview.wxml-->
+<view>
+    <block wx:for="{{dragImgList}}" key="{{item.key}}">
+        <view>
+            <image src="{{item.src}}" mode="widthFix"></image>
+        </view>
+    </block>
+</view>

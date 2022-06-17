@@ -11,7 +11,11 @@
         "pages/uploadPages/addChao/addChao",
         "templates/Chao/Chao",
         "pages/uploadPages/uploadfiles/uploadfiles",
-        "pages/uploadPages/uploadImage/upliadImage"
+        "pages/uploadPages/uploadImage/upliadImage",
+        "pages/uploadPages/success/success",
+        "pages/uploadPages/filespreview/filespreview",
+        "pages/uploadPages/PcUpload_tips/PcUpload_tips",
+        "pages/uploadPages/cropper/cropper"
     ],
     "window": {
         "backgroundTextStyle": "light",

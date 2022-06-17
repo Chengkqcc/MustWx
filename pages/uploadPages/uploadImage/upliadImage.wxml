@@ -1,4 +1,4 @@
-<img-drag imgList="{{imgList}}" obj="{{obj}}" bind:updateImage="updateImage"></img-drag>
+<img-drag imgList="{{imgList}}" obj="{{obj}}" newurl="{{newurl}}" bind:updateImage="updateImage"></img-drag>
 
 <!-- <button class="btnx">下一步</button>
 <view class="tips">

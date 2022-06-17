@@ -1,0 +1,16 @@
+<!--pages/uploadPages/PcUpload_tips/PcUpload_tips.wxml-->
+<view class="main">
+    <view class="main_tit">使用电脑登录 https://web.1dq.com/ 点击顶部的发起合同</view>
+    <block wx:for="{{texts}}" key="index">
+        <view class="main_item">
+            <view class="imgbox">
+                <image src="{{urls[index]}}" mode="widthFix" bindtap='previewImage' src="{{urls[index]}}"></image>
+            </view>
+            <view class="tit">{{item.tits}}</view>
+            <view class="detail">{{item.detail}}</view>
+        </view>
+    </block>
+
+
+
+</view>

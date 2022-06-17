@@ -1,4 +1,5 @@
 <!--templates/Qian/Qian.wxml-->
+<van-toast id="van-toast" />
 <template name="qian">
     <person formData="{{formData}}" persontype="{{persontype}}" titles="{{titles}}">
         <view slot="before">

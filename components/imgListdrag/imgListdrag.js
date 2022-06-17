@@ -13,16 +13,34 @@ Component({
     uploadPosition: { // upload上传图标位移距离
       tranX: 0,
       tranY: 0,
-    }
+    },
+    _key:null     //存放截取的图片key值 这里截取的图片在父组件中
   },
   properties: {
     obj: {
       type: Object
+    },
+    newurl:{
+      type:String,
+      observer(a,b){
+        if(a && (!b || a!=b)){
+          let {_key,dragImgList} = this.data
+          dragImgList.forEach((item)=>{
+            if(item.key == _key){
+              item.src = a
+            }
+          })
+          this.setData({
+            dragImgList
+          })
+        }
+      }
     }
   },
 
   lifetimes: {
     ready() {
+      console.log(this.properties.newurl)
       let { dragImgList, ITEM_SIZE } = this.data
       let obj = this.properties.obj
       obj.tranX = 0,
@@ -43,6 +61,22 @@ Component({
   },
 
   methods: {
+    caiImg(e){
+      const key = e.mark.key
+      this.setData({
+        _key:key
+      })
+      // const item = this.data.dragImgList.filter((item) => item.key == key)
+      let src = null
+      this.data.dragImgList.forEach((item)=>{
+        if(item.key == key){
+          src = item.src
+        }
+      })
+      wx.navigateTo({
+        url: `/pages/uploadPages/cropper/cropper?imgSrc=${src}&&id=${key}`
+      })
+    },
     todetail(){
       let {dragImgList} = this.data
       if(dragImgList.length==1){
@@ -52,6 +86,9 @@ Component({
         })
       }else{
         wx.setStorageSync('dragImgList', dragImgList)
+        wx.navigateTo({
+          url: '/pages/uploadPages/success/success?_index=1',
+        })
       }
     },
     /**
@@ -197,7 +234,7 @@ Component({
      */
     deleteImg(e) {
       const key = e.mark.key
-      console.log(key)
+      // console.log(key)
       const list = this.data.dragImgList.filter((item) => item.key !== key)
       list.forEach((item) => item.key > key && item.key--)
       this.getListPosition(list)

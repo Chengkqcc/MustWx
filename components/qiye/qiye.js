@@ -1,4 +1,5 @@
 // components/qiye/qiye.js
+import {regular,regname} from "../../utils/regular"
 Component({
     options:{
         multipleSlots:true, 
@@ -43,6 +44,22 @@ Component({
         },
         //获取总体表单数据
         addQiye(){
+            let number = this.data.contractNumber
+            let name = this.data.contractName
+            if(!regname(name)){
+                wx.showToast({
+                    icon:'none',
+                    title: '请输入正确的姓名',
+                  })
+                  return false
+            }
+            if(!regular(number)){
+                wx.showToast({
+                  icon:'none',
+                  title: '请输入正确的联系方式',
+                })
+                return false
+            }
             let id = Math.ceil(Math.random()*100)
             let obj = this.properties.formData
             obj.ids = id

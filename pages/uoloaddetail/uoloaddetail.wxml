@@ -1,13 +1,14 @@
 <!--pages/uoloaddetail/uoloaddetail.wxml-->
+<van-toast id="van-toast" />
 <view class="cell_item">
     <van-cell-group>
         <van-cell title="基本信息" title-style="font-weight:bold" />
-        <van-field value="{{ contractName }}" label="合同名称" placeholder="请输入合同名称" input-align="right" />
+        <van-field model:value="{{ contractName }}" label="合同名称" placeholder="请输入合同名称" input-align="right" />
     </van-cell-group>
 </view>
 <view class="cell_item">
     <van-cell-group wx:if="{{pagestate}}">
-        <van-cell title-style="font-weight:bold" >
+        <van-cell title-style="font-weight:bold">
             <view slot="title" class="pailie">
                 <view class="van-cell-text">文件</view>
             </view>
@@ -50,21 +51,25 @@
             </view>
             <van-icon slot="right-icon" name="info-o" class="custom-icon" bindtap="alertExplain" />
         </van-cell>
-        <block wx:for="{{signlist}}" wx:key="*this">
+    </van-cell-group>
+    <block wx:for="{{signlist}}" wx:key="*this">
+        <van-cell-group >
             <van-cell wx:if="{{item.handName}}" class="box1" title="{{item.handName}}" title-style="font-weight:bold" label="经办人:{{item.contractName}}（{{item.contractNumber}}）">
                 <van-icon slot="right-icon" name="delete-o" class="custom-icon" bindtap="delItem" data-name="{{item.persontype}}" data-idx="{{item.ids}}" />
             </van-cell>
             <van-cell wx:else class="box1" title="{{item.contractName}}" title-style="font-weight:bold" label="{{item.contractNumber}}">
                 <van-icon slot="right-icon" name="delete-o" class="custom-icon" bindtap="delItem" data-name="{{item.persontype}}" data-idx="{{item.ids}}" />
             </van-cell>
-        </block>
-        <van-button icon="plus" block="true" custom-style="border:none;color:#518dd9;font-size:11px;" bindtap="chooseP" data-index='1'>添加{{choosetype}}</van-button>
-    </van-cell-group>
+        </van-cell-group>
+        <view style="height: 28rpx;width: 100%;"></view>
+    </block>
+    <van-button icon="plus" block="true" custom-style="border:none;color:#518dd9;font-size:11px;" bindtap="chooseP" data-index='1'>添加{{choosetype}}</van-button>
+
 </view>
 <view class="cell_item">
     <van-cell-group>
         <van-cell title="其他设置" title-style="font-weight:bold" wx:if="{{pagestate}}">
-            <van-icon slot="right-icon" name="{{chooseicon}}"  class="custom-icon"  bindtap="changeS" />
+            <van-icon slot="right-icon" name="{{chooseicon}}" class="custom-icon" bindtap="changeS" />
         </van-cell>
         <view wx:if="{{state}}">
             <van-cell>
@@ -175,7 +180,7 @@
 </view>
 <view class="bot_btns">
     <button class="edit">编辑文件</button>
-    <button class="submit">发起合同</button>
+    <button class="submit" bindtap="tiaosuccess">发起合同</button>
 </view>
 <view class="quick" bindtap="changePS">
     切换到{{bottext}}版

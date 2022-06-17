@@ -1,25 +1,21 @@
-// pages/uploadPages/uploadfiles/uploadfiles.js
+// pages/uploadPages/filespreview/filespreview.js
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-
+        dragImgList:null
     },
 
-    chooseFiles(){
-        wx.getFileSystemManager().readFile({
-            success:(res)=>{
-                console.log(res)
-            }
-        })
-    },
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-
+        let dragImgList = wx.getStorageSync('dragImgList')
+        this.setData({
+            dragImgList
+        })
     },
 
     /**

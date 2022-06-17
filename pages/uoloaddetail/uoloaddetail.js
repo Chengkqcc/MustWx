@@ -1,4 +1,5 @@
 // pages/uoloaddetail/uoloaddetail.js
+import Toast from '../../miniprogram_npm/@vant/weapp/toast/toast';
 Page({
 
 
@@ -6,6 +7,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    username:'666',
     bottext:"高级",
     pagestate:false,
     state:false,
@@ -52,6 +54,22 @@ Page({
       '抄送方为选填项，即本合同哪些人可以查看，抄送方只有查看的权限，无签署的权限',
       '需要签署的文件，您可以添加多个附件，附件信息将合并到PDF文件中(附件无需盖章),附件和主合同具备同等的法律效力'
     ]
+  },
+  tiaosuccess(){
+    let contractName = this.data.contractName
+    
+    if(!contractName.trim()){
+      Toast('为了方便您后期管理，取一个合同名称吧！')
+      // wx.showToast({
+      //   title: '为了您的',
+      //   icon:
+      // })
+    }else{
+      wx.navigateTo({
+        url: '/pages/uploadPages/success/success?_index=0',
+      })
+    }
+    
   },
   changePS(){
     let pagestate = !this.data.pagestate

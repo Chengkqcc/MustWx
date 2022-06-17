@@ -1,0 +1,24 @@
+page {
+  background-color: #f1f1f1;
+}
+page .main {
+  background-color: #fff;
+  padding: 60rpx 30rpx;
+}
+page .main .main_tit {
+  font-size: 28rpx;
+  line-height: 50rpx;
+  color: #d36d5c;
+}
+page .main .main_item .imgbox {
+  margin: 76rpx 0;
+}
+page .main .main_item .tit {
+  font-weight: bold;
+  font-size: 28rpx;
+  line-height: 76rpx;
+}
+page .main .main_item .detail {
+  font-size: 28rpx;
+  line-height: 76rpx;
+}

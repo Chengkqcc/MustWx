@@ -88,7 +88,7 @@
               
           
     </view>
-    <view class="choose_item">
+    <view class="choose_item" bindtap="gotoPcUpload">
         <view class="item_left">
             <view class="item_l red">
                 <image class="" src="https://h5.1dq.com/static/upload_ico/computer.png" />
