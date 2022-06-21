@@ -17,8 +17,8 @@
 <view class="main">
     <view class="choose_item marginb" bindtap="chooseWxFile">
         <view class="item_left">
-            <view class="item_l">
-                <image class="" src="https://h5.1dq.com/static/upload_ico/file.png" />
+            <view class="item_l weixin">
+                <image class="" src="http://images.shejidaren.com/wp-content/uploads/2020/03/unnamed-file.png" />
             </view>
             <view class="item_m">
                 <text class="tit">选择微信聊天文件</text>
@@ -28,12 +28,12 @@
           
         
         <view class="item_r">
-            <text>＞</text>
+            <van-icon name="arrow" />
         </view>
               
           
     </view>
-    <view class="choose_item marginb">
+    <view class="choose_item marginb" bindtap="choosePhonefile">
         <view class="item_left">
             <view class="item_l">
                 <image class="" src="https://h5.1dq.com/static/upload_ico/file.png" />
@@ -46,43 +46,43 @@
           
         
         <view class="item_r">
-            <text>＞</text>
+            <van-icon name="arrow" />
         </view>
               
           
     </view>
-    <view class="choose_item">
+    <view class="choose_item" bindtap="jumpedit">
         <view class="item_left">
             <view class="item_l yellow">
                 <image class="" src="https://h5.1dq.com/static/upload_ico/Word.png" />
             </view>
             <view class="item_m">
-                <text class="tit">选择手机文件</text>
-                <text class="tips">使用手机文件签署</text>
+                <text class="tit">创建空白合同</text>
+                <text class="tips">在线创建word、excel文件</text>
             </view>
         </view>
           
         
         <view class="item_r">
-            <text>＞</text>
+            <van-icon name="arrow" />
         </view>
               
           
     </view>
-    <view class="choose_item marginb">
+    <view class="choose_item marginb" bindtap="jumpcontract">
         <view class="item_left">
             <view class="item_l green">
                 <image class="" src="https://h5.1dq.com/static/upload_ico/tpl.png" />
             </view>
             <view class="item_m">
-                <text class="tit">选择手机文件</text>
-                <text class="tips">使用手机文件签署</text>
+                <text class="tit">我的模板</text>
+                <text class="tips">使用我的模板进行签署</text>
             </view>
         </view>
           
         
         <view class="item_r">
-            <text>＞</text>
+            <van-icon name="arrow" />
         </view>
               
           
@@ -93,14 +93,14 @@
                 <image class="" src="https://h5.1dq.com/static/upload_ico/computer.png" />
             </view>
             <view class="item_m">
-                <text class="tit">选择手机文件</text>
-                <text class="tips">使用手机文件签署</text>
+                <text class="tit">使用电脑上传</text>
+                <text class="tips">使用电脑上传合同，快速签署</text>
             </view>
         </view>
           
         
         <view class="item_r">
-            <text>＞</text>
+            <van-icon name="arrow" />
         </view>
               
           

@@ -13,19 +13,7 @@
         <view class="p">****</view>
       </view>
     </view>
-    <view class="qiehuan" bindtap="bottom_qiehuan">切换</view>
-  </view>
-  <view class="content">
-    <!-- 合同 -->
-    <view class="cont" bindtap="hetong_fn">
-      <view class="img">
-        <image class="" src="https://oss2.1dq.com/app/img/gr.png"></image>
-      </view>
-      <view class="text">
-        <view class="h1">已登录</view>
-        <view class="p">****</view>
-      </view>
-    </view>
+    <view class="qiehuan_btn" bindtap="bottom_qiehuan">切换</view>
   </view>
   <view class="content">
     <!-- 合同 -->
@@ -37,7 +25,6 @@
       <view class="title">常用功能</view>
       <van-grid column-num="4" border="{{false}}">
         <van-grid-item icon="photo-o" text="{{item.text}}" wx:for="{{ function_data }}" url="{{item.page}}" />
-        <van-grid-item icon="photo-o" text="{{item.text}}" wx:for="{{ function_data }}" link-type="navigateTo" url="{{item.page}}" />
       </van-grid>
     </view>
     <!-- 管理 -->
@@ -45,7 +32,6 @@
       <view class="title">模板管理</view>
       <van-grid column-num="4" border="{{false}}">
         <van-grid-item icon="photo-o" text="{{item.text}}" wx:for="{{ manage_data }}" url="{{item.page}}" />
-        <van-grid-item icon="photo-o" text="{{item.text}}" wx:for="{{ manage_data }}" link-type="navigateTo" url="{{item.page}}" />
       </van-grid>
     </view>
     <!-- 设置 -->
@@ -95,7 +81,7 @@
 
 <!-- 未登录 -->
 <view class="mine" wx:else>
-  <view class="user" bindtap="loginfn">
+  <view class="user nologin" bindtap="loginfn">
     <!-- 头像 -->
     <view class="img">
       <image class="" src="https://oss2.1dq.com/app/img/gr.png"></image>
@@ -129,40 +115,6 @@
       <view class="title">账户设置</view>
       <van-grid column-num="4" border="{{false}}">
         <van-grid-item icon="photo-o" text="{{item.text}}" wx:for="{{ user_set_data }}" url="{{item.id==1||item.id==2||item.id==3? '登录页面' :item.page}}" />
-      </van-grid>
-    </view>
-    <view>
-      <view class="h1">请先登录或注册</view>
-      <view class="p">****</view>
-    </view>
-  </view>
-  <view class="content">
-    <!-- 合同 -->
-    <view class="cont" bindtap="loginfn">
-      <image class="" src="https://oss2.1dq.com/app/img/money.png"></image>
-    </view>
-    <!-- 功能 -->
-    <view class="function common">
-      <view class="title">常用功能</view>
-      <van-grid column-num="4" border="{{false}}">
-        <van-grid-item icon="photo-o" text="{{item.text}}" wx:for="{{ function_data }}" link-type="navigateTo" />
-        <!-- url="{{登录页面}}" -->
-      </van-grid>
-    </view>
-    <!-- 管理 -->
-    <view class="manage common">
-      <view class="title">模板管理</view>
-      <van-grid column-num="4" border="{{false}}">
-        <van-grid-item icon="photo-o" text="{{item.text}}" wx:for="{{ manage_data }}" link-type="navigateTo" />
-        <!-- url="{{登录页面}}" -->
-      </van-grid>
-    </view>
-    <!-- 设置 -->
-    <view class="user_set common">
-      <view class="title">账户设置</view>
-      <van-grid column-num="4" border="{{false}}">
-        <van-grid-item icon="photo-o" text="{{item.text}}" wx:for="{{ user_set_data }}" link-type="navigateTo" />
-        <!-- url="{{index==1||index==2||index==3? 登录页面 :item.page}}" -->
       </van-grid>
     </view>
   </view>

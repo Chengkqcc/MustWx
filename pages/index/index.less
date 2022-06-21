@@ -133,3 +133,144 @@
         justify-content: center;
     }
 }
+
+// 电子合同使用流程
+.flow {
+    width: 95%;
+    border-radius: 8px;
+    background-color: unset;
+
+    .nav {
+        box-sizing: border-box;
+        padding: 15px;
+        background: #fff;
+        display: flex;
+        justify-content: space-between;
+
+        .title {
+            color: #333;
+            font-size: 17px;
+        }
+
+        .right {
+            color: #aaa;
+
+            padding-top: 3px;
+
+            text {
+                font-size: 15px;
+            }
+        }
+
+    }
+
+    .list {
+        background: #fff;
+
+        .item {
+            box-sizing: border-box;
+            padding: 10px 15px;
+            border-top: 1px solid #EFEFEF;
+            display: flex;
+            justify-content: space-between;
+
+            .left {
+                width: 60%;
+                display: flex;
+
+                .img {
+                    box-sizing: border-box;
+                    padding: 12px;
+                    height: 53px;
+                    background: #FFC658;
+                    border-radius: 5px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    image {
+                        width: 29px;
+                        height: 29px;
+                    }
+                }
+
+                .detailWrap {
+                    // width: 60%;
+                    padding-left: 10px;
+                    display: flex;
+                    align-items: center;
+
+                    .detail {
+
+                        .title {
+                            color: rgba(59, 65, 68, .91);
+                            font-size: 14px;
+                        }
+
+                        .text {
+                            margin-top: 3px;
+                            color: #999;
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+
+            .right {
+                display: flex;
+                align-items: center;
+
+                view {
+                    height: 26px;
+                    line-height: 26px;
+                    font-size: 13px;
+                    padding: 0 8px;
+                    border-radius: 4px;
+                    margin-left: 5px;
+                }
+
+                .finish {
+                    background: #f37b1d;
+                    color: #fff;
+                }
+
+                .video {
+                    background: #F1F1F1;
+                    color: #333;
+                }
+
+            }
+        }
+
+        .item:nth-child(2) .img {
+            background: #4988FD;
+        }
+
+        .item:nth-child(3) .img {
+            background: #50BC93;
+        }
+
+        .item:last-child .img {
+            background: #FF5858;
+        }
+
+        .people .item:nth-child(3) .img {
+            background: #07C160;
+        }
+
+        .people .item:nth-child(4) .img {
+            background: #2781D7;
+        }
+
+        .people .item:nth-child(5) .img {
+            background: #50BC93;
+        }
+    }
+
+    .close {
+        padding: 15px 0;
+        display: flex;
+        justify-content: center;
+    }
+
+}

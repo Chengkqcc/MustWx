@@ -1,2 +1,176 @@
 <!--pages/operateContract/operateContract.wxml-->
-<text>pages/operateContract/operateContract.wxml</text>
+<view class="operateContract">
+    <!-- 合同详情 -->
+    <view class="detailContract" wx:if="{{detailContract}}">
+        <view class="nav">
+            <van-icon name="arrow-left" color="#aaa" size="20px" bindtap="back"/>
+            <text>合同详情</text>
+        </view>
+        <view class="info">
+            <!-- 合同信息 -->
+            <view class="contractInfo">
+                <view class="title">
+                    <view class="icon"></view>
+                    <text>合同信息</text>
+                </view>
+                <view class="content">
+                    <view class="experience">
+                        体验签署电子合同（无需实名认证）
+                    </view>
+                    <view>
+                        <text>签署状态</text>
+                        <view>待我签署</view>
+                    </view>
+                    <view>
+                        <text>发起时间：</text>
+                        <view>2022-06-07 19:06:16</view>
+                    </view>
+                    <view>
+                        <text>截止时间：</text>
+                        <view>-</view>
+                    </view>
+                </view>
+            </view>
+            <!-- 参与人 -->
+            <view class="participant">
+                <view class="top">
+                    <view class="title">
+                        <view class="icon"></view>
+                        <text>参与人</text>
+                    </view>
+                    <van-icon name="info-o" bindtap="jumpContracePage" data-index="0" color="#aaa"/>
+                </view>
+                <view class="contentWrap">
+                    <view class="content">
+                        <view class="contentTop">
+                            <view class="contentLeft">
+                                <text>16650016402</text>
+                                <view>未签</view>
+                            </view>
+                            <view class="contentRight">
+                                <van-icon name="certificate" size="14px" color="#aaa"/>
+                                <text>未实名</text>
+                            </view>
+                        </view>
+                        <view class="phone">166****6402</view>
+                    </view>
+                </view>
+            </view>
+            <!-- 文件信息 -->
+            <view class="fileInfo">
+                <view class="top">
+                    <view class="title">
+                        <view class="icon"></view>
+                        <text>文件信息</text>
+                    </view>
+                    <van-icon name="info-o" color="#aaa" bindtap="fileInfo"/>
+                </view>
+                <view class="fileContent" bindtap="jumpContracePage" data-index="1">
+                    <view class="fileLeft">
+                        <van-icon name="description" size="14px" color="#aaa"/>
+                        <text>上传的文件</text>
+                        <view class="contract">合同</view>
+                    </view>
+                    <van-icon name="arrow" size="14px" color="#666"/>
+                </view>
+            </view>
+            <!-- 合同备注 -->
+            <view class="contractNotive">
+                <view class="top">
+                    <view class="title">
+                        <view class="icon"></view>
+                        <text>合同备注</text>
+                    </view>
+                    <van-icon name="info-o" color="#aaa" bindtap="comment"/>
+                </view>
+                <view class="content">
+                    <view class="text">{{comment}}</view>
+                    <view class="amendComment" bindtap="jumpContracePage" data-index="2" data-type="comment">
+                        <van-icon name="add" size="14px" color="#0081ff"/>
+                        <text>修改备注</text>
+                    </view>
+                </view>
+            </view>
+            <!-- 流程信息 -->
+            <view class="flowInfo">
+                <view class="top">
+                    <view class="title">
+                        <view class="icon"></view>
+                        <text>流程信息</text>
+                    </view>
+                </view>
+                <view class="content">
+                    <view class="contentLeft">
+                        <van-icon name="checked" color="#585858" size="14px"/>
+                        <view class="line"></view>
+                        <view class="circle"></view>
+                    </view>
+                    <view class="contentRight">
+                        <view class="contentTop">
+                            <text>166500164028 查阅了合同</text>
+                            <view>2022-06-12 20:34:45</view>
+                        </view>
+                        <view class="contentBottom">
+                            <text>上海寻程网络科技有限公司 发起合同</text>
+                            <view>2022-06-07 19:06:16</view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <!-- 去签署合同 -->
+        <view class="signContract">
+            <view class="left" bindtap="showPopup">
+                <van-icon name="records" color="#333" size="24px"/>
+                <text>拒签</text>
+            </view>
+            <view class="right" bindtap="jumpContracePage" data-index="3">
+                <van-button color="#E54D42" block>去签署该合同</van-button>
+            </view>
+        </view>
+        <!-- 合同的文件信息 -->
+        <van-popup show="{{fileShow}}" closeable="{{true}}" bind:close="closeFile" custom-class="fileWrap" overlay="{{false}}">
+            <view class="infoContent">
+                <text>提示</text>
+                <view class="text">合同的文件信息</view>
+                <view class="btn">
+                    <van-button color="#07C160" bindtap="sure">确定</van-button>
+                </view>
+            </view>
+        </van-popup>
+        <!-- 合同备注 -->
+        <van-popup show="{{commentShow}}" closeable="{{true}}" bind:close="closeComment" custom-class="fileWrap" overlay="{{false}}">
+            <view class="infoContent">
+                <text>提示</text>
+                <view class="text">合同的备注只有您或者您企业的同事能查看</view>
+                <view class="btn">
+                    <van-button color="#07C160" bindtap="sure" bindtap="closeComment">确定</van-button>
+                </view>
+            </view>
+        </van-popup>
+        <!-- 拒签 -->
+        <van-popup show="{{ show }}" bind:close="onClose" overlay="{{false}}" custom-class="refusalWrap" closeable="{{true}}">
+            <view class="refusal">
+                <text class="title">提示</text>
+                <view class="content">您真的要拒签吗，拒签后所有人均无法签署</view>
+                <view class="btn">
+                    <view  bindtap="confirm"><van-button color="#07C160" block>确定</van-button></view>
+                    <view bindtap="cancel"><van-button color="#07C160" plain block >取消</van-button></view>
+                </view>
+            </view>
+        </van-popup>
+    </view>
+    <!-- 二维码 -->
+    <view class="qrCode" wx:if="{{qrCode}}">
+        <view class="nav">
+            <van-icon name="arrow-left" color="#aaa" size="20px" bindtap="back"/>
+        </view>
+        <view class="qrCodeCenter">
+            <view class="title">邀请对方扫描二维码完成签署</view>
+            <view class="text">支持微信、QQ等</view>
+            <view class="img">
+                <image src="https://api-cdn-al.1dq.com/v2/QrCode?url=http://1dq.co/u/fnfDuP?source=qrcode"></image>
+            </view>
+        </view>
+    </view>
+</view>

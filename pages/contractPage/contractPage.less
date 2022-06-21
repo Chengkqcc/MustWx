@@ -1,0 +1,329 @@
+.contractPageWrap {
+    .contractPage {
+        padding-top: 15px;
+
+        .nav {
+            box-sizing: border-box;
+            padding: 15px 0;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #E1E1E1;
+
+            .icon {
+                width: 10%;
+                padding-left: 10px;
+            }
+
+            .text {
+                box-sizing: border-box;
+                flex: 1;
+                padding-left: 20px;
+                display: flex;
+                justify-content: center;
+
+                text {
+                    width: 47%;
+                    display: block;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                }
+            }
+        }
+
+        // 如何通知对方签署合同？
+        .inform {
+            background: #f1f1f1;
+            padding-top: 15px;
+
+            .content {
+                background: #fff;
+                box-sizing: border-box;
+                padding: 0 15px;
+
+                .top {
+                    .title {
+                        font-size: 15px;
+                        color: #e61717;
+                        line-height: 35px;
+                        padding: 30px 0;
+                    }
+
+                    .img {
+                        display: flex;
+                        justify-content: center;
+
+                        image {
+                            width: 80%;
+                            height: 645px;
+                            border: 2px solid #e7e7e7;
+                        }
+                    }
+
+                    .text {
+                        padding: 20px 0;
+                        color: #6a6a6a;
+                        line-height: 30px;
+                    }
+                }
+
+                .method {
+                    padding-bottom: 20px;
+
+                    .methodOne {
+                        .title {
+                            color: #585858;
+                            font-weight: bold;
+                            margin-bottom: 20px;
+                        }
+
+                        .text {
+                            line-height: 30px;
+                            color: #6a6a6a;
+
+                            text {
+                                color: #e61717;
+                            }
+                        }
+
+                        .img {
+                            padding-top: 40px;
+                            display: flex;
+                            flex-wrap: wrap;
+                            justify-content: center;
+
+                            image {
+                                width: 80%;
+                                height: 640px;
+                                padding: 2px;
+                                margin-bottom: 40px;
+                                border: 2px solid #e7e7e7;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        // 文件预览
+        .file {
+            box-sizing: border-box;
+            height: calc(100vh - 50px - 15px);
+            padding: 15px 5px;
+
+            .img {
+                height: 70%;
+                box-shadow: 0rpx 0rpx 2rpx 2rpx rgba(170, 170, 170, 0.5);
+
+                image {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+
+        // 修改备注
+        .amend {
+            height: 100vh;
+            background: #f1f1f1;
+
+            .title {
+                background: #F1F1F1;
+                font-size: 14px;
+                color: #aaa;
+                padding: 10px 15px;
+            }
+
+            .content {
+                box-sizing: border-box;
+                height: 130px;
+                padding: 15px;
+                background: #fff;
+                font-size: 14px;
+                color: #666;
+            }
+
+            .btn {
+                padding: 25px 15px;
+
+                button {
+                    border-radius: 5px;
+                }
+            }
+
+            .keep {
+                width: 25%;
+                padding: 5px;
+                background: #525252;
+                font-size: 12px;
+                color: #fff;
+                text-align: center;
+                margin: 0 auto;
+
+            }
+        }
+
+        // 签署合同
+        .sign {
+            width: 100vw;
+            height: calc(100vh - 50px - 15px);
+
+            .content {
+                height: 100%;
+                background: #f1f1f1;
+
+
+                .img {
+                    height: 78%;
+                    background: #fff;
+                    display: flex;
+                    justify-content: center;
+                    position: relative;
+
+                    image {
+                        height: 100%;
+                    }
+
+                    .number {
+                        background: #4D4D4D;
+                        color: #fff;
+                        font-size: 12px;
+                        border-radius: 7px;
+                        padding: 5px 8px;
+                        position: absolute;
+                        right: 15px;
+                    }
+
+                    .icon {
+                        padding: 10px;
+                        background: #F1F1F1;
+                        position: absolute;
+                        right: 0;
+                        bottom: -65px;
+                    }
+
+                    .icon view:first-child {
+                        margin-bottom: 10px;
+                    }
+                }
+
+                .seal {
+                    padding: 20px 0;
+                    display: flex;
+                    justify-content: center;
+
+                    .sealContent {
+                        box-sizing: border-box;
+                        width: 75%;
+                        height: 35px;
+                        padding: 2px 5px 0 15px;
+                        color: #fff;
+                        font-size: 12px;
+                        background: #3C95F3;
+                        border-radius: 5px;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+
+                        text {
+                            white-space: nowrap;
+                        }
+
+                        .icon {
+                            align-self: flex-start;
+                        }
+                    }
+                }
+
+                .bottom {
+                    padding: 5px 0 5px 20px;
+                    background: #fff;
+                    display: flex;
+                    justify-content: space-between;
+                    border-top: 1px solid #E6E6E6;
+
+                    view {
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: center;
+
+                        text {
+                            width: 100%;
+                            text-align: center;
+                            font-size: 14px;
+                            color: #333;
+                        }
+                    }
+                }
+            }
+        }
+
+        // 个人印章弹出层
+        .sealPopup {
+            width: 100%;
+            height: 55%;
+            background: #fff;
+
+            .content {
+                .nav {
+                    box-sizing: border-box;
+                    height: 50px;
+                    padding-left: 15px;
+                    display: flex;
+                    align-items: center;
+                    border-bottom: 1px solid rgb(241, 241, 241);
+                    position: relative;
+
+                    .title {
+                        font-size: 14px;
+                    }
+
+                    .title:after {
+                        content: "";
+                        display: block;
+                        width: 40px;
+                        height: 2px;
+                        background: #e61717;
+                        position: absolute;
+                        bottom: 0;
+                        left: 25px;
+                    }
+                }
+            }
+
+            .addSeal {
+                box-sizing: border-box;
+                padding: 15px 25px 0 25px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+
+                .item {
+                    width: 140px;
+                    margin-bottom: 15px;
+
+                    .img {
+                        height: 150px;
+                        background: #F1F1F1;
+                        border-radius: 5px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        image {
+                            width: 111px;
+                            height: 111px;
+                        }
+                    }
+
+                    .text {
+                        text-align: center;
+                        font-size: 14px;
+                        color: #666;
+                        margin-top: 5px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,1 +1,315 @@
-/* pages/operateContract/operateContract.wxss */
+.detailContract {
+  padding-top: 15px;
+  padding-bottom: 55px;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+.detailContract .nav {
+  box-sizing: border-box;
+  width: 60%;
+  height: 50px;
+  padding: 10px 15px;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.detailContract .info {
+  width: 100%;
+  background: #f1f1f1;
+  padding-bottom: 8px;
+}
+.detailContract .info .title {
+  box-sizing: border-box;
+  padding: 15px;
+  border-bottom: 1px solid #f5f5f5;
+  display: flex;
+}
+.detailContract .info .title .icon {
+  width: 5px;
+  height: 20px;
+  background: #AAAAAA;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+.detailContract .info .title text {
+  font-size: 16px;
+  color: #333;
+  font-weight: 700;
+}
+.detailContract .info .contractInfo .content {
+  padding: 15px 15px 5px;
+}
+.detailContract .info .contractInfo .content .experience {
+  font-size: 16px;
+  color: #333;
+}
+.detailContract .info .contractInfo .content text {
+  font-size: 12px;
+  color: #666;
+}
+.detailContract .info .contractInfo .content > view {
+  margin-bottom: 10px;
+}
+.detailContract .info .contractInfo .content > view view {
+  font-size: 14px;
+  color: #666;
+  margin-top: 10px;
+  padding-left: 4px;
+}
+.detailContract .info .contractInfo .content > view:last-child view {
+  margin: 0;
+  padding: 0;
+}
+.detailContract .info .participant .top {
+  box-sizing: border-box;
+  padding-right: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.detailContract .info .participant .contentWrap {
+  box-sizing: border-box;
+  padding: 15px;
+}
+.detailContract .info .participant .contentWrap .content {
+  box-sizing: border-box;
+  height: 68px;
+  padding: 15px;
+  background: #F7F7F7;
+  border-radius: 5px;
+}
+.detailContract .info .participant .contentWrap .content .contentTop {
+  display: flex;
+  justify-content: space-between;
+}
+.detailContract .info .participant .contentWrap .content .contentTop .contentLeft {
+  display: flex;
+  align-items: center;
+}
+.detailContract .info .participant .contentWrap .content .contentTop .contentLeft text {
+  font-size: 15px;
+  color: #6b6b6b;
+  font-weight: 700;
+}
+.detailContract .info .participant .contentWrap .content .contentTop .contentLeft view {
+  padding: 8px;
+  background: #e7ebed;
+  color: #8799a3;
+  font-size: 13px;
+  font-weight: 700;
+  margin-left: 10px;
+}
+.detailContract .info .participant .contentWrap .content .contentTop .contentRight {
+  display: flex;
+  align-items: center;
+}
+.detailContract .info .participant .contentWrap .content .contentTop .contentRight text {
+  font-size: 13px;
+  color: #aaa;
+  margin-left: 5px;
+}
+.detailContract .info .participant .contentWrap .content .phone {
+  margin-top: 5px;
+  color: #666;
+  font-size: 13px;
+}
+.detailContract .info .fileInfo .top {
+  box-sizing: border-box;
+  padding-right: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.detailContract .info .fileInfo .fileContent {
+  box-sizing: border-box;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+.detailContract .info .fileInfo .fileContent .fileLeft {
+  display: flex;
+  align-items: center;
+}
+.detailContract .info .fileInfo .fileContent .fileLeft text {
+  font-size: 14px;
+  color: #666;
+  margin: 0 11px;
+}
+.detailContract .info .fileInfo .fileContent .fileLeft .contract {
+  padding: 5px 8px;
+  font-size: 13px;
+  color: #8799a3;
+  background-color: #e7ebed;
+  border-radius: 5px;
+}
+.detailContract .info .contractNotive .top {
+  box-sizing: border-box;
+  padding-right: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.detailContract .info .contractNotive .content {
+  padding-bottom: 10px;
+}
+.detailContract .info .contractNotive .content .text {
+  padding: 15px;
+  color: #aaa;
+}
+.detailContract .info .contractNotive .content .amendComment {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.detailContract .info .contractNotive .content .amendComment text {
+  font-size: 14px;
+  color: #0081ff;
+  margin-left: 5px;
+}
+.detailContract .info .flowInfo .content {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+.detailContract .info .flowInfo .content .contentLeft .line {
+  width: 1px;
+  height: 40px;
+  background: #999999;
+  margin: 3px auto 5px;
+}
+.detailContract .info .flowInfo .content .contentLeft .circle {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #999999;
+  margin: 0 auto;
+}
+.detailContract .info .flowInfo .content .contentRight {
+  width: 93%;
+}
+.detailContract .info .flowInfo .content .contentRight .contentTop {
+  color: #585858;
+  padding: 5px 0 10px;
+  border-bottom: 1px solid #E5E5E5;
+}
+.detailContract .info .flowInfo .content .contentRight .contentTop view {
+  font-size: 13px;
+  margin-top: 5px;
+}
+.detailContract .info .flowInfo .content .contentRight .contentBottom {
+  padding-top: 10px;
+  color: #aaa;
+}
+.detailContract .info .flowInfo .content .contentRight .contentBottom view {
+  font-size: 13px;
+  margin-top: 5px;
+}
+.detailContract .info > view {
+  background: #fff;
+  margin-top: 15px;
+}
+.detailContract .signContract {
+  box-sizing: border-box;
+  width: 100vw;
+  padding: 5px 0 5px 15px;
+  background: #f7f7f7;
+  border-top: 1px solid #e6e6e6;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+}
+.detailContract .signContract .left {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.detailContract .signContract .left text {
+  display: block;
+  width: 100%;
+  font-size: 14px;
+  color: #333;
+  text-align: center;
+}
+.detailContract .signContract .right {
+  width: 40%;
+}
+.detailContract .refusalWrap {
+  width: 80%;
+  height: 37%;
+  box-shadow: 4rpx 4rpx 8rpx 4rpx rgba(0, 0, 0, 0.5);
+}
+.detailContract .refusalWrap .refusal {
+  box-sizing: border-box;
+  padding: 15px;
+}
+.detailContract .refusalWrap .refusal .content {
+  padding: 45px 10px;
+  font-size: 14px;
+  line-height: 22px;
+}
+.detailContract .refusalWrap .refusal .btn {
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.detailContract .refusalWrap .refusal .btn view {
+  width: 46%;
+}
+.detailContract .refusalWrap .refusal .btn view button {
+  height: 32px;
+  border-radius: 5px;
+}
+.detailContract .refusalWrap .refusal .btn button:last-child {
+  border: none;
+  background: #ECECEC;
+}
+.detailContract .fileWrap {
+  box-sizing: border-box;
+  width: 80%;
+  padding: 15px 15px 45px;
+  box-shadow: 4rpx 4rpx 8rpx 4rpx rgba(0, 0, 0, 0.5);
+}
+.detailContract .fileWrap .infoContent .text {
+  text-align: center;
+  padding: 55px 0;
+  font-size: 14px;
+}
+.detailContract .fileWrap .infoContent .btn {
+  display: flex;
+  justify-content: center;
+}
+.detailContract .fileWrap .infoContent .btn button {
+  width: 115px;
+  height: 30px;
+}
+.qrCode {
+  box-sizing: border-box;
+  padding: 0 20px;
+  padding-top: 20px;
+}
+.qrCode .nav {
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+.qrCode .qrCodeCenter .title {
+  font-size: 24px;
+  color: #333;
+  padding-top: 50px;
+  text-align: center;
+}
+.qrCode .qrCodeCenter .text {
+  font-size: 17px;
+  color: #aaa;
+  margin-top: 16px;
+  text-align: center;
+}
+.qrCode .qrCodeCenter .img {
+  padding-top: 80px;
+  display: flex;
+  justify-content: center;
+}
+.qrCode .qrCodeCenter .img image {
+  width: 220px;
+  height: 220px;
+}

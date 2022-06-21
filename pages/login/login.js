@@ -7,7 +7,8 @@ Page({
     data: {
         show: false,
         checked: false,
-        readyShow: false
+        readyShow: false,
+        type: null//判断是在首页跳转到的登录页，开始从合同页跳转到的登录页
     },
 
     showPopup() {
@@ -45,6 +46,21 @@ Page({
             this.setData({
                 readyShow: true
             })
+        }
+        wx.setStorageSync('token', "20010108")
+        let token = wx.getStorageSync('token')
+        if (this.data.type == "homepage") {
+            setTimeout(function () {
+                wx.reLaunch({
+                    url: '../index/index?token=' + token,
+                })
+            }, 1400)
+        } else if (this.data.type == "contract") {
+            setTimeout(function () {
+                wx.reLaunch({
+                    url: '../contract/constract?token=' + token,
+                })
+            }, 1400)
         }
     },
     // 点击同意
@@ -84,6 +100,9 @@ Page({
      */
     onLoad: function (options) {
         let that = this;
+        this.setData({
+            type: options.type
+        })
         setTimeout(function () {
             that.showPopup()
         }, 500)

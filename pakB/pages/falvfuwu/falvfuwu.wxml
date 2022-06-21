@@ -9,8 +9,8 @@
         </view>
         <view class="desc">{{item.desc}}</view>
       </view>
-      <view class="btn" bind:click="pay_fn" data-item="{{item}}">
-        <van-button plain type="danger" size="small">现在购买</van-button>
+      <view class="btn">
+        <van-button plain type="danger" size="small"  bind:click="pay_fn" data-item="{{item}}">现在购买</van-button>
       </view>
     </view>
   </block>

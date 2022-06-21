@@ -2,11 +2,12 @@
    <!-- 信息填隙 -->
    <van-cell-group>
       <view class="title">企业信息填写</view>
-      <van-field value="{{ name }}" label="企业名称" placeholder="请输入企业名称" input-align="right" bind:change="onName"/>
-      <van-field value="{{ code }}" label="信用代码" placeholder="请输入企业信用代码/注册号" input-align="right" bind:change="onCode"/>
-      <van-field value="{{ username }}" label="法人名称" placeholder="请输入法人名称/注册号" input-align="right" bind:change="onUser"/>
-      <van-field value="{{ userID }}" label="法人证件号" placeholder="请输入法人身份证号" input-align="right" bind:change="onUserID"/>
+      <van-field value="{{ name }}" label="企业名称" placeholder="请输入企业名称" input-align="right" bind:blur="onName"/>
+      <van-field value="{{ code }}" label="信用代码" placeholder="请输入企业信用代码/注册号" input-align="right" bind:blur="onCode"/>
+      <van-field value="{{ username }}" label="法人名称" placeholder="请输入法人名称/注册号" input-align="right" bind:blur="onUsername"/>
+      <van-field value="{{ userID }}" label="法人证件号" placeholder="请输入法人身份证号" input-align="right" bind:blur="onUserID"/>
    </van-cell-group>
+   <van-toast id="van-toast" />
    <!-- 营业执照 -->
    <view class="yyzz">
       <view class="title">营业执照（副本）</view>

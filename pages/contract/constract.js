@@ -60,6 +60,9 @@ Page({
         timeShow: false,
         FinishTimeShow: false,
         constractShow: false,
+        linkShow: false,
+        empty: true,//控制空状态的显示和隐藏
+        experience: false,//控制体验签署电子合同的显示和隐藏
         currentDate: new Date().getTime(),
         minDate: new Date().getTime(),
         beginTime: null,
@@ -169,14 +172,52 @@ Page({
         this.setData({
             constractShow: false
         })
+
     },
 
     // 登录用户
     login() {
         wx.navigateTo({
-            url: "../login/login",
+            url: "../login/login?type=contract",
         })
     },
+    // 点击详情和二维码
+    operate(e) {
+        this.setData({
+            constractShow: false
+        })
+        let index = e.currentTarget.dataset.index;
+        wx.navigateTo({
+            url: '../operateContract/operateContract?index=' + index,
+        })
+    },
+    // 点击签署
+    jumpContracePage(e) {
+        this.setData({
+            constractShow: false
+        })
+        let index = e.currentTarget.dataset.index;
+        wx.navigateTo({
+            url: '../contractPage/contractPage?index=' + index,
+        })
+
+    },
+    // 点击复制链接
+    cloneIink() {
+        let that = this;
+        this.setData({
+            constractShow: false,
+            linkShow: true
+        })
+        setTimeout(function () {
+            that.setData({
+                linkShow: false
+            })
+        }, 1200)
+    },
+
+
+
 
 
 
@@ -184,7 +225,18 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-
+        let token = options.token || wx.getStorageSync('token');
+        if (token.length > 0) {
+            this.setData({
+                empty: false,
+                experience: true
+            })
+        } else {
+            this.setData({
+                empty: true,
+                experience: false
+            })
+        }
     },
 
     /**

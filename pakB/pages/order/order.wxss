@@ -21,6 +21,12 @@ page {
 .order .order_detail_items .item:nth-child(3) .van-cell__value {
   color: #f00;
 }
+.order .van-cell {
+  display: flex !important;
+}
+.order .van-cell .van-field__label {
+  width: 20px;
+}
 .order .pay_way {
   background-color: #fff;
 }

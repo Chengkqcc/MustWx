@@ -1,0 +1,13 @@
+<!--pakB/pages/setemail/setemail.wxml-->
+<view class="setemail">
+  <view class="text">
+    为了您的账户安全，您需要验证身份后才可以进行操作
+  </view>
+  <view class="phone">
+    {{phone}}
+  </view>
+  <view class="btn">
+    <van-button color="#E54D42" block bind:click="getcode_fn">获取验证码</van-button>
+  </view>
+</view>
+<yanzhengma show="{{show}}" url="{{url}}"/>

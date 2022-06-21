@@ -34,8 +34,8 @@
         <image src="../../images/nav/fl-off.png" bind:tap="showModel"/>
       </view>
       <view class="modelList">
-          <block wx:for="{{model.modelList}}" wx:key="id">
-              <view class="modelItem" bind:tap="detailContract">
+          <block wx:for="{{model.modelList}}" wx:key="{{item.id}}">
+              <view class="modelItem" bind:tap="detailContract" data-imgsrc="{{item.imgsrc}}">
                 <view class="imgWrapper">
                   <image src="{{item.imgsrc}}"/>
                 </view>
@@ -48,4 +48,67 @@
         <view class="icon">＞</view>
       </view>
     </view>
+
+    <van-popup show="{{ show }}" bind:close="onClose" overlay-style="opacity:0.5" custom-style="background:transparent" custom-class="flow">
+       <view class="content">
+        <view class="nav">
+          <view class="title">电子合同使用流程</view>
+          <view class="right" bindtap="changeTitle" data-text="{{text}}">
+            <text class="userType">{{text}}</text>
+            <van-icon name="arrow" />
+          </view>
+        </view>
+        <view class="list">
+          <!-- 企业用户 -->
+          <view wx:if="{{film}}">
+            <block wx:for="{{flow.firm}}">
+              <view class="item">
+                <view class="left">
+                  <view class="img">
+                    <image src="{{item.imgsrc}}"/>
+                  </view>
+                  <view class="detailWrap">
+                    <view class="detail">
+                      <view class="title">{{item.title}}</view>
+                      <view class="text">{{item.text}}</view>
+                    </view>
+                  </view>
+                </view>
+
+                <view class="right">
+                  <view class="finish" bindtap="tofinish" data-title="{{item.title}}">{{item.finish}}</view>
+                  <view class="video" bindtap="toVideoPage" data-title="{{item.title}}">{{item.video}}</view>
+                </view> 
+              </view>
+            </block>
+          </view>
+          <!-- 个人用户 -->
+          <view wx:if="{{people}}" class="people">
+            <block wx:for="{{flow.people}}">
+              <view class="item">
+                <view class="left">
+                  <view class="img">
+                    <image src="{{item.imgsrc}}"/>
+                  </view>
+                  <view class="detailWrap">
+                    <view class="detail">
+                      <view class="title">{{item.title}}</view>
+                      <view class="text">{{item.text}}</view>
+                    </view>
+                  </view>
+                </view>
+
+                <view class="right">
+                  <view class="finish" bindtap="tofinish" data-title="{{item.title}}">{{item.finish}}</view>
+                  <view class="video" bindtap="toVideoPage" data-title="{{item.title}}">{{item.video}}</view>
+                </view> 
+              </view>
+            </block>
+          </view> 
+        </view>
+       </view>
+       <view class="close">
+          <van-icon name="close" size="28px" color="#fff" bindtap="onClose"/>
+        </view>
+    </van-popup>
 </view>

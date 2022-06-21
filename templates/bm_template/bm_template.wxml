@@ -1,7 +1,9 @@
 <!-- 没有数据 -->
 <template name="empty">
    <view class="no-content">
-      <van-notice-bar left-icon="volume-o" text="视频教程 如何完成企业认证？" />
+      <navigator url="/pakB/pages/authVideo/authVideo" open-type="navigateTo">
+         <van-notice-bar left-icon="volume-o" text="视频教程 如何完成企业认证？" />
+      </navigator>
       <van-empty class="custom-image" image="https://oss2.1dq.com/app/static/app-plus/images/empty.png" description="暂时还没有数据" />
    </view>
 </template>
@@ -10,12 +12,12 @@
    <view class="hasCompanies">
       <van-cell-group>
          <block wx:for="{{companiesList}}" wx:key="*this">
-            <van-cell is-link url="/pakB/pages/Auth/Auth?name={{item}}">
+            <van-cell is-link url="/pakB/pages/Auth/Auth?company={{item.company}}&rzState={{item.rzState}}">
                <view class="left" slot="title">
                   <image class="image" src="/images/nav/my-off.png"></image>
                   <view class="title">
-                     <view class="text">{{item}}</view>
-                     <view class="desc">认证状态：未认证</view>
+                     <view class="text">{{item.company}}</view>
+                     <view class="desc">认证状态：{{item.rzState?'已认证':'未认证'}}</view>
                   </view>
                </view>
             </van-cell>

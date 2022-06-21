@@ -1,0 +1,15 @@
+<!--pakB/pages/setheaderimg/setheaderimg.wxml-->
+<view class="setheaderimg">
+  <view class="select">
+    <view class="title">
+      <text>选取图片</text>
+      <text>{{number}}/1</text>
+    </view>
+    <view class="select_box">
+      <van-uploader file-list="{{ fileList }}" deletable="{{ true }}" bind:after-read="afterRead" max-count="{{number}}" bind:delete="delete_img"/>
+    </view>
+  </view>
+  <view class="btn">
+    <van-button color="#E54D42" block bind:click="set_fn">确定更改</van-button>
+  </view>
+</view>

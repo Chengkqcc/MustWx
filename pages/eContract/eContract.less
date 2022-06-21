@@ -1,0 +1,318 @@
+.eContract {
+    padding-top: 20px;
+
+    .nav {
+        width: 75%;
+        box-sizing: border-box;
+        padding: 0 15px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .text {
+            width: 160px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+
+    .contractTop {
+        background: #F6F6F6;
+        padding: 30px;
+
+        .title {
+            font-size: 40px;
+            color: #000;
+            margin-bottom: 20px;
+        }
+
+        .text {
+            font-size: 12px;
+            color: #333;
+            line-height: 25px;
+        }
+
+        .btn {
+            margin-top: 15px;
+
+            button {
+                height: 35px;
+            }
+        }
+    }
+
+    .content {
+        .contentTop {
+            display: flex;
+            justify-content: space-between;
+
+            .item {
+                width: 20%;
+                height: 52px;
+                color: #222;
+                font-size: 14px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+            }
+
+            .item.active {
+                color: #e61717;
+                border-bottom: 2px solid #e61717;
+            }
+        }
+
+        .contentMain {
+
+            // 产品介绍
+            .introduce {
+                padding: 20px;
+
+                .top {
+                    .title {
+                        padding: 25px 0 15px 0;
+                        color: #333;
+                        font-size: 30px;
+                        font-weight: 700;
+                        text-align: center;
+                    }
+
+                    .text {
+                        padding: 0 5px;
+                        color: #646464;
+                        text-align: center;
+                        line-height: 25px;
+                    }
+                }
+
+                .content {
+                    display: flex;
+                    flex-wrap: wrap;
+
+                    .item {
+                        margin-top: 55px;
+                        display: flex;
+
+                        image {
+                            width: 60px;
+                            height: 60px;
+                            padding-top: 12px;
+                        }
+
+                        .right {
+                            box-sizing: border-box;
+                            width: 75%;
+                            padding-left: 25px;
+
+                            .title {
+                                font-size: 20px;
+                                color: #333;
+                                margin-bottom: 15px;
+                            }
+
+                            .text {
+                                font-size: 14px;
+                                color: #777;
+                                line-height: 30px;
+                            }
+                        }
+                    }
+
+                    // .item>view {
+                    //     width: 80%;
+                    // }
+                }
+            }
+
+            // 产品服务
+            .serve {
+                background: #F7F7F7;
+                padding: 30px 25px 0;
+
+                .top {
+                    .title {
+                        font-size: 30px;
+                        color: #333;
+                        font-weight: 700;
+                        text-align: center;
+                        padding: 15px 0;
+                    }
+
+                    .text {
+                        color: #646464;
+                        text-align: center;
+                        line-height: 26px;
+                    }
+                }
+
+                .content {
+                    .item {
+                        padding: 45px 15px;
+                        margin-top: 40px;
+                        background: #fff;
+                        color: #333;
+                        text-align: center;
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: center;
+
+                        image {
+                            width: 60px;
+                            height: 60px;
+                        }
+
+                        .title {
+                            width: 100%;
+                            font-size: 20px;
+                            padding: 15px 0;
+                        }
+
+                        .text {
+                            font-size: 14px;
+                            line-height: 20px;
+                        }
+                    }
+                }
+
+                .btn {
+                    padding: 40px 0;
+                    display: flex;
+                    justify-content: center;
+
+                    view {
+                        width: 55%;
+                    }
+                }
+            }
+
+            // 应用场景
+            .scene {
+                box-sizing: border-box;
+                padding: 0 15px;
+
+                .top {
+                    text-align: center;
+                    padding: 35px 10px 15px;
+
+                    .title {
+                        color: #333;
+                        font-size: 30px;
+                        font-weight: 700;
+                        margin-bottom: 15px;
+                    }
+
+                    .text {
+                        color: #646464;
+                        font-size: 14.5px;
+                        line-height: 22px;
+                    }
+                }
+
+                .content {
+                    .item {
+                        margin-bottom: 30px;
+                        position: relative;
+
+                        image {
+                            width: 100%;
+                            height: 200px;
+                        }
+
+                        .shade {
+                            width: 100%;
+                            height: 200px;
+                            font-size: 24px;
+                            color: #222;
+                            background: rgba(0, 0, 0, 0.2);
+                            position: absolute;
+                            top: 0;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+
+                            .title::after {
+                                content: "";
+                                display: block;
+                                width: 45%;
+                                height: 3px;
+                                background: #E61717;
+                                margin: 15px auto;
+
+                            }
+                        }
+                    }
+                }
+            }
+
+            // 客户案例
+            .case {
+                background: #F7F7F7;
+
+                .top {
+                    box-sizing: border-box;
+                    padding: 35px 15px;
+                    background: #F7F7F7;
+                    text-align: center;
+
+                    .title {
+                        color: #333;
+                        font-size: 30px;
+                        font-weight: 700;
+                        margin-bottom: 15px;
+                    }
+
+                    .text {
+                        font-size: 15px;
+                        padding: 0 10px;
+                        color: #646464;
+                    }
+                }
+
+                .content {
+                    box-sizing: border-box;
+                    padding: 0 15px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+
+                    .item {
+                        box-sizing: border-box;
+                        width: 30%;
+                        background: #fff;
+                        padding: 6px 15px;
+                        margin-bottom: 30px;
+
+                        image {
+                            width: 100%;
+                            height: 40px;
+                        }
+                    }
+                }
+            }
+
+            // 常见问题
+            .question {
+                .top {
+                    padding: 35px 15px;
+                    text-align: center;
+
+                    .title {
+                        font-size: 30px;
+                        color: #333;
+                        font-weight: 700;
+                        margin-bottom: 15px;
+                    }
+
+                    .text {
+                        color: #646464;
+                        font-size: 14.2px;
+                        line-height: 25px;
+                    }
+                }
+            }
+        }
+    }
+}

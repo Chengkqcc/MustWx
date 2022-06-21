@@ -1,2 +1,24 @@
-<!--pakA/pages/otherModel/otherModel.wxml-->
-<text>其他模板</text>
+<view class="othermodel">
+  <view class="img">
+    <image src="https://oss2.1dq.com/app/static/images/appHT.jpg"></image>
+  </view>
+  <van-sticky>
+    <view class="tabs">
+      <scroll-view class="tab" scroll-anchoring scroll-x scroll-into-view="{{ detail }}" scroll-with-animation="{{true}}">
+        <block wx:for="{{tabs}}" wx:key="*this">
+          <view id="{{'d'+index}}" class="{{active==index?'title active':'title'}}" bindtap="changeTab" data-index="{{index}}">{{item}}</view>
+        </block>
+      </scroll-view>
+    </view>
+  </van-sticky>
+
+</view>
+<scroll-view>
+  <view wx:if="{{active==0}}">
+    <block wx:for="{{arr0}}" wx:key="*this">
+      <van-cell title="{{item}}" is-link data-index="{{index}}" bindtap="detialfn" />
+    </block>
+  </view>
+</scroll-view>
+
+<view wx:if="{{active==1}}"></view>

@@ -36,6 +36,7 @@ Page({
     waitArr: [], //待审模板
     isDel: false,
     arrIndex: 0,
+    detail: "d0"
   },
   onClickLeft() {
     wx.showToast({
@@ -47,20 +48,24 @@ Page({
   changeTab(e) {
     let tabs = this.data.tabs
     let index = e.currentTarget.dataset.index;
-    this.setData({
-      active: e.currentTarget.dataset.index,
-      tab: tabs[index].title
-    })
     if (index == 3) {
       wx.navigateTo({
         url: '/pakA/pages/systemModel/systemModel'
       })
+      return
     }
     if (index == 4) {
       wx.navigateTo({
         url: '/pakA/pages/otherModel/otherModel'
       })
+      return
     }
+    this.setData({
+      active: e.currentTarget.dataset.index,
+      tab: tabs[index].title,
+      detail: 'd' + (index - 1)
+    })
+
 
   },
   addHd() {
@@ -93,12 +98,12 @@ Page({
   sureDel() {
     let active = this.data.active;
     let index = this.data.arrIndex;
-    let tabarr=[];
-    let waitarr=[];
+    let tabarr = [];
+    let waitarr = [];
     if (active == 0) {
       tabarr = this.data.tabArr;
       console.log(tabarr)
-      tabarr.splice(index,1)
+      tabarr.splice(index, 1)
       this.setData({
         tabArr: tabarr,
       })
@@ -106,14 +111,14 @@ Page({
       waitarr = this.data.waitArr;
       waitarr.splice(index, 1)
       this.setData({
-        waitArr:waitarr,
+        waitArr: waitarr,
       })
     }
     this.setData({
       show: false
     })
   },
-  onloadmodel(){
+  onloadmodel() {
     wx.navigateTo({
       url: '/pakA/pages/sendModel/sendModel',
     })
@@ -123,19 +128,19 @@ Page({
    */
   onLoad: function (options) {
     console.log(options)
-    let tabs = this.data.tabs
-    let index = this.options.activeIndex
-    let title = options.value;
-    let date = options.date;
-    let waitObj = {
-      title,
-      modelnum: "36456465466546",
-      date,
-      modelv: "v2"
-    }
-    let waitArr = this.data.waitArr
-    waitArr.unshift(waitObj)
-    if (options) {
+    if (options == {}) {
+      let index = this.options.activeIndex
+      let title = options.value;
+      let date = options.date;
+      let waitObj = {
+        title,
+        modelnum: "36456465466546",
+        date,
+        modelv: "v2"
+      }
+      let tabs = this.data.tabs
+      let waitArr = this.data.waitArr
+      waitArr.unshift(waitObj)
       this.setData({
         arrIndex: index,
         tab: tabs[index].title,

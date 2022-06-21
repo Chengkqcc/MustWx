@@ -29,14 +29,14 @@
     "compileHotReLoad": true,
     "lazyloadPlaceholderEnable": false,
     "useMultiFrameRuntime": true,
-    "useApiHook": true,
-    "useApiHostProcess": true,
+    "useApiHook": false,
+    "useApiHostProcess": false,
     "babelSetting": {
       "ignore": [],
       "disablePlugins": [],
       "outputPath": ""
     },
-    "useIsolateContext": true,
+    "useIsolateContext": false,
     "userConfirmedBundleSwitch": false,
     "packNpmManually": true,
     "packNpmRelationList": [
@@ -78,17 +78,26 @@
   "enhance": true,
   "useMultiFrameRuntime": true,
   "showShadowRootInWxmlPanel": true,
-  "packNpmManually": false,
-  "packNpmRelationList": [],
-  "minifyWXSS": true,
   "showES6CompileOption": false,
   "checkInvalidKey": true,
   "compileHotReLoad": true,
+  "useApiHook": false,
+  "useApiHostProcess": false,
   "babelSetting": {
     "ignore": [],
     "disablePlugins": [],
     "outputPath": ""
   },
+  "useIsolateContext": false,
+  "userConfirmedBundleSwitch": false,
+  "packNpmManually": true,
+  "packNpmRelationList": [
+    {
+      "packageJsonPath": "./package.json",
+      "miniprogramNpmDistDir": "./"
+    }
+  ],
+  "minifyWXSS": true,
   "disableUseStrict": false,
   "useCompilerPlugins": false,
   "condition": {}

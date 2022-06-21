@@ -1,0 +1,156 @@
+<!--pages/contractPage/contractPage.wxml-->
+<view class="contractPageWrap">
+    <view class="contractPage">
+        <view class="nav">
+            <view class="icon">
+                <van-icon name="arrow-left" color="#aaa" size="20px" bindtap="back"/>
+            </view>
+            <view class="text">
+                <text>{{text}}</text>
+            </view>
+        </view>
+        <!-- 如何通知对方签署合同？ -->
+        <view class="inform" wx:if="{{inform}}">
+            <view class="content">
+                <view class="top">
+                    <view class="title">假设一份合同需要您和张三签字，需要在签署人中填写张三的手机号和姓名，在发起合同之后，张三可以收到短信，张三点击短信即可对合同签字或盖章。</view>
+                    <view class="img">
+                        <image src="https://oss2.1dq.com/app/static/help/otherPartyToSign/0.png"/>
+                    </view>
+                    <view class="text">如果对方未收到短信或邮件，可通过下方几种方法签署合同 </view>
+                </view>
+                <view class="method">
+                    <!-- 方法一 -->
+                    <view class="methodOne">
+                        <view class="title">方法一、使用支付宝签署</view>
+                        <view class="text">
+                            打开支付宝，在顶部搜索框 搜索 <text>一定签</text>
+                            打开小程序后，使用对方的手机号或邮箱登录，即可签署合同
+                        </view>
+                        <view class="img">
+                            <image src="https://oss2.1dq.com/app/static/help/otherPartyToSign/2.png"/>
+                            <image src="https://oss2.1dq.com/app/static/help/otherPartyToSign/3.png"/>
+                        </view>
+                    </view>
+                    <!-- 方法二 -->
+                    <view class="methodOne">
+                        <view class="title">方法二、通过签署链接签署</view>
+                        <view class="text">
+                            点击底部合同选项卡，进入合同详情页面，选择复制签署链接，发送给对方，对方点击链接即可签署
+                        </view>
+                        <view class="img">
+                            <image src="https://oss2.1dq.com/app/static/help/otherPartyToSign/1.png"/>
+                        </view>
+                    </view>
+                    <!-- 方法三 -->
+                    <view class="methodOne">
+                        <view class="title">方法三、使用微信签署</view>
+                        <view class="text">
+                            打开微信，在顶部搜索框 搜索 <text>一定签</text>
+                            打开小程序后，使用对方的手机号或邮箱登录，即可签署合同
+                        </view>
+                        <view class="img">
+                            <image src="https://oss2.1dq.com/app/static/help/otherPartyToSign/4.png"/>
+                            <image src="https://oss2.1dq.com/app/static/help/otherPartyToSign/5.png"/>
+                        </view>
+                    </view>
+                    <!-- 方法四 -->
+                    <view class="methodOne">
+                        <view class="title">方法四、使用QQ签署</view>
+                        <view class="text">
+                            打开QQ，在顶部搜索框 搜索 <text>一定签</text>
+                            打开小程序后，使用对方的手机号或邮箱登录，即可签署合同
+                        </view>
+                        <view class="img">
+                            <image src="https://oss2.1dq.com/app/static/help/otherPartyToSign/6.png"/>
+                            <image src="https://oss2.1dq.com/app/static/help/otherPartyToSign/7.png"/>
+                        </view>
+                    </view>
+                     <!-- 方法五 -->
+                    <view class="methodOne">
+                        <view class="title">方法五、使用电脑签署</view>
+                        <view class="text">
+                            使用电脑登录  <text>1DQ.COM</text>
+                             ，使用对方的手机号或邮箱登录，即可签署合同
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <!-- 文件预览 -->
+        <view class="file" wx:if="{{file}}">
+            <view class="img">
+                <image src="../../images/contract/contract.png"/>
+            </view>
+        </view>
+
+        <!-- 修改备注 -->
+        <view class="amend" wx:if="{{amend}}">
+            <view class="title">请输入备注</view>
+            <view class="content">
+                <input placeholder="备注只有您和您企业的同时能查看" value="{{inputValue}}" bindinput="changeInput"></input>
+            </view>
+
+            <view class="btn" bindtap="keep"><van-button block color="#E54D42">保存</van-button></view>
+
+            <view class="keep" wx:if="{{keep}}">备注保存成功</view>
+        </view>
+        <!-- 签署合同 -->
+        <view class="sign" wx:if="{{sign}}">
+            <view class="content">
+                <view class="img" bindtap="seal">
+                    <view class="number">1/1</view>
+                    <image wx:if='{{true}}'  src="../../images/contract/contract.png"/>
+                    <view class="icon">
+                        <view><van-icon name="expand-o" color="#aaa" size="20px"/></view>
+                        <view><van-icon name="arrow-down" color="#aaa" size="20px"/></view>
+                    </view>
+                </view>
+                <view class="seal">
+                    <view class="sealContent">
+                        <text>在页面点击需要盖章的位置，添加印章</text>
+                        <view class="icon">
+                            <van-icon name="cross" />
+                        </view>
+                    </view>
+                </view>
+                <view class="bottom">
+                    <view bindtap="seal">
+                        <van-icon name="add-o" size="25px"/>
+                        <text>印章</text>
+                    </view>
+                    <view bindtap="signature">
+                        <van-icon name="edit" size="25px"/>
+                        <text>签字</text>
+                    </view>
+                    <view bindtap="date">
+                        <van-icon name="newspaper-o" size="25px"/>
+                        <text>日期</text>
+                    </view>
+                    <van-button color="#E54D42" bindtap="confirm">确定签署</van-button>
+                </view>
+            </view>
+        </view>
+        <!-- 个人印章弹出层 -->
+        <van-popup show="{{ sealShow }}" bind:close="closeSeal" position="bottom" overlay-style="opacity:0.5" closeable="{{true}}"  custom-class="sealPopup">
+            <view class="content">
+                <view class="nav">
+                    <view class="title">个人印章</view>
+                </view>
+                <view class="addSeal">
+                    <view class="item" bindtap="jumpSealManage">
+                        <view class="img"><image src="https://oss2.1dq.com/app/static/images/sealAdd.jpg"/></view>
+                        <view class="text">添加签名</view>
+                    </view>
+                    <block wx:for="{{signature}}">
+                        <view wx:if="{{item.type}}" class="item">
+                            <view class="img"><image src="{{item.imgsrc}}"/></view>
+                            <view class="text">{{item.time}}</view>
+                        </view>
+                    </block>
+
+                </view>
+            </view>
+        </van-popup>
+    </view>
+</view>

@@ -6,8 +6,8 @@
     </van-cell-group>
 </view>
 <view class="cell_item">
-    <van-cell-group>
-        <van-cell title-style="font-weight:bold">
+    <van-cell-group wx:if="{{pagestate}}">
+        <van-cell title-style="font-weight:bold" >
             <view slot="title" class="pailie">
                 <view class="van-cell-text">文件</view>
             </view>
@@ -17,10 +17,23 @@
             <view slot="title" style="display: flex;">
                 <van-icon name="orders-o" />
                 <view class="van-cell-text" style="margin-left: 10rpx;"> {{choose_files.name}}</view>
+                <van-icon name="send-gift-o" />
+                <view class="van-cell-text" style="margin-left: 10rpx;"> {{choose_files.name?choose_files.name : "照片"}}</view>
             </view>
             <van-checkbox wx:if="{{choose_files.type == 'file'}}" slot="right-icon" value="{{checked}}" checked-color="#929292" shape="square" bind:change="onChange">
             </van-checkbox>
         </van-cell>
+        <block wx:for="{{FuFilesArr}}" key="item.path">
+            <van-cell>
+                <view slot="title" style="display: flex;overflow: hidden;">
+                    <van-icon name="orders-o" />
+                    <view class="van-cell-text" style="margin-left: 10rpx;overflow: hidden;font-size: 28rpx;white-space: nowrap;text-overflow: ellipsis;width: 400rpx;"> {{item.name?item.name:"照片"}}</view>
+                    <!-- <view class="futips">附件</view> -->
+                    <van-tag type="danger" color="#eaeaea" text-color="#8e959b">附件</van-tag>
+                </view>
+                <van-icon name="cross" slot="right-icon" class="slot-right" bindtap="delFu" data-pth="{{item.path}}" />
+            </van-cell>
+        </block>
         <van-cell>
             <view slot="title" style="display: flex;">
                 <van-icon name="add" />
@@ -53,23 +66,123 @@
 </view>
 <view class="cell_item">
     <van-cell-group>
-        <van-cell title="其他设置" title-style="font-weight:bold">
-            <van-icon slot="right-icon" name="plus" class="custom-icon" bindtap="" />
+        <van-cell title="其他设置" title-style="font-weight:bold" wx:if="{{pagestate}}">
+            <van-icon slot="right-icon" name="{{chooseicon}}"  class="custom-icon"  bindtap="changeS" />
         </van-cell>
-        <van-cell>
-            <view slot="title">
-                <view class="van-cell-text">签署证书</view>
-            </view>
-            <view slot="right-icon">
-                <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
-                    <view class="picker">
-                        {{array[index]}}
-                    </view>
-                </picker>
-                <van-icon name="arrow" />
-            </view>
-        </van-cell>
+        <view wx:if="{{state}}">
+            <van-cell>
+                <view slot="title">
+                    <view class="van-cell-text">签署证书</view>
+                </view>
+                <view slot="right-icon" style="display: flex;">
+                    <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+                        <view class="picker">
+                            {{array[index]}}
+                        </view>
+                    </picker>
+                    <!-- <van-picker columns="{{ columns }}" bind:change="onChange" /> -->
+                    <van-icon name="arrow" />
+                </view>
+            </van-cell>
+            <van-cell>
+                <view slot="title">
+                    <view class="van-cell-text">存证方式</view>
+                </view>
+                <view slot="right-icon" style="display: flex;">
+                    <picker bindchange="bindPickerChange1" value="{{index1}}" range="{{array1}}">
+                        <view class="picker">
+                            {{array1[index1]}}
+                        </view>
+                    </picker>
+                    <!-- <van-picker columns="{{ columns }}" bind:change="onChange" /> -->
+                    <van-icon name="arrow" />
+                </view>
+            </van-cell>
+            <van-cell>
+                <view slot="title">
+                    <view class="van-cell-text">自动添加签署日期格式</view>
+                </view>
+                <view slot="right-icon" style="display: flex;">
+                    <picker bindchange="bindPickerChange2" value="{{index2}}" range="{{array2}}">
+                        <view class="picker">
+                            {{array2[index2]}}
+                        </view>
+                    </picker>
+                    <!-- <van-picker columns="{{ columns }}" bind:change="onChange" /> -->
+                    <van-icon name="arrow" />
+                </view>
+            </van-cell>
+            <van-cell>
+                <view slot="title">
+                    <view class="van-cell-text">签署截止日期</view>
+                </view>
+                <view slot="right-icon" style="display: flex;">
+                    <picker mode="date" value="{{date}}" start="{{myDate}}" end="2099-12-31" bindchange="bindDateChange">
+                        <view class="picker">
+                            {{startdate?startdate : '长期'}}
+                        </view>
+                    </picker>
+                    <!-- <van-picker columns="{{ columns }}" bind:change="onChange" /> -->
+                    <van-icon name="arrow" />
+                </view>
+            </van-cell>
+            <van-cell>
+                <view slot="title">
+                    <view class="van-cell-text">文件到期日期</view>
+                </view>
+                <view slot="right-icon" style="display: flex;">
+                    <picker mode="date" value="{{date}}" start="{{myDate}}" end="2099-12-31" bindchange="bindDateChange1">
+                        <view class="picker">
+                            {{startdate1?startdate1 : '长期'}}
+                        </view>
+                    </picker>
+                    <!-- <van-picker columns="{{ columns }}" bind:change="onChange" /> -->
+                    <van-icon name="arrow" />
+                </view>
+            </van-cell>
+            <van-cell>
+                <view slot="title">
+                    <view class="van-cell-text">按顺序签署</view>
+                </view>
+                <view slot="right-icon">
+                    <switch color="#d35849" checked="{{switchChecked}}" />
+                </view>
+            </van-cell>
+            <van-cell>
+                <view slot="title">
+                    <view class="van-cell-text">自动通知签署人</view>
+                </view>
+                <view slot="right-icon">
+                    <switch color="#d35849" checked="{{switch1Checked}}" />
+                </view>
+            </van-cell>
+            <van-cell>
+                <view slot="title">
+                    <view class="van-cell-text">合同检验二维码</view>
+                </view>
+                <view slot="right-icon">
+                    <switch color="#d35849" checked="{{switch2Checked}}" />
+                </view>
+            </van-cell>
+            <van-cell>
+                <view slot="title">
+                    <view class="van-cell-text">允许对方上传附件</view>
+                </view>
+                <view slot="right-icon">
+                    <switch color="#d35849" checked="{{switch3Checked}}" />
+                </view>
+            </van-cell>
+        </view>
+
     </van-cell-group>
+</view>
+<view class="bot_btns">
+    <button class="edit">编辑文件</button>
+    <button class="submit">发起合同</button>
+</view>
+<view class="quick" bindtap="changePS">
+    切换到{{bottext}}版
+    <van-icon name="arrow" />
 </view>
 <van-action-sheet show="{{ show }}" actions="{{ actions[_index] }}" bind:close="onClose" bind:select="onSelect" cancel-text="取消" />
 <!-- <view class='camera' wx:if="{{isAuth}}">

@@ -1,0 +1,32 @@
+.allmodel {
+  width: 100%;
+  height: 100vh;
+  background: #e1e1e1;
+}
+.tabbar-btns {
+  position: fixed;
+  width: 100%;
+  height: 150rpx;
+  padding: 10rpx  20rpx 10rpx 0;
+  padding-bottom: 0;
+  background: #fff;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+}
+.tabbar-btns .addEdit {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+.tabbar-btns .addEdit .add,.tabbar-btns .addEdit .edit{
+  padding-right: 20rpx;
+  margin-left: 60rpx;
+  border-right: 1rpx solid #e1e1e1;
+}
+.usemodel button {
+  padding: 18rpx 50rpx;
+  background: #E54D42;
+  color: #fff;
+  border-radius: 0;
+}
