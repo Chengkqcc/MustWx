@@ -12,13 +12,13 @@ Page({
         sealProp: false, //控制自定义印章弹出层的显示和隐藏
         photoAlbum: false,//控制从相册选取图片弹出层的显示和隐藏
         delSeal: false,//删除印章弹出层
+        systemPrompt: false,//控制系统提示弹出层的显示和隐藏
         index: "",
-        // from: "",
     },
     // 返回上一级
     back() {
         wx.redirectTo({
-            url: '../contractPage/contractPage',
+            url: '../contractPage/contractPage?sealShow=true',
         })
     },
     // 点击添加签名
@@ -164,6 +164,19 @@ Page({
             delSeal: false
         })
         wx.setStorageSync('sealArr', arr)
+    },
+
+    // 点击个人印章右边的图标
+    prompt() {
+        this.setData({
+            systemPrompt: true
+        })
+    },
+    // 改变系统提示
+    closePrompt() {
+        this.setData({
+            systemPrompt: false
+        })
     },
     /**
      * 生命周期函数--监听页面加载

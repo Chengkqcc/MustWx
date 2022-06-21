@@ -102,7 +102,7 @@
          </view>
         <!-- 体验签署电子合同 -->
          <view class="contractList" wx:if="{{experience}}">
-            <block wx:for="{{allConstract}}">
+            <block>
                 <view class="contractItem">
                     <view class="contractLeft">
                          <view class="img">
@@ -110,8 +110,8 @@
                             <image src="../../images/contract/contract.jpg"/>
                          </view>
                          <view class="info" bindtap="operate" data-index="0">
-                            <view class="title">{{item.title}}</view>
-                            <view class="text">{{item.text}}</view>
+                            <view class="title">{{experienceFile.title}}</view>
+                            <view class="text">{{experienceFile.text}}</view>
                          </view>
                     </view>
                     <view class="contractRight">

@@ -7,7 +7,11 @@
         </view>
         <view>
             <label>密码</label>
-            <input type="text" placeholder="请输入您的登录密码" model:value="{{psd}}"/>
+            <view class="pwdInput">
+                <input type="text" placeholder="请输入您的登录密码" model:value="{{psd}}" password="{{flag}}"/>
+                <view class="icon" bind:tap="eye" data-index="0"><van-icon wx:if="{{icon1}}" name="closed-eye"  size="25px" /></view>
+                <view class="icon" bind:tap="eye" data-index="1"><van-icon wx:if="{{icon2}}" name="eye-o"  size="25px"  /></view>
+            </view>
         </view>
     </form>
     <view class="notice">

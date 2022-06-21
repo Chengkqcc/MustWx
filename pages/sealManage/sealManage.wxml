@@ -10,7 +10,10 @@
     </view>
 
     <view class="content">
-        <view class="title">个人印章</view>
+        <view class="title">
+            个人印章
+            <van-icon name="info-o" size="20px" bindtap="prompt"/>
+        </view>
         <view class="addSeal">
             <view class="item" bindtap="addSignature">
                 <view class="top">
@@ -83,6 +86,17 @@
             </view>
             <view class="img"><image src="https://oss2.1dq.com/app/static/images/seal-demo.png"/></view>
             <view class="btnWrap"><van-button color="#0081FF" bindtap="photoAlbumClose">我知道了</van-button></view>
+       </view>
+    </van-popup>
+
+    <!-- 系统提示（点击个人印章）弹出层 -->
+    <van-popup show="{{ systemPrompt }}" bind:close="closePrompt" closeable="true" overlay="{{false}}" custom-class="systemPrompt">
+       <view class="content">
+            <view class="title">系统提示</view>
+            <view class="text">个人模板印章与签名具备同样的法律效力</view>
+            <view class="btn">
+                <van-button color="#07C160" bindtap="closePrompt">确定</van-button>
+            </view>
        </view>
     </van-popup>
 </view>

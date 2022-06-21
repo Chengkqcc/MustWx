@@ -19,7 +19,7 @@
                     </view>
                     <view>
                         <text>签署状态</text>
-                        <view>待我签署</view>
+                        <view>{{state}}</view>
                     </view>
                     <view>
                         <text>发起时间：</text>
@@ -107,7 +107,7 @@
                     </view>
                     <view class="contentRight">
                         <view class="contentTop">
-                            <text>166500164028 查阅了合同</text>
+                            <text>16650016402 查阅了合同</text>
                             <view>2022-06-12 20:34:45</view>
                         </view>
                         <view class="contentBottom">
@@ -119,7 +119,7 @@
             </view>
         </view>
         <!-- 去签署合同 -->
-        <view class="signContract">
+        <view class="signContract" wx:if="{{signContract}}">
             <view class="left" bindtap="showPopup">
                 <van-icon name="records" color="#333" size="24px"/>
                 <text>拒签</text>
@@ -128,6 +128,13 @@
                 <van-button color="#E54D42" block>去签署该合同</van-button>
             </view>
         </view>
+        <!-- 返回文件管理 -->
+        <view class="backContract" wx:if="{{backContract}}">
+            <view class="btn">
+                <van-button color="#E54D42" bindtap="backContract">返回文件管理</van-button>
+            </view>
+        </view>
+
         <!-- 合同的文件信息 -->
         <van-popup show="{{fileShow}}" closeable="{{true}}" bind:close="closeFile" custom-class="fileWrap" overlay="{{false}}">
             <view class="infoContent">
@@ -156,6 +163,20 @@
                 <view class="btn">
                     <view  bindtap="confirm"><van-button color="#07C160" block>确定</van-button></view>
                     <view bindtap="cancel"><van-button color="#07C160" plain block >取消</van-button></view>
+                </view>
+            </view>
+        </van-popup>
+
+        <!-- 点击拒签弹出层的确定按钮会出现的内容 -->
+        <van-popup show="{{refusal}}" bind:close="closeRefusal" overlay="{{false}}" overlay-style="opacity:0.5" custom-class="refusalProp">
+            <view class="content">
+                <view class="title">
+                    <text>{{title}}</text>
+                    <van-icon name="cross" bindtap="hintConfirm"/>
+                </view>
+                <view class="text">{{text}}</view>
+                <view class="btn">
+                    <van-button color="#07C160" bindtap="hintConfirm">{{btnText}}</van-button>
                 </view>
             </view>
         </van-popup>

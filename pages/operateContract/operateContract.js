@@ -10,7 +10,14 @@ Page({
         show: false,
         fileShow: false,//控制文件信息弹出层的显示和隐藏
         commentShow: false, //控制合同备注弹出层的显示和隐藏
-        comment: ""//备注的内容
+        comment: "",//备注的内容
+        refusal: false,
+        title: "系统提示",
+        text: "该合同已经被签署人拒签，无法再签署",
+        btnText: "确定",
+        signContract: true,
+        backContract: false,
+        state: "待我签署"
     },
     showPopup() {
         this.setData({ show: true });
@@ -26,12 +33,41 @@ Page({
     },
     // 点击拒签的确定
     confirm() {
-        console.log("确定")
+        this.setData({
+            show: false,
+            refusal: true
+        })
+    },
+    closeRefusal() {
+        this.setData({
+            refusal: false
+        })
     },
     // 点击拒签的取消
     cancel() {
         this.setData({
             show: false
+        })
+    },
+    // 点击拒签弹出层的去掉按钮
+    hintConfirm() {
+
+        let text = wx.getStorageSync('text')
+        if (text == "已拒签") {
+            this.setData({
+                refusal: false,
+            })
+        } else {
+            wx.reLaunch({
+                url: '../contract/constract',
+            })
+            wx.setStorageSync('text', "已拒签")
+        }
+    },
+    // 点击返回文件管理
+    backContract() {
+        wx.reLaunch({
+            url: '../contract/constract',
         })
     },
     // 跳转到合同操作的具体页面
@@ -78,12 +114,26 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
+        // 0代表合同详情页，1代表二维码页面
         let index = options.index;
+        let text = wx.getStorageSync('text')
         if (index == "0") {
             this.setData({
                 detailContract: true,
                 qrCode: false
             })
+
+            if (text == "已拒签") {
+                this.setData({
+                    refusal: true,
+                    title: "签署提示",
+                    text: "本合同已拒签，不能再签署",
+                    btnText: "我知道了",
+                    state: text,
+                    signContract: false,
+                    backContract: true,
+                })
+            }
         } else if (index == "1") {
             this.setData({
                 detailContract: false,

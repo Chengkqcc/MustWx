@@ -26,6 +26,8 @@
         .title {
             padding: 15px;
             color: #aaa;
+            display: flex;
+            justify-content: space-between;
         }
 
         .addSeal {
@@ -242,6 +244,38 @@
             button {
                 width: 100px;
                 border-radius: 5px;
+            }
+        }
+    }
+
+    // 系统提示弹出层
+    .systemPrompt {
+        width: 80%;
+        padding-bottom: 15px;
+        box-shadow: 4rpx 4rpx 8rpx 4rpx rgba(0, 0, 0, 0.5);
+
+        .content {
+            box-sizing: border-box;
+            text-align: center;
+
+
+            .title {
+                color: #333;
+            }
+
+            .text {
+                padding: 40px 20px;
+                font-size: 14px;
+            }
+
+            .btn {
+                padding-bottom: 30px;
+
+                button {
+                    width: 110px;
+                    height: 30px;
+                    border-radius: 5px;
+                }
             }
         }
     }
