@@ -38,6 +38,7 @@ Page({
    // 页面初始化
    initPage() {
       let companiesList = wx.getStorageSync('companiesList');
+      // console.log(companiesList)
       if (companiesList.length > 0) {
          wx.setStorageSync('hasData', true);
       } else {
@@ -54,10 +55,25 @@ Page({
     * 生命周期函数--监听页面加载
     */
    onLoad(options) {
+      // 更新企业认证状态
+      console.log('options',options)
+      if(JSON.stringify(options) == "{}") return // 为空对象就不执行
+      let companiesList = wx.getStorageSync('companiesList');// 获取当前本地存储已添加的公司列表
+      console.log('companiesList',companiesList)
+      let arr = companiesList.filter((item, index) => {
+         if(options.company === item.company) {
+            item.rzState = true
+         }
+         return item
+      })
+      console.log('过滤后',arr)
+      console.log(options, arr)
+      wx.setStorageSync('companiesList', arr)
       // 页面初始化
       this.initPage()
    },
 
+   // 下拉刷新函数
    onRefresh: function () {
       //导航条加载动画
       wx.showNavigationBarLoading()
@@ -66,7 +82,7 @@ Page({
          title: '加载中...',
       })
       console.log("下拉刷新啦");
-      setTimeout(() =>{
+      setTimeout(() => {
          wx.hideLoading();
          wx.hideNavigationBarLoading();
          //停止下拉刷新
@@ -89,7 +105,7 @@ Page({
     * 生命周期函数--监听页面显示
     */
    onShow() {
-
+      this.initPage()
    },
 
    /**

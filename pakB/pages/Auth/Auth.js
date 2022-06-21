@@ -5,27 +5,29 @@ Page({
     * 页面的初始数据
     */
    data: {
-      company:''
+      company: '',
+      rzState: false,
    },
    //   删除该企业
    deletefn() {
       let companiesList = wx.getStorageSync('companiesList');
-      let arr = companiesList.filter((item)=>{
-         if(item !== this.data.company) return item
+      let arr = companiesList.filter((item) => {
+         if (item.company !== this.data.company) return item
       })
       console.log(arr)
-      wx.setStorageSync('companiesList',arr)
+      wx.setStorageSync('companiesList', arr)
+
       wx.showModal({
          content: '企业删除成功',
          showCancel: false,
-         success (res) {
+         success(res) {
             if (res.confirm) {
-              console.log('用户点击确定')
-              wx.navigateTo({
-                 url: '/pakB/pages/bm/bm'
-              });
+               console.log('用户点击确定')
+               wx.navigateTo({
+                  url: '/pakB/pages/bm/bm'
+               });
             }
-          }
+         }
       })
    },
 
@@ -33,8 +35,10 @@ Page({
     * 生命周期函数--监听页面加载
     */
    onLoad(options) {
+      console.log(options)
       this.setData({
-         company:options.name
+         company: options.company,
+         rzState: options.rzState
       })
    },
 

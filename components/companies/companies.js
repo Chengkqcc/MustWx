@@ -71,6 +71,8 @@ Component({
          this.setData({
             company: event.target.dataset.company
          })
+         // 关闭联想框
+         this.closed()
       },
       // 下一步按钮
       addBtn() {
@@ -79,7 +81,10 @@ Component({
             return
          }
          let arr = wx.getStorageSync('companiesList') || [];
-         arr.push(this.data.company)
+         arr.push({
+            company:this.data.company,
+            rzState:false
+         })
          wx.setStorageSync('companiesList', arr)
 
          wx.nextTick(() => {
@@ -98,7 +103,7 @@ Component({
          setTimeout(() => {
             wx.hideLoading()
             wx.navigateTo({
-               url: '/pakB/pages/Auth/Auth?name=' + this.data.company
+               url: '/pakB/pages/Auth/Auth?company=' + this.data.company
             });
          }, 1500)
       },
