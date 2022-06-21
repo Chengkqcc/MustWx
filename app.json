@@ -58,7 +58,10 @@
     "templates/Chao/Chao",
     "templates/xieyi/smrzsqxy/smrzsqxy",
     "templates/xieyi/szzsslxy/szzsslxy",
-    "templates/xieyi/yhysxy/yhysxy"
+    "templates/xieyi/yhysxy/yhysxy",
+    "pages/fillContract/fillContract",
+    "pages/sealManage/sealManage",
+    "pages/signatureDetailPage/signatureDetailPage"
   ],
   "subpackages": [
     {
@@ -84,6 +87,7 @@
       "pages": [
         "pages/home/home",
         "pages/mine/mine",
+<<<<<<< HEAD
         "pages/usersetting/usersetting",
         "pages/yijianfankui/yijianfankui",
         "pages/guanyuwomen/guanyuwomen",

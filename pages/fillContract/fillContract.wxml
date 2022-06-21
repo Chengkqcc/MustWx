@@ -1,0 +1,5 @@
+<!--pages/fillContract/fillContract.wxml-->
+<!-- 填写合同 -->
+<view class="fillContract">
+    <image src="{{imgsrc}}"/>
+</view>

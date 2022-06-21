@@ -188,16 +188,26 @@
 
             .content {
                 padding-bottom: 10px;
-                display: flex;
-                justify-content: center;
-                align-items: flex-end;
 
-                text {
-                    font-size: 14px;
-                    color: #0081ff;
-                    margin-left: 5px;
+                .text {
+                    padding: 15px;
+                    color: #aaa;
+                }
+
+                .amendComment {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    text {
+                        font-size: 14px;
+                        color: #0081ff;
+                        margin-left: 5px;
+                    }
                 }
             }
+
+
         }
 
         // 流程信息
@@ -262,6 +272,7 @@
         box-sizing: border-box;
         width: 100vw;
         padding: 5px 0 5px 15px;
+        background: #f7f7f7;
         border-top: 1px solid #e6e6e6;
         position: absolute;
         bottom: 0;
@@ -289,7 +300,7 @@
 
     // 拒签
     .refusalWrap {
-        width: 75%;
+        width: 80%;
         height: 37%;
         box-shadow: 4rpx 4rpx 8rpx 4rpx rgba(0, 0, 0, 0.5);
 
@@ -326,11 +337,31 @@
         }
     }
 
-    // .refusal {
-    //     b
-    // }
+    // 文件信息的弹出层
+    .fileWrap {
+        box-sizing: border-box;
+        width: 80%;
+        padding: 15px 15px 45px;
+        box-shadow: 4rpx 4rpx 8rpx 4rpx rgba(0, 0, 0, 0.5);
 
+        .infoContent {
+            .text {
+                text-align: center;
+                padding: 55px 0;
+                font-size: 14px;
+            }
 
+            .btn {
+                display: flex;
+                justify-content: center;
+
+                button {
+                    width: 115px;
+                    height: 30px;
+                }
+            }
+        }
+    }
 }
 
 // 二维码

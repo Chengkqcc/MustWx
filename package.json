@@ -10,7 +10,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@vant/weapp": "^1.10.3"
+    "@vant/weapp": "^1.10.3",
+    "image-cropper": "^1.0.1"
   },
   "devDependencies": {},
   "repository": {
