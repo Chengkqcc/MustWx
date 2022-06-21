@@ -28,7 +28,7 @@
     "uploadWithSourceMap": true,
     "compileHotReLoad": true,
     "lazyloadPlaceholderEnable": false,
-    "useMultiFrameRuntime": false,
+    "useMultiFrameRuntime": true,
     "useApiHook": false,
     "useApiHostProcess": false,
     "babelSetting": {
@@ -50,7 +50,8 @@
     "minifyWXML": true,
     "showES6CompileOption": false,
     "useCompilerPlugins": false,
-    "ignoreUploadUnusedFiles": true
+    "ignoreUploadUnusedFiles": true,
+    "useStaticServer": true
   },
   "editorSetting": {
     "tabIndent": "insertSpaces",
@@ -60,15 +61,6 @@
   "libVersion": "2.19.4",
   "appid": "wxb477562d764bed06",
   "projectname": "wxmust",
-  "debugOptions": {
-    "hidedInDevtools": []
-  },
-  "scripts": {},
-  "staticServerOptions": {
-    "baseURL": "",
-    "servePath": ""
-  },
-  "isGameTourist": false,
   "simulatorType": "wechat",
   "simulatorPluginLibVersion": {},
   "ignoreUploadUnusedFiles": true,
