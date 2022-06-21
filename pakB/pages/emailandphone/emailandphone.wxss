@@ -1,0 +1,9 @@
+page {
+  background-color: #f1f1f1;
+}
+.emailandphone {
+  padding-top: 15px;
+}
+.emailandphone .btn {
+  padding: 20px 15px;
+}

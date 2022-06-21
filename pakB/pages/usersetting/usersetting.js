@@ -39,7 +39,13 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-
+      console.log(options);
+      // title 有值 是从修改邮箱或手机号页面 跳转过来的
+      if(options.title){
+        wx.showToast({
+          title: options.title,
+        })
+      }
     },
 
     /**

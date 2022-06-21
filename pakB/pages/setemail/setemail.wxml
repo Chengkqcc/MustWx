@@ -10,3 +10,4 @@
     <van-button color="#E54D42" block bind:click="getcode_fn">获取验证码</van-button>
   </view>
 </view>
+<yanzhengma show="{{show}}" url="{{url}}"/>

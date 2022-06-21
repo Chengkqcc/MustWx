@@ -6,18 +6,23 @@ Page({
      */
     data: {
       phone:'填写手机号',
-      name:''
+      name:'',
+      show:false,
+      url:'',//跳转 的路径
     },
     // methods
     getcode_fn(){
       console.log('获取验证码');
       let name = this.data.name;
+      let url = this.data.url;
       console.log(name);
+      this.setData({show:true})
       if(name=='email'){
-
-      }else{
-        
+        url = '/pakB/pages/emailandphone/emailandphone?name=email'
+      }else if(name=='phone'){
+        url = '/pakB/pages/emailandphone/emailandphone?name=phone'
       }
+      this.setData({url})
     },
     /**
      * 生命周期函数--监听页面加载

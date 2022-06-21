@@ -1,0 +1,17 @@
+<!--pakB/pages/emailandphone/emailandphone.wxml-->
+<view class="emailandphone">
+  <view class="input">
+    <van-field
+      label="{{name=='email'?'邮箱':'手机号'}}"
+      value="{{ value }}"
+      placeholder="{{name=='email'?'请输入您的邮箱':'请输入您的手机号'}}"
+      border="{{ false }}"
+      type="{{name=='email'?'email':'number'}}"
+      bind:change="onChange"
+    />
+  </view>
+  <view class="btn">
+    <van-button color="#E54D42" block bind:click="set_fn">下一步</van-button>
+  </view>
+</view>
+<yanzhengma show="{{show}}" url="{{url}}" number="{{number}}" /> 

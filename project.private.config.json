@@ -1,156 +1,39 @@
 {
-  "setting": {},
-  "condition": {
-    "miniprogram": {
-      "list": [
-        {
-          "name": "",
-          "pathName": "pages/index/index",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
+    "setting": {},
+    "condition": {
+        "plugin": {
+            "list": []
         },
-        {
-          "name": "",
-          "pathName": "pakA/pages/Mymodel/mymodel",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
+        "game": {
+            "list": []
         },
-        {
-          "name": "",
-          "pathName": "pakA/pages/systemModel/systemModel",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
+        "gamePlugin": {
+            "list": []
         },
-        {
-          "name": "",
-          "pathName": "pakA/pages/sendModel/sendModel",
-          "query": "",
-          "scene": null,
-          "launchMode": "default"
-        },
-        {
-          "name": "",
-          "pathName": "pakB/pages/dianziqianzhang/dianziqianzhang",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "",
-          "pathName": "pakB/pages/falvfuwu/falvfuwu",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "",
-          "pathName": "pakB/pages/youhuiquan/youhuiquan",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "",
-          "pathName": "pakB/pages/dingdanguanli/dingdanguanli",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "",
-          "pathName": "pakA/pages/Mymodel/mymodel",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "",
-          "pathName": "pakA/pages/systemModel/systemModel",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "",
-          "pathName": "pakA/pages/sendModel/sendModel",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "",
-          "pathName": "pakA/pages/systemModel/systemModel",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "",
-          "pathName": "pakA/pages/otherModel/otherModel",
-          "query": "",
-          "scene": null,
-          "launchMode": "default"
-        },
-        {
-          "name": "",
-          "pathName": "pages/contract/constract",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "",
-          "pathName": "pages/login/login",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "",
-          "pathName": "pages/uploading/uploading",
-          "query": "",
-          "scene": null,
-          "launchMode": "default"
-        },
-        {
-          "name": "",
-          "pathName": "pakB/pages/mine/mine",
-          "query": "",
-          "scene": null,
-          "launchMode": "default"
-        },
-        {
-          "name": "",
-          "pathName": "pages/uoloaddetail/uoloaddetail",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "",
-          "pathName": "pakB/pages/usersetting/usersetting",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "",
-          "pathName": "pakB/pages/yijianfankui/yijianfankui",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "",
-          "pathName": "pakB/pages/mine/mine",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
+        "miniprogram": {
+            "list": [
+                {
+                    "name": "",
+                    "pathName": "pages/index/index",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pakA/pages/problem/problem",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pakB/pages/mine/mine",
+                    "query": "",
+                    "scene": null,
+                    "launchMode": "default"
+                }
+            ]
         }
-      ]
     }
-  }
 }
