@@ -11,6 +11,9 @@ Page({
         psd: "",
         usanotice: false,
         pwdnotice: false,
+        icon1: true,
+        icon2: false,
+        flag: true
     },
     onClose() {
         this.setData({ show: false });
@@ -69,6 +72,26 @@ Page({
         this.setData({
             show: false,
         })
+    },
+
+    // 控制密码能不能看到
+    eye(e) {
+        let index = e.currentTarget.dataset.index
+        // 0展示密码，1隐藏密码
+        if (index == "0") {
+            this.setData({
+                icon1: false,
+                icon2: true,
+                flag: false
+            })
+
+        } else if (index == "1") {
+            this.setData({
+                icon1: true,
+                icon2: false,
+                flag: true
+            })
+        }
     },
 
     /**

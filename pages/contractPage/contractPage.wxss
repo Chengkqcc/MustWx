@@ -1,3 +1,6 @@
+.contractPageWrap {
+  position: relative;
+}
 .contractPageWrap .contractPage {
   padding-top: 15px;
 }
@@ -263,4 +266,55 @@
   font-size: 14px;
   color: #666;
   margin-top: 5px;
+}
+.contractPageWrap .contractPage .timePopup {
+  width: 80%;
+  box-shadow: 4rpx 4rpx 8rpx 4rpx rgba(0, 0, 0, 0.5);
+}
+.contractPageWrap .contractPage .timePopup .content {
+  box-sizing: bordder-box;
+  padding: 30px 25px;
+  text-align: center;
+}
+.contractPageWrap .contractPage .timePopup .content .item {
+  padding: 12px 0;
+  color: #07C160;
+  border-bottom: 2px solid #E9E9E9;
+}
+.contractPageWrap .contractPage .timePopup .content .btn {
+  padding-top: 20px;
+}
+.contractPageWrap .contractPage .timePopup .content .btn button {
+  width: 115px;
+  height: 35px;
+  border: none;
+  background: #f2f2f2;
+  border-radius: 5px;
+}
+.contractPageWrap .contractPage .confirmSignPopup {
+  width: 80%;
+  box-shadow: 4rpx 4rpx 8rpx 4rpx rgba(0, 0, 0, 0.5);
+}
+.contractPageWrap .contractPage .confirmSignPopup .content {
+  box-sizing: border-box;
+  padding: 15px;
+}
+.contractPageWrap .contractPage .confirmSignPopup .content .text {
+  padding: 45px 15px;
+  text-align: center;
+  font-size: 14px;
+}
+.contractPageWrap .contractPage .confirmSignPopup .content .btn {
+  padding: 0 15px 30px;
+  display: flex;
+  justify-content: space-between;
+}
+.contractPageWrap .contractPage .confirmSignPopup .content .btn button {
+  width: 110px;
+  height: 40px;
+  border-radius: 5px;
+}
+.contractPageWrap .contractPage .confirmSignPopup .content .btn button:last-child {
+  border: none;
+  background: #f2f2f2;
 }

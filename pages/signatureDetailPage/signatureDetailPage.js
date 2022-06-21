@@ -719,16 +719,6 @@ Page({
             id: options.id,
             ctx: ctx
         })
-        var query = wx.createSelectorQuery();
-        query.select('.handCenter').boundingClientRect(rect => {
-            this.setData({
-                canvasWidth: rect.width,
-                canvasHeight: rect.height
-            })
-            /* 将canvas背景设置为 白底，不设置  导出的canvas的背景为透明 */
-            // console.log(this, 'hahah');
-            this.setCanvasBg('#fff');
-        }).exec();
     },
 
     /**

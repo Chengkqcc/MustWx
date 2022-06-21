@@ -16,6 +16,13 @@ Page({
         type: null, //判断是从哪个页面跳转来的
         sealShow: false, //控制印章弹出层的显示和隐藏
         signature: [],
+        time: false,//控制日期弹出层的显示和隐藏
+        year: "",
+        month: "",
+        day: "",
+        hour: "",
+        minute: "",
+        confirmSign: false //控制确定签署弹出层的显示和隐藏
     },
     // 返回上一级
     back() {
@@ -43,7 +50,7 @@ Page({
         })
     },
     // 点击签署合同页面的印章
-    seal() {
+    seal(e) {
         this.setData({
             sealShow: true
         })
@@ -68,10 +75,28 @@ Page({
     },
     // 点击签署合同页面的日期
     date() {
-
+        this.setData({
+            time: true
+        })
+    },
+    closeTime() {
+        this.setData({
+            time: false
+        })
     },
     // 点击签署合同页面的确定签署按钮
     confirm() {
+        this.setData({
+            confirmSign: true
+        })
+    },
+    closeSign() {
+        this.setData({
+            confirmSign: false
+        })
+    },
+    // 点击确定签署弹出层的确定签署
+    confirmSign() {
 
     },
 
@@ -82,6 +107,14 @@ Page({
         let index = options.index;
         let type = options.type;
         let value = wx.getStorageSync('value')
+
+        // 和日期弹出层有关的数据
+        let time = new Date();
+        let year = time.getFullYear();
+        let month = time.getMonth() + 1 < 10 ? "0" + (time.getMonth() + 1) : time.getMonth() + 1;
+        let day = time.getDate() < 10 ? "0" + time.getDate() : time.getDate();
+        let hour = time.getHours() < 10 ? "0" + time.getHours() : time.getHours();
+        let minute = time.getMinutes() < 10 ? "0" + time.getMinutes() : time.getMinutes();
         if (index == 0) {  // 通知对方签署合同
             this.setData({
                 inform: true,
@@ -118,8 +151,16 @@ Page({
         this.setData({
             inputValue: value,
             type,
-            signature: wx.getStorageSync('sealArr')
+            signature: wx.getStorageSync('sealArr'),
+            sealShow: options.sealShow,
+            year,
+            month,
+            day,
+            hour,
+            minute
         })
+
+
     },
 
     /**

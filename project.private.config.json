@@ -51,6 +51,27 @@
                     "name": "",
                     "pathName": "pages/contractPage/contractPage",
                     "query": "index=3&type=undefined",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pages/operateContract/operateContract",
+                    "query": "index=0",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pages/operateContract/operateContract",
+                    "query": "index=0",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pages/register/register",
+                    "query": "",
                     "scene": null,
                     "launchMode": "default"
                 }

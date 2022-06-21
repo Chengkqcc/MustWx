@@ -79,14 +79,13 @@ Page({
             }
             return value;
         },
-        //全部文件
-        allConstract: [
-            {
-                "imgsrc": "https://safe-storage-cos2.1dq.com/signed/496f6fcb25874c7099fa9277a73ec09d/png/7b5344b9-1.jpg?sign=q-sign-algorithm%3Dsha1%26q-ak%3DAKID1oUyEJ7WEjzIJ2cuSt4ybw0mgJfjIC5s%26q-sign-time%3D1655091275%3B1655091935%26q-key-time%3D1655091275%3B1655091935%26q-header-list%3Dhost%26q-url-param-list%3D%26q-signature%3De48978a430b22e245d56d381e05efd061db64191&&imageMogr2/thumbnail/80x",
-                "title": "体验签署电子合同（无需实名认证）",
-                "text": "2022-06-07.待我签署.16650016402",
-            }
-        ]
+        //体验签署电子合同
+        experienceFile: {
+            "imgsrc": "",
+            "title": "",
+            "text": "",
+        },
+        text: ""
     },
     // 点击输入框旁边的图片，出现需要录入的信息
     showPopup() {
@@ -172,9 +171,7 @@ Page({
         this.setData({
             constractShow: false
         })
-
     },
-
     // 登录用户
     login() {
         wx.navigateTo({
@@ -187,8 +184,9 @@ Page({
             constractShow: false
         })
         let index = e.currentTarget.dataset.index;
+        // let text = this.data.text;
         wx.navigateTo({
-            url: '../operateContract/operateContract?index=' + index,
+            url: '../operateContract/operateContract?index=' + index
         })
     },
     // 点击签署
@@ -215,17 +213,12 @@ Page({
             })
         }, 1200)
     },
-
-
-
-
-
-
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
         let token = options.token || wx.getStorageSync('token');
+        let text = wx.getStorageSync('text') || "待我签署"
         if (token.length > 0) {
             this.setData({
                 empty: false,
@@ -237,6 +230,14 @@ Page({
                 experience: false
             })
         }
+        this.setData({
+            experienceFile: {
+                "imgsrc": "https://safe-storage-cos2.1dq.com/signed/496f6fcb25874c7099fa9277a73ec09d/png/7b5344b9-1.jpg?sign=q-sign-algorithm%3Dsha1%26q-ak%3DAKID1oUyEJ7WEjzIJ2cuSt4ybw0mgJfjIC5s%26q-sign-time%3D1655091275%3B1655091935%26q-key-time%3D1655091275%3B1655091935%26q-header-list%3Dhost%26q-url-param-list%3D%26q-signature%3De48978a430b22e245d56d381e05efd061db64191&&imageMogr2/thumbnail/80x",
+                "title": "体验签署电子合同（无需实名认证）",
+                "text": "2022 - 06 - 07." + text + ".16650016402",
+            },
+        })
+
     },
 
     /**

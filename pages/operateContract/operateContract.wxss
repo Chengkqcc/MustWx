@@ -1,6 +1,5 @@
 .detailContract {
   padding-top: 15px;
-  padding-bottom: 55px;
   display: flex;
   flex-wrap: wrap;
   position: relative;
@@ -233,6 +232,20 @@
 .detailContract .signContract .right {
   width: 40%;
 }
+.detailContract .backContract {
+  width: 100vw;
+}
+.detailContract .backContract .btn {
+  height: 70px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.detailContract .backContract .btn button {
+  width: 170px;
+  height: 55px;
+  font-size: 20px;
+}
 .detailContract .refusalWrap {
   width: 80%;
   height: 37%;
@@ -262,6 +275,32 @@
 .detailContract .refusalWrap .refusal .btn button:last-child {
   border: none;
   background: #ECECEC;
+}
+.detailContract .refusalProp {
+  width: 80%;
+  box-shadow: 4rpx 4rpx 8rpx 4rpx rgba(0, 0, 0, 0.5);
+}
+.detailContract .refusalProp .content {
+  box-sizing: border-box;
+  padding: 15px 20px;
+}
+.detailContract .refusalProp .content .title {
+  display: flex;
+  justify-content: space-between;
+}
+.detailContract .refusalProp .content .text {
+  padding: 40px 15px;
+  text-align: center;
+  font-size: 14px;
+}
+.detailContract .refusalProp .content .btn {
+  padding-bottom: 25px;
+  text-align: center;
+}
+.detailContract .refusalProp .content .btn button {
+  width: 115px;
+  height: 32px;
+  border-radius: 5px;
 }
 .detailContract .fileWrap {
   box-sizing: border-box;

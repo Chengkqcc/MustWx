@@ -1,4 +1,6 @@
 .contractPageWrap {
+    position: relative;
+
     .contractPage {
         padding-top: 15px;
 
@@ -256,6 +258,8 @@
                     }
                 }
             }
+
+
         }
 
         // 个人印章弹出层
@@ -325,5 +329,77 @@
                 }
             }
         }
+
+        // 日期弹出层
+        .timePopup {
+            width: 80%;
+            box-shadow: 4rpx 4rpx 8rpx 4rpx rgba(0, 0, 0, 0.5);
+
+            .content {
+                box-sizing: bordder-box;
+                padding: 30px 25px;
+                text-align: center;
+
+
+                .item {
+                    padding: 12px 0;
+                    color: #07C160;
+                    border-bottom: 2px solid #E9E9E9;
+                }
+
+                .btn {
+                    padding-top: 20px;
+
+                    button {
+                        width: 115px;
+                        height: 35px;
+                        border: none;
+                        background: #f2f2f2;
+                        border-radius: 5px;
+                    }
+                }
+            }
+        }
+
+        // 确定签署弹出层
+        .confirmSignPopup {
+            width: 80%;
+            box-shadow: 4rpx 4rpx 8rpx 4rpx rgba(0, 0, 0, 0.5);
+
+            .content {
+                box-sizing: border-box;
+                padding: 15px;
+
+                .text {
+                    padding: 45px 15px;
+                    text-align: center;
+                    font-size: 14px;
+                }
+
+                .btn {
+                    padding: 0 15px 30px;
+                    display: flex;
+                    justify-content: space-between;
+
+                    button {
+                        width: 110px;
+                        height: 40px;
+                        border-radius: 5px;
+                    }
+
+                    button:last-child {
+                        border: none;
+                        background: #f2f2f2;
+                    }
+                }
+            }
+        }
+
+        // .demo {
+        //     width: 150px;
+        //     height: 150px;
+        //     color: #fff;
+        //     background: red;
+        // }
     }
 }

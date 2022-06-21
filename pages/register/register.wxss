@@ -1,9 +1,6 @@
 .register {
   box-sizing: border-box;
-  padding: 15px;
-}
-.register form view {
-  margin-top: 25px;
+  padding: 25px 15px 15px;
 }
 .register form view label {
   display: block;
@@ -13,6 +10,24 @@
 .register form view input {
   padding-bottom: 10px;
   border-bottom: 1px solid #cecece;
+}
+.register form view .pwdInput {
+  display: flex;
+  position: relative;
+}
+.register form view .pwdInput input {
+  width: 100%;
+}
+.register form view .pwdInput .icon {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: 999;
+}
+.register form view:first-child {
+  margin-bottom: 25px;
 }
 .register .notice {
   padding: 25px 0;
