@@ -1,45 +1,39 @@
-// pakA/pages/hotProblem/hotProblem.js
-import myrequest from '../../../utils/myrequest'
+// pakA/pages/moreTutorials/moreTutorials.js
+import myrequest from  '../../../utils/myrequest'
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    title:"",
-    detailList:""
+    lists:[]
   },
-  //title传值
-  sendTitle(title){
-    this.setData({
-      title
-    })
-  },
-  //获取详情数据
-  async getDetailData(){
+
+  async getMoreData(id){
     wx.showLoading({
       title: '加载中',
     })
     const {data} = await myrequest({
-      url:"/detail",
+      url:'/help',
       complete(){
         wx.hideLoading()
       }
     })
+    const lists = data.data
+    console.log(lists)
+    const obj = lists.filter(item=>item.id == id)[0].data
+    console.log(obj)
     this.setData({
-      detailList:data.data
+      lists:[...this.data.lists,...obj]
     })
-    console.log(data.data)
   },
-
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-
-    this.sendTitle(options.title)
-    this.getDetailData()
+    console.log(options)
+    this.getMoreData(options.id)
   },
 
   /**
@@ -80,8 +74,8 @@ Page({
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom() {
-
+  onReachBottom(e) {
+    
   },
 
   /**

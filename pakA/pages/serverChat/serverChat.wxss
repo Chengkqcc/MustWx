@@ -8,7 +8,7 @@
   position: fixed;
   top: 10vh;
   box-sizing: border-box;
-  height: 90vh;
+  height: 100%;
 }
 .container .chat-con .chat-info {
   margin: 0 30rpx;
@@ -18,6 +18,7 @@
   padding: 10rpx;
 }
 .container .chat-con .chat-info .chat-left .headImg {
+  flex-shrink: 0;
   width: 80rpx;
   height: 80rpx;
 }
@@ -31,6 +32,7 @@
   border-radius: 10rpx;
   z-index: 10;
   position: relative;
+  max-width: 444rpx;
 }
 .container .chat-con .chat-info .chat-left .chat-text::after {
   display: block;
@@ -40,7 +42,7 @@
   border: 10rpx solid transparent;
   border-right-color: #fff;
   position: absolute;
-  left: -20rpx;
+  left: -18rpx;
   top: 30rpx;
 }
 .container .chat-con .chat-info .chat-right {
@@ -49,6 +51,7 @@
   padding: 10rpx;
 }
 .container .chat-con .chat-info .chat-right .headImg {
+  flex-shrink: 0;
   width: 80rpx;
   height: 80rpx;
 }
@@ -62,7 +65,7 @@
   border-radius: 10rpx;
   z-index: 10;
   position: relative;
-  max-width: 100vw;
+  max-width: 444rpx;
 }
 .container .chat-con .chat-info .chat-right .chat-text::before {
   display: block;
@@ -72,11 +75,12 @@
   border: 10rpx solid transparent;
   border-left-color: #96EB6A;
   position: absolute;
-  right: -20rpx;
+  right: -18rpx;
   top: 30rpx;
 }
 .container .chat-con .chat-info .chat-right .chat-img {
-  width: 50%;
+  border-radius: 5rpx;
+  max-width: 444rpx;
 }
 .container .inputRoom {
   width: 100vw;

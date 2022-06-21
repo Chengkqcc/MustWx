@@ -7,14 +7,14 @@
     position:fixed;
     top:10vh;
     box-sizing: border-box;
-    height:90vh;
-    
+    height:100%;
     .chat-info{
       margin:0 30rpx;
       .chat-left{
         display: flex;
         padding:10rpx;
         .headImg{
+          flex-shrink: 0;
           width:80rpx;
           height:80rpx;
         }
@@ -28,6 +28,7 @@
           border-radius: 10rpx;
           z-index: 10;
           position:relative;
+          max-width:444rpx;
 
           &::after{
             display: block;
@@ -37,7 +38,7 @@
             border:10rpx solid transparent;
             border-right-color:#fff;
             position:absolute;
-            left:-20rpx;
+            left:-18rpx;
             top:30rpx;
           }
         }
@@ -47,6 +48,7 @@
         justify-content:flex-end;
         padding:10rpx;
         .headImg{
+          flex-shrink: 0;
           width:80rpx;
           height:80rpx;
         }
@@ -60,7 +62,7 @@
           border-radius: 10rpx;
           z-index: 10;
           position:relative;
-          max-width: 100vw;
+          max-width:444rpx;
           
           &::before{
             display: block;
@@ -70,13 +72,14 @@
             border:10rpx solid transparent;
             border-left-color:#96EB6A;
             position:absolute;
-            right:-20rpx;
+            right:-18rpx;
             top:30rpx;
           }
         
         }
         .chat-img{
-          width:50%;
+          border-radius: 5rpx;
+          max-width:444rpx;
         
         }
       } 

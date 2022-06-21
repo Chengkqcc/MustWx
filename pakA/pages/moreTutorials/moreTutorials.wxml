@@ -1,0 +1,9 @@
+<view class = 'container'>
+  <header></header>
+  <scroll-view class = 'more-con' scroll-y>
+    <van-cell  is-link  wx:for="{{lists}}" wx:key = 'index'>
+      <navigator url="/pakA/pages/hotProblem/hotProblem?title={{item.name}}" slot = 'title'>{{index+1}}、{{item.name}}</navigator>
+    </van-cell>
+  </scroll-view>
+
+</view>

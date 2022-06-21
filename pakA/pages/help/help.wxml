@@ -8,7 +8,7 @@
       <view class = 'help-item' wx:for="{{allData?helpList:m1.sliceData(helpList,5)}}" wx:key = "index">
         <view class = 'help-item-title'>
           <text>{{item.name}}</text>
-          <text class = 'text-more' wx:if = "{{item.data.length>5}}">更多></text>
+          <navigator class = 'text-more' wx:if = "{{item.data.length>5}}" url = '/pakA/pages/moreTutorials/moreTutorials?id={{item.id}}'>更多></navigator>
         </view>
         <van-cell-group>
             <van-cell 
@@ -17,7 +17,7 @@
               bindtap="toAnswer"
               is-link
             >
-              <navigator url="/pakA/pages/hotProblem/hotProblem?title={{item.name}}" slot = 'title'>{{item.name}}</navigator>
+              <navigator url="/pakA/pages/hotProblem/hotProblem?title={{item.name}}" slot = 'title'>{{index+1}}、{{item.name}}</navigator>
             </van-cell>
         </van-cell-group>
       </view>
