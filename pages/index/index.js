@@ -208,7 +208,7 @@ Page({
         })
       } else {
         wx.navigateTo({
-          url: '../login/login',
+          url: '../login/login?type=homepage',
         })
       }
     } else if (url == "帮助中心") {
@@ -223,7 +223,7 @@ Page({
         })
       } else {
         wx.navigateTo({
-          url: '../login/login',
+          url: '../login/login?type=homepage',
         })
       }
 
@@ -248,7 +248,7 @@ Page({
         })
       } else {
         wx.navigateTo({
-          url: '../login/login',
+          url: '../login/login?type=homepage',
         })
       }
     } else if (index == 2) {
@@ -272,11 +272,11 @@ Page({
     })
   },
   // 点击系统模板中的内容
-  detailContract() {
-    // wx.navigateTo({
-    //   url: '../login/login',
-    // })
-    console.log(1)
+  detailContract(e) {
+    let imgsrc = e.currentTarget.dataset.imgsrc;
+    wx.navigateTo({
+      url: '../fillContract/fillContract?imgsrc=' + imgsrc,
+    })
   },
 
   // 点击切换企业用户和个人用户
@@ -311,7 +311,7 @@ Page({
     let title = e.currentTarget.dataset.title;
     if (title == "注册账户") {
       wx.navigateTo({
-        url: '../login/login',
+        url: '../login/login?type=homepage',
       })
     } else if (title == "实名认证" || title == "经办人实名认证") {
       wx.navigateTo({

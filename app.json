@@ -156,7 +156,10 @@
         "pages/operateContract/operateContract",
         "pages/contractPage/contractPage",
         "pages/eContract/eContract",
-        "pages/videoPage/videoPage"
+        "pages/videoPage/videoPage",
+        "pages/fillContract/fillContract",
+        "pages/sealManage/sealManage",
+        "pages/signatureDetailPage/signatureDetailPage"
     ],
     "window": {
         "backgroundTextStyle": "light",

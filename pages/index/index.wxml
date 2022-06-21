@@ -34,8 +34,8 @@
         <image src="../../images/nav/fl-off.png" bind:tap="showModel"/>
       </view>
       <view class="modelList">
-          <block wx:for="{{model.modelList}}" wx:key="id">
-              <view class="modelItem" bind:tap="detailContract">
+          <block wx:for="{{model.modelList}}" wx:key="{{item.id}}">
+              <view class="modelItem" bind:tap="detailContract" data-imgsrc="{{item.imgsrc}}">
                 <view class="imgWrapper">
                   <image src="{{item.imgsrc}}"/>
                 </view>
@@ -104,8 +104,7 @@
                 </view> 
               </view>
             </block>
-          </view>
-          
+          </view> 
         </view>
        </view>
        <view class="close">

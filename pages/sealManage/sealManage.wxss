@@ -1,0 +1,201 @@
+.sealManage {
+  height: 100vh;
+  background: #F1F1F1;
+}
+.sealManage .nav {
+  box-sizing: border-box;
+  padding: 15px 0;
+  display: flex;
+  align-items: center;
+  background: #fff;
+}
+.sealManage .nav .icon {
+  padding-left: 20px;
+}
+.sealManage .nav .text {
+  box-sizing: border-box;
+  flex: 1;
+  padding-right: 10px;
+  display: flex;
+  justify-content: center;
+}
+.sealManage .content .title {
+  padding: 15px;
+  color: #aaa;
+}
+.sealManage .content .addSeal {
+  box-sizing: border-box;
+  padding: 15px 30px 0px;
+  background: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.sealManage .content .addSeal .item {
+  width: 140px;
+  margin-bottom: 40px;
+  position: relative;
+}
+.sealManage .content .addSeal .item .top {
+  height: 150px;
+  background: #F1F1F1;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sealManage .content .addSeal .item .top image {
+  width: 111px;
+  height: 111px;
+}
+.sealManage .content .addSeal .item .text {
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+  margin-top: 5px;
+}
+.sealManage .content .addSeal .item .time {
+  width: 100%;
+  font-size: 14px;
+  color: #666;
+  margin-top: 5px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.sealManage .content .addSeal .item .wait {
+  font-size: 12px;
+  color: #fff;
+  position: absolute;
+  right: -10px;
+  top: 5px;
+  background: #787878;
+  padding: 5px;
+  border-radius: 2px;
+}
+.sealManage .content .btn {
+  padding: 25px 15px;
+}
+.sealManage .content .btn button {
+  border-radius: 5px;
+}
+.sealManage .signaturePopup {
+  width: 80%;
+  box-shadow: 4rpx 4rpx 8rpx 4rpx rgba(0, 0, 0, 0.5);
+}
+.sealManage .signaturePopup .list {
+  box-sizing: border-box;
+  padding: 30px 20px 20px;
+}
+.sealManage .signaturePopup .list .item {
+  color: #07c160;
+  text-align: center;
+  padding: 12px 0;
+  border-bottom: 2px solid #E9E9E9;
+}
+.sealManage .signaturePopup .list .btn {
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+.sealManage .signaturePopup .list .btn button {
+  width: 110px;
+  height: 35px;
+  border: none;
+  background: #F2F2F2;
+  border-radius: 5px;
+}
+.sealManage .filmPopup {
+  height: 40%;
+}
+.sealManage .filmPopup .content .top {
+  box-sizing: border-box;
+  padding: 15px;
+  background: #F1F1F1;
+  font-size: 14px;
+  color: #333;
+  font-weight: 700;
+}
+.sealManage .sealPopup {
+  width: 80%;
+  box-shadow: 4rpx 4rpx 8rpx 4rpx rgba(0, 0, 0, 0.5);
+}
+.sealManage .sealPopup .content {
+  padding: 30px 30px 0;
+  color: #07C160;
+  text-align: center;
+}
+.sealManage .sealPopup .content .item {
+  padding: 12px 0;
+  border-bottom: 2px solid #E9E9E9;
+}
+.sealManage .sealPopup .content .btn button {
+  width: 115px;
+  height: 32px;
+  border: none;
+  background: #F2F2F2;
+  border-radius: 5px;
+}
+.sealManage .delsealPopup {
+  width: 80%;
+  box-shadow: 4rpx 4rpx 8rpx 4rpx rgba(0, 0, 0, 0.5);
+}
+.sealManage .delsealPopup .content {
+  box-sizing: border-box;
+  padding: 15px;
+}
+.sealManage .delsealPopup .content .title {
+  color: #333;
+  padding: 0;
+}
+.sealManage .delsealPopup .content .text {
+  text-align: center;
+  padding: 50px 0;
+}
+.sealManage .delsealPopup .content .btn {
+  box-sizing: border-box;
+  padding: 0 20px 40px;
+  display: flex;
+  justify-content: space-between;
+}
+.sealManage .delsealPopup .content .btn button {
+  width: 108px;
+  height: 30px;
+}
+.sealManage .delsealPopup .content .btn button:last-child {
+  border: none;
+  background: #F2F2F2;
+}
+.sealManage .photoAlbumPopup {
+  width: 85%;
+  box-sizing: border-box;
+  border-radius: 10px;
+  padding: 22px 35px;
+}
+.sealManage .photoAlbumPopup .content .top {
+  font-size: 15px;
+  color: #333;
+  font-weight: 700;
+}
+.sealManage .photoAlbumPopup .content .top text {
+  color: #e54d42;
+}
+.sealManage .photoAlbumPopup .img image {
+  width: 100%;
+  height: 240px;
+  margin-top: 16px;
+}
+.sealManage .photoAlbumPopup .btnWrap {
+  text-align: center;
+  margin-top: 16px;
+}
+.sealManage .photoAlbumPopup .btnWrap button {
+  width: 100px;
+  border-radius: 5px;
+}
+.sealManage:before {
+  content: "";
+  display: block;
+  height: 15px;
+  background: #fff;
+}

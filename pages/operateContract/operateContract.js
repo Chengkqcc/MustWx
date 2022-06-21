@@ -8,6 +8,9 @@ Page({
         detailContract: false,
         qrCode: false,
         show: false,
+        fileShow: false,//控制文件信息弹出层的显示和隐藏
+        commentShow: false, //控制合同备注弹出层的显示和隐藏
+        comment: ""//备注的内容
     },
     showPopup() {
         this.setData({ show: true });
@@ -31,11 +34,44 @@ Page({
             show: false
         })
     },
-    // 点修改备注
+    // 跳转到合同操作的具体页面
     jumpContracePage(e) {
         let index = e.currentTarget.dataset.index;
+        let type = e.currentTarget.dataset.type;
         wx.navigateTo({
-            url: '../contractPage/contractPage?index=' + index,
+            url: '../contractPage/contractPage?index=' + index + "&type=" + type,
+        })
+    },
+
+    // 点文件信息右边的小图标
+    fileInfo() {
+        this.setData({
+            fileShow: true
+        })
+    },
+
+    // 改变文件信息弹出层的状态
+    closeFile() {
+        this.setData({
+            fileShow: false
+        })
+    },
+    // 点击文件弹出层的确定
+    sure() {
+        this.setData({
+            fileShow: false
+        })
+    },
+    // 改变文件备注弹出层的状态
+    comment() {
+        this.setData({
+            commentShow: true
+        })
+    },
+    // 关闭文件备注弹出层
+    closeComment() {
+        this.setData({
+            commentShow: false
         })
     },
     /**
@@ -67,7 +103,10 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function () {
-
+        let value = wx.getStorageSync('value')
+        this.setData({
+            comment: value
+        })
     },
 
     /**

@@ -1,0 +1,439 @@
+.signatureDetailPage .nav {
+  width: 100vw;
+  box-sizing: border-box;
+  padding: 15px 0;
+  display: flex;
+  align-items: center;
+  background: #fff;
+  position: relative;
+  z-index: 999;
+}
+.signatureDetailPage .nav .icon {
+  padding-left: 20px;
+}
+.signatureDetailPage .nav .text {
+  box-sizing: border-box;
+  flex: 1;
+  padding-right: 10px;
+  display: flex;
+  justify-content: center;
+}
+.signatureDetailPage page {
+  background: #fbfbfb;
+  height: auto;
+  overflow: hidden;
+}
+.signatureDetailPage .wrapper {
+  box-sizing: border-box;
+  width: 100%;
+  height: calc(100vh - 52px - 15px);
+  padding-top: 30rpx;
+  overflow: hidden;
+  display: flex;
+  align-content: center;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 28rpx;
+  position: relative;
+}
+.signatureDetailPage .handWriting {
+  background: #fff;
+  width: 100%;
+  height: 95vh;
+}
+.signatureDetailPage .handRight {
+  display: inline-flex;
+  align-items: center;
+}
+.signatureDetailPage .handCenter {
+  border: 4rpx dashed #e9e9e9;
+  flex: 5;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.signatureDetailPage .handTitle {
+  transform: rotate(90deg);
+  flex: 1;
+  color: #666;
+}
+.signatureDetailPage .handBtn {
+  height: 100%;
+  flex: 1;
+}
+.signatureDetailPage .handBtn .icon {
+  height: 40%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.signatureDetailPage .handBtn .icon .color {
+  width: 33px;
+  height: 33px;
+  background: #1A1A1A;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.signatureDetailPage .handBtn .icon .red {
+  background: #FF0000;
+}
+.signatureDetailPage .handBtn .btn {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.signatureDetailPage .handBtn .btn button {
+  box-sizing: border-box;
+  width: 35px;
+  font-size: 16px;
+  height: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 25px;
+}
+.signatureDetailPage .handBtn .btn .uploadBtn {
+  background: #F8F8F8;
+}
+.signatureDetailPage .handBtn .btn .subBtn {
+  background: #E64340;
+  color: #fff;
+}
+.signatureDetailPage .brushSize {
+  box-sizing: border-box;
+  width: 125%;
+  height: 85px;
+  padding: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  background: #fff;
+  box-shadow: 4rpx 4rpx 8rpx 4rpx rgba(0, 0, 0, 0.5);
+  transform: rotate(90deg);
+  position: absolute;
+  right: 20px;
+  top: 220px;
+}
+.signatureDetailPage .brushSize .title {
+  font-weight: 700;
+  margin-bottom: 11px;
+}
+.signatureDetailPage .brushSize .content {
+  width: 100%;
+}
+.signatureDetailPage .brushSize .content .van-ellipsis {
+  width: 20px;
+  height: 30px;
+  line-height: 30px;
+  flex-basis: 7% !important;
+}
+.signatureDetailPage .brushSize .content .van-tab--active {
+  background: #E54D42;
+  color: #fff;
+  border-radius: 5px;
+}
+.signatureDetailPage .brushSize .content .van-tabs__line {
+  height: 0;
+}
+.signatureDetailPage .brushSize .content .van-tabs__scroll--line {
+  height: 85%;
+}
+.signatureDetailPage .selectImage {
+  position: relative;
+  height: calc(100vh - 52px - 15px);
+}
+.signatureDetailPage .selectImage .bottom {
+  background: #222121;
+  width: 100vw;
+  height: 50px;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  border-top: 1px solid rgba(123, 123, 123, 0.5);
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  z-index: 999;
+}
+.signatureDetailPage .selectImage .bottom .cancel {
+  width: 20%;
+}
+.signatureDetailPage .selectImage .bottom .angle {
+  flex: 1;
+}
+.signatureDetailPage .selectImage .bottom .finish {
+  width: 20%;
+}
+.signatureDetailPage .sealSet {
+  height: calc(100vh - 52px - 15px);
+  background: #F1F1F1;
+}
+.signatureDetailPage .sealSet .setName .title {
+  padding: 15px;
+  color: #aaa;
+}
+.signatureDetailPage .sealSet .setName .content {
+  padding: 15px;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+.signatureDetailPage .sealSet .setName .content input {
+  flex: 1;
+  text-align: right;
+}
+.signatureDetailPage .sealSet .sealSize .title {
+  padding: 15px;
+  color: #aaa;
+  display: flex;
+  justify-content: space-between;
+}
+.signatureDetailPage .sealSet .sealSize .content {
+  background: #fff;
+}
+.signatureDetailPage .sealSet .sealSize .content view {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #eee;
+}
+.signatureDetailPage .sealSet .sealSize .content view input {
+  color: #808080;
+  flex: 1;
+  text-align: right;
+}
+.signatureDetailPage .sealSet .explain .title {
+  padding: 15px;
+  color: #333333;
+  font-weight: bold;
+}
+.signatureDetailPage .sealSet .explain .text {
+  color: #aaa;
+  font-size: 14px;
+  padding: 0 15px;
+}
+.signatureDetailPage .sealSet .btn {
+  padding: 15px;
+}
+.signatureDetailPage .sealSet .btn button {
+  border-radius: 5px;
+}
+.sealModel {
+  height: calc(100vh - 52px - 10px);
+  background: #f1f1f1;
+}
+.sealModel .title {
+  background: #F1F1F1;
+  font-size: 14px;
+  color: #aaa;
+  padding: 10px 15px;
+  display: flex;
+}
+.sealModel .title text {
+  color: #e54d42;
+  padding-top: 2px;
+}
+.sealModel .sealName {
+  padding: 15px;
+  background: #fff;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+}
+.sealModel .sealName .name {
+  width: 22%;
+  font-size: 15px;
+  color: #333;
+}
+.sealModel .sealName .text {
+  font-size: 15px;
+  flex: 1;
+  color: #585858;
+  font-weight: 300;
+}
+.sealModel .sealColor .content {
+  box-sizing: border-box;
+  display: flex;
+  background: #fff;
+  padding: 20px;
+}
+.sealModel .sealColor .content .item {
+  width: 80px;
+  height: 43px;
+  background: #FF0000;
+  margin-right: 20px;
+  display: flex;
+  justify-content: center;
+}
+.sealModel .sealColor .content .item:nth-child(2) {
+  background: #0000FF;
+}
+.sealModel .sealColor .content .item:last-child {
+  background: #000000;
+}
+.sealModel .sealStyle .content {
+  box-sizing: border-box;
+  padding: 15px;
+  background: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.sealModel .sealStyle .content image {
+  width: 80px;
+  height: 80px;
+}
+.sealModel .sealPreview .content {
+  background: #fff;
+  overflow: hidden;
+  display: flex;
+  padding: 15px;
+  justify-content: center;
+}
+.sealModel .sealPreview .content image {
+  width: 100px;
+  height: 100px;
+}
+.sealModel .btn {
+  background: #f1f1f1;
+  padding: 25px 15px;
+}
+.sealModel .btn button {
+  border-radius: 5px;
+}
+.setSealParams {
+  background: #F1F1F1;
+}
+.setSealParams .basicInfo {
+  background: #F1F1F1;
+  font-size: 14px;
+  color: #aaa;
+}
+.setSealParams .basicInfo .top {
+  padding: 10px 15px;
+  display: flex;
+}
+.setSealParams .basicInfo .top text {
+  color: #e54d42;
+  padding-top: 2px;
+}
+.setSealParams .basicInfo .content {
+  background: #fff;
+}
+.setSealParams .basicInfo .content .item {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #EEEEEE;
+}
+.setSealParams .basicInfo .content .item .title {
+  color: #333;
+}
+.setSealParams .basicInfo .content .item input {
+  width: 51.5%;
+}
+.setSealParams .basicInfo .content .item .text {
+  color: #333;
+}
+.setSealParams .basicInfo .content .item:last-child {
+  border-bottom: none;
+}
+.setSealParams .sealColor .title {
+  padding: 15px;
+  font-size: 14px;
+  color: #aaa;
+}
+.setSealParams .sealColor .content {
+  padding: 30px 20px 20px 15px;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+.setSealParams .sealColor .content .item {
+  width: 21%;
+  height: 43px;
+  background: #D5D5D5;
+  display: flex;
+  justify-content: center;
+}
+.setSealParams .sealColor .content .item:nth-child(2) {
+  background: #FF0000;
+}
+.setSealParams .sealColor .content .item:nth-child(2) {
+  background: #0000FF;
+}
+.setSealParams .sealColor .content .item:last-child {
+  background: #000;
+}
+.setSealParams .sealPreview {
+  color: #aaa;
+  font-size: 14px;
+}
+.setSealParams .sealPreview .title {
+  padding: 15px;
+}
+.setSealParams .sealPreview .img {
+  background: #fff;
+}
+.setSealParams .sealPreview .img image {
+  width: 100%;
+  height: 380px;
+}
+.setSealParams .btn {
+  padding: 20px 15px;
+}
+.setSealParams .btn button {
+  border-radius: 5px;
+}
+.saveProp {
+  width: 75%;
+  box-shadow: 4rpx 4rpx 8rpx 4rpx rgba(0, 0, 0, 0.5);
+}
+.saveProp .content {
+  box-sizing: border-box;
+  padding: 15px;
+}
+.saveProp .content .text {
+  padding: 35px 15px;
+  font-size: 14px;
+  line-height: 25px;
+}
+.saveProp .content .btn {
+  width: 100%;
+  padding-bottom: 35px;
+  display: flex;
+  justify-content: center;
+}
+.saveProp .content .btn button {
+  width: 115px;
+  height: 35px;
+  border-radius: 5px;
+}
+.sealReminderProp {
+  width: 80%;
+  padding: 15px 15px 40px;
+  box-shadow: 4rpx 4rpx 8rpx 4rpx rgba(0, 0, 0, 0.5);
+}
+.sealReminderProp .content .text {
+  font-size: 14px;
+  text-align: center;
+  padding: 30px 15px;
+}
+.sealReminderProp .content .btn {
+  text-align: center;
+  padding: 0 15px;
+}
+.sealReminderProp .content .btn button {
+  width: 115px;
+  height: 30px;
+  border-radius: 5px;
+}
+.signatureDetailPage:before {
+  content: "";
+  display: block;
+  height: 15px;
+  background: #fff;
+  position: relative;
+  z-index: 999;
+}

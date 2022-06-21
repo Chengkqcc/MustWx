@@ -1,0 +1,229 @@
+<!--pages/signatureDetailPage/signatureDetailPage.wxml-->
+<view class="signatureDetailPage">
+    <view class="nav">
+        <view class="icon">
+            <van-icon name="arrow-left" color="#aaa" size="20px" bindtap="back"/>
+        </view>
+        <view class="text">
+            <text>{{text}}</text>
+        </view>
+    </view>
+    <!-- 手写签名 -->
+    <view class="wrapper" wx:if="{{writeSignature}}">
+        <view class="handBtn">
+            <view class="icon"> 
+                <van-icon name="setting" color="#333" size="38px" bindtap="setBrushSize"/>
+                <view class="color block" bindtap="changeColor" data-index="0">
+                    <van-icon name="success" color="#fff" wx:if="{{color}}" size="20px"/>
+                </view>
+                <view class="color red" bindtap="changeColor" data-index="1">
+                    <van-icon name="success" color="#fff" wx:if="{{color2}}" size="20px"/>
+                </view>
+            </view>
+            <view class="btn">
+                <button  catchtap="retDraw" class="uploadBtn" size="mini">重写</button>
+                <button catchtap="uploadCanvasImg" class="subBtn" size="mini">保存</button>
+            </view>
+        </view>
+        <view class="handCenter">
+            <canvas class="handWriting" disable-scroll="true" bindtouchstart="uploadScaleStart" bindtouchmove="uploadScaleMove"
+            bindtouchend="uploadScaleEnd" bindtap="mouseDown" canvas-id="handWriting">
+            </canvas>
+        </view>
+        <view class="handRight">
+            <view class="handTitle">手写板</view>
+        </view>
+        <!-- 画笔尺寸 -->
+        <view class="brushSize" wx:if="{{brushSizeShow}}">
+            <view class="title">画笔尺寸</view>
+            <view class="content">
+                <van-tabs active="{{ active }}" bind:change="onChange">
+                    <van-tab wx:for="{{brushSize}}" title="{{item}}"></van-tab>
+                </van-tabs>
+            </view>
+        </view>
+
+    </view>
+    <!-- 拍摄签字图片和从相册选取签字图片 -->
+    <view class="selectImage" wx:if="{{selectImage}}">
+        <!-- <image src="{{imgsrc}}" bindtap="clickcut"/> -->
+        <image-cropper 
+            id="image-cropper" 
+            limit_move="true"
+            disable_rotate="true"
+            width="{{width}}" 
+            height="{{height}}"
+            imgSrc="{{imgsrc}}" 
+            angle="{{angle}}"
+            bindload="cropperload"
+            bindimageload="loadimage" 
+            bindtapcut="clickcut"
+        ></image-cropper>
+
+        <view class="bottom">
+            <text class="cancel" bindtap="cancel">取消</text>
+            <view class="angle"><van-icon name="replay" color="#fff" size="15px" bindtap="angle"/></view>
+            <text class="finish" bindtap="finish">完成</text>
+        </view>
+    </view>
+    <!-- 印章设置 -->
+    <view class="sealSet" wx:if="{{sealSet}}">
+        <!-- 名称设置 -->
+        <view class="setName">
+            <view class="title">名称设置</view>
+            <view class="content">
+                <text>名称</text>
+                <input placeholder="请输入印章名称"/>
+            </view>
+        </view>
+        <!-- 印章尺寸 -->
+        <view class="sealSize">
+            <view class="title">
+                <text>印章尺寸</text>
+                <view bindtap="sealReminder"><van-icon name="info-o" size="20px" /></view>
+            </view>
+            <view class="content">
+                <view class="setHeight">
+                    <text>高度</text>
+                    <input placeholder="为空系统默认"></input>
+                </view>
+                <view class="setWidth">
+                    <text>宽度</text>
+                    <input placeholder="为空系统默认"></input>
+                </view>
+            </view>
+        </view>
+        <!-- 尺寸填写说明 -->
+        <view class="explain">
+            <view class="title">尺寸填写说明</view>
+            <view class="text">
+                如果您对印章有特殊要求，可以在这里设置印章尺寸，单位为毫米, 一般推荐尺寸 40毫米 至44毫米，设置后签署的文件印章均按这个尺寸执行(在合同页面调整尺寸将不生效)，如果留空则系统自动处理.
+            </view>
+        </view>
+        <!-- 保存设置 -->
+        <view class="btn">
+            <van-button color="#E54D42" block>保存设置</van-button>
+        </view>
+    </view>
+    <!-- 模板印章 -->
+    <view class="sealModel" wx:if="{{sealModel}}">
+        <!-- 基本信息 -->
+        <view class="title">
+            <text>*</text>
+            基本信息
+        </view>
+        <view class="sealName">
+            <view class="name">印章名称</view>
+            <view class="text">
+                <input placeholder="给印章取一个名字，方便后期管理" bindinput="bindkeyInput"></input>
+            </view>
+        </view>
+        <!-- 印章颜色 -->
+        <view class="sealColor">
+            <view class="title">印章颜色</view>
+            <view class="content">
+                <view class="item" bindtap="changeIcon" data-index="0">
+                    <van-icon name="passed" color="#fff" size="20px" wx:if="{{icon1}}"/>
+                </view>
+                <view class="item" bindtap="changeIcon" data-index="1">
+                    <van-icon name="passed" color="#fff" size="20px" wx:if="{{icon2}}"/>
+                </view>
+                <view class="item" bindtap="changeIcon" data-index="2">
+                    <van-icon name="passed" color="#fff" size="20px" wx:if="{{icon3}}"/>
+                </view>
+            </view>
+        </view>
+        <!-- 印章样式 -->
+        <view class="sealStyle">
+            <view class="title">印章样式</view>
+            <view class="content">
+                <block wx:for="{{imageList}}">
+                    <image src="{{item.imgsrc}}"/>
+                </block>
+            </view>
+        </view>
+        <!-- 印章预览 -->
+        <view class="sealPreview">
+             <view class="title">
+                印章预览
+            </view>
+            <view class="content">
+                <image src="https://api.1dq.com/static/sealdemo/square-3.png"/>
+            </view>
+        </view>
+
+        <view class="btn">
+            <van-button block color="#E54D42">保存</van-button>
+        </view>
+        
+    </view>
+    <!-- 设置印章参数 -->
+    <view class="setSealParams" wx:if="{{setSealParams}}">
+        <!-- 基本信息 -->
+        <view class="basicInfo">
+            <view class="top">
+                <text>*</text>
+                <view class="text">基本信息</view>
+            </view>
+            <view class="content">
+                <view class="item">
+                    <view class="title">名称</view>
+                    <input placeholder="{{value}}"/>
+                </view>
+                <view class="item">
+                    <view class="title">印章类型</view>
+                    <view class="text">个人印章</view>
+                </view>
+            </view>
+        </view>
+        <!-- 印章颜色 -->
+        <view class="sealColor">
+            <view class="title">印章颜色</view>
+            <view class="content">
+                <view class="item" bindtap="changeIcon" data-index="0">
+                    <van-icon name="passed" color="#fff" size="20px" wx:if="{{icon1}}"/>
+                </view>
+                <view class="item" bindtap="changeIcon" data-index="1">
+                    <van-icon name="passed" color="#fff" size="20px" wx:if="{{icon2}}"/>
+                </view>
+                <view class="item" bindtap="changeIcon" data-index="2">
+                    <van-icon name="passed" color="#fff" size="20px" wx:if="{{icon3}}"/>
+                </view>
+                <view class="item" bindtap="changeIcon" data-index="3">
+                    <van-icon name="passed" color="#fff" size="20px" wx:if="{{icon4}}"/>
+                </view>
+            </view>
+        </view>
+        <!-- 印章预览 -->
+        <view class="sealPreview">
+            <view class="title">印章预览</view>
+            <view class="img">
+                <image src="{{sealSrc}}"/>
+            </view>
+        </view>
+        <view class="btn">
+            <van-button color="#E54D42" bindtap="save" block>保存（需审核）</van-button>
+        </view>
+    </view>
+
+    <!-- 点击保存时出现的弹出层 -->
+    <van-popup show="{{ saveProp }}" bind:close="closeSave" overlay="{{false}}" closeable="{{true}}" custom-class="saveProp">
+        <view class="content">
+            <view class="title">提示</view>
+            <view class="text">上传成功，请等待客服审核后方可使用</view>
+            <view class="btn">
+                <van-button  color="#07C160" bindtap="ensure">确定</van-button>
+            </view>
+        </view>
+    </van-popup>
+    <!-- 保存设置的弹出层 -->
+    <van-popup show="{{ sealReminder }}" bind:close="closeReminder" overlay="{{false}}" closeable="{{true}}" custom-class="sealReminderProp">
+        <view class="content">
+            <view class="title">提示</view>
+            <view class="text">如果您对印章有特殊要求，可以在这里设置印章尺寸，单位为毫米, 一般推荐尺寸 40毫米 至44毫米，设置后签署的文件印章均按这个尺寸执行(在合同页面调整尺寸将不生效)，如果留空则系统自动处理.</view>
+            <view class="btn">
+                <van-button  color="#07C160" bindtap="closeReminder">确定</van-button>
+            </view>
+        </view>
+    </van-popup>
+</view>

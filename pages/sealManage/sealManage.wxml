@@ -1,0 +1,88 @@
+<!--pages/sealManage/sealManage.wxml-->
+<view class="sealManage">
+    <view class="nav">
+        <view class="icon">
+            <van-icon name="arrow-left" color="#aaa" size="20px" bindtap="back"/>
+        </view>
+        <view class="text">
+            <text>印章管理</text>
+        </view>
+    </view>
+
+    <view class="content">
+        <view class="title">个人印章</view>
+        <view class="addSeal">
+            <view class="item" bindtap="addSignature">
+                <view class="top">
+                    <image src="https://oss2.1dq.com/app/static/images/sealAdd.jpg"/>
+                </view>
+                <view class="text">添加签名</view>
+            </view>
+
+            <block wx:for="{{sealArr}}">
+                <view class="item" bindtap="seal" data-index="{{index}}">
+                    <view class="top">
+                        <image src="{{item.imgsrc}}"/>
+                    </view>
+                    <view class="time">{{item.time}}</view>
+                    <view class="wait" wx:if="{{item.text}}">{{item.text}}</view>
+                </view>
+            </block>
+        </view>
+        <view class="btn">
+            <van-button color="#E54D42" block bindtap="filmSeal">查看企业印章</van-button>
+        </view>
+    </view>
+    <!-- 添加签名弹出层 -->
+    <van-popup show="{{ addSignature }}" bind:close="signatureClose" overlay="{{false}}"  closeable="true" custom-class="signaturePopup">
+        <view class="list">
+            <view class="item" bindtap="addSignaturePopup">添加手写签名</view>
+            <view class="item" bindtap="chooseImage" data-type="shoot">拍摄签字图片</view>
+            <view class="item" bindtap="chooseImage" data-type="photoAlbum">从相册选取签字图片</view>
+            <view class="item" bindtap="sealModel">从模板添加印章</view>
+            <view class="btn">
+                <van-button bindtap="signatureClose" color="#07c160" plain>取消</van-button>
+            </view>
+        </view>
+    </van-popup>
+    <!-- 企业印章弹出层 -->
+    <van-popup show="{{ filmSeal }}" bind:close="filmClose" position="bottom"  closeable="true" overlay-style="opacity:0.5" custom-class="filmPopup">
+        <view class="content">
+            <view class="top">切换企业账户</view>
+        </view>
+    </van-popup>
+    <!-- 自定义印章弹出层 -->
+    <van-popup show="{{ sealProp }}" bind:close="sealClose" closeable="true" overlay="{{false}}" custom-class="sealPopup">
+        <view class="content">
+            <view class="item" bindtap="setSeal" data-index="{{sealIndex}}">设置</view>
+            <view class="item" bindtap="delSeal">删除印章</view>
+            <view class="btn">
+                <van-button color="#07C160" plain bindtap="sealClose">取消</van-button>
+            </view>
+        </view>
+    </van-popup>
+
+    <!-- 删除印章弹出层 -->
+    <van-popup show="{{ delSeal }}" bind:close="delsealClose" closeable="true" overlay="{{false}}" custom-class="delsealPopup">
+        <view class="content">
+            <view class="title">提示</view>
+            <view class="text">你真的要删除此印章吗?</view>
+            <view class="btn">
+                <van-button color="#07C160" bindtap="confirm">确定</van-button>
+                <van-button color="#07C160" plain bindtap="delsealClose">取消</van-button>
+            </view>
+        </view>
+    </van-popup>
+
+    <!-- 从相册选取签字图片弹出层 -->
+    <van-popup show="{{ photoAlbum }}" bind:close="photoAlbumClose" overlay-style="opacity:0.5" custom-class="photoAlbumPopup">
+       <view class="content">
+            <view class="top">
+                请将公章或签名盖在白纸上，然后拍照上传，如下图所示。
+                <text>如果您要使用企业印章，请先完成企业认证，认证成功后会自动创建具备法律效力的电子公章</text>
+            </view>
+            <view class="img"><image src="https://oss2.1dq.com/app/static/images/seal-demo.png"/></view>
+            <view class="btnWrap"><van-button color="#0081FF" bindtap="photoAlbumClose">我知道了</van-button></view>
+       </view>
+    </van-popup>
+</view>
