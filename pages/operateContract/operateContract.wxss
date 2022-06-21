@@ -150,11 +150,17 @@
 }
 .detailContract .info .contractNotive .content {
   padding-bottom: 10px;
+}
+.detailContract .info .contractNotive .content .text {
+  padding: 15px;
+  color: #aaa;
+}
+.detailContract .info .contractNotive .content .amendComment {
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
 }
-.detailContract .info .contractNotive .content text {
+.detailContract .info .contractNotive .content .amendComment text {
   font-size: 14px;
   color: #0081ff;
   margin-left: 5px;
@@ -205,6 +211,7 @@
   box-sizing: border-box;
   width: 100vw;
   padding: 5px 0 5px 15px;
+  background: #f7f7f7;
   border-top: 1px solid #e6e6e6;
   position: absolute;
   bottom: 0;
@@ -227,7 +234,7 @@
   width: 40%;
 }
 .detailContract .refusalWrap {
-  width: 75%;
+  width: 80%;
   height: 37%;
   box-shadow: 4rpx 4rpx 8rpx 4rpx rgba(0, 0, 0, 0.5);
 }
@@ -255,6 +262,25 @@
 .detailContract .refusalWrap .refusal .btn button:last-child {
   border: none;
   background: #ECECEC;
+}
+.detailContract .fileWrap {
+  box-sizing: border-box;
+  width: 80%;
+  padding: 15px 15px 45px;
+  box-shadow: 4rpx 4rpx 8rpx 4rpx rgba(0, 0, 0, 0.5);
+}
+.detailContract .fileWrap .infoContent .text {
+  text-align: center;
+  padding: 55px 0;
+  font-size: 14px;
+}
+.detailContract .fileWrap .infoContent .btn {
+  display: flex;
+  justify-content: center;
+}
+.detailContract .fileWrap .infoContent .btn button {
+  width: 115px;
+  height: 30px;
 }
 .qrCode {
   box-sizing: border-box;

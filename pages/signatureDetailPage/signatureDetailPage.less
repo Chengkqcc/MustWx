@@ -1,0 +1,571 @@
+.signatureDetailPage {
+    .nav {
+        width: 100vw;
+        box-sizing: border-box;
+        padding: 15px 0;
+        display: flex;
+        align-items: center;
+        background: #fff;
+        position: relative;
+        z-index: 999;
+
+        .icon {
+            padding-left: 20px;
+        }
+
+        .text {
+            box-sizing: border-box;
+            flex: 1;
+            padding-right: 10px;
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    // 手写签名
+    page {
+        background: #fbfbfb;
+        height: auto;
+        overflow: hidden;
+    }
+
+    .wrapper {
+        box-sizing: border-box;
+        width: 100%;
+        height: calc(100vh - 52px - 15px);
+        padding-top: 30rpx;
+        overflow: hidden;
+        display: flex;
+        align-content: center;
+        flex-direction: row;
+        justify-content: center;
+        font-size: 28rpx;
+        position: relative;
+    }
+
+    .handWriting {
+        background: #fff;
+        width: 100%;
+        height: 95vh;
+    }
+
+    .handRight {
+        display: inline-flex;
+        align-items: center;
+    }
+
+    .handCenter {
+        border: 4rpx dashed #e9e9e9;
+        flex: 5;
+        overflow: hidden;
+        box-sizing: border-box;
+    }
+
+    .handTitle {
+        transform: rotate(90deg);
+        flex: 1;
+        color: #666;
+    }
+
+    .handBtn {
+        height: 100%;
+        flex: 1;
+
+        .icon {
+            height: 40%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            .color {
+                width: 33px;
+                height: 33px;
+                background: #1A1A1A;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .red {
+                background: #FF0000;
+            }
+        }
+
+        .btn {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            button {
+                box-sizing: border-box;
+                width: 35px;
+                font-size: 16px;
+                height: 75px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 25px;
+            }
+
+            .uploadBtn {
+                background: #F8F8F8;
+            }
+
+            .subBtn {
+                background: #E64340;
+                color: #fff;
+            }
+        }
+    }
+
+    // 画笔尺寸
+    .brushSize {
+        box-sizing: border-box;
+        width: 125%;
+        height: 85px;
+        padding: 16px;
+        display: flex;
+        flex-wrap: wrap;
+        background: #fff;
+        box-shadow: 4rpx 4rpx 8rpx 4rpx rgba(0, 0, 0, 0.5);
+        transform: rotate(90deg);
+        position: absolute;
+        right: 20px;
+        top: 220px;
+
+        .title {
+            font-weight: 700;
+            margin-bottom: 11px;
+        }
+
+        .content {
+            width: 100%;
+
+            .van-ellipsis {
+                width: 20px;
+                height: 30px;
+                line-height: 30px;
+                flex-basis: 7% !important;
+            }
+
+            .van-tab--active {
+                background: #E54D42;
+                color: #fff;
+                border-radius: 5px;
+            }
+
+            .van-tabs__line {
+                height: 0;
+            }
+
+            .van-tabs__scroll--line {
+                height: 85%;
+            }
+        }
+    }
+
+
+    // 裁剪图片
+    .selectImage {
+        position: relative;
+        height: calc(100vh - 52px - 15px);
+
+        .bottom {
+            background: #222121;
+            width: 100vw;
+            height: 50px;
+            color: #fff;
+            font-size: 14px;
+            text-align: center;
+            border-top: 1px solid rgba(123, 123, 123, 0.5);
+            display: flex;
+            align-items: center;
+            position: absolute;
+            bottom: 0;
+            z-index: 999;
+
+            .cancel {
+                width: 20%;
+            }
+
+            .angle {
+                flex: 1;
+            }
+
+            .finish {
+                width: 20%;
+            }
+        }
+    }
+
+    // 印章设置
+    .sealSet {
+        height: calc(100vh - 52px - 15px);
+        background: #F1F1F1;
+
+        // 名称设置
+        .setName {
+            .title {
+                padding: 15px;
+                color: #aaa;
+            }
+
+            .content {
+                padding: 15px;
+                background: #fff;
+                display: flex;
+                justify-content: space-between;
+
+                input {
+                    flex: 1;
+                    text-align: right;
+                }
+            }
+        }
+
+        // 印章尺寸
+        .sealSize {
+            .title {
+                padding: 15px;
+                color: #aaa;
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .content {
+                background: #fff;
+
+                view {
+                    padding: 15px;
+                    display: flex;
+                    justify-content: space-between;
+                    border-bottom: 1px solid #eee;
+
+                    input {
+                        color: #808080;
+                        flex: 1;
+                        text-align: right;
+                    }
+                }
+            }
+        }
+
+        // 尺寸填写说明
+        .explain {
+            .title {
+                padding: 15px;
+                color: rgb(51, 51, 51);
+                font-weight: bold;
+            }
+
+            .text {
+                color: #aaa;
+                font-size: 14px;
+                padding: 0 15px;
+            }
+        }
+
+        // 保存设置
+        .btn {
+            padding: 15px;
+
+            button {
+                border-radius: 5px;
+            }
+        }
+    }
+}
+
+// 模板印章
+.sealModel {
+    height: calc(100vh - 52px - 10px);
+    background: #f1f1f1;
+
+    // 基本信息
+    .title {
+        background: #F1F1F1;
+        font-size: 14px;
+        color: #aaa;
+        padding: 10px 15px;
+        display: flex;
+
+        text {
+            color: #e54d42;
+            padding-top: 2px;
+        }
+    }
+
+    .sealName {
+        padding: 15px;
+        background: #fff;
+        font-size: 14px;
+        display: flex;
+        justify-content: space-between;
+
+        .name {
+            width: 22%;
+            font-size: 15px;
+            color: #333;
+        }
+
+        .text {
+            font-size: 15px;
+            flex: 1;
+            color: #585858;
+            font-weight: 300;
+        }
+    }
+
+    // 印章颜色
+    .sealColor {
+        .content {
+            box-sizing: border-box;
+            display: flex;
+            background: #fff;
+            padding: 20px;
+
+            .item {
+                width: 80px;
+                height: 43px;
+                background: #FF0000;
+                margin-right: 20px;
+                display: flex;
+                justify-content: center;
+            }
+
+            .item:nth-child(2) {
+                background: #0000FF;
+            }
+
+            .item:last-child {
+                background: #000000;
+            }
+        }
+    }
+
+    // 印章样式
+    .sealStyle {
+        .content {
+            box-sizing: border-box;
+            padding: 15px;
+            background: #fff;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            image {
+                width: 80px;
+                height: 80px;
+            }
+        }
+    }
+
+    // 印章预览
+    .sealPreview {
+        .content {
+            background: #fff;
+            overflow: hidden;
+            display: flex;
+            padding: 15px;
+            justify-content: center;
+
+            image {
+                width: 100px;
+                height: 100px;
+            }
+
+        }
+    }
+
+    .btn {
+        background: #f1f1f1;
+        padding: 25px 15px;
+
+        button {
+            border-radius: 5px;
+        }
+    }
+}
+
+// 设置印章参数
+.setSealParams {
+    background: #F1F1F1;
+
+    // 基本信息
+    .basicInfo {
+        background: #F1F1F1;
+        font-size: 14px;
+        color: #aaa;
+
+        .top {
+            padding: 10px 15px;
+            display: flex;
+
+            text {
+                color: #e54d42;
+                padding-top: 2px;
+            }
+        }
+
+        .content {
+            background: #fff;
+
+            .item {
+                padding: 15px;
+                display: flex;
+                justify-content: space-between;
+                border-bottom: 1px solid #EEEEEE;
+
+                .title {
+                    color: #333;
+                }
+
+                input {
+                    width: 51.5%;
+                }
+
+                .text {
+                    color: #333;
+                }
+            }
+
+            .item:last-child {
+                border-bottom: none;
+            }
+        }
+    }
+
+    // 印章颜色
+    .sealColor {
+        .title {
+            padding: 15px;
+            font-size: 14px;
+            color: #aaa;
+        }
+
+        .content {
+            padding: 30px 20px 20px 15px;
+            background: #fff;
+            display: flex;
+            justify-content: space-between;
+
+            .item {
+                width: 21%;
+                height: 43px;
+                background: #D5D5D5;
+                // margin-right: 20px;
+                display: flex;
+                justify-content: center;
+            }
+
+            .item:nth-child(2) {
+                background: #FF0000;
+            }
+
+            .item:nth-child(2) {
+                background: #0000FF;
+            }
+
+            .item:last-child {
+                background: #000;
+            }
+        }
+    }
+
+    // 印章预览
+    .sealPreview {
+        color: #aaa;
+        font-size: 14px;
+
+        .title {
+            padding: 15px;
+        }
+
+        .img {
+            background: #fff;
+
+            image {
+                width: 100%;
+                height: 380px;
+            }
+        }
+    }
+
+    .btn {
+        padding: 20px 15px;
+
+        button {
+            border-radius: 5px;
+        }
+    }
+}
+
+// 保存的弹出层
+.saveProp {
+    width: 75%;
+    box-shadow: 4rpx 4rpx 8rpx 4rpx rgba(0, 0, 0, 0.5);
+
+    .content {
+        box-sizing: border-box;
+        padding: 15px;
+
+        .text {
+            padding: 35px 15px;
+            font-size: 14px;
+            line-height: 25px;
+        }
+
+        .btn {
+            width: 100%;
+            padding-bottom: 35px;
+            display: flex;
+            justify-content: center;
+
+            button {
+                width: 115px;
+                height: 35px;
+                border-radius: 5px;
+            }
+        }
+    }
+
+}
+
+// 印章设置弹出层提示信息
+.sealReminderProp {
+    width: 80%;
+    padding: 15px 15px 40px;
+    box-shadow: 4rpx 4rpx 8rpx 4rpx rgba(0, 0, 0, 0.5);
+
+    .content {
+
+        .text {
+            font-size: 14px;
+            text-align: center;
+            padding: 30px 15px;
+        }
+
+        .btn {
+            text-align: center;
+            padding: 0 15px;
+
+            button {
+                width: 115px;
+                height: 30px;
+                border-radius: 5px;
+            }
+        }
+    }
+
+}
+
+
+.signatureDetailPage:before {
+    content: "";
+    display: block;
+    height: 15px;
+    background: #fff;
+    position: relative;
+    z-index: 999;
+}

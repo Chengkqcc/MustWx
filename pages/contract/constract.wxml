@@ -91,16 +91,17 @@
         </van-tabs>
     </view>
     <view class="content">
-         <!-- <view class="emptyConstract" >
+        <!-- 空状态 -->
+         <view class="emptyConstract" wx:if="{{empty}}" >
             <image src="https://h5.1dq.com/static/app/images/nodata.png"/>
             <view class="text">- 暂时还没有内容 -</view>
             <view class="login" bind:tap="login">
                 <view class="icon">＋</view>
                 <view class="logintext" >登录用户</view>
             </view>
-         </view> -->
-
-         <view class="contractList">
+         </view>
+        <!-- 体验签署电子合同 -->
+         <view class="contractList" wx:if="{{experience}}">
             <block wx:for="{{allConstract}}">
                 <view class="contractItem">
                     <view class="contractLeft">

@@ -30,6 +30,27 @@
                     "name": "",
                     "pathName": "pages/login/login",
                     "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pages/contractPage/contractPage",
+                    "query": "index=3&type=undefined",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pages/sealManage/sealManage",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pages/contractPage/contractPage",
+                    "query": "index=3&type=undefined",
                     "scene": null,
                     "launchMode": "default"
                 }
