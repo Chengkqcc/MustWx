@@ -15,5 +15,5 @@
 </editor>
 <view class="editmodel-btns">
   <button class="txt">签署文档</button>
-  <button class="save">仅保存模板</button>
+  <button class="save" bindtap="savemodel">仅保存模板</button>
 </view>

@@ -86,19 +86,25 @@
   "babelSetting": {
     "ignore": [],
     "disablePlugins": [],
-    "outputPath": ""
-  },
-  "useIsolateContext": false,
-  "userConfirmedBundleSwitch": false,
-  "packNpmManually": true,
-  "packNpmRelationList": [
-    {
-      "packageJsonPath": "./package.json",
-      "miniprogramNpmDistDir": "./"
-    }
-  ],
-  "minifyWXSS": true,
-  "disableUseStrict": false,
-  "useCompilerPlugins": false,
-  "condition": {}
+    "outputPath": "",
+    "libVersion": "2.24.5",
+    "appid": "wx6f63361d0060525e",
+    "projectname": "must",
+    "debugOptions": {
+      "hidedInDevtools": []
+    },
+    "useIsolateContext": false,
+    "userConfirmedBundleSwitch": false,
+    "packNpmManually": true,
+    "packNpmRelationList": [
+      {
+        "packageJsonPath": "./package.json",
+        "miniprogramNpmDistDir": "./"
+      }
+    ],
+    "minifyWXSS": true,
+    "disableUseStrict": false,
+    "useCompilerPlugins": false,
+    "condition": {}
+  }
 }

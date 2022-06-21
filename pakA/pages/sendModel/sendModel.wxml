@@ -22,7 +22,7 @@
   </view>
   <button class="submit" bindtap="submitfn">确定提交</button>
 </view>
-<van-dialog use-slot title="请按照下方说明准备模板文件" confirmButtonText="我知道了" show="{{ false }}" bind:close="onClose">
+<van-dialog use-slot title="请按照下方说明准备模板文件" confirmButtonText="我知道了" show="{{ true }}" bind:close="onClose">
   <image src="../../img/model.jpg" />
 </van-dialog>
 <van-toast id="van-toast" />

@@ -49,6 +49,12 @@ Page({
       hdArr: newArr
     })
   },
+  fillfn(e){
+    let title = this.data.hdData[e.currentTarget.dataset.index].title
+    wx.navigateTo({
+      url: '/pakA/pages/fillcontent/fillcontent?title='+title,
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

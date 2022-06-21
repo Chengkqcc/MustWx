@@ -24,7 +24,6 @@ Page({
     const {
       fileList = []
     } = this.data;
-    console.log(fileList)
     fileList.push({
       url: file.url,
       deletable: true,
@@ -60,8 +59,8 @@ Page({
       Toast("请上传模板")
       return
     }
-    wx.navigateTo({
-      url: '/pakA/pages/Mymodel/mymodel?activeIndex=' + index + '&value=' + value + '&date=' + date
+    wx.redirectTo({
+      url: '/pakA/pages/Mymodel/mymodel?model=sendModel&activeIndex=' + index + '&value=' + value + '&date=' + date
     })
   },
   /**

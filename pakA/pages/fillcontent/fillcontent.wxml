@@ -1,0 +1,56 @@
+<!--pakA/pages/fillcontent/fillcontent.wxml-->
+<view wx:if="{{content}}" class="fillcontent">
+  <view class="title">
+    {{title}}
+  </view>
+  <view class="{{magnify?'img':'simg'}}">
+    <image src="../../img/model.jpg"></image>
+  </view>
+  <view class="fillbottom">
+    <view class="filllfet">
+      <view class="magnify" bindtap="magnifyfn">
+        <view>
+          <van-icon name="search" size="30" />
+        </view>
+        <view>{{magnify?"放大":"缩小"}}</view>
+      </view>
+      <view class="invite" bindtap="invateFn">
+        <view>
+          <van-icon name="manager-o" size="30" />
+        </view>
+        <view>邀请他人</view>
+      </view>
+    </view>
+    <view class="fillbtn" bindtap="fillbtn">确认填写内容</view>
+  </view>
+</view>
+<view wx:if="{{wait}}">
+  <view class="invite-success">
+    <van-icon name="checked" size="60" color="green" />
+    <view class="success-title">请等待他人填写</view>
+    <view class="success-text">如果还需要他人填写，请点击邀请他人填写</view>
+    <view class="invitebtn" bindtap="invateFn">邀请他人填写</view>
+  </view>
+</view>
+<view wx:if="{{success}}">
+  <view class="invite-success">
+    <van-icon name="checked" size="60" color="green" />
+    <view class="success-title">内容填写成功</view>
+    <view class="success-text">如果还需要他人填写，请点击邀请他人填写</view>
+    <view class="btns">
+      <view class="invitebtn" bindtap="invateFn">邀请他人填写</view>
+      <view class="addbtn" bindtap="addFn">创建合同</view>
+    </view>
+  </view>
+</view>
+<van-popup show="{{ show }}" position="bottom" closeable bind:close="onClose" custom-style="height: 60%">
+  <view class="popup-content">
+    <view class="title-content">
+      <view class="title">邀请对方扫描二维码填写</view>
+      <view class="text">支持微信、QQ等</view>
+    </view>
+    <view class="popup-img">
+      <image src="../../img/2.png"></image>
+    </view>
+  </view>
+</van-popup>

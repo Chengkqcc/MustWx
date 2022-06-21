@@ -80,7 +80,8 @@
         "pages/sendModel/sendModel",
         "pages/allmodel/allmodel",
         "pages/editTxt/editTxt",
-        "pages/offer/offer"
+        "pages/offer/offer",
+        "pages/fillcontent/fillcontent"
       ],
       "name": "aa",
       "independent": false

@@ -6,7 +6,7 @@
     <van-search value="{{value}}" bind:change="filterHd" background="#e1e1e1" placeholder="输入关键词进行搜索" />
     <view class="grid">
       <block wx:for="{{hdArr}}" wx:key="*this">
-        <view class="grid-item">
+        <view class="grid-item" bindtap="fillfn" data-index="{{index}}">
           <view class="item-img">
             <image src="../../img/model.jpg"></image>
           </view>
