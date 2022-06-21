@@ -52,7 +52,8 @@
         "pages/otherModel/otherModel",
         "pages/sendModel/sendModel",
         "pages/allmodel/allmodel",
-        "pages/editTxt/editTxt"
+        "pages/editTxt/editTxt",
+        "pages/fillcontent/fillcontent"
       ],
       "name": "aa",
       "independent": false

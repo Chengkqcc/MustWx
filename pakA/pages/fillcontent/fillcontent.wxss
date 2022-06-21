@@ -1,0 +1,107 @@
+.fillcontent {}
+
+.fillcontent .title {
+  font-weight: 500;
+  text-align: center;
+}
+
+.img {
+  width: 80%;
+  margin: 0 auto;
+  height: 1000rpx;
+}
+
+.simg {
+  width: 100vw;
+  margin: 0 auto;
+  height: 100vh;
+}
+
+image {
+  width: 100%;
+  height: 100%;
+}
+
+.fillcontent .fillbottom {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-bottom: 20rpx;
+  padding-top: 20rpx;
+  background: #eee;
+}
+
+.fillcontent .fillbottom .filllfet {
+  display: flex;
+}
+
+.magnify {
+  margin: 0 50rpx;
+  text-align: center;
+}
+
+.invite {
+  margin: 0 50rpx;
+  text-align: center;
+}
+
+.fillbtn {
+  flex-grow: 1;
+  background: rgb(245, 80, 80);
+  text-align: center;
+  color: #fff;
+  font-weight: 500;
+  padding: 40rpx 0;
+}
+
+/* 弹窗部分 */
+.popup-content .title-content {
+  text-align: center;
+  margin-top: 60rpx;
+}
+.title-content .title{
+  font-weight: bold;
+  margin-bottom: 10rpx;
+}
+.title-content .text {
+  color: #666;
+  font-size: 30rpx;
+}
+.popup-img {
+  margin: 0 auto;
+  width: 400rpx;
+  height: 400rpx;
+  margin-top: 60rpx;
+}
+.invite-success {
+  text-align: center;
+  margin-top: 45%;
+}
+.success-title {
+  font-weight: bold;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  color: #666;
+  font-size: 40rpx;
+}
+.success-text {
+  font-size: 30rpx;
+  color: #999;
+  margin-bottom: 30rpx;
+}
+.btns {
+  display: flex;
+}
+.invitebtn ,.addbtn{
+  width: 300rpx;
+  padding: 30rpx 0;
+  border-radius: 10rpx;
+  margin: 0 auto;
+  background: rgb(84, 85, 85);
+  color: #fff;
+}
+.addbtn {
+  background: rgb(240, 79, 79);
+}

@@ -1,4 +1,5 @@
 // pakA/pages/editTxt/editTxt.js
+import getDate from "../../../utils/formatime"
 Page({
 
   /**
@@ -36,6 +37,18 @@ Page({
       formats
     })
     console.log(this.data.formats)
+  },
+  savemodel(){
+    let date = getDate(new Date())
+    let obj = {
+      title: "新建空白模板",
+      modelnum: "654949594954954",
+      modeltime: date,
+      modelv: "v2"
+    }
+    wx.redirectTo({
+      url: '/pakA/pages/Mymodel/mymodel?model=editTxt&modelArr='+JSON.stringify(obj),
+    })
   },
   /**
    * 生命周期函数--监听页面加载

@@ -20,7 +20,7 @@
         <van-notice-bar wx:if="{{tabArr.length==0}}" left-icon="volume-o" scrollable="{{ false }}" text="在代码阅读过程中" />
         <block wx:for="{{tabArr}}" wx:key="*this">
           <view class="content-item">
-            <van-swipe-cell right-width="{{ 120 }}">
+            <van-swipe-cell right-width="{{ 120 }}" bind:click="swipefn">
               <van-cell-group>
                 <van-cell is-link center>
                   <view class="model-content" slot="title">
@@ -32,7 +32,7 @@
                 </van-cell>
               </van-cell-group>
               <view slot="right" class="btns">
-                <van-button class="edit" square color="#717171">编辑</van-button>
+                <van-button class="edit" square color="#717171" bindtap="editfn" >编辑</van-button>
                 <van-button class="del" bindtap="delfn" data-index="{{index}}" square color="#E54D42">删除</van-button>
               </view>
             </van-swipe-cell>
@@ -46,7 +46,7 @@
         <van-notice-bar wx:if="{{waitArr.length==0}}" left-icon="volume-o" scrollable="{{ false }}" text="在代码阅读过程中" />
         <block wx:for="{{waitArr}}" wx:key="*this">
           <view class="content-item">
-            <van-swipe-cell right-width="{{ 120 }}">
+            <van-swipe-cell right-width="{{ 120 }}" bind:click="swipefn">
               <van-cell-group>
                 <van-cell is-link center>
                   <view class="model-content" slot="title">
@@ -58,7 +58,7 @@
                 </van-cell>
               </van-cell-group>
               <view slot="right" class="btns">
-                <van-button class="edit" square color="#717171">编辑</van-button>
+                <van-button class="edit" square color="#717171" bindtap="editfn" >编辑</van-button>
                 <van-button class="del" bindtap="delfn" data-index="{{index}}" square color="#E54D42">删除</van-button>
               </view>
             </van-swipe-cell>
@@ -67,8 +67,6 @@
         <view wx:if="{{waitArr.length>=1}}" class="{{active==0?'no-have p':'no-have'}}">~没有了</view>
         <view wx:else="{{waitArr.length>=1}}"></view>
       </scroll-view>
-      <!-- <scroll-view class="tab-content" wx:else="{{}}" scroll-y>
-      </scroll-view> -->
     </view>
   </view>
   <view class="model-btns" wx:if="{{active==0||active==2}}">

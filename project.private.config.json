@@ -65,6 +65,13 @@
           "name": "",
           "pathName": "pakA/pages/editTxt/editTxt",
           "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pakA/pages/fillcontent/fillcontent",
+          "query": "title=合同",
           "scene": null,
           "launchMode": "default"
         }
