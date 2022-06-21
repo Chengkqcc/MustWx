@@ -1,4 +1,6 @@
 {
   "navigationBarTitleText": "账户安全认证",
-  "usingComponents": {}
+  "usingComponents": {
+    "yanzhengma": "/components/yanzhengma/yanzhengma"
+  }
 }

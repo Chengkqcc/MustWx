@@ -1,0 +1,41 @@
+<van-popup custom-class="popup" show="{{ show }}" overlay-style="background-color:rgba(0,0,0,0.3)">
+  <view class="yzm" bindtap="select_fn">
+    <view class="title">
+      <text>输入验证码</text>
+      <van-icon custom-class="cross" name="cross" bindclick="onClose" />
+    </view>
+    <view class="phone">验证码已发送至 {{number}}</view>
+    <!-- 这儿显示 输入的值 但 不是 在这儿输入 -->
+    <view class="input">
+      <block wx:for="{{6}}" wx:key="{{index}}">
+        <view class="item {{index == yzm_value.length ? 'active' : ''}}">
+          <!-- 上半部分  要么 竖杆 要么 数值 -->
+          <view class="top">
+            <!-- 竖杆 -->
+            <!-- <view class="line" hidden="{{!index == yzm_value.length}}"></view> -->
+            <!-- 输入的值 -->
+            <view class="shu">{{index == yzm_value.length?'|' : yzm_arr_value[index]}}</view>
+            <!-- <input class="{{index == yzm_value.length?'|' : yzm_arr_value[index]}}"></input> -->
+          </view>
+          <!-- 下半部分 选中为蓝色 线 -->
+           <view class="bottom"></view>
+        </view>
+      </block>
+    </view>
+    <!-- 这个 才是输入 框 但是隐藏的 -->
+    <view class="realyinput_box">
+      <view class="zz"></view>
+      <input class="realyinput"	bindinput="input_fn" type="number" maxlength="6" focus="{{isfocus}}"></input>
+    </view>
+    <view class="btn">
+      <van-button color="#F0F0F0" block disabled="{{disabled}}" custom-style="color:{{btn_font_color}}" bind:click="btn_fn">{{btn}}</van-button>
+    </view>
+    <view class="navigator">
+      收不到短信？<navigator class="nav" target="" url="">获取语音验证码</navigator>
+    </view>
+  </view>
+</van-popup>
+<!-- 
+  组件
+  <yanzhengma show="{{show}}" url="" number="" navigate_type=""/> 
+  -->

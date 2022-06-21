@@ -25,6 +25,7 @@ Page({
     pay_fn(event){
       let item = event.currentTarget.dataset.item
       let {id,title,price} = item
+      console.log(event);
       wx.navigateTo({
         url: '/pakB/pages/order/order?'+JSON.stringify({id,title,price}),
       })
