@@ -3,7 +3,7 @@
       <text class="text">信息填写</text>
       <van-icon name="warning-o" custom-class="tip" bindtap="tip" />
    </view>
-   <van-field value="{{ company }}" label="企业名称" placeholder="请输入企业名称" input-align="right" placeholder-style="color:#808080;" bind:change="changeValue" />
+   <van-field value="{{ company }}" label="企业名称" placeholder="请输入企业名称" input-align="right" placeholder-style="color:#808080;" bind:change="changeValue" clearable/>
    <view class="search-content {{closed?'search-closed':''}}" wx:if="{{companies.length>0}}">
       <van-cell-group custom-class="cell-group">
          <block wx:for="{{companies}}" wx:key="goods_id">

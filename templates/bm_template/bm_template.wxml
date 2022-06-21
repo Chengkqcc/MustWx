@@ -12,12 +12,12 @@
    <view class="hasCompanies">
       <van-cell-group>
          <block wx:for="{{companiesList}}" wx:key="*this">
-            <van-cell is-link url="/pakB/pages/Auth/Auth?name={{item}}">
+            <van-cell is-link url="/pakB/pages/Auth/Auth?company={{item.company}}&rzState={{item.rzState}}">
                <view class="left" slot="title">
                   <image class="image" src="/images/nav/my-off.png"></image>
                   <view class="title">
-                     <view class="text">{{item}}</view>
-                     <view class="desc">认证状态：未认证</view>
+                     <view class="text">{{item.company}}</view>
+                     <view class="desc">认证状态：{{item.rzState?'已认证':'未认证'}}</view>
                   </view>
                </view>
             </van-cell>

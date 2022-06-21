@@ -141,14 +141,6 @@ Page({
   submitBtn: function submitBtn() {
     var _this = this;
 
-    // console.log(this.data)
-    // if (!this.data.name || !this.data.code || !this.data.username || !this.data.userID) {
-    //    Toast('信息填写有误');
-    //    this.setData({
-    //       userID: null
-    //    })
-    //    return
-    // };
     if (!this.data.allInfoState) {
       (0, _toast["default"])('信息填写有误');
       this.setData({
@@ -185,6 +177,20 @@ Page({
         var arr = result.data.duigong;
         arr.push(obj);
         wx.hideLoading(); //停止loading
+        // 将企业认证状态存入本地存储
+
+        wx.setStorageSync('rzState', true);
+        var rzState = wx.getStorageSync('rzState');
+        wx.showToast({
+          title: '企业认证成功',
+          icon: 'success',
+          duration: 2000,
+          success: function success() {
+            wx.navigateTo({
+              url: '/pakB/pages/bm/bm?company=' + _this.data.name + '&rzState=' + rzState
+            });
+          }
+        });
       }
     });
   },
@@ -194,7 +200,7 @@ Page({
    */
   onLoad: function onLoad(options) {
     this.setData({
-      qiyeName: options.name
+      qiyeName: options.company
     });
   },
 
