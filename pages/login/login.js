@@ -92,6 +92,9 @@ Page({
 
     // 使用账户密码登录
     useAccount() {
+        wx.navigateTo({
+            url: '../register/register?type=useAccount',
+        })
     },
 
 

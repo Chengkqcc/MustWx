@@ -15,7 +15,8 @@
         "pages/videoPage/videoPage",
         "pages/fillContract/fillContract",
         "pages/sealManage/sealManage",
-        "pages/signatureDetailPage/signatureDetailPage"
+        "pages/signatureDetailPage/signatureDetailPage",
+        "pages/resetPassword/resetPassword"
     ],
     "window": {
         "backgroundTextStyle": "light",
