@@ -1,0 +1,48 @@
+<!--pakB/pages/modelyz/modelyz.wxml-->
+<view class="modelyz">
+  <view class="title"><text>*</text>基本信息</view>
+  <van-field
+    label="印章名称"
+    value="{{ input_value }}"
+    placeholder="给印章取一个名字,方便后期管理"
+    border="{{ false }}"
+    bind:change="input_fn"
+  />
+  <view class="title">印章颜色</view>
+  <view class="radios">
+    <van-radio-group value="{{ radio }}" bind:change="radio_fn">
+      <van-radio name="1" checked-color="#FF0000"></van-radio>
+      <van-radio name="2" checked-color="#0000FF"></van-radio>
+      <van-radio name="3" checked-color="#000000"></van-radio>
+    </van-radio-group>
+  </view>
+  <view class="title">印章样式</view>
+  <view class="type">
+    <van-grid column-num="3" border="{{ false }}" >
+      <van-grid-item wx:for="{{ yz_arr }}" wx:key="{{index}}" use-slot bind:click="select_yz_fn" data-item="{{item}}">
+        <view class="item">
+          <image src="{{item.img}}" mode="aspectFit"></image>
+        </view>
+      </van-grid-item>
+    </van-grid>
+  </view>
+  <view class="title">印章预览</view>
+  <view class="img">
+    <image class="" src="{{select_yz.img}}" mode="aspectFit"></image>
+  </view>
+  <view class="btn">
+    <van-button color="#E54D42" block bind:click="storage_fn">保存</van-button>
+  </view>
+</view>
+<!-- ! 弹窗 -->
+<van-popup show="{{ tip_show }}" overlay-style="background:rgba(0,0,0,0)" custom-class="tip" bind:close="onClose">
+  <view class="title">
+    <text>系统提示</text>
+    <van-icon name="cross" bind:click="close_tip" />
+  </view>
+  <view class="content">请先完成实名认证</view>
+  <view class="btn">
+    <view class="logout" bindtap="logout_close_tip">实名认证</view>
+    <view bindtap="close_tip">取消</view>
+  </view>
+</van-popup>

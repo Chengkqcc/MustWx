@@ -20,7 +20,7 @@ Component({
     // 的先在下边写其他方式的跳转
     navigate_type:{
       type:String,
-      value:'navigateTo'
+      value:'redirectTo'
     }
   },
   observers:{
@@ -141,7 +141,7 @@ Component({
       if(btn == '验证'){
         // 输入 的 验证码 和 发过来的验证码 对比 如：123456
         if(yzm_value=='123456'){
-          wx.navigateTo({
+          wx.redirectTo({
             url
           })
         }else{

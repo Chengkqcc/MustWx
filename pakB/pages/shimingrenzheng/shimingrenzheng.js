@@ -31,16 +31,20 @@ Page({
     // 切换 认证方式
     qiehuan_fn(event){
       let item = event.currentTarget.dataset.item
-      console.log(item);
+      console.log(34,item);
+      wx.showToast({
+        title: '已更换为'+item.title,
+        icon:'none'
+      })
       if(item.id<=2){
         this.setData({rz_way:item.title})
       }else{
         // 人工审核认证
         // 跳转页面
         console.log('跳转 人工审核认证 页面');
-        // wx.navigateTo({
-        //   url:'url'
-        // })
+        wx.navigateTo({
+          url:'/pakB/pages/porsenSGS/porsenSGS'
+        })
       }
       this.setData({show:false})
     },
@@ -100,7 +104,7 @@ Page({
       console.log('人工认证');
       console.log('跳转 人工审核认证 页面');
       wx.navigateTo({
-        url: 'url',
+        url: '/pakB/pages/porsenSGS/porsenSGS',
       })
     },
     /**

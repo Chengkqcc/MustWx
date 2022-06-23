@@ -1,0 +1,57 @@
+page {
+  background-color: #f1f1f1;
+}
+.porsenSGS .title {
+  padding: 15px;
+  font-size: 14px;
+  color: #666;
+}
+.porsenSGS .pic {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0;
+}
+.porsenSGS .pic .left {
+  flex: 1;
+  margin: 0 15px;
+  background-color: #F7F8FA;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.porsenSGS .pic .right {
+  flex: 1;
+  margin: 0 15px;
+  border: 1px solid #f1f1f1;
+}
+.porsenSGS .pic .img {
+  padding: 5px;
+  position: relative;
+}
+.porsenSGS .pic .img .cancel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  border-radius: 0 0 0 10px;
+}
+.porsenSGS .pic .img image {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.porsenSGS .btn {
+  padding: 20px 15px;
+}
+.popup .title {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.popup .title .confirm {
+  color: #07C160;
+}

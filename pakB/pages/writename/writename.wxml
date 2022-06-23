@@ -1,0 +1,35 @@
+<!--pakB/pages/writename/writename.wxml-->
+<view class="writename">
+  <view class="btn_box">
+    <!-- 画笔尺寸 -->
+    <van-icon name="setting" size="40px" bind:click="canvas_size_popup"/>
+    <!-- 颜色 -->
+    <van-radio-group value="{{ radio }}" bind:change="canvas_color">
+      <van-radio name="1" icon-size="30px" checked-color="#000" custom-class="bgcolor_black"></van-radio>
+      <van-radio name="2" icon-size="30px" checked-color="#f00" custom-class="bgcolor_red"></van-radio>
+    </van-radio-group>
+    <!-- 按钮 -->
+    <view class="writebox">
+      <van-button color="#F8F8F8" custom-class="cusstyle cusstyle_agin"  bindtap="clear">重写</van-button>
+      <van-button color="#E64340" custom-class="cusstyle" bindtap="export">保存</van-button>
+    </view>
+  </view>
+  <view class="write_box">
+    <text class="">签</text>
+    <text class="">字</text>
+    <text class="">区</text>
+    <!-- canvas -->
+    <view class="wricont">
+      <canvas class="canvastyle" canvas-id="canvasId" id='canvasId' bindtouchstart="bindtouchstart" bindtouchmove="bindtouchmove"></canvas>
+    </view>
+  </view>
+</view>
+
+<view class="canvas_popup" wx:if="{{show}}">
+  <view class="title">画笔尺寸：</view>
+  <view class="canvas_number">
+    <block wx:for="{{13}}">
+      <view class="item {{ radius == index+3 ? 'active':''}}" bindtap="canvas_number_fn" data-number="{{index+3}}">{{index+3}}</view>
+    </block>
+  </view>
+</view>

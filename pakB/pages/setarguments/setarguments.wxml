@@ -1,0 +1,33 @@
+<!--pakB/pages/setarguments/setarguments.wxml-->
+<view class="setarguments">
+  <view class="title"><text>*</text>基本信息</view>
+  <van-cell title="名称" value="{{name}}" border="{{false}}"/>
+  <van-cell title="印章类型" value="{{type}}" border="{{false}}"/>
+  <view class="title">印章颜色</view>
+  <view class="radios">
+    <van-radio-group value="{{ radio }}" bind:change="onChange">
+      <van-radio name="1" checked-color="#E1E4EB"></van-radio>
+      <van-radio name="2" checked-color="#FF0000"></van-radio>
+      <van-radio name="3" checked-color="#0000FF"></van-radio>
+      <van-radio name="4" checked-color="#000000"></van-radio>
+    </van-radio-group>
+  </view>
+  <view class="title">印章预览</view>
+  <view class="img">
+    <image class="" src="{{img}}" mode="aspectFit"></image>
+  </view>
+  <view class="btn">
+    <van-button color="#E54D42" block bind:click="storage_fn">保存(需审核)</van-button>
+  </view>
+</view>
+<!-- ! 弹窗 -->
+<van-popup show="{{ tip_show }}" overlay-style="background:rgba(0,0,0,0)" custom-class="tip" bind:close="onClose">
+  <view class="title">
+    <text>系统提示</text>
+    <van-icon name="cross" bind:click="close_tip" />
+  </view>
+  <view class="content">上传成功，请等待客服审核通过后可使用</view>
+  <view class="btn">
+    <view class="logout" bindtap="logout_close_tip">确定</view>
+  </view>
+</van-popup>
