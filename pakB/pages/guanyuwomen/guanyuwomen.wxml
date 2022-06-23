@@ -23,10 +23,10 @@
     </view>
     <view class="cell" wx:elif="{{item.id==6||item.id==7}}" >
     <!-- 没箭头 -->
-      <van-cell title="{{item.title}}" value="{{item.text}}" url="{{'登录页面'}}" border="{{false}}"/>
+      <van-cell title="{{item.title}}" value="{{item.text}}" url="/pages/login/login" border="{{false}}"/>
     </view>
     <view class="cell" wx:else>
-      <van-cell title="{{item.title}}" value="{{item.text}}" is-link url="{{'登录页面'}}" border="{{false}}"/>
+      <van-cell title="{{item.title}}" value="{{item.text}}" is-link url="/pages/login/login" border="{{false}}"/>
     </view>
   </block>
 </view>

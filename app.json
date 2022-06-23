@@ -124,7 +124,12 @@
         "pages/faren/faren",
         "pages/duigong/duigong",
         "pages/rengong/rengong",
-        "pages/authVideo/authVideo"
+        "pages/authVideo/authVideo",
+        "pages/writename/writename",
+        "pages/editimg/editimg",
+        "pages/setarguments/setarguments",
+        "pages/modelyz/modelyz",
+        "pages/porsenSGS/porsenSGS"
       ],
       "name": "bb",
       "independent": false
@@ -154,6 +159,10 @@
     "van-checkbox-group": "@vant/weapp/checkbox-group/index",
     "van-toast": "@vant/weapp/toast/index",
     "van-tag": "@vant/weapp/tag/index",
-    "van-picker": "@vant/weapp/picker/index"
+    "van-picker": "@vant/weapp/picker/index",
+    "van-radio": "@vant/weapp/radio/index",
+    "van-radio-group": "@vant/weapp/radio-group/index",
+    "van-grid": "@vant/weapp/grid/index",
+    "van-grid-item": "@vant/weapp/grid-item/index"
   }
 }

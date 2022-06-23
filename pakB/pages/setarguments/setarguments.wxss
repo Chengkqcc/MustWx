@@ -1,0 +1,87 @@
+page {
+  background: #f1f1f1;
+}
+.setarguments .title {
+  padding: 10px 15px;
+  font-size: 14px;
+}
+.setarguments .title text {
+  color: #f00;
+}
+.setarguments .radios {
+  background-color: #fff;
+}
+.setarguments .radios .van-radio-group {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.setarguments .radios .van-radio-group van-radio:nth-child(1) {
+  background-color: #E1E4EB;
+}
+.setarguments .radios .van-radio-group van-radio:nth-child(2) {
+  background-color: #FF0000;
+}
+.setarguments .radios .van-radio-group van-radio:nth-child(3) {
+  background-color: #0000FF;
+}
+.setarguments .radios .van-radio-group van-radio:nth-child(4) {
+  background-color: #000000;
+}
+.setarguments .radios .van-radio-group .van-radio__icon-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 25px;
+}
+.setarguments .radios .van-radio-group .van-radio__icon-wrap .van-radio__icon {
+  border: 1px solid transparent;
+}
+.setarguments .radios .van-radio-group .van-radio__icon-wrap .van-radio .van-radio__label {
+  display: none;
+}
+.setarguments .img {
+  background-color: #fff;
+  padding: 15px;
+  box-sizing: border-box;
+}
+.setarguments .btn {
+  padding: 15px;
+}
+.setarguments .btn .van-button {
+  border-radius: 5px;
+}
+.tip {
+  padding: 15px 15px 50px;
+  border: 1px solid #BDBDBD;
+  box-shadow: 0 0 10px #BDBDBD;
+  width: 80vw;
+}
+.tip .title {
+  display: flex;
+  justify-content: space-between;
+}
+.tip .content {
+  padding: 0 20px;
+  font-size: 14px;
+  height: 120px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tip .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tip .btn view {
+  padding: 5px 30px;
+  background-color: #F2F2F2;
+  color: #07C160;
+}
+.tip .btn view.logout {
+  background-color: #07C160;
+  color: #fff;
+}

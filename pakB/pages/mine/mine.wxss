@@ -92,6 +92,14 @@ page {
   font-size: 14px;
   color: #000;
 }
+.mine .content .common .iconimg {
+  width: 26px;
+  height: 26px;
+}
+.mine .content .common .iconimg image {
+  width: 100%;
+  height: 100%;
+}
 .mine .content .fixed {
   width: calc(100vw - 30px);
   position: fixed;

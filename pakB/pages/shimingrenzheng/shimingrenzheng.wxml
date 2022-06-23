@@ -26,8 +26,8 @@
         />
     </view>
     <view class="checked">
-      <van-checkbox value="{{ checked }}" shape="square" bind:change="onChange">我已阅读并同意</van-checkbox>
-      <navigator class="text" target="" url="/" open-type="navigate">
+      <van-checkbox value="{{ checked }}" shape="square" bind:change="onChange" checked-color="#fff">我已阅读并同意</van-checkbox>
+      <navigator class="text" url="/pakB/pages/xieyi/xieyi?name=实名认证授权协议" open-type="navigateTo">
         《实名认证授权协议》
       </navigator>
     </view>

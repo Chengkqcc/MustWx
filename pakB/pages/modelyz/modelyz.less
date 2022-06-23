@@ -1,0 +1,100 @@
+page{
+  background: #f1f1f1;
+}
+.modelyz{
+  .title{
+    padding:10px 15px;
+    font-size:14px;
+    text{
+      color:#f00;
+    }
+  }
+  .radios{
+    background-color: #fff;
+    .van-radio-group{
+      padding:15px;
+      display:flex;
+      align-items:center;
+      van-radio{  
+        margin-right:10px;
+        &:nth-child(1){
+          background-color: #FF0000;
+        }
+        &:nth-child(2){
+          background-color: #0000FF;
+        }
+        &:nth-child(3){
+          background-color: #000000;
+        }
+      }
+      .van-radio__icon-wrap{
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        padding:10px 25px;
+        .van-radio__icon{
+          border:1px solid transparent;
+        }        
+        .van-radio .van-radio__label{
+          display:none;
+        }
+      }
+    }
+  }
+  .type{
+    background-color: #fff;
+    .item{
+      height:80px;
+      image{
+        width: 100px;
+        height:100%;
+      }
+    }
+  }
+  .img{
+    background-color: #fff;
+    padding:15px;
+    box-sizing: border-box;
+    image{
+    }
+  }
+  .btn{
+    padding:15px;
+    .van-button{
+      border-radius: 5px;
+    }
+  }
+}
+.tip{
+  padding:15px 15px 50px;
+  border:1px solid #BDBDBD;
+  box-shadow:0 0 10px #BDBDBD;
+  width:80vw;
+  .title{
+    display: flex;
+    justify-content: space-between;
+  }
+  .content{
+    padding:0 20px;
+    font-size:14px;
+    height:120px;
+    text-align:center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .btn{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    view{
+      padding:5px 30px;
+      background-color: #F2F2F2;
+      color:#07C160;
+      &.logout{
+        background-color: #07C160;
+        color:#fff;
+      }
+    }
+  }
+}

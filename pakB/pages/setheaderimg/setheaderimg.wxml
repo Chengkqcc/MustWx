@@ -6,7 +6,7 @@
       <text>{{number}}/1</text>
     </view>
     <view class="select_box">
-      <van-uploader file-list="{{ fileList }}" deletable="{{ true }}" bind:after-read="afterRead" max-count="{{number}}" bind:delete="delete_img"/>
+      <van-uploader file-list="{{ fileList }}" deletable="{{ true }}" bind:after-read="afterRead" max-count="{{1}}" bind:delete="delete_img"/>
     </view>
   </view>
   <view class="btn">

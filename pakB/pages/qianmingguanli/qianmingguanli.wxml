@@ -17,7 +17,7 @@
     <van-button color="#E54D42" block bind:click="add_qyyz">添加企业印章</van-button>
   </view>
 </view>
-<!-- ! 弹窗 -->
+<!-- 提示 弹窗 -->
 <van-popup show="{{ tip_show }}" overlay-style="background:rgba(0,0,0,0)" custom-class="tip" bind:close="onClose">
   <view class="title">
     <text>提示</text>
@@ -43,11 +43,28 @@
     <view bindtap="close_qm">取消</view>
   </view>
 </van-popup>
+<!-- 拍摄签字图片 -->
+<van-dialog
+  class="paise_qm"
+  show="{{ img_show }}"
+  use-slot="{{true}}"
+  use-title-slot="{{true}}"
+  close-on-click-overlay
+  bind:confirm="sure_confirm"
+  confirm-button-text="我知道了"
+  confirm-button-color="#fff"
+  custom-style="padding:15px;"
+>
+  <view class="text" slot="title">请将公章或签名盖在白纸上，然后拍照上传，如下图所示。<text>如果您要使用企业印章,请先完成企业认证，认证成功后会自动创建具备法律效力的电子公章</text></view>
+  <view class="img">
+    <image src="https://img.yzcdn.cn/1.jpg" />
+  </view>
+</van-dialog>
 <!-- 底部切换 -->
 <view class="qiehuan">
   <van-popup show="{{ show }}" bind:close="close_qiehuan" position="bottom" custom-style="height: 40%;">
     <view class="title">
-      <view class="text">切换企业空间</view>
+      <view class="text">切换企业账户</view>
       <van-icon name="cross" bind:click="close_qiehuan" />
     </view>
     <!-- 切换用户 -->

@@ -1,174 +1,26 @@
 {
+  "setting": {},
+  "description": "项目私有配置文件。此文件中的内容将覆盖 project.config.json 中的相同字段。项目的改动优先同步到此文件中。详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html",
   "condition": {
-    "miniprogram": {
-      "list": [
-        {
-          "name": "",
-          "pathName": "pages/index/index",
-          "query": "",
-          "launchMode": "default",
-          "scene": null,
-          "setting": {},
-          "condition": {
-            "plugin": {
-              "list": []
-            },
-            "game": {
-              "list": []
-            },
-            "gamePlugin": {
-              "list": []
-            },
-            "miniprogram": {
-              "list": [
-                {
+      "plugin": {
+          "list": []
+      },
+      "game": {
+          "list": []
+      },
+      "gamePlugin": {
+          "list": []
+      },
+      "miniprogram": {
+          "list": [
+              {
                   "name": "",
                   "pathName": "pages/index/index",
                   "query": "",
                   "launchMode": "default",
                   "scene": null
-                },
-                {
-                  "name": "",
-                  "pathName": "pages/contract/constract",
-                  "query": "",
-                  "launchMode": "default",
-                  "scene": null
-                },
-                {
-                  "name": "",
-                  "pathName": "pages/login/login",
-                  "query": "",
-                  "launchMode": "default",
-                  "scene": null
-                },
-                {
-                  "name": "",
-                  "pathName": "pages/contractPage/contractPage",
-                  "query": "index=3&type=undefined",
-                  "launchMode": "default",
-                  "scene": null
-                },
-                {
-                  "name": "",
-                  "pathName": "pages/sealManage/sealManage",
-                  "query": "",
-                  "launchMode": "default",
-                  "scene": null
-                },
-                {
-                  "name": "",
-                  "pathName": "pages/contractPage/contractPage",
-                  "query": "index=3&type=undefined",
-                  "launchMode": "default",
-                  "scene": null
-                },
-                {
-                  "name": "",
-                  "pathName": "pages/operateContract/operateContract",
-                  "query": "index=0",
-                  "launchMode": "default",
-                  "scene": null
-                },
-                {
-                  "name": "",
-                  "pathName": "pages/operateContract/operateContract",
-                  "query": "index=0",
-                  "launchMode": "default",
-                  "scene": null
-                },
-                {
-                  "name": "",
-                  "pathName": "pages/register/register",
-                  "query": "",
-                  "scene": null,
-                  "launchMode": "default"
-                }
-              ]
-            }
-          }
-        }
-      ],
-      "description": "项目私有配置文件。此文件中的内容将覆盖 project.config.json 中的相同字段。项目的改动优先同步到此文件中。详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html",
-      "setting": {},
-      "condition": {
-        "plugin": {
-          "list": []
-        },
-        "game": {
-          "list": []
-        },
-        "gamePlugin": {
-          "list": []
-        },
-        "miniprogram": {
-          "list": [
-            {
-              "name": "",
-              "pathName": "pages/index/index",
-              "query": "",
-              "launchMode": "default",
-              "scene": null
-            },
-            {
-              "name": "",
-              "pathName": "pakA/pages/Mymodel/mymodel",
-              "query": "",
-              "launchMode": "default",
-              "scene": null
-            },
-            {
-              "name": "",
-              "pathName": "pakA/pages/systemModel/systemModel",
-              "query": "",
-              "launchMode": "default",
-              "scene": null
-            },
-            {
-              "name": "",
-              "pathName": "pakA/pages/sendModel/sendModel",
-              "query": "",
-              "launchMode": "default",
-              "scene": null
-            },
-            {
-              "name": "",
-              "pathName": "pakA/pages/systemModel/systemModel",
-              "query": "",
-              "launchMode": "default",
-              "scene": null
-            },
-            {
-              "name": "",
-              "pathName": "pakA/pages/otherModel/otherModel",
-              "query": "",
-              "launchMode": "default",
-              "scene": null
-            },
-            {
-              "name": "",
-              "pathName": "pakA/pages/allmodel/allmodel",
-              "query": "",
-              "launchMode": "default",
-              "scene": null
-            },
-            {
-              "name": "",
-              "pathName": "pakA/pages/editTxt/editTxt",
-              "query": "",
-              "launchMode": "default",
-              "scene": null
-            },
-            {
-              "name": "",
-              "pathName": "pakA/pages/fillcontent/fillcontent",
-              "query": "title=合同",
-              "scene": null,
-              "launchMode": "default"
-            }
+              }
           ]
-        }
       }
-    }
   }
 }
