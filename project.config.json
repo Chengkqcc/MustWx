@@ -1,110 +1,110 @@
 {
-  "description": "项目配置文件，详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html",
-  "packOptions": {
-    "ignore": [
-      {
-        "value": ".eslintrc.js",
-        "type": "file"
-      }
-    ],
-    "include": []
-  },
-  "setting": {
-    "urlCheck": true,
+    "description": "项目配置文件，详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html",
+    "packOptions": {
+        "ignore": [
+            {
+                "value": ".eslintrc.js",
+                "type": "file"
+            }
+        ],
+        "include": []
+    },
+    "setting": {
+        "urlCheck": true,
+        "es6": true,
+        "enhance": true,
+        "postcss": true,
+        "preloadBackgroundData": false,
+        "minified": true,
+        "newFeature": false,
+        "coverView": true,
+        "nodeModules": false,
+        "autoAudits": false,
+        "showShadowRootInWxmlPanel": true,
+        "scopeDataCheck": false,
+        "uglifyFileName": false,
+        "checkInvalidKey": true,
+        "checkSiteMap": true,
+        "uploadWithSourceMap": true,
+        "compileHotReLoad": true,
+        "lazyloadPlaceholderEnable": false,
+        "useMultiFrameRuntime": true,
+        "useApiHook": true,
+        "useApiHostProcess": true,
+        "babelSetting": {
+            "ignore": [],
+            "disablePlugins": [],
+            "outputPath": ""
+        },
+        "useIsolateContext": true,
+        "userConfirmedBundleSwitch": false,
+        "packNpmManually": true,
+        "packNpmRelationList": [
+            {
+                "packageJsonPath": "./package.json",
+                "miniprogramNpmDistDir": "./"
+            }
+        ],
+        "minifyWXSS": true,
+        "disableUseStrict": false,
+        "minifyWXML": true,
+        "showES6CompileOption": false,
+        "useCompilerPlugins": false,
+        "ignoreUploadUnusedFiles": true,
+        "ignoreDevUnusedFiles": true
+    },
+    "editorSetting": {
+        "tabIndent": "insertSpaces",
+        "tabSize": 2
+    },
+    "compileType": "miniprogram",
+    "libVersion": "2.19.4",
+    "appid": "wxb477562d764bed06",
+    "projectname": "wxmust",
+    "simulatorType": "wechat",
+    "simulatorPluginLibVersion": {},
+    "ignoreUploadUnusedFiles": true,
+    "useStaticServer": true,
+    "coverView": true,
     "es6": true,
-    "enhance": true,
     "postcss": true,
+    "lazyloadPlaceholderEnable": false,
     "preloadBackgroundData": false,
     "minified": true,
-    "newFeature": false,
-    "coverView": true,
-    "nodeModules": false,
     "autoAudits": false,
-    "showShadowRootInWxmlPanel": true,
-    "scopeDataCheck": false,
     "uglifyFileName": false,
-    "checkInvalidKey": true,
-    "checkSiteMap": true,
     "uploadWithSourceMap": true,
-    "compileHotReLoad": true,
-    "lazyloadPlaceholderEnable": false,
+    "enhance": true,
     "useMultiFrameRuntime": true,
+    "showShadowRootInWxmlPanel": true,
+    "showES6CompileOption": false,
+    "checkInvalidKey": true,
+    "compileHotReLoad": true,
     "useApiHook": false,
     "useApiHostProcess": false,
     "babelSetting": {
-      "ignore": [],
-      "disablePlugins": [],
-      "outputPath": ""
+        "ignore": [],
+        "disablePlugins": [],
+        "outputPath": "",
+        "libVersion": "2.24.5",
+        "appid": "wx6f63361d0060525e",
+        "projectname": "must",
+        "debugOptions": {
+            "hidedInDevtools": []
+        },
+        "useIsolateContext": false,
+        "userConfirmedBundleSwitch": false,
+        "packNpmManually": true,
+        "packNpmRelationList": [
+            {
+                "packageJsonPath": "./package.json",
+                "miniprogramNpmDistDir": "./"
+            }
+        ],
+        "minifyWXSS": true,
+        "disableUseStrict": false,
+        "useCompilerPlugins": false,
+        "condition": {}
     },
-    "useIsolateContext": false,
-    "userConfirmedBundleSwitch": false,
-    "packNpmManually": true,
-    "packNpmRelationList": [
-      {
-        "packageJsonPath": "./package.json",
-        "miniprogramNpmDistDir": "./"
-      }
-    ],
-    "minifyWXSS": true,
-    "disableUseStrict": false,
-    "minifyWXML": true,
-    "showES6CompileOption": false,
-    "useCompilerPlugins": false,
-    "ignoreUploadUnusedFiles": true,
-    "ignoreDevUnusedFiles": true,
-    "useStaticServer": true
-  },
-  "editorSetting": {
-    "tabIndent": "insertSpaces",
-    "tabSize": 2
-  },
-  "compileType": "miniprogram",
-  "libVersion": "2.19.4",
-  "appid": "wxb477562d764bed06",
-  "projectname": "wxmust",
-  "simulatorType": "wechat",
-  "simulatorPluginLibVersion": {},
-  "ignoreUploadUnusedFiles": true,
-  "useStaticServer": true,
-  "coverView": true,
-  "es6": true,
-  "postcss": true,
-  "lazyloadPlaceholderEnable": false,
-  "preloadBackgroundData": false,
-  "minified": true,
-  "autoAudits": false,
-  "uglifyFileName": false,
-  "uploadWithSourceMap": true,
-  "enhance": true,
-  "useMultiFrameRuntime": true,
-  "showShadowRootInWxmlPanel": true,
-  "showES6CompileOption": false,
-  "checkInvalidKey": true,
-  "compileHotReLoad": true,
-  "useApiHook": false,
-  "useApiHostProcess": false,
-  "babelSetting": {
-    "ignore": [],
-    "disablePlugins": [],
-    "outputPath": "",
-    "libVersion": "2.24.5",
-    "appid": "wx6f63361d0060525e",
-    "projectname": "must",
-    "debugOptions": {
-      "hidedInDevtools": []
-    },
-    "useIsolateContext": false,
-    "userConfirmedBundleSwitch": false,
-    "packNpmManually": true,
-    "packNpmRelationList": [
-      {
-        "packageJsonPath": "./package.json",
-        "miniprogramNpmDistDir": "./"
-      }
-    ],
-    "minifyWXSS": true,
-    "disableUseStrict": false,
-    "useCompilerPlugins": false,
     "condition": {}
-  }
 }
