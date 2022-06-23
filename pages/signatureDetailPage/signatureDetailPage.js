@@ -660,6 +660,7 @@ Page({
     onLoad: function (options) {
         let type = options.type; //获取跳转类型
         let imgsrc = options.imgsrc; //获取图片路径
+        console.log(imgsrc)
         this.setData({
             type
         })

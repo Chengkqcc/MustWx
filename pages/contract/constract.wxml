@@ -14,7 +14,6 @@
                         <van-icon name="records" />
                         <view class="number">剩余0份</view>
                     </view>
-
                 </view>
                 <view class="popupCenter">
                     <view class="changeBox"  bind:tap="changeSpace">
@@ -100,6 +99,26 @@
                 <view class="logintext" >登录用户</view>
             </view>
          </view>
+         <!-- 新加进来的电子合同 -->
+         <view class="contractList" wx:if="{{experience}}">
+            <block wx:for="{{constractList}}">
+                <view class="contractItem">
+                    <view class="contractLeft">
+                         <view class="img">
+                            <!-- <image src="{{item.imgsrc}}" /> -->
+                            <image src="../../images/contract/contract.jpg"/>
+                         </view>
+                         <view class="info" bindtap="operate" data-index="0">
+                            <view class="title">{{item.title}}</view>
+                            <view class="text">{{item.text}}</view>
+                         </view>
+                    </view>
+                    <view class="contractRight">
+                        <van-icon name="ellipsis" color="#aaa" is-link bind:click="showConstract"/>
+                    </view>
+                </view>
+            </block>
+         </view>
         <!-- 体验签署电子合同 -->
          <view class="contractList" wx:if="{{experience}}">
             <block>
@@ -121,8 +140,8 @@
             </block>
          </view>
          <view class="link" wx:if="{{linkShow}}">签署链接复制成功，将链接发送给对方即可签署</view>
+         
     </view>
-
     <van-popup show="{{constractShow}}" bind:close="constractClose" position="bottom" overlay-style="opacity:0.7" custom-style="height: 42%;">
         <view class="operateWrap">
             <view class="title" bindtap="constractClose">选择要进行的操作</view>

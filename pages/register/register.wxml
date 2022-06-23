@@ -1,27 +1,36 @@
 <!--pages/register/register.wxml-->
 <view class="register">
-     <form>
-        <view>
-            <label>手机号/邮箱</label>
-            <input type="text" placeholder="请输入您的手机号或邮箱" model:value="{{phone}}"/>
-        </view>
-        <view>
-            <label>密码</label>
-            <view class="pwdInput">
-                <input type="text" placeholder="请输入您的登录密码" model:value="{{psd}}" password="{{flag}}"/>
-                <view class="icon" bind:tap="eye" data-index="0"><van-icon wx:if="{{icon1}}" name="closed-eye"  size="25px" /></view>
-                <view class="icon" bind:tap="eye" data-index="1"><van-icon wx:if="{{icon2}}" name="eye-o"  size="25px"  /></view>
+    <view class="nav">
+        <view class="icon" bindtap="back"><van-icon name="arrow-left" size="20px" color="#aaa"/></view>
+        <view class="text">{{navText}}</view>
+    </view>
+    <view class="form">
+        <form>
+            <view>
+                <label>手机号/邮箱</label>
+                <input type="text" placeholder="请输入您的手机号或邮箱" model:value="{{phone}}"/>
             </view>
-        </view>
-    </form>
-    <view class="notice">
+            <view>
+                <label>密码</label>
+                <view class="pwdInput">
+                    <input type="text" placeholder="请输入您的登录密码" model:value="{{psd}}" password="{{flag}}"/>
+                    <view class="icon" bind:tap="eye" data-index="0"><van-icon wx:if="{{icon1}}" name="closed-eye"  size="25px" /></view>
+                    <view class="icon" bind:tap="eye" data-index="1"><van-icon wx:if="{{icon2}}" name="eye-o"  size="25px"  /></view>
+                </view>
+            </view>
+        </form>
+    </view>
+    <view class="notice" wx:if="{{checkShow}}">
         <van-checkbox value="{{ checked }}" bind:change="onChange"></van-checkbox>
         <text>我已阅读并同意</text>
         <p>《注册与使用协议》</p>
         <p>《隐私协议》</p>
         <p>《数字证书申领协议》</p>
     </view>
-    <van-button color="#E54D42"  block bind:tap="register">现在注册</van-button>
+    <view class="btn {{class}}">
+         <van-button color="#E54D42"  block bind:tap="register" data-text="{{btnText}}">{{btnText}}</van-button>
+    </view>
+    <view class="forget" wx:if="{{forget}}" bindtap="forget">忘记登录密码？</view>
 
     <van-popup show="{{show}}" bind:close="onClose" custom-class="readyWrap" overlay="{{false}}" closeable>
         <view class="readyNotice">
@@ -39,6 +48,8 @@
 
     <view class="demo">
         <view wx:if="{{usanotice}}">请输入正确的的账号</view>
-        <view wx:if="{{pwdnotice}}">密码不能少于8位</view>
+        <view wx:if="{{pwdnotice}}">{{pwdHint}}</view>
     </view>
+
+    <!-- 账户或密码错误弹出层 -->
 </view>

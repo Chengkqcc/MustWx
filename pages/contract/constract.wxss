@@ -178,6 +178,7 @@
   flex-wrap: wrap;
 }
 .contract .content .contractList .contractItem .contractLeft .info .title {
+  width: 100%;
   color: rgba(59, 65, 68, 0.91);
 }
 .contract .content .contractList .contractItem .contractLeft .info .text {
