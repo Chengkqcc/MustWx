@@ -63,7 +63,7 @@ Page({
       // });
       // 上传完成需要更新 fileList
       const { fileList = [] } = this.data;
-      fileList.push({ ...file, url: res.data });
+      fileList.push({ ...file });
       this.setData({ fileList });
     },
     // 删除

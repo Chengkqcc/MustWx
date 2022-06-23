@@ -19,13 +19,6 @@
                     "query": "",
                     "launchMode": "default",
                     "scene": null
-                },
-                {
-                    "name": "",
-                    "pathName": "pakB/pages/mine/mine",
-                    "query": "",
-                    "scene": null,
-                    "launchMode": "default"
                 }
             ]
         }

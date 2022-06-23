@@ -1,0 +1,96 @@
+page {
+  background: #f1f1f1;
+}
+.modelyz .title {
+  padding: 10px 15px;
+  font-size: 14px;
+}
+.modelyz .title text {
+  color: #f00;
+}
+.modelyz .radios {
+  background-color: #fff;
+}
+.modelyz .radios .van-radio-group {
+  padding: 15px;
+  display: flex;
+  align-items: center;
+}
+.modelyz .radios .van-radio-group van-radio {
+  margin-right: 10px;
+}
+.modelyz .radios .van-radio-group van-radio:nth-child(1) {
+  background-color: #FF0000;
+}
+.modelyz .radios .van-radio-group van-radio:nth-child(2) {
+  background-color: #0000FF;
+}
+.modelyz .radios .van-radio-group van-radio:nth-child(3) {
+  background-color: #000000;
+}
+.modelyz .radios .van-radio-group .van-radio__icon-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 25px;
+}
+.modelyz .radios .van-radio-group .van-radio__icon-wrap .van-radio__icon {
+  border: 1px solid transparent;
+}
+.modelyz .radios .van-radio-group .van-radio__icon-wrap .van-radio .van-radio__label {
+  display: none;
+}
+.modelyz .type {
+  background-color: #fff;
+}
+.modelyz .type .item {
+  height: 80px;
+}
+.modelyz .type .item image {
+  width: 100px;
+  height: 100%;
+}
+.modelyz .img {
+  background-color: #fff;
+  padding: 15px;
+  box-sizing: border-box;
+}
+.modelyz .btn {
+  padding: 15px;
+}
+.modelyz .btn .van-button {
+  border-radius: 5px;
+}
+.tip {
+  padding: 15px 15px 50px;
+  border: 1px solid #BDBDBD;
+  box-shadow: 0 0 10px #BDBDBD;
+  width: 80vw;
+}
+.tip .title {
+  display: flex;
+  justify-content: space-between;
+}
+.tip .content {
+  padding: 0 20px;
+  font-size: 14px;
+  height: 120px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tip .btn {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.tip .btn view {
+  padding: 5px 30px;
+  background-color: #F2F2F2;
+  color: #07C160;
+}
+.tip .btn view.logout {
+  background-color: #07C160;
+  color: #fff;
+}

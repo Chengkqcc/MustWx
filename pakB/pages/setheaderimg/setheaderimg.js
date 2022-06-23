@@ -17,29 +17,20 @@ Page({
       console.log(fileList);
       fileList.push({ ...file, url: file.url });
       this.setData({ fileList,number:1 });
-      // 当设置 mutiple 为 true 时, file 为数组格式，否则为对象格式
-      // wx.uploadFile({
-      //   url: 'https://example.weixin.qq.com/upload', // 仅为示例，非真实的接口地址
-      //   filePath: file.url,
-      //   name: 'file',
-      //   formData: { user: 'test' },
-      //   success(res) {
-      //     // 上传完成需要更新 fileList
-      //     const { fileList = [] } = this.data;
-      //     fileList.push({ ...file, url: res.data });
-      //     this.setData({ fileList });
-      //   },
-      // });
     },
     // 删除图片
     delete_img(event){
       console.log(event.detail.index);
-      
+      const { fileList = [] } = this.data;
+      fileList.pop()
+      console.log(fileList);
+      this.setData({ fileList,number:0 });
     },
     set_fn(){
       let number = this.data.number;
+      const { fileList = [] } = this.data;
       if(number==1){
-        
+        console.log('把这个图片设为全局数据',fileList);
       }else{
         wx.showToast({
           title: '请先选取头像',

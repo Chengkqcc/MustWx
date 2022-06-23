@@ -39,6 +39,12 @@ page {
 .shimingrenzheng .top .van-cell .van-field__control {
   font-size: 16px;
 }
+.shimingrenzheng .top .van-checkbox .van-checkbox__icon {
+  background-color: #fff;
+}
+.shimingrenzheng .top .van-checkbox .van-checkbox__icon--checked .van-icon-success {
+  color: #0081FF;
+}
 .shimingrenzheng .top .checked {
   padding: 15px;
   display: flex;

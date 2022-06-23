@@ -1,0 +1,96 @@
+page {
+  background: #f1f1f1;
+}
+.writename {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+}
+.writename .btn_box {
+  padding-top: 30px;
+  box-sizing: border-box;
+  flex-basis: 20%;
+  background-color: #FBFBFB;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.writename .btn_box .van-radio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+.writename .btn_box .van-radio .van-radio__label {
+  display: none;
+}
+.writename .btn_box .bgcolor_black .van-radio__icon--round {
+  background-color: #000;
+}
+.writename .btn_box .bgcolor_red .van-radio__icon--round {
+  background-color: #f00;
+}
+.writename .btn_box .writebox .cusstyle {
+  border-radius: 3px;
+  transform: rotateZ(90deg);
+  margin: 30px 0;
+}
+.writename .btn_box .writebox .cusstyle .van-button__text {
+  font-size: 20px;
+}
+.writename .btn_box .writebox .cusstyle_agin .van-button__text {
+  color: #000;
+}
+.writename .write_box {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+.writename .write_box text {
+  font-size: 100px;
+  font-weight: 500;
+  color: #E1E2E2;
+  transform: rotateZ(90deg);
+}
+.writename .write_box .wricont {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.writename .write_box .wricont .canvastyle {
+  height: 100%;
+  width: 100%;
+}
+.canvas_popup {
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-60%) rotateZ(90deg);
+  background-color: #fff;
+  padding: 15px;
+}
+.canvas_popup .title {
+  font-size: 16px;
+  font-weight: 600;
+}
+.canvas_popup .canvas_number {
+  display: flex;
+  justify-content: space-between;
+}
+.canvas_popup .canvas_number .item {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+  border-radius: 3px;
+  background-color: #E1E2E2;
+}
+.canvas_popup .canvas_number .item.active {
+  color: #fff;
+  background-color: #E64340;
+}

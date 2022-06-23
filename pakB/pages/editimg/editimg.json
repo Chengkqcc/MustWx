@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "图片编辑",
+  "usingComponents": {
+    "yeyouzi-cropper": "/components/yeyouzi-cropper/yeyouzi-cropper"
+  }
+}
