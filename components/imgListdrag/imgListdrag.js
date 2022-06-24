@@ -74,7 +74,7 @@ Component({
         }
       })
       wx.navigateTo({
-        url: `/pages/uploadPages/cropper/cropper?imgSrc=${src}&&id=${key}`
+        url: '/pages/uploadPages/cropper/cropper?imgSrc='+src+'&&id='+key
       })
     },
     todetail(){

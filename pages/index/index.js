@@ -226,7 +226,6 @@ Page({
           url: '../login/login?type=homepage',
         })
       }
-
     } else {
       wx.navigateTo({
         url: '../../pakB/pages/usersetting/usersetting',
