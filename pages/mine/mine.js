@@ -100,11 +100,17 @@ Page({
   },
   // 展示底部切换
   bottom_qiehuan(){
+    wx.hideTabBar({
+      animation: true,
+    })
     this.setData({show:true})
   },
   // 关闭 底部切换
   close_qiehuan(){
     this.setData({ show: false });
+    wx.showTabBar({
+      animation: true,
+    })
   },
   // 切换用户
   qiehuan_fn(){
