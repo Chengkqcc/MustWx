@@ -28,7 +28,7 @@
       },
       {
         "text": "我的",
-        "pagePath": "pages/../pakB/pages/mine/mine",
+        "pagePath": "pages/mine/mine",
         "iconPath": "images/nav/my-off.png",
         "selectedIconPath": "images/nav/my-on.png"
       }
