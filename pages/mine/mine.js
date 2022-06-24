@@ -57,32 +57,32 @@ Page({
       rzshow:true,//认证框是否显示
       show:false,//是否展示底部 切换框
       function_data:[
-        {id:0,text:'认证中心',page:'/pakB/pages/renzhengzhongxin/renzhengzhongxin',icon:'/pakB/imgs/pingtairenzheng.png'},
-        {id:1,text:'产品购买',page:'/pakB/pages/chanpingoumai/chanpingoumai',icon:'/pakB/imgs/gouwu.png'},
-        {id:2,text:'优惠券',page:'/pakB/pages/youhuiquan/youhuiquan',icon:'/pakB/imgs/libao.png'},
-        {id:3,text:'费用中心',page:'/pakB/pages/dingdanguanli/dingdanguanli',icon:'/pakB/imgs/feiyong.png'},
-        {id:4,text:'签名管理',page:'/pakB/pages/qianmingguanli/qianmingguanli',icon:'/pakB/imgs/pen.png'},
-        {id:5,text:'企业管理',page:'/pakB/pages/bm/bm',icon:'/pakB/imgs/zhengjian.png'},
+        {id:0,text:'认证中心',page:'/pakB/pages/renzhengzhongxin/renzhengzhongxin',icon:'/images/mine/pingtairenzheng.png'},
+        {id:1,text:'产品购买',page:'/pakB/pages/chanpingoumai/chanpingoumai',icon:'/images/mine/gouwu.png'},
+        {id:2,text:'优惠券',page:'/pakB/pages/youhuiquan/youhuiquan',icon:'/images/mine/libao.png'},
+        {id:3,text:'费用中心',page:'/pakB/pages/dingdanguanli/dingdanguanli',icon:'/images/mine/feiyong.png'},
+        {id:4,text:'签名管理',page:'/pakB/pages/qianmingguanli/qianmingguanli',icon:'/images/mine/pen.png'},
+        {id:5,text:'企业管理',page:'/pakB/pages/bm/bm',icon:'/images/mine/zhengjian.png'},
       ],
       function_nologin_data:[
-        {id:0,text:'认证中心',page:'/pages/login/login',icon:'/pakB/imgs/pingtairenzheng.png'},
-        {id:1,text:'产品购买',page:'/pages/login/login',icon:'/pakB/imgs/gouwu.png'},
-        {id:2,text:'优惠券',page:'/pages/login/login',icon:'/pakB/imgs/libao.png'},
-        {id:3,text:'费用中心',page:'/pages/login/login',icon:'/pakB/imgs/feiyong.png'},
+        {id:0,text:'认证中心',page:'/pages/login/login',icon:'/images/mine/pingtairenzheng.png'},
+        {id:1,text:'产品购买',page:'/pages/login/login',icon:'/images/mine/gouwu.png'},
+        {id:2,text:'优惠券',page:'/pages/login/login',icon:'/images/mine/libao.png'},
+        {id:3,text:'费用中心',page:'/pages/login/login',icon:'/images/mine/feiyong.png'},
       ],
       manage_data:[
-        {id:0,text:'我的模板',page:'/pakA/pages/Mymodel/mymodel',icon:'/pakB/imgs/wenjianjia.png'},
-        {id:1,text:'草稿箱',page:'/pakA/pages/Mymodel/mymodel',icon:'/pakB/imgs/zhongmingming.png'},
-        {id:2,text:'待审模板',page:'/pakA/pages/Mymodel/mymodel',icon:'/pakB/imgs/shenfenrenzheng_tianjiashenfenrenzheng.png'}
+        {id:0,text:'我的模板',page:'/pakA/pages/Mymodel/mymodel',icon:'/images/mine/wenjianjia.png'},
+        {id:1,text:'草稿箱',page:'/pakA/pages/Mymodel/mymodel',icon:'/images/mine/zhongmingming.png'},
+        {id:2,text:'待审模板',page:'/pakA/pages/Mymodel/mymodel',icon:'/images/mine/shenfenrenzheng_tianjiashenfenrenzheng.png'}
       ],
       user_set_data:[
-        {id:0,text:'账户设置',page:'/pakB/pages/usersetting/usersetting',icon:'/pakB/imgs/shezhi.png'},
-        {id:1,text:'安全设置',page:'/pakB/pages/anquanshezhi/anquanshezhi',icon:'/pakB/imgs/anquanzhongxin.png'},
-        {id:2,text:'通知设置',page:'/pakB/pages/tongzhishezhi/tongzhishezhi',icon:'/pakB/imgs/tongzhi.png'},
-        {id:3,text:'消息中心',page:'/pakB/pages/xiaoxizhongxin/xiaoxizhongxin',icon:'/pakB/imgs/xiaoxi.png'},
-        {id:4,text:'帮助中心',page:'/pakA/pages/help/help',icon:'/pakB/imgs/bangzhu.png'},
-        {id:5,text:'意见反馈',page:'/pakB/pages/yijianfankui/yijianfankui',icon:'/pakB/imgs/yunongtongyijianfankui.png'},//pakA/pages/problem/problem  也可以用这个  /pakB/pages/yijianfankui/yijianfankui
-        {id:6,text:'关于我们',page:'/pakB/pages/guanyuwomen/guanyuwomen',icon:'/pakB/imgs/'},
+        {id:0,text:'账户设置',page:'/pakB/pages/usersetting/usersetting',icon:'/images/mine/shezhi.png'},
+        {id:1,text:'安全设置',page:'/pakB/pages/anquanshezhi/anquanshezhi',icon:'/images/mine/anquanzhongxin.png'},
+        {id:2,text:'通知设置',page:'/pakB/pages/tongzhishezhi/tongzhishezhi',icon:'/images/mine/tongzhi.png'},
+        {id:3,text:'消息中心',page:'/pakB/pages/xiaoxizhongxin/xiaoxizhongxin',icon:'/images/mine/xiaoxi.png'},
+        {id:4,text:'帮助中心',page:'/pakA/pages/help/help',icon:'/images/mine/bangzhu.png'},
+        {id:5,text:'意见反馈',page:'/pakB/pages/yijianfankui/yijianfankui',icon:'/images/mine/yunongtongyijianfankui.png'},//pakA/pages/problem/problem  也可以用这个  /pakB/pages/yijianfankui/yijianfankui
+        {id:6,text:'关于我们',page:'/pakB/pages/guanyuwomen/guanyuwomen',icon:'/images/mine/'},
       ],
   },
   //methods
