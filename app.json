@@ -28,11 +28,11 @@
       },
       {
         "text": "我的",
-        "pagePath": "pages/mine/mine",
+        "pagePath": "pages/../pakB/pages/mine/mine",
         "iconPath": "images/nav/my-off.png",
         "selectedIconPath": "images/nav/my-on.png"
       }
-    ],
+    ] },
     "pages": [
       "pages/index/index",
       "pages/logs/logs",
@@ -59,51 +59,6 @@
       "navigationBarTextStyle": "black"
     },
     "sitemapLocation": "sitemap.json",
-    "tabBar": {
-      "selectedColor": "#e53f3c",
-      "list": [{
-          "text": "首页",
-          "pagePath": "pages/index/index",
-          "iconPath": "images/nav/home-off.png",
-          "selectedIconPath": "images/nav/home-on.png"
-        },
-        {
-          "text": "上传",
-          "pagePath": "pages/uploading/uploading",
-          "iconPath": "images/nav/fl-off.png",
-          "selectedIconPath": "images/nav/fl-on.png"
-        },
-        {
-          "text": "合同",
-          "pagePath": "pages/contract/constract",
-          "iconPath": "images/nav/cart-off.png",
-          "selectedIconPath": "images/nav/cart-on.png"
-        },
-        {
-          "text": "我的",
-          "pagePath": "pages/mine/mine",
-          "iconPath": "images/nav/my-off.png",
-          "selectedIconPath": "images/nav/my-on.png"
-        }
-      ]
-    },
-    "subpackages": [{
-        "root": "pakA",
-        "pages": [
-          "pages/home/home"
-        ],
-        "name": "aa",
-        "independent": false
-      },
-      {
-        "root": "pakB",
-        "pages": [
-          "pages/home/home"
-        ],
-        "name": "bb",
-        "independent": false
-      }
-    ],
     "pages": [
       "pages/uploadPages/uploadfiles/uploadfiles",
       "pages/uploadPages/uploadImage/upliadImage",
@@ -233,5 +188,5 @@
       "van-grid": "@vant/weapp/grid/index",
       "van-grid-item": "@vant/weapp/grid-item/index"
     }
-  }
+
 }
