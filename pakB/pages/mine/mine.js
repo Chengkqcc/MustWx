@@ -5,7 +5,7 @@ Page({
      * 页面的初始数据
      */
     data: {        
-        login:true,//是否登录，true登录，false 为登录
+        login:false,//是否登录，true登录，false 为登录
         rzshow:true,//认证框是否显示
         show:false,//是否展示底部 切换框
         function_data:[
@@ -38,6 +38,13 @@ Page({
         ],
     },
     //methods
+    // 登录 点击 头部 跳转
+    to_usersetting_fn(){
+      wx.navigateTo({
+        url: '/pakB/pages/usersetting/usersetting',
+      })
+    },
+    // 登录
     loginfn(){
       wx.navigateTo({
         url: '/pages/login/login',
@@ -90,7 +97,12 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function () {
-
+      // 判断是否登录
+      let token = wx.getStorageSync('token')
+      console.log(token);
+      if(token){
+        this.setData({login:true})
+      }
     },
 
     /**

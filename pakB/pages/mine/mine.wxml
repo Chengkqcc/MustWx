@@ -2,7 +2,7 @@
 <!-- <text>pakB/pages/mine/mine.wxml</text> -->
 <!-- 登录 -->
 <view class="mine" wx:if="{{login}}">
-  <view class="user">
+  <view class="user" bindtap="to_usersetting_fn">
     <!-- 头像 -->
     <view class="yonghu">
       <view class="img">
