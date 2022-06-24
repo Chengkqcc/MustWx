@@ -89,8 +89,6 @@
     </van-popup>
   </view>
 </view>
-
-
 <!-- 未登录 -->
 <view class="mine" wx:else>
   <view class="user nologin" bindtap="loginfn">
