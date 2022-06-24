@@ -63,7 +63,6 @@
         "iconPath": "images/nav/my-off.png",
         "selectedIconPath": "images/nav/my-on.png"
       }
-<<<<<<< HEAD
     ] },
     "pages": [
       "pages/index/index",
@@ -219,11 +218,7 @@
       "van-radio-group": "@vant/weapp/radio-group/index",
       "van-grid": "@vant/weapp/grid/index",
       "van-grid-item": "@vant/weapp/grid-item/index"
-    }
-
-=======
-    ]
-  },
+    },
   "subpackages": [
     {
       "root": "pakA",
@@ -326,5 +321,4 @@
     "van-grid": "@vant/weapp/grid/index",
     "van-grid-item": "@vant/weapp/grid-item/index"
   }
->>>>>>> 5d08d1610b25e1d0afcbd574647a9d5fa8c1502a
 }

@@ -1,7 +1,5 @@
 // pakB/pages/mine/mine.js
 Page({
-
-<<<<<<< HEAD
     /**
      * 页面的初始数据
      */
@@ -51,7 +49,6 @@ Page({
     onShow: function () {
 
     },
-=======
   /**
    * 页面的初始数据
    */
@@ -155,7 +152,6 @@ Page({
       this.setData({login:true})
     }
   },
->>>>>>> 5d08d1610b25e1d0afcbd574647a9d5fa8c1502a
 
   /**
    * 生命周期函数--监听页面隐藏
