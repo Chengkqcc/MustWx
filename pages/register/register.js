@@ -19,7 +19,8 @@ Page({
         checkShow: null,
         forget: null,
         class: null,
-        pwdHint: "密码不能少于8位"
+        pwdHint: "密码不能少于8位",
+        systemHint: false
     },
     // 返回上一级
     back() {
@@ -96,7 +97,9 @@ Page({
                 }, 1200)
 
             } else if (this.data.psd.length >= 5 && this.data.psd.length <= 8) {
-                console.log(1)
+                this.setData({
+                    systemHint: true
+                })
             } else {
                 wx.setStorageSync('token', "20010108");
                 let token = wx.getStorageSync('token');
@@ -105,6 +108,13 @@ Page({
                 })
             }
         }
+    },
+
+    // 关闭系统提示
+    closeHint() {
+        this.setData({
+            systemHint: false
+        })
     },
 
     // 同意
