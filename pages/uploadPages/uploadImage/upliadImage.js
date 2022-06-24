@@ -7,7 +7,8 @@ Page({
      */
     data: {
         imgList: [],
-        obj:null
+        obj:null,
+        newurl:null //存放截取的图片
     },
     updateImage(e) {
         console.log(e.detail)
@@ -76,7 +77,7 @@ Page({
      */
     onShow: function () {
         // 计算图片宽度
-
+        console.log(this.data.newurl)
     },
 
     /**

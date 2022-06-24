@@ -1,0 +1,9 @@
+<!--pages/uploadPages/success/success.wxml-->
+<view class="main">
+    <van-icon name="passed" color="#5bb053" size="50px" />
+    <text class="tips">{{arr[_index].tit}}</text>
+    <view class="btns">
+        <button class="yulan" bindtap="gotopreview">{{arr[_index].btn1}}</button>
+        <button class="chuangjian" bindtap="gotodetail">{{arr[_index].btn2}}</button>
+    </view>
+</view>

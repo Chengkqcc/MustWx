@@ -82,6 +82,22 @@
       "pages/sealManage/sealManage",
       "pages/signatureDetailPage/signatureDetailPage",
       "pages/resetPassword/resetPassword"
+        "pages/index/index",
+        "pages/logs/logs",
+        "pages/contract/constract",
+        "pages/mine/mine",
+        "pages/uploading/uploading",
+        "pages/uoloaddetail/uoloaddetail",
+        "pages/uploadPages/addQian/addQian",
+        "templates/Qian/Qian",
+        "pages/uploadPages/addChao/addChao",
+        "templates/Chao/Chao",
+        "pages/uploadPages/uploadfiles/uploadfiles",
+        "pages/uploadPages/uploadImage/upliadImage",
+        "pages/uploadPages/success/success",
+        "pages/uploadPages/filespreview/filespreview",
+        "pages/uploadPages/PcUpload_tips/PcUpload_tips",
+        "pages/uploadPages/cropper/cropper"
     ],
     "window": {
       "backgroundTextStyle": "light",

@@ -1,0 +1,33 @@
+page {
+  background-color: #f1f1f1;
+}
+page .main {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 56rpx;
+  margin: 50% auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+page .main .tips {
+  font-size: 38rpx;
+  margin: 50rpx 0;
+}
+page .main .btns {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+page .main .btns button {
+  width: 45%;
+  font-size: 30rpx;
+}
+page .main .btns .yulan {
+  color: #d0d0d0;
+  background-color: transparent;
+}
+page .main .btns .chuangjian {
+  background-color: #d35849;
+  color: #fff;
+}

@@ -1,0 +1,11 @@
+
+<view>
+    <image-cropper id="image-cropper" angle="{{angle}}" limit_move="{{true}}" disable_rotate="{{true}}" width="{{width}}" height="{{height}}" imgSrc="{{src}}" bindload="cropperload" bindimageload="loadimage" bindtapcut="clickcut"></image-cropper>
+</view>
+<view class="bottom">
+    <view bindtap="cancels">取消</view>
+    <view catchtouchstart='rotate' catchtouchend='end' data-type="rotate">
+        <van-icon name="replay" />
+    </view>
+    <view bindtap="submit">完成</view>
+</view>

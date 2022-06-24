@@ -16,6 +16,11 @@ Page({
     // showPopup() {
     //     this.setData({ show: true });
     //   },
+    gotoPcUpload(){
+      wx.navigateTo({
+        url: '/pages/uploadPages/PcUpload_tips/PcUpload_tips',
+      })
+    },
     jumpcontract(){
       wx.navigateTo({
         url: '/pakA/pages/Mymodel/mymodel',

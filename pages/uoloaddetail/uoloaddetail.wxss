@@ -24,9 +24,6 @@ page {
   padding: none !important;
   display: none;
 }
-.cell_item .van-cell__value {
-  display: none;
-}
 .cell_list {
   padding-bottom: 40rpx;
 }

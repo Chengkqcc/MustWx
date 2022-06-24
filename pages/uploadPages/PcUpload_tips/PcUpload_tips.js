@@ -1,20 +1,33 @@
-// pages/uploadPages/uploadfiles/uploadfiles.js
+// pages/uploadPages/PcUpload_tips/PcUpload_tips.js
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-
-    },
-
-    chooseFiles(){
-        wx.getFileSystemManager().readFile({
-            success:(res)=>{
-                console.log(res)
+        urls:[
+            "https://oss2.1dq.com/app/static/help/webCreateDoc/1.png",
+            "https://oss2.1dq.com/app/static/help/webCreateDoc/2.png"
+        ],
+        texts:[
+            {
+                tits:"点击浏览，选择要签署的合同",
+                detail:"或者将合同文件拖到方框内，系统会自动上传"
+            },
+            {
+                tits:"点击底部，发起合同",
+                detail:"一份电子合同就发起成功了，对方会收到一条短信，对方点击短信链接即可完成签字或盖章"
             }
+        ]
+    },
+    previewImage(e){
+        let current = e.target.dataset.src
+        wx.previewImage({
+          current,
+          urls: this.data.urls,
         })
     },
+
     /**
      * 生命周期函数--监听页面加载
      */
