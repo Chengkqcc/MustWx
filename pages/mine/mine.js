@@ -95,7 +95,7 @@ Page({
   // 登录
   loginfn(){
     wx.navigateTo({
-      url: '/pages/login/login',
+      url: '/pages/login/login?type=mine',
     })
   },
   // 展示底部切换
