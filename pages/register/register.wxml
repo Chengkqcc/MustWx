@@ -52,4 +52,13 @@
     </view>
 
     <!-- 账户或密码错误弹出层 -->
+    <van-popup show="{{systemHint}}" bind:close="closeHint" custom-class="systemHint" overlay="{{false}}" closeable>
+        <view class="content">
+            <view class="title">系统提示</view>
+            <view class="text">账户或密码错误</view>
+            <view class="btn">
+                <van-button color="#07C160" bind:tap="consent" bindtap="closeHint">我同意</van-button>
+            </view>
+        </view>
+    </van-popup>
 </view>

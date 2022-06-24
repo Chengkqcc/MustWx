@@ -61,6 +61,12 @@ Page({
                     url: '../contract/constract?token=' + token,
                 })
             }, 1400)
+        } else if (this.data.type == "mine") {
+            setTimeout(function () {
+                wx.reLaunch({
+                    url: '../mine/mine?token=' + token,
+                })
+            }, 1400)
         }
     },
     // 点击同意
