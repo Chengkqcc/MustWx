@@ -11,7 +11,7 @@
         <view class="p">****</view>
       </view>
     </view>
-    <view class="qiehuan_btn" bindtap="bottom_qiehuan">切换</view>
+    <view class="qiehuan_btn" catchtap="bottom_qiehuan">切换</view>
   </view>
   <view class="content">
     <!-- 合同 -->
@@ -63,7 +63,7 @@
   </view>
   <!-- 底部切换 -->
   <view class="qiehuan">
-    <van-popup show="{{ show }}" bind:close="onClose" position="bottom" custom-style="height: 40%;">
+    <van-popup show="{{ show }}" bind:close="close_qiehuan" position="bottom" custom-style="height: 40%;">
       <view class="title">
         <view class="text">切换企业空间</view>
         <van-icon name="cross" bind:click="close_qiehuan" />
