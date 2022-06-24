@@ -6,7 +6,7 @@ Page({
      */
     data: {
       tip_show:false,// 退出登录 时 弹窗
-      login:true,//是否登录，true 登录 false 未登录
+      login:false,//是否登录，true 登录 false 未登录
       user_set_data:[
         {id:0,title:'账户充值',page:'/pakB/pages/order/order?wayname=chongzhi'},
         {id:1,title:'头像设置',page:'/pakB/pages/setheaderimg/setheaderimg'},
@@ -30,7 +30,7 @@ Page({
     // logout
     logout_close_tip(){
       this.setData({tip_show:false})
-      this.setData({login:false})
+      wx.removeStorageSync('token')
       wx.navigateTo({
         url: '/pakB/pages/mine/mine',
       })
@@ -59,7 +59,12 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function () {
-
+      // 判断是否登录
+      let token = wx.getStorageSync('token')
+      console.log(token);
+      if(token){
+        this.setData({login:true})
+      }
     },
 
     /**
