@@ -75,27 +75,14 @@ Page({
                     sizeType: ['compressed'],
                     sourceType: ['camera'],
                     success: (res) => {
-                      // tempFilePath可以作为 img 标签的 src 属性显示图片
-                      console.log(res)
-                      wx.showToast({
-                        title: '处理中...',
-                        icon: 'loading',
-                        duration: 500,
-                        success: () => {
-                          let files = res.tempFiles[0]
-                          console.log(res)
-                          let FuFilesArr = this.data.FuFilesArr
-                          FuFilesArr.push(files)
-                          console.log(FuFilesArr)
-                          this.setData({
-                            FuFilesArr
-                          })
-                        }
+                      let imgSrc = encodeURIComponent(JSON.stringify(res.tempFilePaths[0]))
+                      wx.navigateTo({
+                        url: '/pages/uploadPages/uploadImage/upliadImage?imgSrc='+imgSrc,
                       })
                     },
-                    fail() {
+                    fail:()=>{
                       wx.showToast({
-                        title: '您取消了拍照',
+                        title: '未选择文件',
                         icon: 'none',
                         duration: 1000
                       })

@@ -16,8 +16,6 @@
         </van-cell>
         <van-cell>
             <view slot="title" style="display: flex;">
-                <van-icon name="orders-o" />
-                <view class="van-cell-text" style="margin-left: 10rpx;"> {{choose_files.name}}</view>
                 <van-icon name="send-gift-o" />
                 <view class="van-cell-text" style="margin-left: 10rpx;"> {{choose_files.name?choose_files.name : "照片"}}</view>
             </view>

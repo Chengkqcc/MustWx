@@ -1,5 +1,4 @@
 {
-
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
@@ -140,5 +139,39 @@
       "name": "bb",
       "independent": false
     }
-  ]
+  ],
+  "usingComponents": {
+    "van-popup": "@vant/weapp/popup/index",
+    "van-button": "@vant/weapp/button/index",
+    "van-cell": "@vant/weapp/cell/index",
+    "van-cell-group": "@vant/weapp/cell-group/index",
+    "van-field": "@vant/weapp/field/index",
+    "van-action-sheet": "@vant/weapp/action-sheet/index",
+    "van-icon": "@vant/weapp/icon/index",
+    "van-checkbox": "@vant/weapp/checkbox/index",
+    "van-checkbox-group": "@vant/weapp/checkbox-group/index",
+    "van-toast": "@vant/weapp/toast/index",
+    "van-tag": "@vant/weapp/tag/index",
+    "van-picker": "@vant/weapp/picker/index",
+    "van-config-provider": "@vant/weapp/config-provider/index",
+    "van-image": "@vant/weapp/image/index",
+    "van-row": "@vant/weapp/row/index",
+    "van-col": "@vant/weapp/col/index",
+    "van-transition": "@vant/weapp/transition/index",
+    "van-uploader": "@vant/weapp/uploader/index",
+    "van-radio": "@vant/weapp/radio/index",
+    "van-radio-group": "@vant/weapp/radio-group/index",
+    "van-rate": "@vant/weapp/rate/index",
+    "van-search": "@vant/weapp/search/index",
+    "van-slider": "@vant/weapp/slider/index",
+    "van-stepper": "@vant/weapp/stepper/index",
+    "van-switch": "@vant/weapp/switch/index",
+    "van-dialog": "@vant/weapp/dialog/index",
+    "van-overlay": "@vant/weapp/overlay/index",
+    "van-tab": "@vant/weapp/tab/index",
+    "van-tabs": "@vant/weapp/tabs/index",
+    "van-area": "@vant/weapp/area/index",
+    "van-panel": "@vant/weapp/panel/index",
+    "van-datetime-picker": "@vant/weapp/datetime-picker/index"
+  }
 }
