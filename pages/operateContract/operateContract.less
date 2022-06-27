@@ -271,7 +271,7 @@
     .signContract {
         box-sizing: border-box;
         width: 100vw;
-        padding: 5px 0 5px 15px;
+        padding: 5px 0px;
         background: #f7f7f7;
         border-top: 1px solid #e6e6e6;
         position: absolute;
@@ -280,38 +280,52 @@
         justify-content: space-between;
 
         .left {
+            width: 42%;
             display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
 
-            text {
-                display: block;
-                width: 100%;
-                font-size: 14px;
-                color: #333;
+            .icon {
+                flex: 1;
                 text-align: center;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+
+                text {
+                    width: 100%;
+                    font-size: 14px;
+                    margin-top: 2px;
+                }
+            }
+
+            .icon:first-child {
+                border-right: 1px solid #EDEDED;
             }
         }
 
         .right {
             width: 40%;
+
+            button {
+                font-size: 18px;
+            }
         }
     }
 
     // 返回文件管理
-    .backContract {
-        width: 100vw;
-
+    .contractManage {
         .btn {
-            height: 70px;
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-
             button {
-                width: 170px;
-                height: 55px;
-                font-size: 20px;
+                font-size: 18px;
+            }
+        }
+    }
+
+    // 撤回和签署区
+    .toSign {
+        .btn {
+            button {
+                font-size: 18px;
+                height: 100%;
             }
         }
     }
@@ -319,7 +333,7 @@
     // 拒签
     .refusalWrap {
         width: 80%;
-        height: 37%;
+        // height: 37%;
         box-shadow: 4rpx 4rpx 8rpx 4rpx rgba(0, 0, 0, 0.5);
 
         .refusal {
@@ -330,6 +344,7 @@
                 padding: 45px 10px;
                 font-size: 14px;
                 line-height: 22px;
+                text-align: center;
             }
 
             .btn {
@@ -351,6 +366,39 @@
                 border: none;
                 background: #ECECEC;
 
+            }
+        }
+
+        .delContent {
+            padding-bottom: 45px;
+        }
+    }
+
+    // 签署提示
+    .signHintProp {
+        width: 80%;
+        box-shadow: 4rpx 4rpx 8rpx 4rpx rgba(0, 0, 0, 0.5);
+
+        .signHint {
+            box-sizing: border-box;
+            padding: 15px;
+
+            .text {
+                font-size: 14px;
+                padding: 45px 0;
+                text-align: center;
+            }
+        }
+
+        .btn {
+            text-align: center;
+            padding-bottom: 30px;
+
+            button {
+                width: 115px;
+                height: 35px;
+                border-radius: 5px;
+                ;
             }
         }
     }
@@ -389,6 +437,31 @@
 
     }
 
+    // 点击撤回弹出层的确定按钮会出现的内容
+    .confirmRevocation {
+        box-sizing: border-box;
+        width: 80%;
+        padding: 15px;
+        box-shadow: 4rpx 4rpx 8rpx 4rpx rgba(0, 0, 0, 0.5);
+
+        .content {
+            padding: 50px 0;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .btn {
+            padding-bottom: 30px;
+            text-align: center;
+
+            button {
+                width: 115px;
+                height: 35px;
+                border-radius: 5px;
+            }
+        }
+    }
+
     // 文件信息的弹出层
     .fileWrap {
         box-sizing: border-box;
@@ -412,6 +485,26 @@
                     height: 30px;
                 }
             }
+        }
+    }
+
+    //邮箱
+    .email {
+        width: 190px;
+        background: #3C95F3;
+        border-radius: 5px;
+        color: #fff;
+        font-size: 14px;
+        padding: 10px 25px 10px 15px;
+        display: flex;
+        position: absolute;
+        top: 150px;
+        right: 10px;
+
+        .icon {
+            position: absolute;
+            top: 5px;
+            right: 5px;
         }
     }
 }

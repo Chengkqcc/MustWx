@@ -121,18 +121,55 @@
         <!-- 去签署合同 -->
         <view class="signContract" wx:if="{{signContract}}">
             <view class="left" bindtap="showPopup">
-                <van-icon name="records" color="#333" size="24px"/>
-                <text>拒签</text>
+                <view class="icon">
+                    <van-icon name="records" color="#333" size="24px"/>
+                    <text>拒签</text>
+                </view>
             </view>
             <view class="right" bindtap="jumpContracePage" data-index="3">
                 <van-button color="#E54D42" block>去签署该合同</van-button>
             </view>
         </view>
         <!-- 返回文件管理 -->
-        <view class="backContract" wx:if="{{backContract}}">
-            <view class="btn">
-                <van-button color="#E54D42" bindtap="backContract">返回文件管理</van-button>
+        <view class="signContract contractManage" wx:if="{{backContract}}">
+            <view class="left"></view>
+            <view class="right btn" bindtap="backContract">
+                <van-button color="#E54D42" block>返回文件管理</van-button>
             </view>
+        </view>
+        <!-- 撤回和签署区 -->
+        <view class="signContract  toSign" wx:if="{{toSign}}">
+            <view class="left">
+                <view class="icon" bindtap="revocation">
+                    <van-icon name="records" color="#333" size="30px"/>
+                    <text>撤回</text>
+                </view>
+
+                <view class="icon">
+                    <van-icon name="description" size="30px"/>
+                    <text>签署区</text>
+                </view>
+            </view>
+            <view class="right btn" bindtap="jumpContracePage" data-index="3">
+                <van-button color="#E54D42" block>去签署该合同</van-button>
+            </view>
+        </view>
+        <!-- 删除新加入的合同 -->
+        <view class="signContract  toSign" wx:if="{{delContract}}">
+            <view class="left">
+                <view class="icon" bindtap="delContract">
+                    <van-icon name="delete-o" color="#333" size="30px"/>
+                    <text>删除</text>
+                </view>
+            </view>
+            <view class="right btn" bindtap="backContract">
+                <van-button color="#E54D42" block>返回文件管理</van-button>
+            </view>
+        </view>
+        <!-- 邮箱 -->
+        <view class="email" wx:if="{{email}}">
+            <view class="icon" bindtap="closeEmail"><van-icon name="cross" /></view>
+            <view class="text">绑定邮箱后，合同签署成功后会将合同文件通过邮件的方式发送给您，点击绑定</view>
         </view>
 
         <!-- 合同的文件信息 -->
@@ -180,6 +217,53 @@
                 </view>
             </view>
         </van-popup>
+
+        <!-- 撤回 -->
+        <van-popup show="{{ revocation }}" bind:close="closeRevocation" overlay="{{false}}" custom-class="refusalWrap" closeable="{{true}}">
+            <view class="refusal">
+                <text class="title">提示</text>
+                <view class="content">您真的要撤回吗，撤回后所有人均无法签署</view>
+                <view class="btn">
+                    <view bindtap="confirmRevocation"><van-button color="#07C160" block>确定</van-button></view>
+                    <view bindtap="closeRevocation"><van-button color="#07C160" plain block >取消</van-button></view>
+                </view>
+            </view>
+        </van-popup>
+
+        <!-- 点击撤回弹出层的确定按钮会出现的内容 -->
+        <van-popup show="{{ confirmRevocation }}" bind:close="closeConfirmRevocation" overlay="{{false}}" custom-class="confirmRevocation" closeable="{{true}}">
+            <view class="refusal">
+                <text class="title">系统提示</text>
+                <view class="content">该合同已经被撤回，无法再签署</view>
+                <view class="btn" bindtap="closeConfirmRevocation">
+                    <van-button color="#07C160">确定</van-button>
+                </view>
+            </view>
+        </van-popup>
+
+        <!-- 删除弹出层 -->
+        <van-popup show="{{ del }}" bind:close="closeDel" overlay="{{false}}" custom-class="refusalWrap" closeable="{{true}}">
+            <view class="refusal delContent">
+                <text class="title">提示</text>
+                <view class="content">您真的要删除吗? 如果您的文件已经签署，已下载的文件同样具备法律效力，如您的文件已经进行存证或公证，已下载的文件同样具备核验能力</view>
+                <view class="btn">
+                    <view bindtap="confirmDel"><van-button color="#07C160" block>确定</van-button></view>
+                    <view bindtap="closeDel"><van-button color="#07C160" plain block >取消</van-button></view>
+                </view>
+            </view>
+        </van-popup>
+
+        <!-- 签署提示 -->
+        <van-popup show="{{ signHint }}" bind:close="closeSignHint" overlay="{{false}}" custom-class="signHintProp" closeable="{{true}}">
+            <view class="signHint">
+                <text class="title">签署提示</text>
+                <view class="text">本合同已经撤回，不能再签署</view>
+                <view class="btn">
+                    <van-button color="#07C160" bindtap="closeSignHint">我知道了</van-button>
+                </view>
+            </view>
+        </van-popup>
+
     </view>
     <!-- 二维码 -->
     <view class="qrCode" wx:if="{{qrCode}}">

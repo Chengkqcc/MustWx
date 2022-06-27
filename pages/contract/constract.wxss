@@ -163,6 +163,7 @@
   justify-content: space-between;
 }
 .contract .content .contractList .contractItem .contractLeft {
+  flex: 1;
   display: flex;
 }
 .contract .content .contractList .contractItem .contractLeft .img {
@@ -174,6 +175,7 @@
   height: 40px;
 }
 .contract .content .contractList .contractItem .contractLeft .info {
+  flex: 1;
   display: flex;
   flex-wrap: wrap;
 }
@@ -186,6 +188,7 @@
   color: #999;
 }
 .contract .content .contractList .contractItem .contractRight {
+  width: 16px;
   display: flex;
 }
 .contract .content .link {

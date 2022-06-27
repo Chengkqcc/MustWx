@@ -210,7 +210,7 @@
 .detailContract .signContract {
   box-sizing: border-box;
   width: 100vw;
-  padding: 5px 0 5px 15px;
+  padding: 5px 0px;
   background: #f7f7f7;
   border-top: 1px solid #e6e6e6;
   position: absolute;
@@ -219,37 +219,39 @@
   justify-content: space-between;
 }
 .detailContract .signContract .left {
+  width: 42%;
+  display: flex;
+}
+.detailContract .signContract .left .icon {
+  flex: 1;
+  text-align: center;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
-.detailContract .signContract .left text {
-  display: block;
+.detailContract .signContract .left .icon text {
   width: 100%;
   font-size: 14px;
-  color: #333;
-  text-align: center;
+  margin-top: 2px;
+}
+.detailContract .signContract .left .icon:first-child {
+  border-right: 1px solid #EDEDED;
 }
 .detailContract .signContract .right {
   width: 40%;
 }
-.detailContract .backContract {
-  width: 100vw;
+.detailContract .signContract .right button {
+  font-size: 18px;
 }
-.detailContract .backContract .btn {
-  height: 70px;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
+.detailContract .contractManage .btn button {
+  font-size: 18px;
 }
-.detailContract .backContract .btn button {
-  width: 170px;
-  height: 55px;
-  font-size: 20px;
+.detailContract .toSign .btn button {
+  font-size: 18px;
+  height: 100%;
 }
 .detailContract .refusalWrap {
   width: 80%;
-  height: 37%;
   box-shadow: 4rpx 4rpx 8rpx 4rpx rgba(0, 0, 0, 0.5);
 }
 .detailContract .refusalWrap .refusal {
@@ -260,6 +262,7 @@
   padding: 45px 10px;
   font-size: 14px;
   line-height: 22px;
+  text-align: center;
 }
 .detailContract .refusalWrap .refusal .btn {
   padding: 0 20px;
@@ -276,6 +279,31 @@
 .detailContract .refusalWrap .refusal .btn button:last-child {
   border: none;
   background: #ECECEC;
+}
+.detailContract .refusalWrap .delContent {
+  padding-bottom: 45px;
+}
+.detailContract .signHintProp {
+  width: 80%;
+  box-shadow: 4rpx 4rpx 8rpx 4rpx rgba(0, 0, 0, 0.5);
+}
+.detailContract .signHintProp .signHint {
+  box-sizing: border-box;
+  padding: 15px;
+}
+.detailContract .signHintProp .signHint .text {
+  font-size: 14px;
+  padding: 45px 0;
+  text-align: center;
+}
+.detailContract .signHintProp .btn {
+  text-align: center;
+  padding-bottom: 30px;
+}
+.detailContract .signHintProp .btn button {
+  width: 115px;
+  height: 35px;
+  border-radius: 5px;
 }
 .detailContract .refusalProp {
   width: 80%;
@@ -303,6 +331,26 @@
   height: 32px;
   border-radius: 5px;
 }
+.detailContract .confirmRevocation {
+  box-sizing: border-box;
+  width: 80%;
+  padding: 15px;
+  box-shadow: 4rpx 4rpx 8rpx 4rpx rgba(0, 0, 0, 0.5);
+}
+.detailContract .confirmRevocation .content {
+  padding: 50px 0;
+  text-align: center;
+  font-size: 14px;
+}
+.detailContract .confirmRevocation .btn {
+  padding-bottom: 30px;
+  text-align: center;
+}
+.detailContract .confirmRevocation .btn button {
+  width: 115px;
+  height: 35px;
+  border-radius: 5px;
+}
 .detailContract .fileWrap {
   box-sizing: border-box;
   width: 80%;
@@ -321,6 +369,23 @@
 .detailContract .fileWrap .infoContent .btn button {
   width: 115px;
   height: 30px;
+}
+.detailContract .email {
+  width: 190px;
+  background: #3C95F3;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 14px;
+  padding: 10px 25px 10px 15px;
+  display: flex;
+  position: absolute;
+  top: 150px;
+  right: 10px;
+}
+.detailContract .email .icon {
+  position: absolute;
+  top: 5px;
+  right: 5px;
 }
 .qrCode {
   box-sizing: border-box;
