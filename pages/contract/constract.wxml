@@ -100,7 +100,7 @@
             </view>
          </view>
          <!-- 新加进来的电子合同 -->
-         <view class="contractList" wx:if="{{experience}}">
+         <view class="contractList" wx:if="{{newContract}}">
             <block wx:for="{{constractList}}">
                 <view class="contractItem">
                     <view class="contractLeft">
@@ -108,7 +108,7 @@
                             <!-- <image src="{{item.imgsrc}}" /> -->
                             <image src="../../images/contract/contract.jpg"/>
                          </view>
-                         <view class="info" bindtap="operate" data-index="0">
+                         <view class="info" bindtap="operate" data-index="0" data-number="{{index}}" data-title="{{item.title}}">
                             <view class="title">{{item.title}}</view>
                             <view class="text">{{item.text}}</view>
                          </view>
@@ -128,7 +128,7 @@
                             <!-- <image src="{{item.imgsrc}}" /> -->
                             <image src="../../images/contract/contract.jpg"/>
                          </view>
-                         <view class="info" bindtap="operate" data-index="0">
+                         <view class="info" bindtap="operate" data-index="0" data-title="体验签署">
                             <view class="title">{{experienceFile.title}}</view>
                             <view class="text">{{experienceFile.text}}</view>
                          </view>

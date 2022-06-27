@@ -63,6 +63,7 @@ Page({
         linkShow: false,
         empty: true,//控制空状态的显示和隐藏
         experience: false,//控制体验签署电子合同的显示和隐藏
+        newContract: false,
         currentDate: new Date().getTime(),
         minDate: new Date().getTime(),
         beginTime: null,
@@ -89,7 +90,8 @@ Page({
         // 新加入的合同
         constractList: [
             {}
-        ]
+        ],
+        newText: ""
     },
     // 点击输入框旁边的图片，出现需要录入的信息
     showPopup() {
@@ -188,9 +190,11 @@ Page({
             constractShow: false
         })
         let index = e.currentTarget.dataset.index;
-        // let text = this.data.text;
+        let title = e.currentTarget.dataset.title;
+        let number = e.currentTarget.dataset.number;
+        let newText = this.data.newText;
         wx.navigateTo({
-            url: '../operateContract/operateContract?index=' + index
+            url: '../operateContract/operateContract?index=' + index + "&title=" + title + "&newText=" + newText + "&number=" + number
         })
     },
     // 点击签署
@@ -223,6 +227,16 @@ Page({
     onLoad: function (options) {
         let token = options.token || wx.getStorageSync('token');
         let text = wx.getStorageSync('text') || "待我签署"
+        let newText = wx.getStorageSync('newText') || "待我签署"
+        let type = options.type;
+        if (type == "contract") {
+            this.setData({
+                newContract: true
+            })
+        }
+        this.setData({
+            newText
+        })
         if (token.length > 0) {
             this.setData({
                 empty: false,
@@ -241,20 +255,20 @@ Page({
                 "text": "2022-06-07." + text + ".16650016402",
             },
         })
-
         let time = new Date();
         let year = time.getFullYear();
         let month = time.getMonth() + 1 < 10 ? "0" + (time.getMonth() + 1) : time.getMonth() + 1;
         let day = time.getDate() < 10 ? "0" + time.getDate() : time.getDate();
         this.setData({
-            constractList: [
+            constractList: wx.getStorageSync('constractList') || [
                 {
                     "imgsrc": "https://safe-storage-cos2.1dq.com/signed/496f6fcb25874c7099fa9277a73ec09d/png/7b5344b9-1.jpg?sign=q-sign-algorithm%3Dsha1%26q-ak%3DAKID1oUyEJ7WEjzIJ2cuSt4ybw0mgJfjIC5s%26q-sign-time%3D1655091275%3B1655091935%26q-key-time%3D1655091275%3B1655091935%26q-header-list%3Dhost%26q-url-param-list%3D%26q-signature%3De48978a430b22e245d56d381e05efd061db64191&&imageMogr2/thumbnail/80x",
                     "title": "123",
-                    "text": year + "-" + month + "-" + day + "待我签署",
+                    "text": year + "-" + month + "-" + day + "." + newText,
                 }
             ]
         })
+        wx.setStorageSync('constractList', this.data.constractList)
     },
 
     /**
